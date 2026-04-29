@@ -1,90 +1,206 @@
-import Header from '../../components/feature/Header';
-import Footer from '../../components/feature/Footer';
-import AboutHero from './components/AboutHero';
-import CompanyStory from './components/CompanyStory';
-import AboutWhyUs from './components/AboutWhyUs';
-import TrustBar from '../home/components/TrustBar';
-import InlineCTA from '../home/components/InlineCTA';
-import BeforeAfterGallery from '../home/components/BeforeAfterGallery';
-import Testimonials from '../home/components/Testimonials';
-import ProcessTimeline from '../home/components/ProcessTimeline';
-import ServiceAreas from '../home/components/ServiceAreas';
-import MidCTA from '../home/components/MidCTA';
-import AISearchBlocks from '../home/components/AISearchBlocks';
-import FAQ from '../home/components/FAQ';
-import Gallery from '../home/components/Gallery';
-import LeadForm from '../home/components/LeadForm';
+import Navbar from "../../components/feature/Navbar";
+import Footer from "../../components/feature/Footer";
+import HeroSection from "../../components/feature/sections/HeroSection";
+import TrustBar from "../../components/feature/sections/TrustBar";
+import AIAnswerBlock from "../../components/feature/sections/AIAnswerBlock";
+import ProcessSection from "../../components/feature/sections/ProcessSection";
+import WhyChooseUs from "../../components/feature/sections/WhyChooseUs";
+import ServiceAreasSection from "../../components/feature/sections/ServiceAreasSection";
+import TestimonialsSection from "../../components/feature/sections/TestimonialsSection";
+import FAQSection from "../../components/feature/sections/FAQSection";
+import FinalCTA from "../../components/feature/sections/FinalCTA";
+import LeadFormSection from "../../components/feature/sections/LeadFormSection";
+import { SITE, PROCESS_STEPS, WHY_FEATURES } from "../../mocks/siteData";
+
+const ABOUT_FAQS = [
+  {
+    q: "How long has Park Lawn Heating been in business?",
+    a: "Park Lawn Heating and Cooling Inc. has been proudly serving the Etobicoke and greater Toronto community for nearly 10 years. We have grown steadily by maintaining a commitment to quality workmanship, honest pricing, and exceptional customer service on every job we complete.",
+  },
+  {
+    q: "Is Park Lawn Heating licensed and insured?",
+    a: "Yes. All Park Lawn Heating technicians are fully licensed and insured to perform HVAC work in Ontario. We maintain all required certifications and insurance coverage so that your home and your investment are fully protected on every service call or installation we perform.",
+  },
+  {
+    q: "What areas does Park Lawn Heating serve?",
+    a: "We serve Etobicoke and the surrounding Toronto communities including Mimico, New Toronto, Long Branch, Humber Bay, Islington, Alderwood, Rexdale, Lakeshore, Stonegate-Queensway, The Kingsway, and many more. Call (416) 832-5842 to confirm service availability in your area.",
+  },
+  {
+    q: "Do you offer both residential and commercial HVAC services?",
+    a: "Yes. Park Lawn Heating provides heating, cooling, and air quality services for residential homes, condo buildings, and commercial properties. As in-suite condo specialists, we have particular expertise in fan coil and heat pump systems for condominium buildings across Etobicoke.",
+  },
+];
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white">
-      <Header />
+    <>
+      <Navbar />
       <main>
-        {/* 1 — Hero */}
-        <AboutHero />
-        {/* 2 — TrustBar */}
-        <TrustBar />
-        {/* 3 — Services / Company Story */}
-        <CompanyStory />
-        {/* 4 — InlineCTA (light) */}
-        <InlineCTA
-          heading="Request a Free Quote for Residential Window Cleaning"
-          subtext="Serving homeowners across Washington, Oregon &amp; Idaho — fast response, no obligation."
-          primaryLabel="Get Free Quote"
-          variant="light"
+        <HeroSection
+          eyebrow="About Park Lawn Heating"
+          headline="Nearly a Decade of Trusted HVAC Service in Etobicoke"
+          subheadline="Park Lawn Heating and Cooling Inc. was built on a simple belief: every homeowner deserves honest, expert HVAC service at a fair price. For nearly 10 years, we have delivered exactly that."
+          primaryCTA={{ label: "Get in Touch", href: "/contact" }}
+          secondaryCTA={{ label: "View Our Services", href: "/services" }}
         />
-        {/* 5 — Why Choose Us */}
-        <AboutWhyUs />
-        {/* 6 — About Section / Visual Break */}
-        <section className="relative h-72 overflow-hidden">
-          <img
-            src="https://readdy.ai/api/search-image?query=wide%20panoramic%20view%20window%20cleaning%20service%20residential%20neighborhood%20Pacific%20Northwest%20beautiful%20homes%20sunny%20day%20lush%20green%20trees%20suburban%20community%20clean%20windows%20gleaming%20bright%20light%20morning%20residential%20houses%20Pacific%20Northwest%20Washington%20Oregon%20Idaho%20wide%20landscape%20community&width=1920&height=500&seq=about-midband-v1&orientation=landscape"
-            alt="World Wide Window Co serving Pacific Northwest communities"
-            className="w-full h-full object-cover object-center"
-          />
-          <div className="absolute inset-0 bg-slate-900/55 flex items-center justify-center">
-            <div className="text-center text-white max-w-2xl px-6">
-              <p className="text-2xl lg:text-3xl font-extrabold mb-3">
-                &ldquo;We treat every home like it&apos;s our own.&rdquo;
-              </p>
-              <p className="text-white/80 text-base font-light">— World Wide Window Co, est. 1983</p>
+        <TrustBar />
+
+        {/* Our Story */}
+        <section className="bg-[#FAF8F5] py-24 lg:py-32">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <p className="text-[#C4902A] text-xs font-semibold tracking-[0.2em] uppercase mb-5 flex items-center gap-2">
+                  <span className="inline-block w-8 h-px bg-[#C4902A]"></span>
+                  Our Story
+                </p>
+                <h2
+                  className="font-serif text-[#1A1A1A] leading-tight mb-6"
+                  style={{
+                    fontSize: "clamp(1.8rem, 3vw, 2.8rem)",
+                    fontFamily: "'Playfair Display', Georgia, serif",
+                  }}
+                >
+                  Welcome to Park Lawn Heating and Cooling Inc.
+                </h2>
+                <div className="space-y-4 text-[#6B6B6B] leading-relaxed">
+                  <p>
+                    We are your go-to local HVAC contractor in the Etobicoke area.
+                    Specializing in both residential and commercial services, Park Lawn Heating
+                    is here to support YOU.
+                  </p>
+                  <p>
+                    Live in a condo building? Have a house with a boiler or furnace? Not a
+                    problem — we are in-suite condo specialists and experts in small homes to
+                    large office buildings. No matter the situation, Park Lawn Heating has
+                    you covered.
+                  </p>
+                  <p>
+                    Proudly servicing the Etobicoke area for nearly 10 years, Park Lawn Heating
+                    continues to grow and expand with the area, providing service and
+                    installation of furnaces, boilers, air conditioners, plumbing fixtures,
+                    and so much more.
+                  </p>
+                </div>
+              </div>
+
+              {/* Stats grid */}
+              <div className="grid grid-cols-2 gap-5">
+                {[
+                  { value: "10+", label: "Years in Etobicoke", icon: "ri-calendar-line" },
+                  { value: "5★", label: "Google Rating", icon: "ri-star-line" },
+                  { value: "24/7", label: "Emergency Service", icon: "ri-time-line" },
+                  { value: "7", label: "Premium Brands", icon: "ri-medal-line" },
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    className="bg-white rounded-2xl p-7 border border-[#EAE8E3] text-center"
+                  >
+                    <i className={`${stat.icon} text-[#C4902A] text-3xl mb-3 block`}></i>
+                    <p
+                      className="font-serif font-bold text-[#1A1A1A] text-3xl mb-1"
+                      style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                    >
+                      {stat.value}
+                    </p>
+                    <p className="text-[#8A8A8A] text-xs">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </section>
-        {/* 7 — InlineCTA (emerald) */}
-        <InlineCTA
-          heading="40+ Years of Excellence — Serving WA, OR &amp; ID"
-          subtext="Call or get a quote online in minutes. Family-owned, satisfaction guaranteed."
-          primaryLabel="Book Now"
-          variant="emerald"
+
+        {/* Our Mission */}
+        <section className="bg-[#1A1A1A] py-20">
+          <div className="max-w-3xl mx-auto px-6 text-center">
+            <i className="ri-sparkling-line text-[#C4902A] text-3xl mb-6 block"></i>
+            <blockquote
+              className="text-white font-serif leading-relaxed mb-6"
+              style={{
+                fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
+                fontFamily: "'Playfair Display', Georgia, serif",
+              }}
+            >
+              &ldquo;At Park Lawn Heating, we strive to be in constant communication with our
+              customers until the job is done. If you have questions about any of our heating
+              and air conditioning services or require emergency assistance, please give us a
+              call.&rdquo;
+            </blockquote>
+            <p className="text-[#C4902A] text-sm font-semibold tracking-wide">
+              — Park Lawn Heating Team
+            </p>
+          </div>
+        </section>
+
+        {/* Contact ribbon */}
+        <div className="bg-[#C4902A] py-5 text-white text-center">
+          <p className="text-sm font-medium">
+            Questions? We&apos;re here to help. &nbsp;
+            <a href={`tel:${SITE.phonePlain}`} className="font-bold underline whitespace-nowrap">
+              {SITE.phone}
+            </a>
+            &nbsp;|&nbsp;
+            <a href={`mailto:${SITE.email}`} className="underline whitespace-nowrap">
+              {SITE.email}
+            </a>
+          </p>
+        </div>
+
+        <AIAnswerBlock
+          headline="About Park Lawn Heating and Cooling Inc."
+          intro="Park Lawn Heating and Cooling Inc. is a locally owned and operated HVAC contractor based at 246 Park Lawn Road in Toronto, Ontario. We have served the Etobicoke community for nearly a decade with licensed, insured, and fully transparent heating and cooling services."
+          whatWeDo="We specialize in both residential and commercial HVAC including furnace and AC repair, boiler service, condo fan coil systems, heat pumps, hot water heaters, and indoor air quality products. Every technician is fully licensed and trained to industry standards."
+          services={[
+            "Established local contractor — nearly 10 years",
+            "Fully licensed &amp; insured technicians",
+            "Residential, commercial &amp; condo specialists",
+            "7 premium HVAC brands serviced",
+            "Transparent pricing with no hidden fees",
+            "5-star Google rated service",
+          ]}
+          benefits={[
+            "Community-focused, locally owned",
+            "Long-term relationships over one-time transactions",
+            "Honest assessment before recommendation",
+            "24/7 emergency availability",
+            "Constant communication throughout every job",
+          ]}
+          area="246 Park Lawn Road, Toronto, Ontario M8Y, Canada. Serving Etobicoke, Mimico, Humber Bay, Islington, Rexdale, and the greater Toronto west end."
         />
-        {/* 8 — Before & After Gallery */}
-        <BeforeAfterGallery />
-        {/* 9 — Testimonials */}
-        <Testimonials />
-        {/* 10 — InlineCTA (light) */}
-        <InlineCTA
-          heading="Trusted by Pacific Northwest Homeowners Since 1983"
-          subtext="Spotless results, satisfaction guaranteed. Serving Washington, Oregon &amp; Idaho."
-          primaryLabel="Get My Free Quote"
-          variant="light"
+
+        <ProcessSection
+          headline="Our Commitment to You"
+          subheadline="Every service call follows the same standard of excellence."
+          steps={PROCESS_STEPS}
         />
-        {/* 11 — Process Timeline */}
-        <ProcessTimeline />
-        {/* 12 — Service Areas */}
-        <ServiceAreas />
-        {/* 13 — Mid CTA */}
-        <MidCTA />
-        {/* 14 — AI Search Blocks */}
-        <AISearchBlocks />
-        {/* 15 — FAQ */}
-        <FAQ />
-        {/* 16 — Gallery */}
-        <Gallery />
-        {/* 17 — Lead Form */}
-        <LeadForm />
+
+        <WhyChooseUs
+          headline="The Values Behind Every Service Call"
+          intro="Our company was built on honesty, expertise, and genuine care for our community. These are the principles that drive our work."
+          features={WHY_FEATURES}
+        />
+
+        <ServiceAreasSection />
+
+        <TestimonialsSection />
+
+        <FAQSection
+          faqs={ABOUT_FAQS}
+          headline="About Park Lawn Heating — FAQ"
+          subheadline="Get to know your local Etobicoke HVAC specialists"
+        />
+
+        <LeadFormSection />
+
+        <FinalCTA
+          headline="Let\u2019s Work Together — Get in Touch Today"
+          subheadline="Etobicoke trusted heating and cooling team is ready to help. Call, email, or request service online."
+          ctaLabel="Contact Us Today"
+          ctaHref="/contact"
+        />
       </main>
       <Footer />
-    </div>
+    </>
   );
 }

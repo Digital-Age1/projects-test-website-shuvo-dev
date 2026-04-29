@@ -1,30 +1,29 @@
-import { useEffect, useRef, RefObject } from 'react';
+import { useEffect, useRef } from "react";
 
-type RevealClass = 'reveal' | 'reveal-left' | 'reveal-right';
-
-export function useScrollReveal<T extends HTMLElement = HTMLElement>(
-  className: RevealClass = 'reveal',
-  threshold = 0.15
-): RefObject<T> {
-  const ref = useRef<T>(null);
+export function useScrollReveal() {
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    el.classList.add(className);
 
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          el.classList.add('visible');
-          observer.disconnect();
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("sr-visible");
+            observer.unobserve(entry.target);
+          }
+        });
       },
-      { threshold }
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
-    observer.observe(el);
+
+    const targets = el.querySelectorAll("[data-sr]");
+    targets.forEach((t) => observer.observe(t));
+
     return () => observer.disconnect();
-  }, [className, threshold]);
+  }, []);
 
   return ref;
 }

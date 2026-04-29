@@ -1,134 +1,192 @@
-import { Link } from 'react-router-dom';
-
-const footerLinks = {
-  Services: [
-    { label: 'Residential Cleaning', href: '/services#residential' },
-    { label: 'Gutter Cleaning', href: '/services#gutters' },
-    { label: 'Hard Water Removal', href: '/services#hardwater' },
-    { label: 'Commercial Cleaning', href: '/services#commercial' },
-  ],
-  Locations: [
-    { label: 'Washington State', href: '/locations' },
-    { label: 'Oregon State', href: '/locations' },
-    { label: 'Idaho State', href: '/locations' },
-    { label: 'View All Areas', href: '/locations' },
-  ],
-  Company: [
-    { label: 'Home', href: '/' },
-    { label: 'About Us', href: '/about' },
-    { label: 'Services', href: '/services' },
-    { label: 'Locations', href: '/locations' },
-    { label: 'Free Quote', href: '/contact' },
-  ],
-};
+import { Link } from "react-router-dom";
+import { SITE, SERVICES } from "../../mocks/siteData";
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t-2 border-slate-100">
-      {/* Top CTA bar */}
-      <div className="bg-blue-700">
-        <div className="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex flex-col md:flex-row items-center justify-between gap-4">
-          <div>
-            <p className="text-white font-bold text-lg">Ready for crystal-clear windows at your home?</p>
-            <p className="text-blue-200 text-sm">Serving Washington, Oregon &amp; Idaho · 100% satisfaction guaranteed</p>
-          </div>
-          <div className="flex items-center gap-3 flex-shrink-0">
-            <a
-              href="tel:+18002231286"
-              className="inline-flex items-center gap-2 bg-white text-blue-700 font-bold text-sm px-5 py-2.5 rounded-full hover:bg-blue-50 transition-colors cursor-pointer whitespace-nowrap"
-            >
-              <i className="ri-phone-fill"></i> (800) 223-1286
-            </a>
+    <footer>
+      {/* Pre-footer trust band */}
+      <div
+        className="py-16 lg:py-20"
+        style={{
+          background: "linear-gradient(135deg, #C4902A 0%, #b07e20 60%, #8a6118 100%)",
+        }}
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+            <div>
+              <p className="text-white/65 text-xs font-semibold tracking-[0.2em] uppercase mb-2">Your Comfort Experts</p>
+              <h3
+                className="text-white font-serif text-2xl lg:text-3xl leading-tight"
+                style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+              >
+                Etobicoke Most Trusted HVAC Team
+              </h3>
+            </div>
+            <div className="grid grid-cols-3 gap-6 text-center">
+              {[
+                { val: "10+", lbl: "Years Serving" },
+                { val: "5★", lbl: "Google Rated" },
+                { val: "24/7", lbl: "Emergency" },
+              ].map((s) => (
+                <div key={s.lbl}>
+                  <p
+                    className="text-white font-serif font-bold text-3xl leading-none mb-1"
+                    style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
+                  >
+                    {s.val}
+                  </p>
+                  <p className="text-white/60 text-[11px] tracking-wide uppercase">{s.lbl}</p>
+                </div>
+              ))}
+            </div>
+            <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row gap-3 lg:items-end">
+              <a
+                href={`tel:${SITE.phonePlain}`}
+                className="inline-flex items-center justify-center gap-2 bg-white text-[#C4902A] font-bold px-8 py-3.5 rounded-full hover:bg-white/90 transition-colors whitespace-nowrap text-sm"
+              >
+                <i className="ri-phone-fill text-base"></i>
+                {SITE.phone}
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center gap-2 border-2 border-white/40 text-white font-semibold px-8 py-3.5 rounded-full hover:bg-white/10 hover:border-white/70 transition-colors whitespace-nowrap text-sm"
+              >
+                Book Service
+                <i className="ri-arrow-right-line text-sm"></i>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Main footer */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-          {/* Brand column */}
-          <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center mb-5">
+      <div
+        className="text-white pt-16 pb-0"
+        style={{ background: "linear-gradient(180deg, #0A0A0A 0%, #141414 100%)" }}
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 pb-14 border-b border-white/[0.07]">
+            {/* Brand */}
+            <div className="lg:col-span-1">
               <img
-                src="https://static.readdy.ai/image/81164d3ba0f00c2a7e247a9f180c9b75/bc0259c4ade5599752e3a176166f5ac2.png"
-                alt="World Wide Window Co — Family-owned residential window cleaning since 1983"
-                className="h-14 w-auto object-contain"
+                src={SITE.logoFooter}
+                alt={SITE.name}
+                className="h-12 w-auto object-contain mb-5"
+                style={{ mixBlendMode: "screen" }}
               />
-            </Link>
-            <p className="text-slate-500 text-sm leading-relaxed mb-6 max-w-xs">
-              Family-owned window cleaning company since 1983. Serving homes, storefronts, and properties throughout Washington, Oregon, and Idaho with a 100% satisfaction guarantee.
-            </p>
-            <div className="space-y-3">
-              <a href="tel:+18002231286" className="flex items-center gap-3 text-slate-600 hover:text-blue-700 transition-colors text-sm cursor-pointer">
-                <div className="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-lg flex-shrink-0">
-                  <i className="ri-phone-line text-blue-700 text-sm"></i>
-                </div>
-                (800) 223-1286
-              </a>
-              <a href="mailto:clean@worldwidewindow.net" className="flex items-center gap-3 text-slate-600 hover:text-blue-700 transition-colors text-sm cursor-pointer">
-                <div className="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-lg flex-shrink-0">
-                  <i className="ri-mail-line text-blue-700 text-sm"></i>
-                </div>
-                clean@worldwidewindow.net
-              </a>
-              <div className="flex items-center gap-3 text-slate-600 text-sm">
-                <div className="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-lg flex-shrink-0">
-                  <i className="ri-map-pin-line text-blue-700 text-sm"></i>
-                </div>
-                Washington · Oregon · Idaho
-              </div>
-              <div className="flex items-center gap-3 text-slate-600 text-sm">
-                <div className="w-8 h-8 flex items-center justify-center bg-blue-50 rounded-lg flex-shrink-0">
-                  <i className="ri-time-line text-blue-700 text-sm"></i>
-                </div>
-                Mon–Sat: 7:00 AM – 6:00 PM
+              <p className="text-white/40 text-sm leading-relaxed mb-6">
+                Etobicoke trusted HVAC contractor. Residential, commercial, and condo specialists for over a decade.
+              </p>
+              <div className="flex items-center gap-3">
+                <a
+                  href={SITE.social.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 flex items-center justify-center rounded-full border border-white/15 text-white/45 hover:text-white hover:border-white/40 transition-colors"
+                  aria-label="Facebook"
+                >
+                  <i className="ri-facebook-fill text-sm"></i>
+                </a>
               </div>
             </div>
-          </div>
 
-          {/* Links columns */}
-          {Object.entries(footerLinks).map(([group, links]) => (
-            <div key={group}>
-              <h4 className="text-slate-900 font-bold text-sm uppercase tracking-wider mb-5">{group}</h4>
-              <ul className="space-y-2.5">
-                {links.map((link) => (
-                  <li key={link.label}>
+            {/* Services */}
+            <div>
+              <h4 className="text-white font-semibold text-xs tracking-[0.2em] uppercase mb-6">
+                Services
+              </h4>
+              <ul className="space-y-3">
+                {[
+                  { label: "All Services", href: "/services" },
+                  { label: "Repair Services", href: "/repair-services" },
+                  { label: "Installation", href: "/installation" },
+                  { label: "Maintenance", href: "/maintenance" },
+                  { label: "Heat Pumps", href: "/heat-pumps" },
+                  { label: "Condo HVAC", href: "/condos" },
+                  { label: "Fan Coils", href: "/fan-coils" },
+                ].map((s) => (
+                  <li key={s.href}>
                     <Link
-                      to={link.href}
-                      className="text-slate-500 hover:text-blue-700 text-sm transition-colors cursor-pointer flex items-center gap-1.5 group"
+                      to={s.href}
+                      className="text-white/40 text-sm hover:text-[#C4902A] transition-colors leading-relaxed"
                     >
-                      <i className="ri-arrow-right-s-line text-slate-300 group-hover:text-blue-500 text-xs transition-colors"></i>
-                      {link.label}
+                      {s.label}
                     </Link>
                   </li>
                 ))}
               </ul>
             </div>
-          ))}
-        </div>
 
-        {/* Trust badges */}
-        <div className="mt-14 pt-8 border-t border-slate-200">
-          <div className="flex flex-wrap items-center justify-between gap-6">
-            <div className="flex flex-wrap gap-3">
-              {[
-                { icon: 'ri-home-heart-line', text: 'Family-Owned Since 1983' },
-                { icon: 'ri-award-line', text: 'BBB Accredited' },
-                { icon: 'ri-star-fill', text: 'Top-Rated Service' },
-                { icon: 'ri-sparkling-2-line', text: 'Spotless Every Time' },
-                { icon: 'ri-map-2-line', text: 'WA · OR · ID Coverage' },
-              ].map((badge) => (
-                <div key={badge.text} className="flex items-center gap-2 bg-blue-50 border border-blue-100 px-4 py-2 rounded-full">
-                  <div className="w-4 h-4 flex items-center justify-center flex-shrink-0">
-                    <i className={`${badge.icon} text-blue-700 text-xs`}></i>
-                  </div>
-                  <span className="text-slate-700 text-xs font-medium">{badge.text}</span>
-                </div>
-              ))}
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-white font-semibold text-xs tracking-[0.2em] uppercase mb-6">
+                Quick Links
+              </h4>
+              <ul className="space-y-3">
+                {[
+                  { label: "Home", href: "/" },
+                  { label: "About Us", href: "/about" },
+                  { label: "Blog", href: "/blog" },
+                  { label: "FAQ", href: "/faq" },
+                  { label: "Contact Us", href: "/contact" },
+                ].map((l) => (
+                  <li key={l.href}>
+                    <Link
+                      to={l.href}
+                      className="text-white/40 text-sm hover:text-[#C4902A] transition-colors"
+                    >
+                      {l.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <p className="text-slate-400 text-xs">
-              © {new Date().getFullYear()} World Wide Window Co. All rights reserved.
+
+            {/* Contact */}
+            <div>
+              <h4 className="text-white font-semibold text-xs tracking-[0.2em] uppercase mb-6">
+                Get In Touch
+              </h4>
+              <ul className="space-y-4">
+                <li>
+                  <a href={`tel:${SITE.phonePlain}`} className="flex items-start gap-3 text-white/40 hover:text-white text-sm transition-colors group">
+                    <i className="ri-phone-line mt-0.5 text-[#C4902A] shrink-0"></i>
+                    <span>{SITE.phone}</span>
+                  </a>
+                </li>
+                <li>
+                  <a href={`mailto:${SITE.email}`} className="flex items-start gap-3 text-white/40 hover:text-white text-sm transition-colors">
+                    <i className="ri-mail-line mt-0.5 text-[#C4902A] shrink-0"></i>
+                    <span>{SITE.email}</span>
+                  </a>
+                </li>
+                <li>
+                  <a href={SITE.mapUrl} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-white/40 hover:text-white text-sm transition-colors">
+                    <i className="ri-map-pin-line mt-0.5 text-[#C4902A] shrink-0"></i>
+                    <span>{SITE.address}</span>
+                  </a>
+                </li>
+                <li className="flex items-start gap-3 text-white/40 text-sm">
+                  <i className="ri-time-line mt-0.5 text-[#C4902A] shrink-0"></i>
+                  <div>
+                    <p>{SITE.hours.weekday}</p>
+                    <p>{SITE.hours.weekend}</p>
+                    <p className="text-[#C4902A] font-medium">{SITE.hours.emergency}</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom bar */}
+          <div className="py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-white/20 text-xs">
+            <p>
+              Copyright &copy; {new Date().getFullYear()} Park Lawn Heating and Cooling Inc. — All Rights Reserved.
             </p>
+            <div className="flex gap-5">
+              <span className="hover:text-white/50 transition-colors cursor-pointer">Privacy Policy</span>
+              <span className="hover:text-white/50 transition-colors cursor-pointer">Terms &amp; Conditions</span>
+            </div>
           </div>
         </div>
       </div>
