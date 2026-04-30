@@ -2,39 +2,80 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     name: '',
     email: '',
     phone: '',
     subject: '',
     message: '',
     botField: ''
+  }
+
+  const [formData, setFormData] = useState({
+    ...initialFormData
   })
 
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState(null) // 'success' | 'error' | null
 
+  const validateField = (name, value) => {
+    const trimmedValue = value.trim()
+
+    if (name === 'name') {
+      if (!trimmedValue) {
+        return 'Full Name is required'
+      }
+      if (trimmedValue.length < 2) {
+        return 'Full Name must be at least 2 characters'
+      }
+    }
+
+    if (name === 'email') {
+      if (!trimmedValue) {
+        return 'Email Address is required'
+      }
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedValue)) {
+        return 'Please enter a valid email address'
+      }
+    }
+
+    if (name === 'phone' && trimmedValue && !/^[0-9\s+\-()]+$/.test(trimmedValue)) {
+      return 'Phone Number can only include numbers, spaces, +, -, and parentheses'
+    }
+
+    if (name === 'subject') {
+      if (!trimmedValue) {
+        return 'Subject is required'
+      }
+      if (trimmedValue.length < 3) {
+        return 'Subject must be at least 3 characters'
+      }
+    }
+
+    if (name === 'message') {
+      if (!trimmedValue) {
+        return 'Message is required'
+      }
+      if (trimmedValue.length < 10) {
+        return 'Message must be at least 10 characters'
+      }
+    }
+
+    return ''
+  }
+
   const validateForm = () => {
     const newErrors = {}
+    const fieldsToValidate = ['name', 'email', 'phone', 'subject', 'message']
 
-    if (!formData.name.trim()) {
-      newErrors.name = 'Full Name is required'
-    }
+    fieldsToValidate.forEach(fieldName => {
+      const error = validateField(fieldName, formData[fieldName])
 
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email Address is required'
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Please enter a valid email address'
-    }
-
-    if (!formData.subject.trim()) {
-      newErrors.subject = 'Subject is required'
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = 'Message is required'
-    }
+      if (error) {
+        newErrors[fieldName] = error
+      }
+    })
 
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
@@ -43,11 +84,52 @@ function App() {
   const handleChange = (e) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
-    
-    if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: '' }))
-    }
+
+    const fieldError = validateField(name, value)
+
+    setErrors(prev => {
+      if (fieldError) {
+        return { ...prev, [name]: fieldError }
+      }
+
+      const updatedErrors = { ...prev }
+      delete updatedErrors[name]
+      return updatedErrors
+    })
   }
+
+  const handleBotFieldChange = (e) => {
+    setFormData(prev => ({ ...prev, botField: e.target.value }))
+  }
+
+  const encodeFormData = () => {
+    const formPayload = new URLSearchParams()
+    formPayload.append('form-name', 'contact')
+    formPayload.append('name', formData.name)
+    formPayload.append('email', formData.email)
+    formPayload.append('phone', formData.phone)
+    formPayload.append('subject', formData.subject)
+    formPayload.append('message', formData.message)
+    formPayload.append('bot-field', formData.botField)
+
+    return formPayload.toString()
+  }
+
+  const resetForm = () => {
+    setFormData({
+      ...initialFormData
+    })
+    setErrors({})
+  }
+
+  const showSubmissionError = () => {
+    setSubmitStatus('error')
+  }
+
+  const showSubmissionSuccess = () => {
+    setSubmitStatus('success')
+    resetForm()
+    }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -60,38 +142,21 @@ function App() {
     setIsSubmitting(true)
 
     try {
-      const formPayload = new URLSearchParams()
-      formPayload.append('form-name', 'contact')
-      formPayload.append('name', formData.name)
-      formPayload.append('email', formData.email)
-      formPayload.append('phone', formData.phone)
-      formPayload.append('subject', formData.subject)
-      formPayload.append('message', formData.message)
-      formPayload.append('bot-field', formData.botField)
-
       const response = await fetch('/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: formPayload.toString()
+        body: encodeFormData()
       })
 
       if (response.ok) {
-        setSubmitStatus('success')
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          subject: '',
-          message: '',
-          botField: ''
-        })
+        showSubmissionSuccess()
       } else {
-        setSubmitStatus('error')
+        showSubmissionError()
       }
     } catch (error) {
-      setSubmitStatus('error')
+      showSubmissionError()
     } finally {
       setIsSubmitting(false)
     }
@@ -120,6 +185,7 @@ function App() {
         <form
           onSubmit={handleSubmit}
           name="contact"
+          method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
           noValidate
@@ -134,8 +200,8 @@ function App() {
               name="bot-field" 
               tabIndex="-1" 
               autoComplete="off"
-              value={formData.botField || ''}
-              onChange={(e) => setFormData(prev => ({ ...prev, botField: e.target.value }))}
+              value={formData.botField}
+              onChange={handleBotFieldChange}
             />
           </div>
 
@@ -179,8 +245,10 @@ function App() {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
+              className={errors.phone ? 'input-error' : ''}
               placeholder="Enter your phone number (optional)"
             />
+            {errors.phone && <span className="error-text">{errors.phone}</span>}
           </div>
 
           <div className="form-group">
