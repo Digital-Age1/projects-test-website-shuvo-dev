@@ -1,40 +1,32 @@
 import { useState } from 'react'
 import './App.css'
 
+const initialFormData = {
+  name: '',
+  email: '',
+  phone: '',
+  subject: '',
+  message: ''
+}
+
+const encode = (data) => new URLSearchParams(data).toString()
+
 function App() {
-  const initialFormData = {
-    name: '',
-    email: '',
-    phone: '',
-    subject: '',
-    message: '',
-    botField: ''
-  }
-
-  const [formData, setFormData] = useState({
-    ...initialFormData
-  })
-
+  const [formData, setFormData] = useState(initialFormData)
   const [errors, setErrors] = useState({})
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState(null) // 'success' | 'error' | null
+  const [submitStatus, setSubmitStatus] = useState(null)
 
   const validateField = (name, value) => {
     const trimmedValue = value.trim()
 
     if (name === 'name') {
-      if (!trimmedValue) {
-        return 'Full Name is required'
-      }
-      if (trimmedValue.length < 2) {
-        return 'Full Name must be at least 2 characters'
-      }
+      if (!trimmedValue) return 'Full Name is required'
+      if (trimmedValue.length < 2) return 'Full Name must be at least 2 characters'
     }
 
     if (name === 'email') {
-      if (!trimmedValue) {
-        return 'Email Address is required'
-      }
+      if (!trimmedValue) return 'Email Address is required'
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedValue)) {
         return 'Please enter a valid email address'
       }
@@ -45,94 +37,59 @@ function App() {
     }
 
     if (name === 'subject') {
-      if (!trimmedValue) {
-        return 'Subject is required'
-      }
-      if (trimmedValue.length < 3) {
-        return 'Subject must be at least 3 characters'
-      }
+      if (!trimmedValue) return 'Subject is required'
+      if (trimmedValue.length < 3) return 'Subject must be at least 3 characters'
     }
 
     if (name === 'message') {
-      if (!trimmedValue) {
-        return 'Message is required'
-      }
-      if (trimmedValue.length < 10) {
-        return 'Message must be at least 10 characters'
-      }
+      if (!trimmedValue) return 'Message is required'
+      if (trimmedValue.length < 10) return 'Message must be at least 10 characters'
     }
 
     return ''
   }
 
   const validateForm = () => {
-    const newErrors = {}
-    const fieldsToValidate = ['name', 'email', 'phone', 'subject', 'message']
+    const nextErrors = {}
 
-    fieldsToValidate.forEach(fieldName => {
+    Object.keys(initialFormData).forEach((fieldName) => {
       const error = validateField(fieldName, formData[fieldName])
 
       if (error) {
-        newErrors[fieldName] = error
+        nextErrors[fieldName] = error
       }
     })
 
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
+    setErrors(nextErrors)
+    return Object.keys(nextErrors).length === 0
   }
 
-  const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({ ...prev, [name]: value }))
+  const handleChange = (event) => {
+    const { name, value } = event.target
+
+    setFormData((currentData) => ({
+      ...currentData,
+      [name]: value
+    }))
 
     const fieldError = validateField(name, value)
 
-    setErrors(prev => {
+    setErrors((currentErrors) => {
       if (fieldError) {
-        return { ...prev, [name]: fieldError }
+        return {
+          ...currentErrors,
+          [name]: fieldError
+        }
       }
 
-      const updatedErrors = { ...prev }
-      delete updatedErrors[name]
-      return updatedErrors
+      const nextErrors = { ...currentErrors }
+      delete nextErrors[name]
+      return nextErrors
     })
   }
 
-  const handleBotFieldChange = (e) => {
-    setFormData(prev => ({ ...prev, botField: e.target.value }))
-  }
-
-  const encodeFormData = () => {
-    const formPayload = new URLSearchParams()
-    formPayload.append('form-name', 'contact')
-    formPayload.append('name', formData.name)
-    formPayload.append('email', formData.email)
-    formPayload.append('phone', formData.phone)
-    formPayload.append('subject', formData.subject)
-    formPayload.append('message', formData.message)
-    formPayload.append('bot-field', formData.botField)
-
-    return formPayload.toString()
-  }
-
-  const resetForm = () => {
-    setFormData({
-      ...initialFormData
-    })
-    setErrors({})
-  }
-
-  const showSubmissionError = () => {
-    setSubmitStatus('error')
-  }
-
-  const showSubmissionSuccess = () => {
-    setSubmitStatus('success')
-    resetForm()
-    }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
+  const handleSubmit = async (event) => {
+    event.preventDefault()
     setSubmitStatus(null)
 
     if (!validateForm()) {
@@ -147,38 +104,53 @@ function App() {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         },
-        body: encodeFormData()
+        body: encode({
+          'form-name': 'contact',
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          subject: formData.subject,
+          message: formData.message,
+          'bot-field': ''
+        })
       })
 
       if (response.ok) {
-        showSubmissionSuccess()
+        setSubmitStatus('success')
+        setFormData(initialFormData)
+        setErrors({})
       } else {
-        showSubmissionError()
+        console.error('Netlify form submission failed with status:', response.status)
+        setSubmitStatus('error')
       }
     } catch (error) {
-      showSubmissionError()
+      console.error('Netlify form submission error:', error)
+      setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
     }
   }
 
   return (
-    <div className="app-container">
-      <div className="form-card">
+    <main className="app-container">
+      <section className="form-card" aria-labelledby="contact-title">
         <div className="form-header">
-          <h1>Contact Us</h1>
-          <p>Send us a message and we will get back to you soon.</p>
+          <p className="eyebrow">Contact Form</p>
+          <h1 id="contact-title">Get in Touch</h1>
+          <p>
+            Send your message using the contact form below. We will respond as soon as possible.
+          </p>
         </div>
 
         {submitStatus === 'success' && (
-          <div className="success-message">
-            Thank you! Your message has been sent successfully. We will get back to you soon.
+          <div className="success-message" role="status">
+            Thank you! Your message has been sent successfully.
           </div>
         )}
 
         {submitStatus === 'error' && (
-          <div className="error-message">
-            Sorry, something went wrong. Please try again later.
+          <div className="error-message" role="alert">
+            Sorry, your message could not be sent. Please check the console for the Netlify response status and try again.
           </div>
         )}
 
@@ -191,80 +163,78 @@ function App() {
           noValidate
         >
           <input type="hidden" name="form-name" value="contact" />
-          
-          <div className="hidden-field" aria-hidden="true">
-            <label htmlFor="bot-field">Do not fill this out</label>
-            <input 
-              type="text" 
-              id="bot-field" 
-              name="bot-field" 
-              tabIndex="-1" 
-              autoComplete="off"
-              value={formData.botField}
-              onChange={handleBotFieldChange}
-            />
-          </div>
+          <input type="hidden" name="bot-field" value="" readOnly />
 
-          <div className="form-group">
-            <label htmlFor="name">
-              Full Name <span className="required">*</span>
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className={errors.name ? 'input-error' : ''}
-              placeholder="Enter your full name"
-            />
-            {errors.name && <span className="error-text">{errors.name}</span>}
-          </div>
+          <div className="form-grid">
+            <div className="form-group">
+              <label htmlFor="name">
+                Full Name <span className="required">*</span>
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                className={errors.name ? 'input-error' : ''}
+                placeholder="Enter your full name"
+                aria-invalid={Boolean(errors.name)}
+                aria-describedby={errors.name ? 'name-error' : undefined}
+              />
+              {errors.name && <span id="name-error" className="error-text">{errors.name}</span>}
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="email">
-              Email Address <span className="required">*</span>
-            </label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className={errors.email ? 'input-error' : ''}
-              placeholder="Enter your email address"
-            />
-            {errors.email && <span className="error-text">{errors.email}</span>}
-          </div>
+            <div className="form-group">
+              <label htmlFor="email">
+                Email Address <span className="required">*</span>
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className={errors.email ? 'input-error' : ''}
+                placeholder="Enter your email address"
+                aria-invalid={Boolean(errors.email)}
+                aria-describedby={errors.email ? 'email-error' : undefined}
+              />
+              {errors.email && <span id="email-error" className="error-text">{errors.email}</span>}
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="phone">Phone Number</label>
-            <input
-              type="tel"
-              id="phone"
-              name="phone"
-              value={formData.phone}
-              onChange={handleChange}
-              className={errors.phone ? 'input-error' : ''}
-              placeholder="Enter your phone number (optional)"
-            />
-            {errors.phone && <span className="error-text">{errors.phone}</span>}
-          </div>
+            <div className="form-group">
+              <label htmlFor="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                className={errors.phone ? 'input-error' : ''}
+                placeholder="Enter your phone number"
+                aria-invalid={Boolean(errors.phone)}
+                aria-describedby={errors.phone ? 'phone-error' : undefined}
+              />
+              {errors.phone && <span id="phone-error" className="error-text">{errors.phone}</span>}
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="subject">
-              Subject <span className="required">*</span>
-            </label>
-            <input
-              type="text"
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              className={errors.subject ? 'input-error' : ''}
-              placeholder="Enter the subject"
-            />
-            {errors.subject && <span className="error-text">{errors.subject}</span>}
+            <div className="form-group">
+              <label htmlFor="subject">
+                Subject <span className="required">*</span>
+              </label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
+                className={errors.subject ? 'input-error' : ''}
+                placeholder="Enter the subject"
+                aria-invalid={Boolean(errors.subject)}
+                aria-describedby={errors.subject ? 'subject-error' : undefined}
+              />
+              {errors.subject && <span id="subject-error" className="error-text">{errors.subject}</span>}
+            </div>
           </div>
 
           <div className="form-group">
@@ -277,24 +247,22 @@ function App() {
               value={formData.message}
               onChange={handleChange}
               className={errors.message ? 'input-error' : ''}
-              placeholder="Enter your message"
-              rows="5"
+              placeholder="Write your message"
+              rows="6"
+              aria-invalid={Boolean(errors.message)}
+              aria-describedby={errors.message ? 'message-error' : undefined}
             />
-            {errors.message && <span className="error-text">{errors.message}</span>}
+            {errors.message && <span id="message-error" className="error-text">{errors.message}</span>}
           </div>
 
-          <button 
-            type="submit" 
-            className="submit-btn" 
-            disabled={isSubmitting}
-          >
+          <button type="submit" className="submit-btn" disabled={isSubmitting}>
             {isSubmitting ? 'Sending...' : 'Send Message'}
           </button>
         </form>
 
         <p className="required-note">All fields marked * are required.</p>
-      </div>
-    </div>
+      </section>
+    </main>
   )
 }
 
