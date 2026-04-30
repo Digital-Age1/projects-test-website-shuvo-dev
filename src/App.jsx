@@ -136,10 +136,6 @@ function App() {
       <section className="form-card" aria-labelledby="contact-title">
         <div className="form-header">
           <p className="eyebrow">Contact Form</p>
-          <h1 id="contact-title">Get in Touch</h1>
-          <p>
-            Send your message using the contact form below. We will respond as soon as possible.
-          </p>
         </div>
 
         {submitStatus === 'success' && (
