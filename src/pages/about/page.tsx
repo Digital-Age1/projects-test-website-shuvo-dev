@@ -1,206 +1,203 @@
-import Navbar from "../../components/feature/Navbar";
-import Footer from "../../components/feature/Footer";
-import HeroSection from "../../components/feature/sections/HeroSection";
-import TrustBar from "../../components/feature/sections/TrustBar";
-import AIAnswerBlock from "../../components/feature/sections/AIAnswerBlock";
-import ProcessSection from "../../components/feature/sections/ProcessSection";
-import WhyChooseUs from "../../components/feature/sections/WhyChooseUs";
-import ServiceAreasSection from "../../components/feature/sections/ServiceAreasSection";
-import TestimonialsSection from "../../components/feature/sections/TestimonialsSection";
-import FAQSection from "../../components/feature/sections/FAQSection";
-import FinalCTA from "../../components/feature/sections/FinalCTA";
-import LeadFormSection from "../../components/feature/sections/LeadFormSection";
-import { SITE, PROCESS_STEPS, WHY_FEATURES } from "../../mocks/siteData";
+import Navbar from '@/components/feature/Navbar';
+import Footer from '@/components/feature/Footer';
+import HeroSection from '@/components/feature/HeroSection';
+import ContactSection from '@/components/feature/ContactSection';
+import { useInView } from '@/hooks/useInView';
 
-const ABOUT_FAQS = [
+const credentials = [
+  { icon: 'ri-government-fill', label: 'Former Federal & State Law Enforcement', sub: 'Every agent — no civilian hires' },
+  { icon: 'ri-shield-star-fill', label: 'Texas State License C12684701', sub: 'Fully licensed, bonded, and insured' },
+  { icon: 'ri-global-fill', label: '100+ Countries', sub: 'Global operations and partner network' },
+  { icon: 'ri-eye-off-fill', label: 'Discretion First', sub: 'Invisible by design' },
+  { icon: 'ri-brain-fill', label: 'Intelligence-Led', sub: 'Prevent incidents before they occur' },
+  { icon: 'ri-time-fill', label: '24/7 Availability', sub: 'Rapid response, always on' },
+];
+
+const teamMembers = [
   {
-    q: "How long has Park Lawn Heating been in business?",
-    a: "Park Lawn Heating and Cooling Inc. has been proudly serving the Etobicoke and greater Toronto community for nearly 10 years. We have grown steadily by maintaining a commitment to quality workmanship, honest pricing, and exceptional customer service on every job we complete.",
+    name: 'John Beegle',
+    title: 'Founder & President — Close Protection Associate',
+    image: 'https://jnbprotectiongroup.com/images/JohnBeegle.jpg',
+    bio: [
+      'John Beegle has over 28 years of experience in the fields of law enforcement, criminal, civil and private investigations, advance threat protection, site vulnerability assessments and executive/close protection. John is currently the Founder and President of JNB Protection Group, assisting clients around the globe by providing them proactive intelligence-based protection and security concierge services.',
+      'John specializes in site security advances, in depth physical, threat and vulnerability assessments, secure transportation and close protection. Since leaving law enforcement to pursue his passion of personal protection, John has built a large network of resources, contacts and partnerships that have enabled him to partner with some of the best and most experienced protection agents in the world, including former United States Secret Service Agents, FBI Agents and DSS Agents.',
+      "Mr. Beegle's experience includes Fortune 50 companies and their C-suite executives, celebrities, high profile/ultra-high net-worth individuals and their families, foreign dignitaries, United States Senators, Presidential candidates and Royal families. Prior to working in the private sector John was a Sworn Police Officer and Domestic Violence Detective, specializing in crimes of Domestic Violence. John earned his Bachelor of Science degree in Social Justice from Olivet Nazarene University.",
+    ],
   },
   {
-    q: "Is Park Lawn Heating licensed and insured?",
-    a: "Yes. All Park Lawn Heating technicians are fully licensed and insured to perform HVAC work in Ontario. We maintain all required certifications and insurance coverage so that your home and your investment are fully protected on every service call or installation we perform.",
+    name: 'Kevin Cote',
+    title: 'Lead Protective Agent — Close Protection Associate',
+    image: 'https://jnbprotectiongroup.com/images/Mr.Cote.jpg',
+    bio: [
+      'Mr. Cote is a seasoned law enforcement and protective services professional with over 33 years of experience in public safety, criminal investigations, and executive protection. He spent the majority of his career with the Harris County Sheriff\'s Department, where he began as a patrol deputy and later advanced into the Criminal Investigations Division as a detective assigned to the Violent Crimes Unit.',
+      'For more than 15 years, Kevin has provided executive and close protection services to Fortune 500 corporations, C-suite executives and their families, high-profile entertainers and celebrities, ultra-high-net-worth individuals, and domestic and foreign political officials.',
+      'Kevin currently serves as a Lead Protective Agent with JNB Protection Group, where he leads protective teams through complex, high-risk, and highly sensitive protective assignments. Mr. Cote holds Executive Protection Certification through LaSorsa & Associates.',
+    ],
   },
   {
-    q: "What areas does Park Lawn Heating serve?",
-    a: "We serve Etobicoke and the surrounding Toronto communities including Mimico, New Toronto, Long Branch, Humber Bay, Islington, Alderwood, Rexdale, Lakeshore, Stonegate-Queensway, The Kingsway, and many more. Call (416) 832-5842 to confirm service availability in your area.",
-  },
-  {
-    q: "Do you offer both residential and commercial HVAC services?",
-    a: "Yes. Park Lawn Heating provides heating, cooling, and air quality services for residential homes, condo buildings, and commercial properties. As in-suite condo specialists, we have particular expertise in fan coil and heat pump systems for condominium buildings across Etobicoke.",
+    name: 'Christopher Sanchez',
+    title: 'Director of Intelligence & Advance Threat Protection — Senior Associate',
+    image: 'https://jnbprotectiongroup.com/picsLg/5ef665febdb10CHRISTOPHER-SANCHEZ.jpg',
+    bio: [
+      'Christopher has over 28 years of national security, crisis management, forensic investigations, advance threat protection and site vulnerability assessments. He is currently the Director of Intelligence & Advance Threat Protection for JNB Protection Group. He is helping clients in all industries manage a myriad of business, financial, legal, regulatory and reputational risk. Christopher specializes in conducting site security advances and criminal investigations, as well as physical, threat and vulnerability assessments to include protective intelligence investigations. He also assists clients in achieving their desired protection from the Department of Homeland Security\'s SAFETY Act.',
+      'Christopher is also part of the Intelligence practice group that offers a full spectrum of governance, compliance, investigative, anti-corruption and intelligence services across all sectors of business — both public and private. In addition he heads JNB Protection Group Sports Intelligence practice which helps professional sports teams manage threats and increase opportunities to teams, players, ownership organizations, and events by integrating key capabilities to help sports organizations and event venues manage threats to their brand, their teams and their fans.',
+      'Prior to joining JNB Protection Group, Christopher was a Managing Director for the Mintz Group, and a Director with PwC in the Global Intelligence Practice where he lead PWC\'s Sports Intelligence team as well as the Enterprise Physical Security practice.',
+      'Christopher was a Special Agent for the United States Secret Service, where he investigated crimes against the government, acts of terrorism, and spent 5 years on the Presidential Protection Detail. Christopher has conducted numerous security advances for the first family both domestically and internationally, throughout Europe and the Middle East.',
+      'Before the Secret Service, he was a Police Officer with the Houston Police Department, enforcing federal, state and local laws. Christopher has a Criminal Justice degree from Texas State University where he played Division I college football.',
+    ],
   },
 ];
 
-export default function AboutPage() {
+function TeamMemberCard({ member, index }: { member: typeof teamMembers[0]; index: number }) {
+  const [ref, visible] = useInView<HTMLDivElement>();
   return (
-    <>
-      <Navbar />
-      <main>
-        <HeroSection
-          eyebrow="About Park Lawn Heating"
-          headline="Nearly a Decade of Trusted HVAC Service in Etobicoke"
-          subheadline="Park Lawn Heating and Cooling Inc. was built on a simple belief: every homeowner deserves honest, expert HVAC service at a fair price. For nearly 10 years, we have delivered exactly that."
-          primaryCTA={{ label: "Get in Touch", href: "/contact" }}
-          secondaryCTA={{ label: "View Our Services", href: "/services" }}
-        />
-        <TrustBar />
+    <div
+      ref={ref}
+      className={`flex flex-col lg:flex-row gap-10 xl:gap-16 items-start transition-all duration-700 delay-${index * 100} ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'} ${index < teamMembers.length - 1 ? 'pb-16 mb-16 border-b border-[#1A1A1A]' : ''}`}
+    >
+      {/* Image */}
+      <div className="w-full lg:w-[280px] xl:w-[320px] shrink-0">
+        <div className="w-full lg:w-[280px] xl:w-[320px] h-[340px] lg:h-[380px] overflow-hidden">
+          <img
+            src={member.image}
+            alt={member.name}
+            className="w-full h-full object-cover object-top"
+          />
+        </div>
+        <div className="mt-4 pl-1 border-l-2 border-[#C9A84C]">
+          <p className="text-white font-heading font-bold text-lg">{member.name}</p>
+          <p className="text-[#C9A84C] text-sm tracking-widest uppercase mt-1 leading-snug">{member.title}</p>
+        </div>
+      </div>
 
-        {/* Our Story */}
-        <section className="bg-[#FAF8F5] py-24 lg:py-32">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <p className="text-[#C4902A] text-xs font-semibold tracking-[0.2em] uppercase mb-5 flex items-center gap-2">
-                  <span className="inline-block w-8 h-px bg-[#C4902A]"></span>
-                  Our Story
-                </p>
-                <h2
-                  className="font-serif text-[#1A1A1A] leading-tight mb-6"
-                  style={{
-                    fontSize: "clamp(1.8rem, 3vw, 2.8rem)",
-                    fontFamily: "'Playfair Display', Georgia, serif",
-                  }}
-                >
-                  Welcome to Park Lawn Heating and Cooling Inc.
-                </h2>
-                <div className="space-y-4 text-[#6B6B6B] leading-relaxed">
-                  <p>
-                    We are your go-to local HVAC contractor in the Etobicoke area.
-                    Specializing in both residential and commercial services, Park Lawn Heating
-                    is here to support YOU.
-                  </p>
-                  <p>
-                    Live in a condo building? Have a house with a boiler or furnace? Not a
-                    problem — we are in-suite condo specialists and experts in small homes to
-                    large office buildings. No matter the situation, Park Lawn Heating has
-                    you covered.
-                  </p>
-                  <p>
-                    Proudly servicing the Etobicoke area for nearly 10 years, Park Lawn Heating
-                    continues to grow and expand with the area, providing service and
-                    installation of furnaces, boilers, air conditioners, plumbing fixtures,
-                    and so much more.
-                  </p>
-                </div>
-              </div>
+      {/* Bio */}
+      <div className="flex-1 space-y-4 pt-1">
+        {member.bio.map((paragraph, i) => (
+          <p key={i} className="text-white/60 text-base leading-relaxed">
+            {paragraph}
+          </p>
+        ))}
+      </div>
+    </div>
+  );
+}
 
-              {/* Stats grid */}
-              <div className="grid grid-cols-2 gap-5">
-                {[
-                  { value: "10+", label: "Years in Etobicoke", icon: "ri-calendar-line" },
-                  { value: "5★", label: "Google Rating", icon: "ri-star-line" },
-                  { value: "24/7", label: "Emergency Service", icon: "ri-time-line" },
-                  { value: "7", label: "Premium Brands", icon: "ri-medal-line" },
-                ].map((stat) => (
-                  <div
-                    key={stat.label}
-                    className="bg-white rounded-2xl p-7 border border-[#EAE8E3] text-center"
-                  >
-                    <i className={`${stat.icon} text-[#C4902A] text-3xl mb-3 block`}></i>
-                    <p
-                      className="font-serif font-bold text-[#1A1A1A] text-3xl mb-1"
-                      style={{ fontFamily: "'Playfair Display', Georgia, serif" }}
-                    >
-                      {stat.value}
-                    </p>
-                    <p className="text-[#8A8A8A] text-xs">{stat.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+function TeamSection() {
+  const [ref, visible] = useInView<HTMLDivElement>();
+  return (
+    <section className="bg-[#060606] py-20 px-6 lg:px-16 border-t border-[#1A1A1A]">
+      <div className="max-w-7xl mx-auto">
+        {/* Header */}
+        <div
+          ref={ref}
+          className={`mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+        >
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-7 h-[2px] bg-[#C9A84C]" />
+            <span className="text-[#C9A84C] text-[10px] font-medium tracking-[5px] uppercase">Leadership</span>
           </div>
-        </section>
-
-        {/* Our Mission */}
-        <section className="bg-[#1A1A1A] py-20">
-          <div className="max-w-3xl mx-auto px-6 text-center">
-            <i className="ri-sparkling-line text-[#C4902A] text-3xl mb-6 block"></i>
-            <blockquote
-              className="text-white font-serif leading-relaxed mb-6"
-              style={{
-                fontSize: "clamp(1.4rem, 2.5vw, 2rem)",
-                fontFamily: "'Playfair Display', Georgia, serif",
-              }}
-            >
-              &ldquo;At Park Lawn Heating, we strive to be in constant communication with our
-              customers until the job is done. If you have questions about any of our heating
-              and air conditioning services or require emergency assistance, please give us a
-              call.&rdquo;
-            </blockquote>
-            <p className="text-[#C4902A] text-sm font-semibold tracking-wide">
-              — Park Lawn Heating Team
-            </p>
-          </div>
-        </section>
-
-        {/* Contact ribbon */}
-        <div className="bg-[#C4902A] py-5 text-white text-center">
-          <p className="text-sm font-medium">
-            Questions? We&apos;re here to help. &nbsp;
-            <a href={`tel:${SITE.phonePlain}`} className="font-bold underline whitespace-nowrap">
-              {SITE.phone}
-            </a>
-            &nbsp;|&nbsp;
-            <a href={`mailto:${SITE.email}`} className="underline whitespace-nowrap">
-              {SITE.email}
-            </a>
+          <h2 className="font-heading text-white font-bold text-xl lg:text-2xl">Our Team</h2>
+          <p className="text-white/40 text-sm mt-3 max-w-xl leading-relaxed">
+            Former federal agents, law enforcement veterans, and intelligence professionals — each bringing decades of real-world field experience.
           </p>
         </div>
 
-        <AIAnswerBlock
-          headline="About Park Lawn Heating and Cooling Inc."
-          intro="Park Lawn Heating and Cooling Inc. is a locally owned and operated HVAC contractor based at 246 Park Lawn Road in Toronto, Ontario. We have served the Etobicoke community for nearly a decade with licensed, insured, and fully transparent heating and cooling services."
-          whatWeDo="We specialize in both residential and commercial HVAC including furnace and AC repair, boiler service, condo fan coil systems, heat pumps, hot water heaters, and indoor air quality products. Every technician is fully licensed and trained to industry standards."
-          services={[
-            "Established local contractor — nearly 10 years",
-            "Fully licensed &amp; insured technicians",
-            "Residential, commercial &amp; condo specialists",
-            "7 premium HVAC brands serviced",
-            "Transparent pricing with no hidden fees",
-            "5-star Google rated service",
-          ]}
-          benefits={[
-            "Community-focused, locally owned",
-            "Long-term relationships over one-time transactions",
-            "Honest assessment before recommendation",
-            "24/7 emergency availability",
-            "Constant communication throughout every job",
-          ]}
-          area="246 Park Lawn Road, Toronto, Ontario M8Y, Canada. Serving Etobicoke, Mimico, Humber Bay, Islington, Rexdale, and the greater Toronto west end."
-        />
+        {/* Members */}
+        <div>
+          {teamMembers.map((member, index) => (
+            <TeamMemberCard key={member.name} member={member} index={index} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
-        <ProcessSection
-          headline="Our Commitment to You"
-          subheadline="Every service call follows the same standard of excellence."
-          steps={PROCESS_STEPS}
-        />
+function AboutContent() {
+  const [ref, visible] = useInView<HTMLDivElement>();
+  return (
+    <section className="bg-[#080808] py-16 px-6 lg:px-16 border-t border-[#1A1A1A]">
+      <div
+        ref={ref}
+        className={`max-w-7xl mx-auto transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+          {/* Text */}
+          <div>
+            <div className="flex items-center gap-3 mb-5">
+              <div className="w-7 h-[2px] bg-[#C9A84C]" />
+              <span className="text-[#C9A84C] text-[10px] font-medium tracking-[5px] uppercase">Who We Are</span>
+            </div>
+            <h2 className="font-heading text-white font-bold text-xl lg:text-2xl mb-6 leading-tight">
+              Founded on a simple principle:<br />prevent the incident before it occurs.
+            </h2>
+            <div className="space-y-4 text-white/48 text-base leading-relaxed">
+              <p>
+                JNB Protection Group is an executive protection firm founded by former Federal, State, and Local Law Enforcement professionals. Every member of our team brings real field experience from careers in law enforcement — not civilian security backgrounds.
+              </p>
+              <p>
+                We operate with a proactive, intelligence-first approach. Before any deployment, we study the environment, map threats, and establish protocols — so your protection is ahead of any situation, not behind it.
+              </p>
+              <p>
+                Headquartered in League City, TX, with a global partner network spanning 100+ countries. Trusted by corporate executives, entertainment clients, private families, and legal professionals.
+              </p>
+            </div>
+            <div className="mt-7 pt-7 border-t border-[#161616] flex flex-col sm:flex-row gap-3">
+              <a
+                href="tel:+17139068273"
+                className="inline-flex items-center gap-2 bg-[#C9A84C] hover:bg-[#E2C97E] text-black font-heading font-bold px-6 py-3 text-xs tracking-widest uppercase transition-colors cursor-pointer whitespace-nowrap"
+              >
+                <i className="ri-phone-fill" /> 713.906.8273
+              </a>
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-2 border border-white/15 hover:border-[#C9A84C] text-white/60 hover:text-[#C9A84C] font-heading font-semibold px-6 py-3 text-xs tracking-widest uppercase transition-all cursor-pointer whitespace-nowrap"
+              >
+                Send a Message
+              </a>
+            </div>
+          </div>
 
-        <WhyChooseUs
-          headline="The Values Behind Every Service Call"
-          intro="Our company was built on honesty, expertise, and genuine care for our community. These are the principles that drive our work."
-          features={WHY_FEATURES}
-        />
+          {/* Credentials */}
+          <div className="space-y-0">
+            {credentials.map((c, i) => (
+              <div
+                key={c.label}
+                className={`flex items-start gap-4 py-4 ${i < credentials.length - 1 ? 'border-b border-[#161616]' : ''}`}
+              >
+                <div className="w-7 h-7 flex items-center justify-center shrink-0 mt-0.5">
+                  <i className={`${c.icon} text-[#C9A84C] text-sm`} />
+                </div>
+                <div>
+                  <p className="text-white font-heading font-semibold text-sm">{c.label}</p>
+                  <p className="text-white/32 text-sm mt-0.5">{c.sub}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
 
-        <ServiceAreasSection />
-
-        <TestimonialsSection />
-
-        <FAQSection
-          faqs={ABOUT_FAQS}
-          headline="About Park Lawn Heating — FAQ"
-          subheadline="Get to know your local Etobicoke HVAC specialists"
-        />
-
-        <LeadFormSection />
-
-        <FinalCTA
-          headline="Let\u2019s Work Together — Get in Touch Today"
-          subheadline="Etobicoke trusted heating and cooling team is ready to help. Call, email, or request service online."
-          ctaLabel="Contact Us Today"
-          ctaHref="/contact"
-        />
-      </main>
+export default function AboutPage() {
+  return (
+    <div className="min-h-screen bg-[#080808]">
+      <Navbar />
+      <HeroSection
+        h1="Discreet. Professional. Highly Trained."
+        subheadline="Founded by former law enforcement professionals. Built on a simple principle — prevent the incident before it occurs."
+        imageSrc="https://public.readdy.ai/ai/img_res/edited_7b9e08c633aad3321501519a1b4ae268_8976c376.jpg"
+        badge="About JNB Protection Group"
+        ctaPrimary={{ label: 'Contact Us', href: '#contact' }}
+        ctaSecondary={{ label: '713.906.8273', href: 'tel:+17139068273' }}
+        compact
+      />
+      <AboutContent />
+      <TeamSection />
+      <ContactSection />
       <Footer />
-    </>
+    </div>
   );
 }
