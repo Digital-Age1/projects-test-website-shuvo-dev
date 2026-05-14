@@ -1,117 +1,121 @@
-import Navbar from '@/components/feature/Navbar';
-import Footer from '@/components/feature/Footer';
-import HeroSection from '@/components/feature/HeroSection';
-import ContactSection from '@/components/feature/ContactSection';
-import { useInView } from '@/hooks/useInView';
-
-const services = [
-  {
-    icon: 'ri-vip-crown-fill',
-    category: 'PROTECTION',
-    title: 'Executive & Close Protection',
-    description: 'Former law enforcement professionals providing discreet, intelligence-led close protection tailored to your specific threat environment. Deployed in plainclothes or professional attire — presence without attention.',
-  },
-  {
-    icon: 'ri-radar-fill',
-    category: 'ADVANCE WORK',
-    title: 'Security Advances',
-    description: 'Comprehensive advance work at every venue, route, hotel, and transit point before your arrival. Every variable assessed, every contingency established — before you walk in the door.',
-  },
-  {
-    icon: 'ri-spy-fill',
-    category: 'INTELLIGENCE',
-    title: 'Intelligence-Based Protection',
-    description: 'Proactive threat identification and neutralization before incidents occur. Our intelligence-first methodology means we are always ahead of the threat — never responding to it.',
-  },
-  {
-    icon: 'ri-shield-check-fill',
-    category: 'ASSESSMENT',
-    title: 'Vulnerability Assessments',
-    description: 'Physical and site security assessments for estates, corporate campuses, events, and high-value properties. Conducted by specialists with experience securing major global events.',
-  },
-  {
-    icon: 'ri-flight-takeoff-fill',
-    category: 'TRAVEL',
-    title: 'International Travel Protection',
-    description: 'End-to-end protection for domestic and international travel. Coordinated through a global partner network spanning 100+ countries — every airport, hotel, and transit point covered.',
-  },
-  {
-    icon: 'ri-search-eye-fill',
-    category: 'INVESTIGATIONS',
-    title: 'Private Investigations',
-    description: 'Discreet, professional investigations for law firms, insurers, businesses, and private individuals. Confidential by default — delivered as actionable, documented intelligence.',
-  },
-  {
-    icon: 'ri-calendar-event-fill',
-    category: 'EVENTS',
-    title: 'High-Profile Event Security',
-    description: 'Full-scope security planning and execution for events of any scale — from intimate private gatherings to major industry engagements. Complete environmental control and principal safety.',
-  },
-  {
-    icon: 'ri-alert-fill',
-    category: 'CRISIS',
-    title: 'Crisis Management',
-    description: 'Rapid strategic guidance and controlled-environment resolution for complex, high-stakes situations. Experience managing real crises under real pressure — without compromise.',
-  },
-  {
-    icon: 'ri-building-4-fill',
-    category: 'CONSULTING',
-    title: 'Security Consulting',
-    description: 'Strategic security consulting for organizations navigating complex threat environments. From enterprise-level program design to workplace violence prevention protocols.',
-  },
-];
-
-function ServicesGrid() {
-  const [ref, visible] = useInView<HTMLDivElement>();
-  return (
-    <section className="bg-[#080808] py-16 px-6 lg:px-16 border-t border-[#1A1A1A]" id="services">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="w-7 h-[2px] bg-[#C9A84C]" />
-          <span className="text-[#C9A84C] text-[10px] font-medium tracking-[5px] uppercase">Capabilities</span>
-        </div>
-        <h2 className="font-heading text-white font-bold text-xl lg:text-2xl mb-10">All Services</h2>
-        <div
-          ref={ref}
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#181818] transition-all duration-700 ${visible ? 'opacity-100' : 'opacity-0'}`}
-        >
-          {services.map((s) => (
-            <div
-              key={s.title}
-              className="bg-[#080808] hover:bg-[#0C0C0C] p-7 group transition-all cursor-default border-l-2 border-transparent hover:border-[#C9A84C]/60"
-            >
-              <span className="text-[#C9A84C] text-sm font-medium tracking-[0.35em] uppercase block mb-2.5">{s.category}</span>
-              <div className="flex items-center gap-3 mb-3.5">
-                <div className="w-7 h-7 flex items-center justify-center shrink-0">
-                  <i className={`${s.icon} text-[#C9A84C] text-base`} />
-                </div>
-                <h3 className="font-heading text-white font-semibold text-base leading-tight">{s.title}</h3>
-              </div>
-              <p className="text-white/38 text-sm leading-relaxed">{s.description}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+import { Link } from 'react-router-dom';
+import PageHeader from '@/components/feature/PageHeader';
+import PageFooter from '@/components/feature/PageFooter';
+import ServicesHero from './components/ServicesHero';
+import ServicesGrid from './components/ServicesGrid';
+import ServiceDetails from './components/ServiceDetails';
+import ServicesFAQ from './components/ServicesFAQ';
+import ServicesIncludes from './components/ServicesIncludes';
+import { useSEO, SITE_URL } from '@/hooks/useSEO';
 
 export default function ServicesPage() {
+  useSEO({
+    title: 'Lawn Care & Landscaping Services | Trimming Edge Western Massachusetts',
+    description: 'Full-service lawn care and landscaping in Westfield, Huntington, Russell & Montgomery MA. Lawn mowing, landscape design, tree care, mulching, seasonal cleanups & commercial services. Free estimates.',
+    keywords: 'lawn care services Western MA, landscaping services Massachusetts, lawn mowing Westfield, tree trimming Huntington, mulching Russell MA, seasonal cleanup Montgomery MA',
+    canonical: '/services',
+    schemaJson: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${SITE_URL}/services`,
+      url: `${SITE_URL}/services`,
+      name: 'Lawn Care & Landscaping Services',
+      description: 'Full-service lawn care and landscaping services across Western Massachusetts.',
+      breadcrumb: {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+          { '@type': 'ListItem', position: 2, name: 'Services', item: `${SITE_URL}/services` },
+        ],
+      },
+    },
+  });
+
   return (
-    <div className="min-h-screen bg-[#080808]">
-      <Navbar />
-      <HeroSection
-        h1="Protection Services."
-        subheadline="Intelligence-led protection, advance work, investigations, and consulting — delivered by former law enforcement professionals."
-        imageSrc="https://public.readdy.ai/ai/img_res/edited_7b9e08c633aad3321501519a1b4ae268_aa794ca6.jpg"
-        badge="Services"
-        ctaPrimary={{ label: 'Contact Us', href: '#contact' }}
-        ctaSecondary={{ label: '713.906.8273', href: 'tel:+17139068273' }}
-        compact
-      />
-      <ServicesGrid />
-      <ContactSection />
-      <Footer />
+    <div className="min-h-screen bg-white">
+      <PageHeader />
+      <main>
+        <ServicesHero />
+
+        {/* Benefits */}
+        <section className="py-12 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <h2 className="font-display font-bold text-3xl text-gray-900 mb-3">
+                Why Choose Our Lawn Care Services?
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                We combine professional-grade equipment with personal attention to deliver results that consistently earn 5-star reviews across Western Massachusetts.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: 'ri-calendar-check-line',
+                  title: 'Consistent Scheduling',
+                  desc: 'We show up on the day we promise — every time. No ghosting, no rescheduling without notice.',
+                },
+                {
+                  icon: 'ri-tools-line',
+                  title: 'Professional Equipment',
+                  desc: 'Commercial-grade mowers, trimmers, and blowers for clean, efficient results on every property.',
+                },
+                {
+                  icon: 'ri-shield-check-line',
+                  title: 'Licensed & Insured',
+                  desc: 'Full Massachusetts licensing and insurance coverage for your peace of mind on every visit.',
+                },
+              ].map((item) => (
+                <div key={item.title} className="bg-white rounded-2xl p-6 border border-gray-100">
+                  <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
+                    <i className={`${item.icon} text-2xl text-primary-600`}></i>
+                  </div>
+                  <h3 className="font-display font-bold text-lg text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-sm text-gray-600">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <ServicesGrid />
+        <ServiceDetails />
+        <ServicesIncludes />
+        <ServicesFAQ />
+
+        {/* Trust Section */}
+        <section className="py-12 bg-white">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-primary-50 rounded-2xl p-8 md:p-10">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+                  <i className="ri-star-fill text-2xl text-primary-600"></i>
+                </div>
+                <div>
+                  <span className="text-sm font-semibold text-gray-900">5.0 · All Google Reviews</span>
+                  <p className="text-sm text-gray-600">Every review is 5 stars. That is not luck — it is consistency.</p>
+                </div>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Link
+                  to="/contact-us"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap"
+                >
+                  Get Free Estimate
+                </Link>
+                <a
+                  href="tel:+14135519653"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg border border-gray-200 hover:bg-gray-50 transition-colors whitespace-nowrap"
+                >
+                  <i className="ri-phone-line mr-2"></i>
+                  Call (413) 551-9653
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <PageFooter />
     </div>
   );
 }
