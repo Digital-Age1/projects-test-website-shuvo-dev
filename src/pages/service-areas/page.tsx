@@ -46,10 +46,10 @@ export default function ServiceAreasPage() {
       <PageHeader />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[500px] flex items-center overflow-hidden">
+        <section className="relative min-h-[500px] flex items-center overflow-hidden bg-gray-900">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://readdy.ai/api/search-image?query=aerial%20view%20of%20a%20beautiful%20New%20England%20small%20town%20with%20lush%20green%20tree-lined%20streets%2C%20well-maintained%20residential%20lawns%2C%20classic%20colonial%20homes%2C%20summer%2C%20Massachusetts%20countryside%2C%20blue%20sky%2C%20vibrant%20green%20landscape%2C%20wide%20panoramic%20shot&width=1920&height=800&seq=te_svareas_01&orientation=landscape"
+              src="https://readdy.ai/api/search-image?query=aerial%20view%20of%20a%20beautiful%20New%20England%20small%20town%20with%20lush%20green%20tree-lined%20streets%2C%20well-maintained%20residential%20lawns%2C%20classic%20colonial%20homes%2C%20summer%2C%20Massachusetts%20countryside%2C%20blue%20sky%2C%20vibrant%20green%20landscape%2C%20wide%20panoramic%20shot&width=1920&height=800&seq=te_svareas_02&orientation=landscape"
               alt="Trimming Edge Service Areas — Western Massachusetts"
               className="w-full h-full object-cover object-top"
             />

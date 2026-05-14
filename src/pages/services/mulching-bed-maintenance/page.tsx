@@ -60,14 +60,14 @@ export default function MulchingBedMaintenancePage() {
       <PageHeader />
 
       {/* Hero */}
-      <section className="relative h-[420px] md:h-[520px] w-full overflow-hidden">
+      <section className="relative h-[420px] md:h-[520px] w-full overflow-hidden bg-gray-900">
         <img
-          src="https://readdy.ai/api/search-image?query=fresh%20dark%20brown%20hardwood%20mulch%20being%20spread%20in%20beautiful%20garden%20beds%20around%20colorful%20flowering%20plants%20and%20shrubs%2C%20neat%20crisp%20edging%20along%20lawn%20border%2C%20professional%20mulching%20service%2C%20New%20England%20residential%20property%2C%20bright%20spring%20daylight%2C%20vibrant%20green%20plants%20against%20rich%20dark%20mulch&width=1400&height=600&seq=mulch_hero01&orientation=landscape"
+          src="https://readdy.ai/api/search-image?query=fresh%20dark%20brown%20hardwood%20mulch%20being%20spread%20in%20beautiful%20garden%20beds%20around%20colorful%20flowering%20plants%20and%20shrubs%2C%20neat%20crisp%20edging%20along%20lawn%20border%2C%20professional%20mulching%20service%2C%20New%20England%20residential%20property%2C%20bright%20spring%20daylight%2C%20vibrant%20green%20plants%20against%20rich%20dark%20mulch&width=1400&height=600&seq=mulch_hero02&orientation=landscape"
           alt="Mulching & Bed Maintenance"
-          className="w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover object-top z-0"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60 z-[1]"></div>
+        <div className="relative z-[2] h-full flex flex-col items-center justify-center text-center px-4">
           <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4">
             <i className="ri-contrast-drop-line text-white"></i>
             <span className="text-sm font-semibold text-white">Bed &amp; Mulch Services</span>
@@ -134,7 +134,7 @@ export default function MulchingBedMaintenancePage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden h-96">
               <img
-                src="https://readdy.ai/api/search-image?query=perfectly%20edged%20garden%20bed%20with%20fresh%20dark%20mulch%20and%20colorful%20flowering%20perennials%2C%20crisp%20clean%20lawn%20edge%20border%2C%20professional%20landscaping%20detail%2C%20vibrant%20green%20and%20red%20plants%20against%20rich%20dark%20brown%20mulch%2C%20New%20England%20residential%20yard%2C%20bright%20summer%20light&width=800&height=600&seq=mulch_detail01&orientation=landscape"
+                src="https://readdy.ai/api/search-image?query=perfectly%20edged%20garden%20bed%20with%20fresh%20dark%20mulch%20and%20colorful%20flowering%20perennials%2C%20crisp%20clean%20lawn%20edge%20border%2C%20professional%20landscaping%20detail%2C%20vibrant%20green%20and%20red%20plants%20against%20rich%20dark%20brown%20mulch%2C%20New%20England%20residential%20yard%2C%20bright%20summer%20light&width=800&height=600&seq=mulch_detail02&orientation=landscape"
                 alt="Fresh mulch and clean bed edges"
                 className="w-full h-full object-cover object-top"
               />

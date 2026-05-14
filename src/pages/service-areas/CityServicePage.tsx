@@ -80,7 +80,7 @@ export default function CityServicePage() {
       <PageHeader />
       <main>
         {/* Hero Banner */}
-        <section className="relative min-h-[480px] flex items-center overflow-hidden">
+        <section className="relative min-h-[480px] flex items-center overflow-hidden bg-gray-900">
           <div className="absolute inset-0 z-0">
             <img
               src="https://readdy.ai/api/search-image?query=professional%20landscaping%20team%20maintaining%20a%20beautiful%20green%20residential%20lawn%20with%20trimmed%20bushes%20and%20neat%20flower%20beds%20in%20Western%20Massachusetts%2C%20bright%20sunny%20day%2C%20clean%20simple%20background&width=800&height=500&seq=cityHero&orientation=landscape"

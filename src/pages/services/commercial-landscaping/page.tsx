@@ -67,14 +67,14 @@ export default function CommercialLandscapingPage() {
       <PageHeader />
 
       {/* Hero */}
-      <section className="relative h-[420px] md:h-[520px] w-full overflow-hidden">
+      <section className="relative h-[420px] md:h-[520px] w-full overflow-hidden bg-gray-900">
         <img
-          src="https://readdy.ai/api/search-image?query=immaculate%20commercial%20property%20landscape%20with%20perfectly%20manicured%20green%20lawn%20professional%20plantings%20colorful%20flower%20beds%20in%20front%20of%20modern%20office%20building%2C%20business%20landscaping%20service%2C%20clean%20tidy%20grounds%2C%20bright%20sunny%20day%2C%20wide%20angle%20showing%20full%20commercial%20property%20exterior&width=1400&height=600&seq=commercial_hero01&orientation=landscape"
+          src="https://readdy.ai/api/search-image?query=immaculate%20commercial%20property%20landscape%20with%20perfectly%20manicured%20green%20lawn%20professional%20plantings%20colorful%20flower%20beds%20in%20front%20of%20modern%20office%20building%2C%20business%20landscaping%20service%2C%20clean%20tidy%20grounds%2C%20bright%20sunny%20day%2C%20wide%20angle%20showing%20full%20commercial%20property%20exterior&width=1400&height=600&seq=commercial_hero02&orientation=landscape"
           alt="Commercial Landscaping"
-          className="w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover object-top z-0"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60 z-[1]"></div>
+        <div className="relative z-[2] h-full flex flex-col items-center justify-center text-center px-4">
           <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4">
             <i className="ri-building-line text-white"></i>
             <span className="text-sm font-semibold text-white">Commercial Services</span>
@@ -141,7 +141,7 @@ export default function CommercialLandscapingPage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden h-96 lg:order-1">
               <img
-                src="https://readdy.ai/api/search-image?query=well%20maintained%20commercial%20office%20building%20exterior%20with%20manicured%20green%20lawn%20trimmed%20hedges%20colorful%20seasonal%20plantings%20professional%20landscaping%2C%20clean%20tidy%20business%20property%20grounds%2C%20bright%20daylight%2C%20Western%20Massachusetts%20commercial%20property&width=800&height=600&seq=commercial_detail01&orientation=landscape"
+                src="https://readdy.ai/api/search-image?query=well%20maintained%20commercial%20office%20building%20exterior%20with%20manicured%20green%20lawn%20trimmed%20hedges%20colorful%20seasonal%20plantings%20professional%20landscaping%2C%20clean%20tidy%20business%20property%20grounds%2C%20bright%20daylight%2C%20Western%20Massachusetts%20commercial%20property&width=800&height=600&seq=commercial_detail02&orientation=landscape"
                 alt="Commercial property landscaping"
                 className="w-full h-full object-cover object-top"
               />

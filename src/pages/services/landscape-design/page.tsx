@@ -60,14 +60,14 @@ export default function LandscapeDesignPage() {
       <PageHeader />
 
       {/* Hero */}
-      <section className="relative h-[420px] md:h-[520px] w-full overflow-hidden">
+      <section className="relative h-[420px] md:h-[520px] w-full overflow-hidden bg-gray-900">
         <img
-          src="https://readdy.ai/api/search-image?query=beautifully%20designed%20front%20yard%20residential%20landscape%20with%20colorful%20blooming%20shrubs%20and%20perennials%20stone%20edged%20garden%20beds%20filled%20with%20fresh%20dark%20mulch%20native%20flowering%20plants%20winding%20stone%20path%20elegant%20New%20England%20colonial%20home%20exterior%20bright%20natural%20daylight%20vibrant%20greens%20and%20reds%20and%20yellows%2C%20professional%20landscape%20installation&width=1400&height=600&seq=landscape_hero01&orientation=landscape"
+          src="https://readdy.ai/api/search-image?query=beautifully%20designed%20front%20yard%20residential%20landscape%20with%20colorful%20blooming%20shrubs%20and%20perennials%20stone%20edged%20garden%20beds%20filled%20with%20fresh%20dark%20mulch%20native%20flowering%20plants%20winding%20stone%20path%20elegant%20New%20England%20colonial%20home%20exterior%20bright%20natural%20daylight%20vibrant%20greens%20and%20reds%20and%20yellows%2C%20professional%20landscape%20installation&width=1400&height=600&seq=landscape_hero02&orientation=landscape"
           alt="Landscape Design & Installation"
-          className="w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover object-top z-0"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60 z-[1]"></div>
+        <div className="relative z-[2] h-full flex flex-col items-center justify-center text-center px-4">
           <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4">
             <i className="ri-seedling-line text-white"></i>
             <span className="text-sm font-semibold text-white">Landscaping Services</span>
@@ -134,7 +134,7 @@ export default function LandscapeDesignPage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden h-96">
               <img
-                src="https://readdy.ai/api/search-image?query=stunning%20completed%20landscape%20installation%20with%20layered%20garden%20beds%20colorful%20perennials%20ornamental%20grasses%20stone%20border%20edging%20fresh%20dark%20mulch%20in%20front%20of%20beautiful%20New%20England%20home%2C%20professional%20landscaping%20result%2C%20bright%20summer%20afternoon%20light&width=800&height=600&seq=landscape_detail01&orientation=landscape"
+                src="https://readdy.ai/api/search-image?query=stunning%20completed%20landscape%20installation%20with%20layered%20garden%20beds%20colorful%20perennials%20ornamental%20grasses%20stone%20border%20edging%20fresh%20dark%20mulch%20in%20front%20of%20beautiful%20New%20England%20home%2C%20professional%20landscaping%20result%2C%20bright%20summer%20afternoon%20light&width=800&height=600&seq=landscape_detail02&orientation=landscape"
                 alt="Completed landscape installation"
                 className="w-full h-full object-cover object-top"
               />

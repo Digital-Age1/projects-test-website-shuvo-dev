@@ -5,10 +5,10 @@ interface CityHeroProps {
 
 export default function CityHero({ cityName, state }: CityHeroProps) {
   return (
-    <section className="relative min-h-[520px] flex items-center overflow-hidden">
+    <section className="relative min-h-[520px] flex items-center overflow-hidden bg-gray-900">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://readdy.ai/api/search-image?query=beautiful%20lush%20green%20residential%20lawn%20in%20a%20small%20New%20England%20town%2C%20perfectly%20mowed%20grass%2C%20mature%20trees%20lining%20the%20street%2C%20classic%20colonial%20homes%2C%20summer%20afternoon%20golden%20light%2C%20Massachusetts%20neighborhood%2C%20wide%20angle%2C%20no%20people%2C%20professional%20landscaping%2C%20vibrant%20green%20turf&width=1920&height=800&seq=te_cityhero_01&orientation=landscape"
+          src="https://readdy.ai/api/search-image?query=beautiful%20lush%20green%20residential%20lawn%20in%20a%20small%20New%20England%20town%2C%20perfectly%20mowed%20grass%2C%20mature%20trees%20lining%20the%20street%2C%20classic%20colonial%20homes%2C%20summer%20afternoon%20golden%20light%2C%20Massachusetts%20neighborhood%2C%20wide%20angle%2C%20no%20people%2C%20professional%20landscaping%2C%20vibrant%20green%20turf&width=1920&height=800&seq=te_cityhero_02&orientation=landscape"
           alt={`Lawn Care in ${cityName}, ${state}`}
           className="w-full h-full object-cover object-top"
         />

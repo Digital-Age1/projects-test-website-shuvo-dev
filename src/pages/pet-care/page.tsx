@@ -7,7 +7,7 @@ export default function PetCarePage() {
       <PageHeader />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[480px] flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-[480px] flex items-center justify-center overflow-hidden bg-gray-900">
           <div className="absolute inset-0">
             <img
               src="https://readdy.ai/api/search-image?query=happy%20golden%20retriever%20dog%20playing%20in%20a%20lush%20green%20backyard%20lawn%20on%20a%20sunny%20summer%20day%20in%20New%20England%2C%20well-maintained%20grass%2C%20white%20picket%20fence%2C%20bright%20blue%20sky%2C%20warm%20afternoon%20light%2C%20joyful%20pet%2C%20clean%20yard%2C%20Massachusetts%20residential%20home%20background&width=1920&height=800&seq=te_petcare_hero&orientation=landscape"

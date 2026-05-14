@@ -60,14 +60,14 @@ export default function TreeShrubCarePage() {
       <PageHeader />
 
       {/* Hero */}
-      <section className="relative h-[420px] md:h-[520px] w-full overflow-hidden">
+      <section className="relative h-[420px] md:h-[520px] w-full overflow-hidden bg-gray-900">
         <img
-          src="https://readdy.ai/api/search-image?query=precisely%20shaped%20ornamental%20hedges%20and%20boxwood%20shrubs%20along%20the%20foundation%20of%20a%20beautiful%20residential%20property%20in%20New%20England%2C%20professionally%20trimmed%20into%20perfect%20geometric%20forms%2C%20crisp%20clean%20lines%2C%20bright%20summer%20daylight%2C%20green%20garden%20with%20flowering%20border%20plants%2C%20clean%20tidy%20suburban%20yard%2C%20wide%20shot%20showing%20full%20hedge%20line&width=1400&height=600&seq=treeshrub_hero01&orientation=landscape"
+          src="https://readdy.ai/api/search-image?query=precisely%20shaped%20ornamental%20hedges%20and%20boxwood%20shrubs%20along%20the%20foundation%20of%20a%20beautiful%20residential%20property%20in%20New%20England%2C%20professionally%20trimmed%20into%20perfect%20geometric%20forms%2C%20crisp%20clean%20lines%2C%20bright%20summer%20daylight%2C%20green%20garden%20with%20flowering%20border%20plants%2C%20clean%20tidy%20suburban%20yard%2C%20wide%20shot%20showing%20full%20hedge%20line&width=1400&height=600&seq=treeshrub_hero02&orientation=landscape"
           alt="Tree & Shrub Care"
-          className="w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover object-top z-0"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60 z-[1]"></div>
+        <div className="relative z-[2] h-full flex flex-col items-center justify-center text-center px-4">
           <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full mb-4">
             <i className="ri-leaf-line text-white"></i>
             <span className="text-sm font-semibold text-white">Tree &amp; Shrub Services</span>
@@ -134,7 +134,7 @@ export default function TreeShrubCarePage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden h-96 lg:order-1">
               <img
-                src="https://readdy.ai/api/search-image?query=professional%20landscaper%20carefully%20pruning%20and%20shaping%20ornamental%20shrubs%20and%20small%20trees%20in%20a%20beautiful%20residential%20garden%2C%20precise%20trimming%20work%2C%20healthy%20green%20plants%2C%20New%20England%20yard%2C%20bright%20daylight%2C%20clean%20tidy%20property&width=800&height=600&seq=treeshrub_detail01&orientation=landscape"
+                src="https://readdy.ai/api/search-image?query=professional%20landscaper%20carefully%20pruning%20and%20shaping%20ornamental%20shrubs%20and%20small%20trees%20in%20a%20beautiful%20residential%20garden%2C%20precise%20trimming%20work%2C%20healthy%20green%20plants%2C%20New%20England%20yard%2C%20bright%20daylight%2C%20clean%20tidy%20property&width=800&height=600&seq=treeshrub_detail02&orientation=landscape"
                 alt="Professional tree and shrub trimming"
                 className="w-full h-full object-cover object-top"
               />

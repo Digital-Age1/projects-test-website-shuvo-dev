@@ -8,7 +8,7 @@ export default function TechnologyPage() {
       <PageHeader />
       <main>
         {/* Hero */}
-        <section className="relative min-h-[480px] flex items-center justify-center overflow-hidden">
+        <section className="relative min-h-[480px] flex items-center justify-center overflow-hidden bg-gray-900">
           <div className="absolute inset-0">
             <img
               src="https://readdy.ai/api/search-image?query=modern%20IT%20networking%20server%20room%20with%20glowing%20warm%20amber%20and%20white%20LED%20lights%2C%20organized%20cable%20management%2C%20professional%20network%20switches%20and%20routers%2C%20clean%20data%20center%20environment%2C%20technology%20infrastructure%2C%20dark%20background%20with%20warm%20accent%20lighting%2C%20high-tech%20professional%20setting%2C%20no%20blue%20or%20purple%20colors&width=1920&height=800&seq=te_tech_hero_v2&orientation=landscape"

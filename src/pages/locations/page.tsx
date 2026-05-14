@@ -77,7 +77,7 @@ function ServiceAreaIntro() {
 
 function NearMeSection() {
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section className="py-20 relative overflow-hidden bg-gray-900">
       <div className="absolute inset-0 z-0">
         <img
           src="https://readdy.ai/api/search-image?query=bird%20eye%20view%20of%20a%20quiet%20residential%20neighborhood%20with%20green%20lawns%20and%20trees%2C%20New%20England%20town%2C%20summer%2C%20aerial%20perspective%2C%20blue%20sky%2C%20Massachusetts&width=1920&height=700&seq=te319_10&orientation=landscape"
