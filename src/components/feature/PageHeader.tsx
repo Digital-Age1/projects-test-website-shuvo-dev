@@ -8,25 +8,17 @@ const servicesSubLinks = [
   { label: 'Seasonal Cleanups', path: '/services/seasonal-cleanups' },
   { label: 'Mulching & Bed Maintenance', path: '/services/mulching-bed-maintenance' },
   { label: 'Commercial Landscaping', path: '/services/commercial-landscaping' },
-  { label: 'Pet Care', path: '/pet-care' },
-  { label: 'Technology', path: '/technology' },
 ];
 
 const aboutSubLinks = [
   { label: 'About Us', path: '/about' },
-  { label: 'History', path: '/history' },
   { label: 'Our Work', path: '/our-work' },
-  { label: 'Speedtest', path: '/speedtest' },
-  { label: 'Updates', path: '/updates' },
-  { label: 'Wolf Radio', path: '/wolf-radio' },
 ];
 
 const serviceAreaCities = [
-  { label: 'Agawam, MA', path: '/service-areas/agawam-ma' },
   { label: 'Huntington, MA', path: '/service-areas/huntington-ma' },
   { label: 'Montgomery, MA', path: '/service-areas/montgomery-ma' },
   { label: 'Russell, MA', path: '/service-areas/russell-ma' },
-  { label: 'Southwick, MA', path: '/service-areas/southwick-ma' },
   { label: 'Westfield, MA', path: '/service-areas/westfield-ma' },
 ];
 
@@ -44,7 +36,7 @@ export default function PageHeader() {
   const aboutRef = useRef<HTMLDivElement>(null);
   const serviceAreasRef = useRef<HTMLDivElement>(null);
 
-  const isServicesActive = pathname.startsWith('/services') || pathname === '/pet-care' || pathname === '/technology';
+  const isServicesActive = pathname.startsWith('/services');
   const isAboutActive = aboutSubLinks.some((l) => pathname === l.path);
   const isServiceAreasActive = pathname.startsWith('/service-areas');
 
@@ -99,17 +91,12 @@ export default function PageHeader() {
                       <i className="ri-layout-grid-line mr-2 text-primary-500"></i>
                       All Services
                     </Link>
-                    {servicesSubLinks.map((sub, idx) => (
-                      <>
-                        {idx === 6 && (
-                          <div key="divider" className="border-t border-gray-100 my-1"></div>
-                        )}
-                        <Link key={sub.path} to={sub.path} onClick={() => setIsServicesOpen(false)}
-                          className={`flex items-center px-4 py-2.5 text-sm transition-colors ${pathname === sub.path ? 'text-primary-600 font-semibold bg-primary-50' : 'text-gray-700 hover:bg-gray-50 hover:text-primary-600'}`}>
-                          <i className="ri-arrow-right-s-line mr-1 text-gray-400"></i>
-                          {sub.label}
-                        </Link>
-                      </>
+                    {servicesSubLinks.map((sub) => (
+                      <Link key={sub.path} to={sub.path} onClick={() => setIsServicesOpen(false)}
+                        className={`flex items-center px-4 py-2.5 text-sm transition-colors ${pathname === sub.path ? 'text-primary-600 font-semibold bg-primary-50' : 'text-gray-700 hover:bg-gray-50 hover:text-primary-600'}`}>
+                        <i className="ri-arrow-right-s-line mr-1 text-gray-400"></i>
+                        {sub.label}
+                      </Link>
                     ))}
                   </div>
                 )}

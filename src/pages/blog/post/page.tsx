@@ -89,7 +89,7 @@ function PostContent({ post }: { post: (typeof blogPosts)[0] }) {
             );
           })
         ) : (
-          post.content.map((section, idx) => {
+          (post.content as Array<{ type: string; text?: string; items?: string[] }>).map((section, idx) => {
             if (section.type === 'paragraph') {
               return (
                 <p key={idx} className="text-gray-700 text-base leading-relaxed">

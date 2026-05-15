@@ -19,10 +19,10 @@ export default function PageFooter() {
               Locally operated lawn care &amp; landscaping serving Western Massachusetts with 5-star results.
             </p>
             <div className="flex items-center space-x-4">
-              <a href="#" className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-lg hover:bg-primary-600 transition-colors" aria-label="Facebook">
+              <a href="https://facebook.com/trimmingedgema" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-lg hover:bg-primary-600 transition-colors" aria-label="Facebook">
                 <i className="ri-facebook-fill text-lg"></i>
               </a>
-              <a href="#" className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-lg hover:bg-primary-600 transition-colors" aria-label="Instagram">
+              <a href="http://instagram.com/TrimmingEdge" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center bg-white/10 rounded-lg hover:bg-primary-600 transition-colors" aria-label="Instagram">
                 <i className="ri-instagram-line text-lg"></i>
               </a>
             </div>
