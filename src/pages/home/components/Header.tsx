@@ -9,17 +9,25 @@ const servicesSubLinks = [
   { label: 'Seasonal Cleanups', path: '/services/seasonal-cleanups' },
   { label: 'Mulching & Bed Maintenance', path: '/services/mulching-bed-maintenance' },
   { label: 'Commercial Landscaping', path: '/services/commercial-landscaping' },
+  { label: 'Pet Care', path: '/pet-care' },
+  { label: 'Technology', path: '/technology' },
 ];
 
 const aboutSubLinks = [
   { label: 'About Us', path: '/about' },
+  { label: 'History', path: '/history' },
   { label: 'Our Work', path: '/our-work' },
+  { label: 'Speedtest', path: '/speedtest' },
+  { label: 'Updates', path: '/updates' },
+  { label: 'Wolf Radio', path: '/wolf-radio' },
 ];
 
 const serviceAreaCities = [
+  { label: 'Agawam, MA', path: '/service-areas/agawam-ma' },
   { label: 'Huntington, MA', path: '/service-areas/huntington-ma' },
   { label: 'Montgomery, MA', path: '/service-areas/montgomery-ma' },
   { label: 'Russell, MA', path: '/service-areas/russell-ma' },
+  { label: 'Southwick, MA', path: '/service-areas/southwick-ma' },
   { label: 'Westfield, MA', path: '/service-areas/westfield-ma' },
 ];
 
@@ -38,7 +46,7 @@ export default function Header() {
   const serviceAreasRef = useRef<HTMLDivElement>(null);
   const { pathname } = useLocation();
 
-  const isServicesActive = pathname.startsWith('/services');
+  const isServicesActive = pathname.startsWith('/services') || servicesSubLinks.some((l) => pathname === l.path);
   const isAboutActive = aboutSubLinks.some((l) => pathname === l.path);
   const isServiceAreasActive = pathname.startsWith('/service-areas');
 
@@ -108,7 +116,7 @@ export default function Header() {
                   <i className={`ri-arrow-down-s-line text-base transition-transform duration-200 ${isServicesOpen ? 'rotate-180' : ''}`}></i>
                 </button>
                 {isServicesOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl border border-gray-200 py-2 z-[100] shadow-lg">
+                  <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-xl border border-gray-200 py-2 z-[100] shadow-lg">
                     <Link to="/services" onClick={() => setIsServicesOpen(false)}
                       className={`flex items-center px-4 py-2.5 text-sm font-semibold transition-colors border-b border-gray-100 mb-1 ${pathname === '/services' ? 'text-primary-600 bg-primary-50' : 'text-gray-900 hover:bg-gray-50 hover:text-primary-600'}`}>
                       <i className="ri-layout-grid-line mr-2 text-primary-500"></i>
@@ -133,7 +141,7 @@ export default function Header() {
                   <i className={`ri-arrow-down-s-line text-base transition-transform ${isAboutOpen ? 'rotate-180' : ''}`}></i>
                 </button>
                 {isAboutOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-48 bg-white rounded-xl border border-gray-100 py-2 z-50">
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-52 bg-white rounded-xl border border-gray-100 py-2 z-50">
                     {aboutSubLinks.map((sub) => (
                       <Link key={sub.path} to={sub.path} onClick={() => setIsAboutOpen(false)}
                         className={`block px-4 py-2.5 text-sm transition-colors ${pathname === sub.path ? 'text-primary-600 font-semibold bg-primary-50' : 'text-gray-700 hover:bg-gray-50 hover:text-primary-600'}`}>
