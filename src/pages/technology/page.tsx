@@ -11,7 +11,7 @@ export default function TechnologyPage() {
         <section className="relative min-h-[480px] flex items-center justify-center overflow-hidden bg-gray-900">
           <div className="absolute inset-0">
             <img
-              src="/uploads/about-difference-truck.jpg"
+              src="/uploads/hero-technology-server-room.jpg"
               alt="Technology & IT Solutions — Trimming Edge"
               className="w-full h-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
@@ -66,7 +66,7 @@ export default function TechnologyPage() {
               </div>
               <div className="w-full h-80 rounded-xl overflow-hidden">
                 <img
-                  src="/uploads/city-company.jpg"
+                  src="/uploads/technology-computer-repair.jpg"
                   alt="IT Computer Solutions"
                   className="w-full h-full object-cover object-top" />
               </div>
@@ -78,8 +78,11 @@ export default function TechnologyPage() {
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div className="w-full h-80 rounded-xl overflow-hidden bg-gray-200 flex items-center justify-center order-2 lg:order-1">
-                <i className="ri-router-line text-8xl text-gray-400"></i>
+              <div className="w-full h-80 rounded-xl overflow-hidden order-2 lg:order-1">
+                <img
+                  src="/uploads/technology-network-setup.jpg"
+                  alt="Business Network Setup"
+                  className="w-full h-full object-cover object-top" />
               </div>
               <div className="order-1 lg:order-2">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
@@ -131,7 +134,7 @@ export default function TechnologyPage() {
               </div>
               <div className="w-full h-80 rounded-xl overflow-hidden">
                 <img
-                  src="/uploads/city-commercial.jpg"
+                  src="/uploads/technology-network-setup.jpg"
                   alt="Business Network Solutions"
                   className="w-full h-full object-cover object-top" />
               </div>
@@ -145,7 +148,7 @@ export default function TechnologyPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="w-full h-80 rounded-xl overflow-hidden order-2 lg:order-1">
                 <img
-                  src="/uploads/about-gallery-equipment.jpg"
+                  src="/uploads/technology-remote-support.jpg"
                   alt="Remote IT Troubleshooting"
                   className="w-full h-full object-cover object-top" />
               </div>

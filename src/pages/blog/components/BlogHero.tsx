@@ -2,7 +2,7 @@ export default function BlogHero() {
   return (
     <section className="relative h-72 md:h-96 overflow-hidden bg-gray-900">
       <img
-        src="/uploads/about-gallery-banner.jpg"
+        src="/uploads/hero-blog-gardening-flowers.jpg"
         alt="Trimming Edge Blog"
         className="absolute inset-0 w-full h-full object-cover object-top z-0" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60 z-[1] flex items-center justify-center">

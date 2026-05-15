@@ -43,11 +43,15 @@ export default function SpeedtestPage() {
             <div className="rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
               <iframe
                 width="100%"
-                height="650px"
+                height="650"
+                className="block w-full min-h-[650px] bg-white"
                 style={{ border: 0 }}
-                src="https://trimming-edge.speedtestcustom.com"
+                src="https://trimming-edge.speedtestcustom.com/"
                 title="Trimming Edge Network Speed Test"
                 allow="fullscreen"
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
             <p className="text-gray-600 text-xs text-center mt-4">

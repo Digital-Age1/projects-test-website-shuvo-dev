@@ -80,7 +80,7 @@ export default function ContactPage() {
         <section className="relative py-24 overflow-hidden bg-gray-900">
           <div className="absolute inset-0">
             <img
-              src="/uploads/home-free-estimate.jpg"
+              src="/uploads/hero-contact-landscape-garden.jpg"
               alt="Contact Trimming Edge Landscaping"
               className="w-full h-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-br from-primary-900/60 to-black/50"></div>

@@ -10,7 +10,7 @@ export default function PetCarePage() {
         <section className="relative min-h-[480px] flex items-center justify-center overflow-hidden bg-gray-900">
           <div className="absolute inset-0">
             <img
-              src="/uploads/hero-home.jpg"
+              src="/uploads/hero-pet-care-dog-lawn.jpg"
               alt="Pet Care Services — Trimming Edge"
               className="w-full h-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
@@ -49,7 +49,7 @@ export default function PetCarePage() {
               </div>
               <div className="w-full h-72 rounded-xl overflow-hidden">
                 <img
-                  src="/uploads/home-about-team.jpg"
+                  src="/uploads/pet-care-family-dog.jpg"
                   alt="Quality Pet Care"
                   className="w-full h-full object-cover object-top" />
               </div>
