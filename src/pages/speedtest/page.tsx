@@ -29,7 +29,7 @@ export default function SpeedtestPage() {
         </section>
 
         {/* Speed Test Embed */}
-        <section className="py-10 bg-gray-950">
+        <section className="py-10 bg-black">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Link
@@ -40,21 +40,28 @@ export default function SpeedtestPage() {
                 Back to Technology Services
               </Link>
             </div>
-            <div className="rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
+            <div className="rounded-2xl overflow-hidden border border-gray-800 shadow-2xl bg-black">
               <iframe
                 width="100%"
-                height="650"
-                className="block w-full min-h-[650px] bg-white"
+                height="650px"
+                className="block w-full"
                 style={{ border: 0 }}
                 src="https://trimming-edge.speedtestcustom.com/"
                 title="Trimming Edge Network Speed Test"
                 allow="fullscreen"
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-            <p className="text-gray-600 text-xs text-center mt-4">
+            <div className="text-center mt-4">
+              <a
+                href="https://trimming-edge.speedtestcustom.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white rounded-full border border-gray-700 hover:bg-gray-800 transition"
+              >
+                Open Speed Test
+              </a>
+            </div>
+            <p className="text-gray-400 text-xs text-center mt-4">
               All trademarks of Ookla, LLC, including Speedtest®, are used under license.
             </p>
           </div>
