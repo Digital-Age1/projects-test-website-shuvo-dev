@@ -102,7 +102,7 @@ export default function ColoradoSpringsPage() {
       <HeroSection
         h1="League City &amp; Houston, TX."
         subheadline="Executive protection and security services throughout Texas — with global deployments available on request."
-        imageSrc="https://public.readdy.ai/ai/img_res/edited_7b9e08c633aad3321501519a1b4ae268_915ffc50.jpg"
+        imageSrc="/uploads/hero-lawn-care.jpg"
         badge="League City & Houston, TX"
         ctaPrimary={{ label: 'Contact Us', href: '#contact' }}
         ctaSecondary={{ label: '713.906.8273', href: 'tel:+17139068273' }}

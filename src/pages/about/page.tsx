@@ -12,32 +12,32 @@ import { useSEO, SITE_URL } from '@/hooks/useSEO';
 function AboutWorkGallery() {
   const shots = [
     {
-      src: 'https://readdy.ai/api/search-image?query=close%20up%20of%20a%20lawn%20edger%20creating%20a%20clean%20sharp%20edge%20between%20grass%20and%20concrete%20driveway%2C%20green%20lawn%2C%20residential%20yard%2C%20bright%20daylight&width=700&height=500&seq=te319_06&orientation=landscape',
+      src: '/uploads/hero-lawn-care.jpg',
       alt: 'Professional lawn edging service',
       label: 'Precision Edging',
     },
     {
-      src: 'https://readdy.ai/api/search-image?query=commercial%20riding%20mower%20cutting%20perfect%20stripes%20on%20large%20lush%20green%20residential%20lawn%20in%20Western%20Massachusetts%2C%20beautiful%20straight%20mowing%20lines%2C%20bright%20morning%20sunlight%2C%20vibrant%20healthy%20turf%2C%20no%20people%20visible%20just%20equipment&width=700&height=500&seq=gallery_mow02&orientation=landscape',
+      src: '/uploads/hero-lawn-care.jpg',
       alt: 'Lawn mowing with commercial equipment',
       label: 'Lawn Mowing',
     },
     {
-      src: 'https://readdy.ai/api/search-image?query=neatly%20trimmed%20ornamental%20hedges%20and%20shrubs%20along%20beautiful%20New%20England%20home%20foundation%2C%20professional%20hedge%20trimming%20result%2C%20crisp%20clean%20lines%2C%20flowering%20plants%2C%20well%20maintained%20garden%20bed%2C%20bright%20daylight&width=700&height=500&seq=gallery_shrub02&orientation=landscape',
+      src: '/uploads/hero-lawn-care.jpg',
       alt: 'Hedge and shrub trimming',
       label: 'Shrub Trimming',
     },
     {
-      src: 'https://readdy.ai/api/search-image?query=freshly%20installed%20dark%20mulch%20garden%20beds%20around%20trees%20and%20shrubs%20in%20residential%20landscape%20Western%20Massachusetts%2C%20clean%20defined%20edges%2C%20vibrant%20green%20plants%2C%20neat%20decorative%20border%2C%20professional%20landscaping%20result%2C%20bright%20daylight&width=700&height=500&seq=gallery_mulch02&orientation=landscape',
+      src: '/uploads/hero-lawn-care.jpg',
       alt: 'Mulch bed installation',
       label: 'Mulching & Beds',
     },
     {
-      src: 'https://readdy.ai/api/search-image?query=lawn%20care%20equipment%20trailer%20loaded%20with%20commercial%20mowers%20string%20trimmers%20and%20blowers%20parked%20on%20residential%20street%2C%20green%20branded%20truck%2C%20professional%20setup%20ready%20for%20service%2C%20New%20England%20suburban%20neighborhood%2C%20bright%20morning&width=700&height=500&seq=gallery_truck02&orientation=landscape',
+      src: '/uploads/hero-lawn-care.jpg',
       alt: 'Trimming Edge professional equipment',
       label: 'Professional Equipment',
     },
     {
-      src: 'https://readdy.ai/api/search-image?query=beautiful%20lush%20green%20lawn%20after%20professional%20landscaping%20service%20completed%2C%20perfectly%20mowed%20and%20edged%20residential%20yard%2C%20clean%20curb%20appeal%2C%20vibrant%20healthy%20grass%2C%20flowers%20along%20foundation%2C%20New%20England%20home%20exterior%2C%20bright%20summer%20day&width=700&height=500&seq=gallery_result02&orientation=landscape',
+      src: '/uploads/hero-lawn-care.jpg',
       alt: 'Completed lawn care result',
       label: 'Completed Results',
     },
@@ -77,7 +77,7 @@ function AboutWorkGallery() {
 
         <div className="relative rounded-3xl overflow-hidden h-64">
           <img
-            src="https://readdy.ai/api/search-image?query=wide%20shot%20of%20beautifully%20completed%20lawn%20care%20on%20stunning%20New%20England%20residential%20property%2C%20perfectly%20mowed%20striped%20lawn%20crisp%20edging%20clean%20garden%20beds%20fresh%20mulch%2C%20golden%20hour%20warm%20light%2C%20vibrant%20lush%20property%2C%20neighborhood%20curb%20appeal%20at%20its%20finest&width=1600&height=600&seq=gallery_banner02&orientation=landscape"
+            src="/uploads/hero-lawn-care.jpg"
             alt="Trimming Edge completed lawn care result"
             className="w-full h-full object-cover object-center"
           />
@@ -155,7 +155,7 @@ function AboutWhatsDifferent() {
           </div>
           <div className="relative rounded-3xl overflow-hidden h-72">
             <img
-              src="https://readdy.ai/api/search-image?query=professional%20green%20lawn%20care%20truck%20and%20branded%20equipment%20trailer%20parked%20in%20front%20of%20beautiful%20large%20well-kept%20residential%20property%20in%20Western%20Massachusetts%2C%20commercial%20mowers%20visible%2C%20clean%20professional%20setup%2C%20bright%20sunny%20day%2C%20green%20grass%20perfectly%20maintained%2C%20no%20people&width=900&height=600&seq=diff_truck02&orientation=landscape"
+              src="/uploads/hero-lawn-care.jpg"
               alt="Trimming Edge professional equipment and service"
               className="w-full h-full object-cover object-top"
             />

@@ -1,17 +1,17 @@
 import { BlogPost } from '@/mocks/blogPosts1';
 
-const IMG_LOCAL = 'https://readdy.ai/api/search-image?query=professional%20landscaping%20team%20maintaining%20a%20beautiful%20green%20residential%20lawn%20with%20trimmed%20bushes%20and%20neat%20flower%20beds%20in%20Western%20Massachusetts%2C%20bright%20sunny%20day%2C%20clean%20simple%20background&width=600&height=400&seq=blogLocal&orientation=landscape';
-const IMG_HEIDI = 'https://readdy.ai/api/search-image?query=beautiful%20German%20Shepherd%20dog%20sitting%20in%20a%20well-maintained%20green%20backyard%20garden%20with%20blooming%20flowers%2C%20happy%20family%20pet%20in%20landscaped%20yard%2C%20warm%20sunlight&width=600&height=400&seq=blogHeidi&orientation=landscape';
-const IMG_CABIN = 'https://readdy.ai/api/search-image?query=cozy%20rustic%20cabin%20home%20with%20professionally%20maintained%20landscape%2C%20manicured%20lawn%2C%20colorful%20flower%20beds%2C%20and%20neatly%20trimmed%20shrubs%20in%20Western%20Massachusetts%20countryside&width=600&height=400&seq=blogCabin&orientation=landscape';
-const IMG_COMMERCIAL = 'https://readdy.ai/api/search-image?query=well-maintained%20commercial%20property%20with%20professional%20landscaping%2C%20manicured%20lawn%2C%20decorative%20shrubs%2C%20and%20clean%20parking%20lot%20in%20Western%20Massachusetts&width=600&height=400&seq=blogCommercial&orientation=landscape';
-const IMG_LAWN = 'https://readdy.ai/api/search-image?query=lush%20green%20healthy%20lawn%20with%20perfect%20mowing%20stripes%2C%20freshly%20cut%20grass%20in%20residential%20yard%20with%20garden%20beds%20and%20blue%20sky%20in%20Western%20Massachusetts&width=600&height=400&seq=blogLawn&orientation=landscape';
-const IMG_FACEBOOK = 'https://readdy.ai/api/search-image?query=professional%20lawn%20care%20team%20working%20on%20residential%20property%20with%20green%20grass%20trimmed%20hedges%20and%20blooming%20flowers%2C%20community%20focused%20outdoor%20service%20work&width=600&height=400&seq=blogSocial&orientation=landscape';
-const IMG_CHERRY = 'https://readdy.ai/api/search-image?query=beautiful%20spring%20cherry%20blossom%20tree%20in%20a%20well-maintained%20residential%20garden%20with%20lush%20green%20lawn%20and%20trimmed%20hedges%20in%20Western%20Massachusetts&width=600&height=400&seq=blogCherry&orientation=landscape';
-const IMG_MEADOW = 'https://readdy.ai/api/search-image?query=peaceful%20meadow%20landscape%20with%20wildflowers%20and%20green%20grass%2C%20professional%20lawn%20care%20maintenance%20in%20Western%20Massachusetts%20natural%20setting&width=600&height=400&seq=blogMeadow&orientation=landscape';
-const IMG_GRASS_SEED = 'https://readdy.ai/api/search-image?query=close%20up%20of%20fresh%20grass%20seed%20being%20spread%20on%20rich%20dark%20soil%2C%20new%20lawn%20establishment%20process%2C%20gardening%20and%20landscaping%20preparation%20work&width=600&height=400&seq=blogSeed&orientation=landscape';
-const IMG_SPROUTS = 'https://readdy.ai/api/search-image?query=fresh%20green%20grass%20seedlings%20sprouting%20from%20soil%2C%20new%20lawn%20growth%20with%20morning%20dew%20drops%2C%20healthy%20grass%20germination%20process&width=600&height=400&seq=blogSprouts&orientation=landscape';
-const IMG_TRUCK = 'https://readdy.ai/api/search-image?query=professional%20landscaping%20service%20truck%20with%20equipment%20parked%20in%20front%20of%20a%20beautifully%20maintained%20residential%20property%20with%20green%20lawn%20and%20trimmed%20bushes&width=600&height=400&seq=blogTruck&orientation=landscape';
-const IMG_AUTUMN = 'https://readdy.ai/api/search-image?query=beautiful%20autumn%20residential%20lawn%20with%20colorful%20fall%20leaves%2C%20professional%20seasonal%20cleanup%20service%20in%20Western%20Massachusetts%2C%20well-maintained%20property&width=600&height=400&seq=blogAutumn&orientation=landscape';
+const IMG_LOCAL = '/uploads/hero-lawn-care.jpg';
+const IMG_HEIDI = '/uploads/hero-lawn-care.jpg';
+const IMG_CABIN = '/uploads/hero-lawn-care.jpg';
+const IMG_COMMERCIAL = '/uploads/hero-lawn-care.jpg';
+const IMG_LAWN = '/uploads/hero-lawn-care.jpg';
+const IMG_FACEBOOK = '/uploads/hero-lawn-care.jpg';
+const IMG_CHERRY = '/uploads/hero-lawn-care.jpg';
+const IMG_MEADOW = '/uploads/hero-lawn-care.jpg';
+const IMG_GRASS_SEED = '/uploads/hero-lawn-care.jpg';
+const IMG_SPROUTS = '/uploads/hero-lawn-care.jpg';
+const IMG_TRUCK = '/uploads/hero-lawn-care.jpg';
+const IMG_AUTUMN = '/uploads/hero-lawn-care.jpg';
 
 export const southwickPosts: BlogPost[] = [
   {

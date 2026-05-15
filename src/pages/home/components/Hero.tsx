@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import home from '@/content/home.json';
+import site from '@/content/site.json';
 
 export default function Hero() {
   return (
@@ -6,7 +8,7 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://readdy.ai/api/search-image?query=stunning%20aerial%20view%20of%20perfectly%20manicured%20residential%20lawn%20and%20landscape%20with%20vibrant%20green%20grass%20beautiful%20trees%20and%20professional%20landscaping%20design%2C%20bright%20natural%20lighting%2C%20modern%20home%20exterior%2C%20clean%20minimalist%20background%20with%20soft%20bokeh%20effect&width=1920&height=1080&seq=hero1&orientation=landscape"
+          src={home.hero.image}
           alt="Professional Lawn Care"
           className="w-full h-full object-cover"
         />
@@ -18,23 +20,23 @@ export default function Hero() {
         {/* Trust Badge */}
         <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/95 backdrop-blur-sm rounded-full mb-8">
           <i className="ri-star-fill text-accent-500 text-lg"></i>
-          <span className="text-sm font-semibold text-gray-900">5.0/5 Google Rating</span>
-          <span className="text-gray-400">•</span>
-          <span className="text-sm text-gray-600">5-Star Rated</span>
-          <span className="text-gray-400">•</span>
-          <span className="text-sm text-gray-600">Locally Owned</span>
+          <span className="text-sm font-semibold text-gray-900">{home.hero.badge[0]}</span>
+          <span className="text-gray-400">-</span>
+          <span className="text-sm text-gray-600">{home.hero.badge[1]}</span>
+          <span className="text-gray-400">-</span>
+          <span className="text-sm text-gray-600">{home.hero.badge[2]}</span>
         </div>
 
         {/* Main Headline */}
         <h2 className="font-display font-bold text-5xl sm:text-6xl lg:text-7xl text-white mb-6 leading-tight">
-          Transform Your Outdoor Space
+          {home.hero.headline}
           <br />
-          <span className="text-primary-400">With Expert Care</span>
+          <span className="text-primary-400">{home.hero.highlight}</span>
         </h2>
 
         {/* Subheadline */}
         <p className="text-xl sm:text-2xl text-white mb-10 max-w-3xl mx-auto leading-relaxed drop-shadow-lg">
-          Professional <strong>lawn care</strong> and <strong>landscaping services</strong> in Westfield, Huntington, Russell &amp; Montgomery, MA. Licensed, insured, and trusted by homeowners and businesses across Western Massachusetts.
+          {home.hero.description}
         </p>
 
         {/* CTA Buttons */}
@@ -46,11 +48,11 @@ export default function Hero() {
             Get Free Estimate
           </Link>
           <a
-            href="tel:+14135519653"
+            href={site.phoneHref}
             className="w-full sm:w-auto px-8 py-4 bg-white text-gray-900 text-lg font-bold rounded-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-xl whitespace-nowrap"
           >
             <i className="ri-phone-line mr-2"></i>
-            (413) 551-9653
+            {site.phone}
           </a>
         </div>
 

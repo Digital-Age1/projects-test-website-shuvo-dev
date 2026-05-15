@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import site from '@/content/site.json';
 
 const servicesSubLinks = [
   { label: 'Lawn Mowing & Maintenance', path: '/services/lawn-mowing' },
@@ -22,11 +23,9 @@ const aboutSubLinks = [
 ];
 
 const serviceAreaCities = [
-  { label: 'Agawam, MA', path: '/service-areas/agawam-ma' },
   { label: 'Huntington, MA', path: '/service-areas/huntington-ma' },
   { label: 'Montgomery, MA', path: '/service-areas/montgomery-ma' },
   { label: 'Russell, MA', path: '/service-areas/russell-ma' },
-  { label: 'Southwick, MA', path: '/service-areas/southwick-ma' },
   { label: 'Westfield, MA', path: '/service-areas/westfield-ma' },
 ];
 
@@ -94,7 +93,7 @@ export default function Header() {
             {/* Logo */}
             <Link to="/" className="flex items-center">
               <img
-                src="https://storage.readdy-site.link/project_files/06569fef-aef2-4c64-b2a6-c762b53898e6/4c302328-1049-4884-9eb6-a81a1fd3d561_TrimmingEdgelogo-1920w.png?v=086f99166582422d1c90bf8e8c042030"
+                src={site.logo}
                 alt="Trimming Edge Logo"
                 className="h-12 w-auto object-contain"
               />
@@ -185,12 +184,12 @@ export default function Header() {
 
             {/* CTA */}
             <div className="hidden lg:flex items-center space-x-3">
-              <a href="tel:+14135519653"
+              <a href={site.phoneHref}
                 className={`flex items-center space-x-2 text-sm font-semibold transition-colors whitespace-nowrap ${isScrolled ? 'text-gray-900 hover:text-primary-600' : 'text-white hover:text-primary-300'}`}>
                 <i className="ri-phone-line text-lg"></i>
-                <span>(413) 551-9653</span>
+                <span>{site.phone}</span>
               </a>
-              <a href="https://clienthub.getjobber.com/client_hubs/da2b824e-c9bb-44de-96ad-55e97fa0a147/login/new?source=share_login"
+              <a href={site.clientLoginUrl}
                 target="_blank" rel="noopener noreferrer"
                 className={`flex items-center space-x-1.5 px-4 py-2.5 text-sm font-semibold rounded-lg border transition-colors whitespace-nowrap ${isScrolled ? 'border-gray-300 text-gray-700 hover:border-primary-500 hover:text-primary-600' : 'border-white/40 text-white hover:border-white hover:bg-white/10'}`}>
                 <i className="ri-user-line text-base"></i>
@@ -298,16 +297,16 @@ export default function Header() {
                 Contact Us
               </Link>
 
-              <a href="https://clienthub.getjobber.com/client_hubs/da2b824e-c9bb-44de-96ad-55e97fa0a147/login/new?source=share_login"
+              <a href={site.clientLoginUrl}
                 target="_blank" rel="noopener noreferrer"
                 className="flex items-center justify-center space-x-2 w-full px-4 py-3 border border-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors whitespace-nowrap mt-2">
                 <i className="ri-user-line text-lg"></i>
-                <span>Client Login — Pay Invoice</span>
+                <span>Client Login - Pay Invoice</span>
               </a>
-              <a href="tel:+14135519653"
+              <a href={site.phoneHref}
                 className="flex items-center justify-center space-x-2 w-full px-4 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap mt-2">
                 <i className="ri-phone-line text-lg"></i>
-                <span>(413) 551-9653</span>
+                <span>{site.phone}</span>
               </a>
             </nav>
           </div>
@@ -317,7 +316,7 @@ export default function Header() {
       {/* Sticky Mobile CTA */}
       <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white border-t border-gray-200 shadow-lg">
         <div className="grid grid-cols-2 gap-2 p-3">
-          <a href="tel:+14135519653"
+          <a href={site.phoneHref}
             className="flex items-center justify-center space-x-2 px-4 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap">
             <i className="ri-phone-line text-lg"></i>
             <span>Call Now</span>

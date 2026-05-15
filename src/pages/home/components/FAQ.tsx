@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { faqItems } from '../../../mocks/services';
+import site from '@/content/site.json';
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -52,7 +53,7 @@ export default function FAQ() {
         <div className="mt-12 text-center">
           <p className="text-gray-600 mb-4">Still have questions?</p>
           <a
-            href="tel:+15555296227"
+            href={site.phoneHref}
             className="inline-flex items-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap"
           >
             <i className="ri-phone-line mr-2"></i>

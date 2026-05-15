@@ -1,17 +1,17 @@
 import { BlogPost } from '@/mocks/blogPosts1';
 
-const IMG_LOCAL = 'https://readdy.ai/api/search-image?query=professional%20landscaping%20team%20maintaining%20a%20beautiful%20green%20residential%20lawn%20with%20trimmed%20bushes%20and%20neat%20flower%20beds%20in%20Western%20Massachusetts%2C%20bright%20sunny%20day%2C%20clean%20simple%20background&width=600&height=400&seq=blogLocal&orientation=landscape';
-const IMG_CABIN = 'https://readdy.ai/api/search-image?query=cozy%20rustic%20cabin%20home%20with%20professionally%20maintained%20landscape%2C%20manicured%20lawn%2C%20colorful%20flower%20beds%2C%20and%20neatly%20trimmed%20shrubs%20in%20Western%20Massachusetts%20countryside&width=600&height=400&seq=blogCabin&orientation=landscape';
-const IMG_COMMERCIAL = 'https://readdy.ai/api/search-image?query=well-maintained%20commercial%20property%20with%20professional%20landscaping%2C%20manicured%20lawn%2C%20decorative%20shrubs%2C%20and%20clean%20parking%20lot%20in%20Western%20Massachusetts&width=600&height=400&seq=blogCommercial&orientation=landscape';
-const IMG_LAWN = 'https://readdy.ai/api/search-image?query=lush%20green%20healthy%20lawn%20with%20perfect%20mowing%20stripes%2C%20freshly%20cut%20grass%20in%20residential%20yard%20with%20garden%20beds%20and%20blue%20sky%20in%20Western%20Massachusetts&width=600&height=400&seq=blogLawn&orientation=landscape';
-const IMG_FACEBOOK = 'https://readdy.ai/api/search-image?query=professional%20lawn%20care%20team%20working%20on%20residential%20property%20with%20green%20grass%20trimmed%20hedges%20and%20blooming%20flowers%2C%20community%20focused%20outdoor%20service%20work&width=600&height=400&seq=blogSocial&orientation=landscape';
-const IMG_CHERRY = 'https://readdy.ai/api/search-image?query=beautiful%20spring%20cherry%20blossom%20tree%20in%20a%20well-maintained%20residential%20garden%20with%20lush%20green%20lawn%20and%20trimmed%20hedges%20in%20Western%20Massachusetts&width=600&height=400&seq=blogCherry&orientation=landscape';
-const IMG_RETAINING = 'https://readdy.ai/api/search-image?query=beautiful%20natural%20stone%20retaining%20wall%20in%20a%20professionally%20landscaped%20garden%20with%20tiered%20flower%20beds%20and%20green%20shrubs%2C%20Western%20Massachusetts%20residential%20property%2C%20bright%20sunny%20day&width=600&height=400&seq=blogRetaining3&orientation=landscape';
-const IMG_FIREPIT = 'https://readdy.ai/api/search-image?query=outdoor%20fire%20pit%20patio%20area%20surrounded%20by%20comfortable%20seating%20and%20professionally%20landscaped%20garden%20with%20flowering%20plants%2C%20Western%20Massachusetts%20backyard%2C%20warm%20evening%20light&width=600&height=400&seq=blogFirepit3&orientation=landscape';
-const IMG_PERENNIAL = 'https://readdy.ai/api/search-image?query=diverse%20perennial%20flower%20bed%20with%20black-eyed%20susans%20lavender%20and%20coneflowers%20in%20full%20bloom%2C%20professionally%20maintained%20cottage%20garden%20in%20Western%20Massachusetts%2C%20bright%20sunny%20day&width=600&height=400&seq=blogPerennial3&orientation=landscape';
-const IMG_BULB = 'https://readdy.ai/api/search-image?query=professional%20landscaper%20planting%20spring%20flower%20bulbs%20in%20a%20well-prepared%20garden%20bed%20with%20rich%20dark%20soil%2C%20tulips%20and%20daffodils%20being%20planted%20in%20Western%20Massachusetts%2C%20bright%20daylight&width=600&height=400&seq=blogBulb3&orientation=landscape';
-const IMG_FENCE = 'https://readdy.ai/api/search-image?query=beautiful%20white%20picket%20fence%20with%20climbing%20roses%20and%20flowering%20vines%2C%20professionally%20maintained%20cottage%20style%20garden%20in%20Western%20Massachusetts%2C%20charming%20and%20inviting%20residential%20property&width=600&height=400&seq=blogFence3&orientation=landscape';
-const IMG_DRAINAGE = 'https://readdy.ai/api/search-image?query=professional%20landscape%20drainage%20solution%20with%20decorative%20gravel%20dry%20creek%20bed%20winding%20through%20a%20green%20lawn%2C%20effective%20water%20management%20in%20Western%20Massachusetts%20residential%20yard%2C%20bright%20sunny%20day&width=600&height=400&seq=blogDrainage3&orientation=landscape';
+const IMG_LOCAL = '/uploads/hero-lawn-care.jpg';
+const IMG_CABIN = '/uploads/hero-lawn-care.jpg';
+const IMG_COMMERCIAL = '/uploads/hero-lawn-care.jpg';
+const IMG_LAWN = '/uploads/hero-lawn-care.jpg';
+const IMG_FACEBOOK = '/uploads/hero-lawn-care.jpg';
+const IMG_CHERRY = '/uploads/hero-lawn-care.jpg';
+const IMG_RETAINING = '/uploads/hero-lawn-care.jpg';
+const IMG_FIREPIT = '/uploads/hero-lawn-care.jpg';
+const IMG_PERENNIAL = '/uploads/hero-lawn-care.jpg';
+const IMG_BULB = '/uploads/hero-lawn-care.jpg';
+const IMG_FENCE = '/uploads/hero-lawn-care.jpg';
+const IMG_DRAINAGE = '/uploads/hero-lawn-care.jpg';
 
 export const montgomeryPosts: BlogPost[] = [
   {

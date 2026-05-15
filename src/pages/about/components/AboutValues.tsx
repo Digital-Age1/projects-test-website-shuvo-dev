@@ -41,7 +41,7 @@ export default function AboutValues() {
         {/* Visual accent image */}
         <div className="relative rounded-3xl overflow-hidden h-56 mb-12">
           <img
-            src="https://readdy.ai/api/search-image?query=freshly%20mowed%20and%20edged%20lawn%20at%20golden%20hour%2C%20New%20England%20home%2C%20garden%20beds%20with%20dark%20mulch%2C%20warm%20afternoon%20light%2C%20no%20people%2C%20beautiful%20curb%20appeal&width=1600&height=500&seq=te319_07&orientation=landscape"
+            src="/uploads/hero-lawn-care.jpg"
             alt="Trimming Edge quality lawn care"
             className="w-full h-full object-cover object-center"
           />

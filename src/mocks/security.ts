@@ -229,19 +229,19 @@ export const teamMembers = [
   {
     name: 'John Beegle',
     role: 'Founder & Lead Protection Specialist',
-    avatar: 'https://readdy.ai/api/search-image?query=professional%20male%20executive%20protection%20director%20in%20premium%20tailored%20dark%20suit%20formal%20portrait%20authoritative%20confident%20expression%20neutral%20dark%20background%20high%20quality%20cinematic%20lighting&width=400&height=400&seq=team1-ep&orientation=squarish',
+    avatar: '/uploads/hero-lawn-care.jpg',
     bio: 'Former law enforcement professional and founder of JNB Protection Group — with decades of executive protection and advance threat experience across 100+ countries.',
   },
   {
     name: 'Kevin Cote',
     role: 'Senior Close Protection Specialist',
-    avatar: 'https://readdy.ai/api/search-image?query=professional%20male%20close%20protection%20agent%20formal%20business%20attire%20confident%20portrait%20neutral%20dark%20background%20cinematic%20lighting%20executive%20security%20professional&width=400&height=400&seq=team2-ep&orientation=squarish',
+    avatar: '/uploads/hero-lawn-care.jpg',
     bio: 'Close protection and advance threat specialist with extensive domestic and international field experience serving corporate and private clients.',
   },
   {
     name: 'Operations Team',
     role: 'Former Federal & State Law Enforcement',
-    avatar: 'https://readdy.ai/api/search-image?query=professional%20male%20security%20operations%20team%20leader%20formal%20suit%20confident%20authoritative%20portrait%20neutral%20dark%20background%20executive%20protection%20professional&width=400&height=400&seq=team3-ep&orientation=squarish',
+    avatar: '/uploads/hero-lawn-care.jpg',
     bio: 'An elite team of former Federal, State, and Local Law Enforcement agents bringing unmatched field experience to every close protection engagement.',
   },
 ];

@@ -47,7 +47,7 @@ export default function ArmedSecurityPage() {
       <HeroSection
         h1="Executive &amp; Close Protection Services Worldwide"
         subheadline="Discreet, intelligence-led protection for C-suite executives, public figures, and high-net-worth individuals. JNB Protection Group's Close Protection Specialists are former law enforcement professionals — trained to prevent incidents, not just respond to them."
-        imageSrc="https://readdy.ai/api/search-image?query=elite%20close%20protection%20specialist%20in%20impeccable%20charcoal%20suit%20with%20discreet%20earpiece%20walking%20alongside%20VIP%20principal%20through%20luxury%20hotel%20corridor%20warm%20golden%20ambient%20lighting%20low%20profile%20professional%20discreet%20executive%20protection%20high-end%20environment%20natural%20cinematic&width=1920&height=1080&seq=hero-ep-service-v2&orientation=landscape"
+        imageSrc="/uploads/hero-lawn-care.jpg"
         badge="Close Protection Specialists"
         ctaPrimary={{ label: 'Request a Private Consultation', href: '/#contact' }}
         ctaSecondary={{ label: 'Call 713.906.8273', href: 'tel:+17139068273' }}
@@ -91,7 +91,7 @@ export default function ArmedSecurityPage() {
       <WhyChooseUs
         items={epWhyItems}
         heading="Why Discerning Clients Choose JNB"
-        imageSrc="https://readdy.ai/api/search-image?query=two%20close%20protection%20agents%20in%20premium%20tailored%20dark%20suits%20with%20earpieces%20flanking%20VIP%20principal%20walking%20through%20glass%20corporate%20building%20atrium%20natural%20light%20professional%20discreet%20high-end%20executive%20protection%20low%20profile%20team&width=800&height=900&seq=why-ep-service-v2&orientation=portrait"
+        imageSrc="/uploads/hero-lawn-care.jpg"
       />
 
       {/* 8. Service Areas */}

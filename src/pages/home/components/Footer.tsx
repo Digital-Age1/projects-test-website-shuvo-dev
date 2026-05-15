@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import SystemStatus from '@/components/feature/SystemStatus';
+import site from '@/content/site.json';
 
 export default function Footer() {
   const scrollToSection = (id: string) => {
@@ -17,7 +18,7 @@ export default function Footer() {
           <div>
             <div className="mb-6">
               <img
-                src="https://storage.readdy-site.link/project_files/06569fef-aef2-4c64-b2a6-c762b53898e6/4c302328-1049-4884-9eb6-a81a1fd3d561_TrimmingEdgelogo-1920w.png?v=086f99166582422d1c90bf8e8c042030"
+                src={site.logo}
                 alt="Trimming Edge Logo"
                 className="h-12 w-auto object-contain"
               />
@@ -89,22 +90,22 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <i className="ri-phone-line text-primary-400 mt-1"></i>
                 <div>
-                  <a href="tel:+14135519653" className="text-sm text-gray-400 hover:text-primary-400 transition-colors">
-                    (413) 551-9653
+                  <a href={site.phoneHref} className="text-sm text-gray-400 hover:text-primary-400 transition-colors">
+                    {site.phone}
                   </a>
                 </div>
               </li>
               <li className="flex items-start space-x-3">
                 <i className="ri-map-pin-line text-primary-400 mt-1"></i>
                 <div>
-                  <p className="text-sm text-gray-400">Montgomery, MA 01050</p>
+                  <p className="text-sm text-gray-400">{site.location}</p>
                 </div>
               </li>
               <li className="flex items-start space-x-3">
                 <i className="ri-mail-line text-primary-400 mt-1"></i>
                 <div>
-                  <a href="mailto:info@trimmingedge.com" className="text-sm text-gray-400 hover:text-primary-400 transition-colors">
-                    info@trimmingedge.com
+                  <a href={site.emailHref} className="text-sm text-gray-400 hover:text-primary-400 transition-colors">
+                    {site.email}
                   </a>
                 </div>
               </li>

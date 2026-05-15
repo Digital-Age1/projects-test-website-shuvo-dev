@@ -15,4 +15,4 @@ Allow: /contact-us
 Allow: /service-areas
 Allow: /terms-and-conditions
 Allow: /privacy-policy
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://www.trimmingedge.com/sitemap.xml

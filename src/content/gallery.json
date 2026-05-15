@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Residential Lawn Care",
+    "image": "/uploads/gallery-residential-lawn-care.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Landscape Design",
+    "image": "/uploads/gallery-landscape-design.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Tree Trimming",
+    "image": "/uploads/gallery-tree-trimming.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Commercial Property",
+    "image": "/uploads/gallery-commercial-property.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Mulch Installation",
+    "image": "/uploads/gallery-mulch-installation.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Seasonal Cleanup",
+    "image": "/uploads/gallery-seasonal-cleanup.jpg"
+  }
+]

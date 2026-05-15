@@ -2,7 +2,7 @@ export default function BlogHero() {
   return (
     <section className="relative h-72 md:h-96 overflow-hidden bg-gray-900">
       <img
-        src="https://readdy.ai/api/search-image?query=professional%20landscaper%20hands%20in%20green%20gloves%20planting%20colorful%20flowers%20into%20rich%20dark%20mulch%20garden%20bed%2C%20close%20up%20detail%20shot%2C%20autumn%20leaves%20in%20background%2C%20warm%20golden%20hour%20light%2C%20bokeh%20effect&width=1920&height=700&seq=blog_hero_main_02&orientation=landscape"
+        src="/uploads/hero-lawn-care.jpg"
         alt="Trimming Edge Blog"
         className="absolute inset-0 w-full h-full object-cover object-top z-0"
       />

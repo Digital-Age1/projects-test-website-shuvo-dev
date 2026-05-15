@@ -1,17 +1,17 @@
 import { BlogPost } from '@/mocks/blogPosts1';
 
-const IMG_LOCAL = 'https://readdy.ai/api/search-image?query=professional%20landscaping%20team%20maintaining%20a%20beautiful%20green%20residential%20lawn%20with%20trimmed%20bushes%20and%20neat%20flower%20beds%20in%20Western%20Massachusetts%2C%20bright%20sunny%20day%2C%20clean%20simple%20background&width=600&height=400&seq=blogLocal&orientation=landscape';
-const IMG_CABIN = 'https://readdy.ai/api/search-image?query=cozy%20rustic%20cabin%20home%20with%20professionally%20maintained%20landscape%2C%20manicured%20lawn%2C%20colorful%20flower%20beds%2C%20and%20neatly%20trimmed%20shrubs%20in%20Western%20Massachusetts%20countryside&width=600&height=400&seq=blogCabin&orientation=landscape';
-const IMG_COMMERCIAL = 'https://readdy.ai/api/search-image?query=well-maintained%20commercial%20property%20with%20professional%20landscaping%2C%20manicured%20lawn%2C%20decorative%20shrubs%2C%20and%20clean%20parking%20lot%20in%20Western%20Massachusetts&width=600&height=400&seq=blogCommercial&orientation=landscape';
-const IMG_LAWN = 'https://readdy.ai/api/search-image?query=lush%20green%20healthy%20lawn%20with%20perfect%20mowing%20stripes%2C%20freshly%20cut%20grass%20in%20residential%20yard%20with%20garden%20beds%20and%20blue%20sky%20in%20Western%20Massachusetts&width=600&height=400&seq=blogLawn&orientation=landscape';
-const IMG_FACEBOOK = 'https://readdy.ai/api/search-image?query=professional%20lawn%20care%20team%20working%20on%20residential%20property%20with%20green%20grass%20trimmed%20hedges%20and%20blooming%20flowers%2C%20community%20focused%20outdoor%20service%20work&width=600&height=400&seq=blogSocial&orientation=landscape';
-const IMG_CHERRY = 'https://readdy.ai/api/search-image?query=beautiful%20spring%20cherry%20blossom%20tree%20in%20a%20well-maintained%20residential%20garden%20with%20lush%20green%20lawn%20and%20trimmed%20hedges%20in%20Western%20Massachusetts&width=600&height=400&seq=blogCherry&orientation=landscape';
-const IMG_PATIO = 'https://readdy.ai/api/search-image?query=elegant%20stone%20patio%20with%20outdoor%20furniture%20surrounded%20by%20professionally%20landscaped%20garden%20beds%2C%20flowering%20plants%20and%20neatly%20trimmed%20shrubs%2C%20Western%20Massachusetts%20residential%20backyard%2C%20bright%20sunny%20day&width=600&height=400&seq=blogPatio2&orientation=landscape';
-const IMG_WATER = 'https://readdy.ai/api/search-image?query=serene%20garden%20water%20feature%20with%20small%20fountain%20surrounded%20by%20lush%20green%20plants%20and%20colorful%20flowers%2C%20professionally%20landscaped%20backyard%20in%20Western%20Massachusetts%2C%20peaceful%20natural%20setting&width=600&height=400&seq=blogWater2&orientation=landscape';
-const IMG_TREE = 'https://readdy.ai/api/search-image?query=professional%20arborist%20trimming%20large%20tree%20branches%20with%20proper%20equipment%2C%20tree%20pruning%20and%20maintenance%20work%20in%20a%20residential%20yard%20in%20Western%20Massachusetts%2C%20clear%20blue%20sky&width=600&height=400&seq=blogTree2&orientation=landscape';
-const IMG_PATH = 'https://readdy.ai/api/search-image?query=beautiful%20curved%20garden%20pathway%20made%20of%20natural%20stone%20pavers%20winding%20through%20a%20lush%20landscaped%20yard%20with%20colorful%20perennials%20and%20green%20lawn%20in%20Western%20Massachusetts%2C%20bright%20daylight&width=600&height=400&seq=blogPath2&orientation=landscape';
-const IMG_CONSULT = 'https://readdy.ai/api/search-image?query=professional%20landscaper%20consulting%20with%20homeowner%20in%20a%20beautiful%20backyard%20garden%2C%20discussing%20landscape%20design%20plans%20with%20tablet%20device%2C%20Western%20Massachusetts%20residential%20property%2C%20warm%20sunlight&width=600&height=400&seq=blogConsult2&orientation=landscape';
-const IMG_NURSERY = 'https://readdy.ai/api/search-image?query=local%20plant%20nursery%20with%20rows%20of%20healthy%20shrubs%20and%20flowering%20plants%20in%20pots%2C%20professional%20landscaper%20selecting%20plants%20for%20a%20project%2C%20Western%20Massachusetts%20garden%20center%2C%20bright%20sunny%20day&width=600&height=400&seq=blogNursery2&orientation=landscape';
+const IMG_LOCAL = '/uploads/hero-lawn-care.jpg';
+const IMG_CABIN = '/uploads/hero-lawn-care.jpg';
+const IMG_COMMERCIAL = '/uploads/hero-lawn-care.jpg';
+const IMG_LAWN = '/uploads/hero-lawn-care.jpg';
+const IMG_FACEBOOK = '/uploads/hero-lawn-care.jpg';
+const IMG_CHERRY = '/uploads/hero-lawn-care.jpg';
+const IMG_PATIO = '/uploads/hero-lawn-care.jpg';
+const IMG_WATER = '/uploads/hero-lawn-care.jpg';
+const IMG_TREE = '/uploads/hero-lawn-care.jpg';
+const IMG_PATH = '/uploads/hero-lawn-care.jpg';
+const IMG_CONSULT = '/uploads/hero-lawn-care.jpg';
+const IMG_NURSERY = '/uploads/hero-lawn-care.jpg';
 
 export const huntingtonPosts: BlogPost[] = [
   {

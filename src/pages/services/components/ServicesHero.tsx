@@ -5,7 +5,7 @@ export default function ServicesHero() {
     <section className="relative py-28 overflow-hidden bg-gray-900">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://readdy.ai/api/search-image?query=beautiful%20green%20lawn%20in%20front%20of%20a%20classic%20New%20England%20home%2C%20perfectly%20mowed%20stripes%2C%20blue%20sky%2C%20summer%2C%20wide%20angle%2C%20no%20people%2C%20curb%20appeal%2C%20bright%20sunlight&width=1920&height=800&seq=te319_02&orientation=landscape"
+          src="/uploads/hero-lawn-care.jpg"
           alt="Professional Lawn Care Services"
           className="w-full h-full object-cover object-top"
         />

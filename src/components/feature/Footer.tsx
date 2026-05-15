@@ -5,7 +5,7 @@ export default function Footer() {
         {/* Brand + contact */}
         <div>
           <img
-            src="https://storage.readdy-site.link/project_files/02624808-1281-4360-8d72-e7a5bc1cee0d/70f36ce5-ea55-45b0-8347-6e12733ced32_jnblogo.png?v=4582c1ef63d7dd761e1f6ff933291473"
+            src="/uploads/logo-trimming-edge.png"
             alt="JNB Protection Group"
             className="h-36 w-auto object-contain mb-4"
           />

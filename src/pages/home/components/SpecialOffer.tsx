@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import home from '@/content/home.json';
+import site from '@/content/site.json';
 
 export default function SpecialOffer() {
   return (
@@ -19,11 +21,11 @@ export default function SpecialOffer() {
             </div>
 
             <h2 className="font-display font-bold text-4xl sm:text-5xl text-white mb-6">
-              Get Your Free Estimate Today
+              {home.freeEstimate.headline}
             </h2>
 
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              No obligation, no pressure. Just honest advice and a detailed quote for your <strong>lawn care</strong> and <strong>landscaping</strong> needs.
+              {home.freeEstimate.description}
             </p>
 
             {/* Benefits */}
@@ -63,11 +65,11 @@ export default function SpecialOffer() {
                 Request Free Estimate
               </Link>
               <a
-                href="tel:+15555296227"
+                href={site.phoneHref}
                 className="px-8 py-4 bg-gray-900 text-white text-lg font-bold rounded-lg hover:bg-gray-800 transition-all shadow-xl whitespace-nowrap"
               >
                 <i className="ri-phone-line mr-2"></i>
-                (555) 529-6227
+                {site.phone}
               </a>
             </div>
           </div>
@@ -77,7 +79,7 @@ export default function SpecialOffer() {
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <div className="w-full h-[500px]">
                 <img
-                  src="https://readdy.ai/api/search-image?query=happy%20homeowner%20shaking%20hands%20with%20professional%20landscaper%20in%20front%20of%20beautiful%20well%20maintained%20lawn%20and%20landscape%2C%20satisfied%20customer%2C%20successful%20service%20completion%2C%20bright%20sunny%20day%2C%20clean%20simple%20background&width=800&height=1000&seq=offer1&orientation=portrait"
+                  src={home.freeEstimate.image}
                   alt="Free Estimate"
                   className="w-full h-full object-cover object-top"
                 />

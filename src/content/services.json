@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Lawn Mowing & Maintenance",
+    "description": "Professional weekly or bi-weekly lawn mowing with edging, trimming, and blowing. Keep your lawn looking pristine all season long.",
+    "icon": "ri-plant-line",
+    "image": "/uploads/service-lawn-mowing.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Landscape Design & Installation",
+    "description": "Transform your outdoor space with custom landscape design, plantings, mulching, and hardscaping that enhances curb appeal.",
+    "icon": "ri-seedling-line",
+    "image": "/uploads/service-landscape-design.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Tree & Shrub Care",
+    "description": "Expert tree trimming, pruning, and removal services. Keep your trees healthy and your property safe with professional arborist care.",
+    "icon": "ri-leaf-line",
+    "image": "/uploads/service-tree-care.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Seasonal Cleanups",
+    "description": "Spring and fall cleanup services including leaf removal, debris clearing, bed preparation, and property refresh for every season.",
+    "icon": "ri-broom-line",
+    "image": "/uploads/service-seasonal-cleanup.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Mulching & Bed Maintenance",
+    "description": "Fresh mulch installation and garden bed maintenance to suppress weeds, retain moisture, and give your landscape a polished look.",
+    "icon": "ri-contrast-drop-line",
+    "image": "/uploads/service-mulching.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Commercial Landscaping",
+    "description": "Reliable commercial property maintenance for businesses, HOAs, and property managers. Professional service that keeps your property impressive.",
+    "icon": "ri-building-line",
+    "image": "/uploads/service-commercial-landscaping.jpg"
+  }
+]

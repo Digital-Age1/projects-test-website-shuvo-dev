@@ -15,7 +15,7 @@ interface WhyChooseUsProps {
 export default function WhyChooseUs({
   heading = 'Why Discerning Clients Choose JNB',
   items,
-  imageSrc = 'https://readdy.ai/api/search-image?query=elite%20close%20protection%20specialist%20in%20immaculate%20tailored%20dark%20suit%20standing%20discreet%20guard%20position%20luxury%20hotel%20corridor%20warm%20ambient%20lighting%20low%20profile%20professional%20executive%20protection%20agent%20refined%20environment&width=800&height=900&seq=why-ep-v1&orientation=portrait',
+  imageSrc = '/uploads/hero-lawn-care.jpg',
 }: WhyChooseUsProps) {
   const [leftRef, leftVisible] = useInView<HTMLDivElement>();
   const [rightRef, rightVisible] = useInView<HTMLDivElement>();

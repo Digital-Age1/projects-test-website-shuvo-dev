@@ -10,17 +10,17 @@ export default function HistoryPage() {
 
   const logos = [
     {
-      src: 'https://readdy.ai/api/search-image?query=vintage%20retro%20logo%20design%20featuring%20a%20classic%20lawnmower%20and%20text%20reading%20Trimming%20Edge%20Lawn%20Care%20on%20a%20warm%20tan%20and%20black%20color%20scheme%2C%20nostalgic%20branding%20illustration&width=600&height=400&seq=logo1&orientation=landscape',
+      src: '/uploads/hero-lawn-care.jpg',
       alt: 'Early Trimming Edge Lawn Care logo with a lawn mower on a black and tan background.',
       caption: 'Trimming Edge Lawn Care — Early Logo',
     },
     {
-      src: 'https://readdy.ai/api/search-image?query=landscape%20company%20logo%20design%20with%20lawnmower%20icon%2C%20wolf%20silhouette%20and%20text%20Trimming%20Edge%20Lawn%20Care%2C%20combined%20brand%20identity%20for%20radio%20and%20lawn%20service%2C%20vintage%20style%20illustration&width=600&height=400&seq=logo2&orientation=landscape',
+      src: '/uploads/hero-lawn-care.jpg',
       alt: 'Combined logo with Trimming Edge Lawn Care text, a lawnmower icon, and wolf background.',
       caption: 'Trimming Edge + Wolf Radio Combined Logo',
     },
     {
-      src: 'https://readdy.ai/api/search-image?query=radio%20station%20logo%20featuring%20a%20fierce%20detailed%20wolf%20head%20in%20profile%2C%20classic%20broadcast%20media%20branding%20with%20bold%20typography%2C%20vintage%20retro%20style%20design&width=600&height=400&seq=logo3&orientation=landscape',
+      src: '/uploads/hero-lawn-care.jpg',
       alt: 'Logo for Wolf Radio featuring a wolf\'s head.',
       caption: 'Wolf Radio — Classic Logo',
     },
@@ -152,7 +152,7 @@ export default function HistoryPage() {
                 <div className="mt-6 flex justify-center">
                   <div className="bg-gray-800 rounded-xl p-6 inline-block">
                     <img
-                      src="https://readdy.ai/api/search-image?query=playful%20ASCII%20art%20wolf%20face%20design%20with%20wide%20eyes%20and%20triangular%20ears%2C%20stylized%20text%20art%20characters%20on%20a%20dark%20background%2C%20retro%20computing%20aesthetic%20typography%20art&width=600&height=400&seq=textWolf&orientation=landscape"
+                      src="/uploads/hero-lawn-care.jpg"
                       alt="Stylized text art characters resembling a playful wolf-like face on a dark background"
                       className="max-w-xs mx-auto"
                     />

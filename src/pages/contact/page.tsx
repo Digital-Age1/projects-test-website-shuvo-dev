@@ -80,7 +80,7 @@ export default function ContactPage() {
         <section className="relative py-24 overflow-hidden bg-gray-900">
           <div className="absolute inset-0">
             <img
-              src="https://readdy.ai/api/search-image?query=beautifully%20manicured%20residential%20lawn%20and%20garden%20with%20lush%20green%20grass%2C%20professional%20landscaping%2C%20vibrant%20flower%20beds%2C%20clean%20garden%20edging%2C%20warm%20golden%20hour%20sunlight%2C%20suburban%20home%20exterior%2C%20inviting%20outdoor%20space%2C%20no%20people%20visible%2C%20warm%20natural%20tones&width=1920&height=600&seq=te_contact_hero_v1&orientation=landscape"
+              src="/uploads/hero-lawn-care.jpg"
               alt="Contact Trimming Edge Landscaping"
               className="w-full h-full object-cover object-top"
             />

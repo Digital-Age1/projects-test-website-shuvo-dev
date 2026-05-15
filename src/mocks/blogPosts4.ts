@@ -1,18 +1,18 @@
 import { BlogPost } from '@/mocks/blogPosts1';
 
-const IMG_LOCAL = 'https://readdy.ai/api/search-image?query=professional%20landscaping%20team%20maintaining%20a%20beautiful%20green%20residential%20lawn%20with%20trimmed%20bushes%20and%20neat%20flower%20beds%20in%20Western%20Massachusetts%2C%20bright%20sunny%20day%2C%20clean%20simple%20background&width=600&height=400&seq=blogLocal&orientation=landscape';
-const IMG_CABIN = 'https://readdy.ai/api/search-image?query=cozy%20rustic%20cabin%20home%20with%20professionally%20maintained%20landscape%2C%20manicured%20lawn%2C%20colorful%20flower%20beds%2C%20and%20neatly%20trimmed%20shrubs%20in%20Western%20Massachusetts%20countryside&width=600&height=400&seq=blogCabin&orientation=landscape';
-const IMG_COMMERCIAL = 'https://readdy.ai/api/search-image?query=well-maintained%20commercial%20property%20with%20professional%20landscaping%2C%20manicured%20lawn%2C%20decorative%20shrubs%2C%20and%20clean%20parking%20lot%20in%20Western%20Massachusetts&width=600&height=400&seq=blogCommercial&orientation=landscape';
-const IMG_LAWN = 'https://readdy.ai/api/search-image?query=lush%20green%20healthy%20lawn%20with%20perfect%20mowing%20stripes%2C%20freshly%20cut%20grass%20in%20residential%20yard%20with%20garden%20beds%20and%20blue%20sky%20in%20Western%20Massachusetts&width=600&height=400&seq=blogLawn&orientation=landscape';
-const IMG_FACEBOOK = 'https://readdy.ai/api/search-image?query=professional%20lawn%20care%20team%20working%20on%20residential%20property%20with%20green%20grass%20trimmed%20hedges%20and%20blooming%20flowers%2C%20community%20focused%20outdoor%20service%20work&width=600&height=400&seq=blogSocial&orientation=landscape';
-const IMG_CHERRY = 'https://readdy.ai/api/search-image?query=beautiful%20spring%20cherry%20blossom%20tree%20in%20a%20well-maintained%20residential%20garden%20with%20lush%20green%20lawn%20and%20trimmed%20hedges%20in%20Western%20Massachusetts&width=600&height=400&seq=blogCherry&orientation=landscape';
-const IMG_MEADOW = 'https://readdy.ai/api/search-image?query=peaceful%20meadow%20landscape%20with%20wildflowers%20and%20green%20grass%2C%20professional%20lawn%20care%20maintenance%20in%20Western%20Massachusetts%20natural%20setting&width=600&height=400&seq=blogMeadow&orientation=landscape';
-const IMG_POOL = 'https://readdy.ai/api/search-image?query=beautiful%20inground%20swimming%20pool%20surrounded%20by%20professionally%20landscaped%20garden%20with%20lush%20green%20lawn%2C%20flowering%20plants%2C%20and%20stone%20pavers%2C%20Western%20Massachusetts%20residential%20backyard%2C%20bright%20sunny%20day&width=600&height=400&seq=blogPool4&orientation=landscape';
-const IMG_LIGHTS = 'https://readdy.ai/api/search-image?query=professionally%20landscaped%20garden%20with%20elegant%20outdoor%20string%20lights%20hanging%20between%20trees%2C%20beautiful%20evening%20ambiance%20with%20green%20lawn%20and%20flowering%20plants%2C%20Western%20Massachusetts%20residential%20yard%2C%20warm%20twilight&width=600&height=400&seq=blogLights4&orientation=landscape';
-const IMG_BUTTERFLY = 'https://readdy.ai/api/search-image?query=vibrant%20butterfly%20garden%20with%20milkweed%20coneflowers%20and%20colorful%20native%20wildflowers%2C%20professionally%20designed%20pollinator%20garden%20in%20Western%20Massachusetts%2C%20monarch%20butterflies%20flying%2C%20bright%20sunny%20day&width=600&height=400&seq=blogButterfly4&orientation=landscape';
-const IMG_JAPANESE = 'https://readdy.ai/api/search-image?query=serene%20Japanese-inspired%20zen%20garden%20with%20carefully%20raked%20gravel%2C%20ornamental%20rocks%2C%20and%20manicured%20green%20shrubs%2C%20peaceful%20meditative%20landscape%20in%20Western%20Massachusetts%20residential%20yard%2C%20soft%20natural%20light&width=600&height=400&seq=blogZen4&orientation=landscape';
-const IMG_DROUGHT = 'https://readdy.ai/api/search-image?query=drought-tolerant%20xeriscape%20garden%20with%20ornamental%20grasses%20succulents%20and%20native%20stone%2C%20water-wise%20landscaping%20design%20in%20Western%20Massachusetts%2C%20professionally%20maintained%20and%20beautiful%2C%20bright%20sunny%20day&width=600&height=400&seq=blogDrought4&orientation=landscape';
-const IMG_GAZEBO = 'https://readdy.ai/api/search-image?query=beautiful%20wooden%20gazebo%20surrounded%20by%20professionally%20landscaped%20flower%20beds%20and%20green%20lawn%2C%20charming%20garden%20structure%20in%20Western%20Massachusetts%20residential%20backyard%2C%20bright%20sunny%20day%2C%20climbing%20roses&width=600&height=400&seq=blogGazebo4&orientation=landscape';
+const IMG_LOCAL = '/uploads/hero-lawn-care.jpg';
+const IMG_CABIN = '/uploads/hero-lawn-care.jpg';
+const IMG_COMMERCIAL = '/uploads/hero-lawn-care.jpg';
+const IMG_LAWN = '/uploads/hero-lawn-care.jpg';
+const IMG_FACEBOOK = '/uploads/hero-lawn-care.jpg';
+const IMG_CHERRY = '/uploads/hero-lawn-care.jpg';
+const IMG_MEADOW = '/uploads/hero-lawn-care.jpg';
+const IMG_POOL = '/uploads/hero-lawn-care.jpg';
+const IMG_LIGHTS = '/uploads/hero-lawn-care.jpg';
+const IMG_BUTTERFLY = '/uploads/hero-lawn-care.jpg';
+const IMG_JAPANESE = '/uploads/hero-lawn-care.jpg';
+const IMG_DROUGHT = '/uploads/hero-lawn-care.jpg';
+const IMG_GAZEBO = '/uploads/hero-lawn-care.jpg';
 
 export const westfieldPosts: BlogPost[] = [
   {

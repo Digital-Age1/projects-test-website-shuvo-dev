@@ -83,7 +83,7 @@ export default function CityServicePage() {
         <section className="relative min-h-[480px] flex items-center overflow-hidden bg-gray-900">
           <div className="absolute inset-0 z-0">
             <img
-              src="https://readdy.ai/api/search-image?query=professional%20landscaping%20team%20maintaining%20a%20beautiful%20green%20residential%20lawn%20with%20trimmed%20bushes%20and%20neat%20flower%20beds%20in%20Western%20Massachusetts%2C%20bright%20sunny%20day%2C%20clean%20simple%20background&width=800&height=500&seq=cityHero&orientation=landscape"
+              src="/uploads/hero-lawn-care.jpg"
               alt={`${service.label} in ${city.name}, ${city.state}`}
               className="w-full h-full object-cover object-top"
             />
@@ -129,7 +129,7 @@ export default function CityServicePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="lg:order-2">
                 <img
-                  src="https://readdy.ai/api/search-image?query=well-maintained%20commercial%20property%20with%20professional%20landscaping%2C%20manicured%20lawn%2C%20decorative%20shrubs%2C%20and%20clean%20parking%20lot%20in%20Western%20Massachusetts&width=800&height=500&seq=cityCommercial&orientation=landscape"
+                  src="/uploads/hero-lawn-care.jpg"
                   alt={`${service.label} in ${city.name}`}
                   className="w-full h-72 object-cover object-top rounded-2xl"
                 />
@@ -150,7 +150,7 @@ export default function CityServicePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <img
-                  src="https://readdy.ai/api/search-image?query=lush%20green%20healthy%20lawn%20with%20perfect%20mowing%20stripes%2C%20freshly%20cut%20grass%20in%20residential%20yard%20with%20garden%20beds%20and%20blue%20sky%20in%20Western%20Massachusetts&width=800&height=500&seq=cityLawn&orientation=landscape"
+                  src="/uploads/hero-lawn-care.jpg"
                   alt={`${service.label} solutions`}
                   className="w-full h-72 object-cover object-top rounded-2xl"
                 />
@@ -171,7 +171,7 @@ export default function CityServicePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="lg:order-2">
                 <img
-                  src="https://readdy.ai/api/search-image?query=professional%20landscaping%20company%20crew%20working%20on%20large%20commercial%20property%20with%20green%20lawn%20trimmed%20hedges%20and%20flower%20beds%2C%20professional%20service%20work&width=800&height=500&seq=cityCompany&orientation=landscape"
+                  src="/uploads/hero-lawn-care.jpg"
                   alt={`Expert ${service.label}`}
                   className="w-full h-72 object-cover object-top rounded-2xl"
                 />

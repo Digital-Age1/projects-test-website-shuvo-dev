@@ -5,7 +5,7 @@ export default function LocationsHero() {
     <section className="relative py-28 overflow-hidden bg-gray-900">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://readdy.ai/api/search-image?query=aerial%20drone%20view%20of%20New%20England%20town%20with%20green%20tree%20lined%20streets%2C%20residential%20neighborhoods%2C%20blue%20sky%2C%20summer%2C%20Massachusetts%2C%20overhead%20perspective&width=1920&height=800&seq=te319_08&orientation=landscape"
+          src="/uploads/hero-lawn-care.jpg"
           alt="Western Massachusetts Service Area — Trimming Edge"
           className="w-full h-full object-cover object-top"
         />

@@ -5,7 +5,7 @@ const cities = [
     description2: 'Our Westfield customers rely on us for weekly lawn mowing, seasonal cleanups, mulching, edging, and landscape maintenance. Whether you\'re a homeowner on Court Street or managing a commercial property on Western Ave, we\'ve got you covered.',
     icon: 'ri-building-2-line',
     highlights: ['Residential lawn mowing', 'Commercial property maintenance', 'Seasonal cleanups', 'Landscape design'],
-    image: 'https://readdy.ai/api/search-image?query=classic%20New%20England%20colonial%20house%20with%20thick%20green%20front%20lawn%2C%20trimmed%20hedges%2C%20flower%20beds%2C%20sunny%20day%2C%20residential%20Massachusetts%2C%20curb%20appeal&width=800&height=500&seq=te319_09&orientation=landscape',
+    image: '/uploads/hero-lawn-care.jpg',
   },
   {
     name: 'Huntington, MA',
@@ -13,7 +13,7 @@ const cities = [
     description2: 'From large residential lots to hobby farms needing regular maintenance, Trimming Edge has the equipment and experience to handle Huntington properties of all sizes. We know the area and understand the demands of lawn care in this part of Massachusetts.',
     icon: 'ri-landscape-line',
     highlights: ['Large lot maintenance', 'Rural property care', 'Tree & shrub trimming', 'Fall cleanup'],
-    image: 'https://readdy.ai/api/search-image?query=scenic%20rural%20landscape%20in%20Huntington%20Massachusetts%20with%20lush%20green%20lawn%20large%20property%20trees%20and%20rolling%20hills%2C%20beautiful%20New%20England%20countryside%2C%20well%20maintained%20residential%20yard%2C%20clean%20simple%20background&width=800&height=500&seq=lochunt1&orientation=landscape',
+    image: '/uploads/hero-lawn-care.jpg',
   },
   {
     name: 'Russell, MA',
@@ -21,7 +21,7 @@ const cities = [
     description2: 'Our Russell customers appreciate the personal touch — they often deal directly with David and Amanda, not a call center. That direct relationship means better communication, more customized service, and results you\'ll be proud of.',
     icon: 'ri-home-heart-line',
     highlights: ['Residential lawn care', 'Hedge & shrub trimming', 'Mulching & bed maintenance', 'Spring & fall cleanup'],
-    image: 'https://readdy.ai/api/search-image?query=charming%20residential%20property%20in%20Russell%20Massachusetts%20with%20beautiful%20green%20lawn%20professional%20landscaping%20New%20England%20home%20exterior%2C%20clean%20neighborhood%2C%20bright%20daylight%2C%20simple%20clean%20background&width=800&height=500&seq=locruss1&orientation=landscape',
+    image: '/uploads/hero-lawn-care.jpg',
   },
   {
     name: 'Montgomery, MA',
@@ -29,7 +29,7 @@ const cities = [
     description2: 'Montgomery\'s quiet, wooded properties benefit from our careful approach to tree and shrub maintenance, seasonal cleanups, and regular lawn care. We understand the specific needs of properties in this part of Hampden County.',
     icon: 'ri-map-pin-2-line',
     highlights: ['Home base community', 'Wooded lot maintenance', 'Tree & shrub care', 'Full-service lawn care'],
-    image: 'https://readdy.ai/api/search-image?query=beautiful%20wooded%20residential%20property%20in%20Montgomery%20Massachusetts%20with%20green%20lawn%20surrounded%20by%20trees%20New%20England%20rural%20home%2C%20well%20maintained%20yard%2C%20autumn%20foliage%2C%20clean%20simple%20background&width=800&height=500&seq=locmont1&orientation=landscape',
+    image: '/uploads/hero-lawn-care.jpg',
   },
 ];
 

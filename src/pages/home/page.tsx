@@ -13,6 +13,7 @@ import FAQ from './components/FAQ';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import home from '@/content/home.json';
 
 const homeSchema = [
   {
@@ -24,7 +25,7 @@ const homeSchema = [
     url: `${SITE_URL}/`,
     telephone: '+14135519653',
     priceRange: '$$',
-    image: 'https://readdy.ai/api/search-image?query=professional%20landscaping%20team%20maintaining%20a%20beautiful%20green%20residential%20lawn%20with%20trimmed%20bushes%20and%20neat%20flower%20beds%20in%20Western%20Massachusetts%2C%20bright%20sunny%20day%2C%20clean%20simple%20background&width=800&height=500&seq=homeSchema&orientation=landscape',
+    image: `${SITE_URL}${home.hero.image}`,
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Montgomery',
@@ -43,8 +44,6 @@ const homeSchema = [
       { '@type': 'City', name: 'Montgomery', addressRegion: 'MA' },
       { '@type': 'City', name: 'Russell', addressRegion: 'MA' },
       { '@type': 'City', name: 'Westfield', addressRegion: 'MA' },
-      { '@type': 'City', name: 'Agawam', addressRegion: 'MA' },
-      { '@type': 'City', name: 'Southwick', addressRegion: 'MA' },
     ],
     openingHoursSpecification: [
       { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '18:00' },
@@ -61,7 +60,7 @@ const homeSchema = [
       { '@type': 'Question', name: 'How often should I have my lawn mowed?', acceptedAnswer: { '@type': 'Answer', text: 'During peak growing season, we recommend weekly mowing to maintain optimal lawn health and appearance. In slower growth periods, bi-weekly service may be sufficient.' } },
       { '@type': 'Question', name: 'Do you offer free estimates?', acceptedAnswer: { '@type': 'Answer', text: 'Yes! We provide completely free, no-obligation estimates for all our services. Call us at (413) 551-9653 or fill out our online form.' } },
       { '@type': 'Question', name: 'Are you licensed and insured?', acceptedAnswer: { '@type': 'Answer', text: 'Absolutely. Trimming Edge is fully licensed, bonded, and insured to protect both our team and your property.' } },
-      { '@type': 'Question', name: 'What areas do you serve?', acceptedAnswer: { '@type': 'Answer', text: 'We serve Huntington, Montgomery, Russell, Westfield, Agawam, and Southwick in Western Massachusetts.' } },
+      { '@type': 'Question', name: 'What areas do you serve?', acceptedAnswer: { '@type': 'Answer', text: 'We serve Huntington, Montgomery, Russell, and Westfield in Western Massachusetts.' } },
     ],
   },
 ];
@@ -72,6 +71,7 @@ export default function HomePage() {
     description: 'Professional lawn care & landscaping in Montgomery, Huntington, Westfield & Russell MA. Mowing, mulching, seasonal cleanups & more. 5-star rated. Call (413) 551-9653 for a free estimate.',
     keywords: 'lawn care Montgomery MA, landscaping Montgomery Massachusetts, lawn mowing Western MA, mulching services MA, seasonal cleanup Hampden County, Trimming Edge',
     canonical: '/',
+    ogImage: `${SITE_URL}${home.hero.image}`,
     schemaJson: homeSchema,
   });
 

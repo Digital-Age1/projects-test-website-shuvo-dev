@@ -12,19 +12,19 @@ export interface BlogPost {
   readTime: string;
 }
 
-const IMG_LOCAL = 'https://readdy.ai/api/search-image?query=professional%20landscaping%20team%20maintaining%20a%20beautiful%20green%20residential%20lawn%20with%20trimmed%20bushes%20and%20neat%20flower%20beds%20in%20Western%20Massachusetts%2C%20bright%20sunny%20day%2C%20clean%20simple%20background&width=600&height=400&seq=blogLocal&orientation=landscape';
-const IMG_CABIN = 'https://readdy.ai/api/search-image?query=cozy%20rustic%20cabin%20home%20with%20professionally%20maintained%20landscape%2C%20manicured%20lawn%2C%20colorful%20flower%20beds%2C%20and%20neatly%20trimmed%20shrubs%20in%20Western%20Massachusetts%20countryside&width=600&height=400&seq=blogCabin&orientation=landscape';
-const IMG_COMMERCIAL = 'https://readdy.ai/api/search-image?query=well-maintained%20commercial%20property%20with%20professional%20landscaping%2C%20manicured%20lawn%2C%20decorative%20shrubs%2C%20and%20clean%20parking%20lot%20in%20Western%20Massachusetts&width=600&height=400&seq=blogCommercial&orientation=landscape';
-const IMG_LAWN = 'https://readdy.ai/api/search-image?query=lush%20green%20healthy%20lawn%20with%20perfect%20mowing%20stripes%2C%20freshly%20cut%20grass%20in%20residential%20yard%20with%20garden%20beds%20and%20blue%20sky%20in%20Western%20Massachusetts&width=600&height=400&seq=blogLawn&orientation=landscape';
-const IMG_FACEBOOK = 'https://readdy.ai/api/search-image?query=professional%20lawn%20care%20team%20working%20on%20residential%20property%20with%20green%20grass%20trimmed%20hedges%20and%20blooming%20flowers%2C%20community%20focused%20outdoor%20service%20work&width=600&height=400&seq=blogSocial&orientation=landscape';
-const IMG_TRUCK = 'https://readdy.ai/api/search-image?query=professional%20landscaping%20service%20truck%20with%20equipment%20parked%20in%20front%20of%20a%20beautifully%20maintained%20residential%20property%20with%20green%20lawn%20and%20trimmed%20bushes&width=600&height=400&seq=blogTruck&orientation=landscape';
-const IMG_CHERRY = 'https://readdy.ai/api/search-image?query=beautiful%20spring%20cherry%20blossom%20tree%20in%20a%20well-maintained%20residential%20garden%20with%20lush%20green%20lawn%20and%20trimmed%20hedges%20in%20Western%20Massachusetts&width=600&height=400&seq=blogCherry&orientation=landscape';
-const IMG_GARDEN = 'https://readdy.ai/api/search-image?query=vibrant%20colorful%20perennial%20flower%20garden%20with%20professionally%20maintained%20landscaping%2C%20blooming%20flowers%20in%20neat%20rows%20with%20mulch%20beds%2C%20bright%20sunny%20day%20in%20Western%20Massachusetts%2C%20clean%20simple%20background&width=600&height=400&seq=blogGarden1&orientation=landscape';
-const IMG_HEDGE = 'https://readdy.ai/api/search-image?query=professional%20hedge%20trimming%20work%20in%20progress%2C%20neatly%20shaped%20green%20hedges%20and%20topiary%20shrubs%20along%20a%20residential%20property%20line%2C%20precision%20landscaping%20service%20in%20Western%20Massachusetts&width=600&height=400&seq=blogHedge1&orientation=landscape';
-const IMG_SPRING = 'https://readdy.ai/api/search-image?query=beautiful%20spring%20landscape%20with%20fresh%20green%20grass%2C%20blooming%20tulips%20and%20daffodils%2C%20newly%20mulched%20garden%20beds%2C%20and%20budding%20trees%20in%20Western%20Massachusetts%20residential%20yard&width=600&height=400&seq=blogSpring1&orientation=landscape';
-const IMG_MOWER = 'https://readdy.ai/api/search-image?query=professional%20zero-turn%20lawn%20mower%20cutting%20perfect%20stripes%20on%20a%20lush%20green%20residential%20lawn%2C%20landscaping%20equipment%20at%20work%20in%20Western%20Massachusetts%20on%20a%20bright%20sunny%20day&width=600&height=400&seq=blogMower1&orientation=landscape';
-const IMG_AERATION = 'https://readdy.ai/api/search-image?query=lawn%20aeration%20process%20showing%20core%20plugs%20on%20a%20green%20lawn%2C%20professional%20landscaping%20service%20improving%20soil%20health%2C%20Western%20Massachusetts%20residential%20yard&width=600&height=400&seq=blogAeration1&orientation=landscape';
-const IMG_FALL = 'https://readdy.ai/api/search-image?query=professional%20fall%20leaf%20cleanup%20service%20on%20a%20beautiful%20residential%20property%2C%20autumn%20foliage%20being%20cleared%20from%20lawn%20and%20garden%20beds%20in%20Western%20Massachusetts%2C%20crisp%20autumn%20day&width=600&height=400&seq=blogFall1&orientation=landscape';
+const IMG_LOCAL = '/uploads/hero-lawn-care.jpg';
+const IMG_CABIN = '/uploads/hero-lawn-care.jpg';
+const IMG_COMMERCIAL = '/uploads/hero-lawn-care.jpg';
+const IMG_LAWN = '/uploads/hero-lawn-care.jpg';
+const IMG_FACEBOOK = '/uploads/hero-lawn-care.jpg';
+const IMG_TRUCK = '/uploads/hero-lawn-care.jpg';
+const IMG_CHERRY = '/uploads/hero-lawn-care.jpg';
+const IMG_GARDEN = '/uploads/hero-lawn-care.jpg';
+const IMG_HEDGE = '/uploads/hero-lawn-care.jpg';
+const IMG_SPRING = '/uploads/hero-lawn-care.jpg';
+const IMG_MOWER = '/uploads/hero-lawn-care.jpg';
+const IMG_AERATION = '/uploads/hero-lawn-care.jpg';
+const IMG_FALL = '/uploads/hero-lawn-care.jpg';
 
 export const russellPosts: BlogPost[] = [
   {

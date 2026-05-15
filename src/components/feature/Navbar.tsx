@@ -43,7 +43,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center cursor-pointer">
             <img
-              src="https://storage.readdy-site.link/project_files/02624808-1281-4360-8d72-e7a5bc1cee0d/70f36ce5-ea55-45b0-8347-6e12733ced32_jnblogo.png?v=4582c1ef63d7dd761e1f6ff933291473"
+              src="/uploads/logo-trimming-edge.png"
               alt="JNB Protection Group"
               className="h-44 w-auto object-contain"
             />
@@ -113,7 +113,7 @@ export default function Navbar() {
         {menuOpen && (
           <div className="lg:hidden bg-[#080808] border-t border-[#1A1A1A] px-6 py-6 space-y-5">
             <img
-              src="https://storage.readdy-site.link/project_files/02624808-1281-4360-8d72-e7a5bc1cee0d/70f36ce5-ea55-45b0-8347-6e12733ced32_jnblogo.png?v=4582c1ef63d7dd761e1f6ff933291473"
+              src="/uploads/logo-trimming-edge.png"
               alt="JNB Protection Group"
               className="h-10 w-auto object-contain mb-2"
             />

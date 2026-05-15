@@ -10,7 +10,7 @@ export default function PageFooter() {
           <div>
             <div className="mb-6">
               <img
-                src="https://storage.readdy-site.link/project_files/06569fef-aef2-4c64-b2a6-c762b53898e6/4c302328-1049-4884-9eb6-a81a1fd3d561_TrimmingEdgelogo-1920w.png?v=086f99166582422d1c90bf8e8c042030"
+                src="/uploads/logo-trimming-edge.png"
                 alt="Trimming Edge Logo"
                 className="h-12 w-auto object-contain"
               />

@@ -69,7 +69,7 @@ export default function SeasonalCleanupsPage() {
       {/* Hero */}
       <section className="relative h-[420px] md:h-[520px] w-full overflow-hidden bg-gray-900">
         <img
-          src="https://readdy.ai/api/search-image?query=professional%20seasonal%20yard%20cleanup%20service%20with%20crew%20raking%20and%20removing%20large%20piles%20of%20autumn%20leaves%20from%20a%20beautiful%20residential%20property%2C%20colorful%20fall%20foliage%20trees%20in%20background%2C%20New%20England%20autumn%20scene%2C%20orange%20and%20red%20leaves%2C%20clean%20tidy%20yard%20emerging%20from%20cleanup%2C%20bright%20fall%20daylight&width=1400&height=600&seq=seasonal_hero02&orientation=landscape"
+          src="/uploads/hero-lawn-care.jpg"
           alt="Seasonal Cleanups"
           className="absolute inset-0 w-full h-full object-cover object-top z-0"
         />
@@ -127,7 +127,7 @@ export default function SeasonalCleanupsPage() {
             <div className="rounded-2xl overflow-hidden border border-gray-200">
               <div className="relative h-56 w-full">
                 <img
-                  src="https://readdy.ai/api/search-image?query=beautiful%20spring%20yard%20cleanup%20result%20with%20fresh%20green%20lawn%20emerging%2C%20cleared%20garden%20beds%20with%20fresh%20dark%20mulch%2C%20blooming%20spring%20flowers%2C%20clean%20property%20after%20professional%20spring%20cleanup%20service%2C%20New%20England%20residential%20yard%2C%20bright%20spring%20morning%20light&width=700&height=400&seq=spring_cleanup02&orientation=landscape"
+                  src="/uploads/hero-lawn-care.jpg"
                   alt="Spring cleanup"
                   className="w-full h-full object-cover object-top"
                 />
@@ -150,7 +150,7 @@ export default function SeasonalCleanupsPage() {
             <div className="rounded-2xl overflow-hidden border border-gray-200">
               <div className="relative h-56 w-full">
                 <img
-                  src="https://readdy.ai/api/search-image?query=pristine%20yard%20after%20professional%20fall%20cleanup%20service%2C%20all%20leaves%20removed%2C%20clean%20lawn%20visible%2C%20well%20maintained%20property%2C%20autumn%20season%20New%20England%2C%20orange%20and%20gold%20trees%20in%20background%2C%20tidy%20residential%20yard%20ready%20for%20winter%2C%20bright%20fall%20afternoon&width=700&height=400&seq=fall_cleanup02&orientation=landscape"
+                  src="/uploads/hero-lawn-care.jpg"
                   alt="Fall cleanup"
                   className="w-full h-full object-cover object-top"
                 />

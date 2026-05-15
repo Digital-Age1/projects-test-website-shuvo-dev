@@ -63,7 +63,7 @@ export default function LawnMowingPage() {
       {/* Hero */}
       <section className="relative h-[420px] md:h-[520px] w-full overflow-hidden bg-gray-900">
         <img
-          src="https://readdy.ai/api/search-image?query=professional%20commercial%20zero-turn%20riding%20lawn%20mower%20leaving%20perfect%20parallel%20green%20stripes%20on%20a%20large%20lush%20vibrant%20residential%20lawn%20in%20New%20England%2C%20brilliant%20sunny%20morning%2C%20healthy%20dense%20turf%2C%20clean%20neat%20yard%2C%20no%20people%20just%20equipment%20in%20action%20on%20manicured%20grass%2C%20wide%20angle%20shot%20showing%20full%20lawn&width=1400&height=600&seq=lawnmow_hero02&orientation=landscape"
+          src="/uploads/hero-lawn-care.jpg"
           alt="Lawn Mowing & Maintenance"
           className="absolute inset-0 w-full h-full object-cover object-top z-0"
         />
@@ -135,7 +135,7 @@ export default function LawnMowingPage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden h-96">
               <img
-                src="https://readdy.ai/api/search-image?query=close%20up%20of%20perfectly%20mowed%20lawn%20with%20crisp%20parallel%20stripes%20and%20sharp%20edging%20along%20a%20concrete%20driveway%2C%20vibrant%20green%20healthy%20grass%2C%20New%20England%20residential%20property%2C%20bright%20summer%20daylight%2C%20immaculate%20lawn%20care%20result&width=800&height=600&seq=lawnmow_detail02&orientation=landscape"
+                src="/uploads/hero-lawn-care.jpg"
                 alt="Perfect lawn stripes after professional mowing"
                 className="w-full h-full object-cover object-top"
               />

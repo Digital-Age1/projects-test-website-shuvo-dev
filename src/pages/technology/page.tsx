@@ -11,7 +11,7 @@ export default function TechnologyPage() {
         <section className="relative min-h-[480px] flex items-center justify-center overflow-hidden bg-gray-900">
           <div className="absolute inset-0">
             <img
-              src="https://readdy.ai/api/search-image?query=modern%20IT%20networking%20server%20room%20with%20glowing%20warm%20amber%20and%20white%20LED%20lights%2C%20organized%20cable%20management%2C%20professional%20network%20switches%20and%20routers%2C%20clean%20data%20center%20environment%2C%20technology%20infrastructure%2C%20dark%20background%20with%20warm%20accent%20lighting%2C%20high-tech%20professional%20setting%2C%20no%20blue%20or%20purple%20colors&width=1920&height=800&seq=te_tech_hero_v2&orientation=landscape"
+              src="/uploads/hero-lawn-care.jpg"
               alt="Technology & IT Solutions — Trimming Edge"
               className="w-full h-full object-cover object-top"
             />
@@ -67,7 +67,7 @@ export default function TechnologyPage() {
               </div>
               <div className="w-full h-80 rounded-xl overflow-hidden">
                 <img
-                  src="https://readdy.ai/api/search-image?query=technician%20working%20on%20a%20desktop%20computer%20repair%20in%20a%20clean%20professional%20workspace%2C%20tools%20laid%20out%20neatly%2C%20open%20computer%20case%2C%20focused%20work%2C%20bright%20workshop%20lighting%2C%20IT%20support%20professional%2C%20Massachusetts%20small%20business%20setting%2C%20no%20faces%20visible&width=800&height=640&seq=te_tech_02&orientation=landscape"
+                  src="/uploads/hero-lawn-care.jpg"
                   alt="IT Computer Solutions"
                   className="w-full h-full object-cover object-top"
                 />
@@ -133,7 +133,7 @@ export default function TechnologyPage() {
               </div>
               <div className="w-full h-80 rounded-xl overflow-hidden">
                 <img
-                  src="https://readdy.ai/api/search-image?query=modern%20office%20network%20setup%20with%20routers%20switches%20and%20ethernet%20cables%20neatly%20organized%2C%20professional%20business%20network%20infrastructure%2C%20clean%20server%20rack%20in%20a%20small%20office%2C%20warm%20ambient%20lighting%2C%20organized%20cable%20management%2C%20professional%20IT%20environment&width=800&height=640&seq=te_tech_03&orientation=landscape"
+                  src="/uploads/hero-lawn-care.jpg"
                   alt="Business Network Solutions"
                   className="w-full h-full object-cover object-top"
                 />
@@ -148,7 +148,7 @@ export default function TechnologyPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="w-full h-80 rounded-xl overflow-hidden order-2 lg:order-1">
                 <img
-                  src="https://readdy.ai/api/search-image?query=person%20working%20remotely%20on%20a%20laptop%20providing%20IT%20support%2C%20dual%20monitor%20setup%2C%20home%20office%20environment%2C%20professional%20remote%20troubleshooting%20session%2C%20clean%20desk%2C%20warm%20natural%20light%2C%20focused%20technician%2C%20modern%20workspace%2C%20no%20faces%20visible&width=800&height=640&seq=te_tech_04&orientation=landscape"
+                  src="/uploads/hero-lawn-care.jpg"
                   alt="Remote IT Troubleshooting"
                   className="w-full h-full object-cover object-top"
                 />

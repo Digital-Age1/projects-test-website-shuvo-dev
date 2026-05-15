@@ -5,7 +5,7 @@ export default function AboutHero() {
     <section className="relative py-28 overflow-hidden bg-gray-900">
       <div className="absolute inset-0 z-0">
         <img
-          src="https://readdy.ai/api/search-image?query=green%20lawn%20mowing%20truck%20and%20trailer%20parked%20in%20front%20of%20a%20residential%20home%20in%20Massachusetts%2C%20summer%2C%20blue%20sky%2C%20clean%20driveway%2C%20no%20people%2C%20professional%20equipment&width=1920&height=800&seq=te319_04&orientation=landscape"
+          src="/uploads/hero-lawn-care.jpg"
           alt="Trimming Edge Professional Lawn Care"
           className="w-full h-full object-cover object-top"
         />
