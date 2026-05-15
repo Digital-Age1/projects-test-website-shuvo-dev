@@ -5,7 +5,7 @@ const cities = [
     description2: 'Our Westfield customers rely on us for weekly lawn mowing, seasonal cleanups, mulching, edging, and landscape maintenance. Whether you\'re a homeowner on Court Street or managing a commercial property on Western Ave, we\'ve got you covered.',
     icon: 'ri-building-2-line',
     highlights: ['Residential lawn mowing', 'Commercial property maintenance', 'Seasonal cleanups', 'Landscape design'],
-    image: '/uploads/hero-lawn-care.jpg',
+    image: '/uploads/service-area-westfield.jpg',
   },
   {
     name: 'Huntington, MA',
@@ -13,7 +13,7 @@ const cities = [
     description2: 'From large residential lots to hobby farms needing regular maintenance, Trimming Edge has the equipment and experience to handle Huntington properties of all sizes. We know the area and understand the demands of lawn care in this part of Massachusetts.',
     icon: 'ri-landscape-line',
     highlights: ['Large lot maintenance', 'Rural property care', 'Tree & shrub trimming', 'Fall cleanup'],
-    image: '/uploads/hero-lawn-care.jpg',
+    image: '/uploads/service-area-huntington.jpg',
   },
   {
     name: 'Russell, MA',
@@ -21,7 +21,7 @@ const cities = [
     description2: 'Our Russell customers appreciate the personal touch — they often deal directly with David and Amanda, not a call center. That direct relationship means better communication, more customized service, and results you\'ll be proud of.',
     icon: 'ri-home-heart-line',
     highlights: ['Residential lawn care', 'Hedge & shrub trimming', 'Mulching & bed maintenance', 'Spring & fall cleanup'],
-    image: '/uploads/hero-lawn-care.jpg',
+    image: '/uploads/service-area-russell.jpg',
   },
   {
     name: 'Montgomery, MA',
@@ -29,7 +29,7 @@ const cities = [
     description2: 'Montgomery\'s quiet, wooded properties benefit from our careful approach to tree and shrub maintenance, seasonal cleanups, and regular lawn care. We understand the specific needs of properties in this part of Hampden County.',
     icon: 'ri-map-pin-2-line',
     highlights: ['Home base community', 'Wooded lot maintenance', 'Tree & shrub care', 'Full-service lawn care'],
-    image: '/uploads/hero-lawn-care.jpg',
+    image: '/uploads/service-area-montgomery.jpg',
   },
 ];
 

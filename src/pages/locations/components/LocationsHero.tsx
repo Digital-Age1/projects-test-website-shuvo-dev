@@ -5,10 +5,9 @@ export default function LocationsHero() {
     <section className="relative py-28 overflow-hidden bg-gray-900">
       <div className="absolute inset-0 z-0">
         <img
-          src="/uploads/hero-lawn-care.jpg"
+          src="/uploads/hero-service-areas.jpg"
           alt="Western Massachusetts Service Area — Trimming Edge"
-          className="w-full h-full object-cover object-top"
-        />
+          className="w-full h-full object-cover object-top" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/20"></div>
       </div>
 

@@ -1,18 +1,18 @@
 import { BlogPost } from '@/mocks/blogPosts1';
 
-const IMG_LOCAL = '/uploads/hero-lawn-care.jpg';
-const IMG_CABIN = '/uploads/hero-lawn-care.jpg';
-const IMG_COMMERCIAL = '/uploads/hero-lawn-care.jpg';
-const IMG_LAWN = '/uploads/hero-lawn-care.jpg';
-const IMG_FACEBOOK = '/uploads/hero-lawn-care.jpg';
-const IMG_CHERRY = '/uploads/hero-lawn-care.jpg';
-const IMG_MEADOW = '/uploads/hero-lawn-care.jpg';
-const IMG_POOL = '/uploads/hero-lawn-care.jpg';
-const IMG_LIGHTS = '/uploads/hero-lawn-care.jpg';
-const IMG_BUTTERFLY = '/uploads/hero-lawn-care.jpg';
-const IMG_JAPANESE = '/uploads/hero-lawn-care.jpg';
-const IMG_DROUGHT = '/uploads/hero-lawn-care.jpg';
-const IMG_GAZEBO = '/uploads/hero-lawn-care.jpg';
+const IMG_LOCAL = '/uploads/service-area-montgomery.jpg';
+const IMG_CABIN = '/uploads/service-area-huntington.jpg';
+const IMG_COMMERCIAL = '/uploads/gallery-commercial-property.jpg';
+const IMG_LAWN = '/uploads/gallery-residential-lawn-care.jpg';
+const IMG_FACEBOOK = '/uploads/home-about-team.jpg';
+const IMG_CHERRY = '/uploads/gallery-landscape-design.jpg';
+const IMG_MEADOW = '/uploads/service-area-huntington.jpg';
+const IMG_POOL = '/uploads/about-gallery-result.jpg';
+const IMG_LIGHTS = '/uploads/about-gallery-banner.jpg';
+const IMG_BUTTERFLY = '/uploads/gallery-landscape-design.jpg';
+const IMG_JAPANESE = '/uploads/about-precision-edging.jpg';
+const IMG_DROUGHT = '/uploads/service-mulching.jpg';
+const IMG_GAZEBO = '/uploads/about-gallery-result.jpg';
 
 export const westfieldPosts: BlogPost[] = [
   {

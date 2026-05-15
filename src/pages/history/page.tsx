@@ -10,17 +10,17 @@ export default function HistoryPage() {
 
   const logos = [
     {
-      src: '/uploads/hero-lawn-care.jpg',
+      src: '/uploads/hero-about.jpg',
       alt: 'Early Trimming Edge Lawn Care logo with a lawn mower on a black and tan background.',
       caption: 'Trimming Edge Lawn Care — Early Logo',
     },
     {
-      src: '/uploads/hero-lawn-care.jpg',
+      src: '/uploads/home-about-team.jpg',
       alt: 'Combined logo with Trimming Edge Lawn Care text, a lawnmower icon, and wolf background.',
       caption: 'Trimming Edge + Wolf Radio Combined Logo',
     },
     {
-      src: '/uploads/hero-lawn-care.jpg',
+      src: '/uploads/about-values.jpg',
       alt: 'Logo for Wolf Radio featuring a wolf\'s head.',
       caption: 'Wolf Radio — Classic Logo',
     },
@@ -152,7 +152,7 @@ export default function HistoryPage() {
                 <div className="mt-6 flex justify-center">
                   <div className="bg-gray-800 rounded-xl p-6 inline-block">
                     <img
-                      src="/uploads/hero-lawn-care.jpg"
+                      src="/uploads/about-gallery-equipment.jpg"
                       alt="Stylized text art characters resembling a playful wolf-like face on a dark background"
                       className="max-w-xs mx-auto"
                     />

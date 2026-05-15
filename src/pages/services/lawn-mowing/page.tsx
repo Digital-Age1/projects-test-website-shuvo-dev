@@ -63,7 +63,7 @@ export default function LawnMowingPage() {
       {/* Hero */}
       <section className="relative h-[420px] md:h-[520px] w-full overflow-hidden bg-gray-900">
         <img
-          src="/uploads/hero-lawn-care.jpg"
+          src="/uploads/hero-lawn-mowing.jpg"
           alt="Lawn Mowing & Maintenance"
           className="absolute inset-0 w-full h-full object-cover object-top z-0"
         />
@@ -135,7 +135,7 @@ export default function LawnMowingPage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden h-96">
               <img
-                src="/uploads/hero-lawn-care.jpg"
+                src="/uploads/detail-lawn-mowing.jpg"
                 alt="Perfect lawn stripes after professional mowing"
                 className="w-full h-full object-cover object-top"
               />

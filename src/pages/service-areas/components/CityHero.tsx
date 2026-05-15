@@ -8,10 +8,9 @@ export default function CityHero({ cityName, state }: CityHeroProps) {
     <section className="relative min-h-[520px] flex items-center overflow-hidden bg-gray-900">
       <div className="absolute inset-0 z-0">
         <img
-          src="/uploads/hero-lawn-care.jpg"
+          src="/uploads/hero-city-service-area.jpg"
           alt={`Lawn Care in ${cityName}, ${state}`}
-          className="w-full h-full object-cover object-top"
-        />
+          className="w-full h-full object-cover object-top" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/25"></div>
       </div>
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">

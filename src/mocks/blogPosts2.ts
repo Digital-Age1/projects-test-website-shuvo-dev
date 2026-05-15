@@ -1,17 +1,17 @@
 import { BlogPost } from '@/mocks/blogPosts1';
 
-const IMG_LOCAL = '/uploads/hero-lawn-care.jpg';
-const IMG_CABIN = '/uploads/hero-lawn-care.jpg';
-const IMG_COMMERCIAL = '/uploads/hero-lawn-care.jpg';
-const IMG_LAWN = '/uploads/hero-lawn-care.jpg';
-const IMG_FACEBOOK = '/uploads/hero-lawn-care.jpg';
-const IMG_CHERRY = '/uploads/hero-lawn-care.jpg';
-const IMG_PATIO = '/uploads/hero-lawn-care.jpg';
-const IMG_WATER = '/uploads/hero-lawn-care.jpg';
-const IMG_TREE = '/uploads/hero-lawn-care.jpg';
-const IMG_PATH = '/uploads/hero-lawn-care.jpg';
-const IMG_CONSULT = '/uploads/hero-lawn-care.jpg';
-const IMG_NURSERY = '/uploads/hero-lawn-care.jpg';
+const IMG_LOCAL = '/uploads/service-area-montgomery.jpg';
+const IMG_CABIN = '/uploads/service-area-huntington.jpg';
+const IMG_COMMERCIAL = '/uploads/gallery-commercial-property.jpg';
+const IMG_LAWN = '/uploads/gallery-residential-lawn-care.jpg';
+const IMG_FACEBOOK = '/uploads/home-about-team.jpg';
+const IMG_CHERRY = '/uploads/gallery-landscape-design.jpg';
+const IMG_PATIO = '/uploads/about-gallery-result.jpg';
+const IMG_WATER = '/uploads/about-gallery-banner.jpg';
+const IMG_TREE = '/uploads/gallery-tree-trimming.jpg';
+const IMG_PATH = '/uploads/about-precision-edging.jpg';
+const IMG_CONSULT = '/uploads/about-difference-truck.jpg';
+const IMG_NURSERY = '/uploads/service-landscape-design.jpg';
 
 export const huntingtonPosts: BlogPost[] = [
   {

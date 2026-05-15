@@ -69,7 +69,7 @@ export default function CommercialLandscapingPage() {
       {/* Hero */}
       <section className="relative h-[420px] md:h-[520px] w-full overflow-hidden bg-gray-900">
         <img
-          src="/uploads/hero-lawn-care.jpg"
+          src="/uploads/hero-commercial-landscaping.jpg"
           alt="Commercial Landscaping"
           className="absolute inset-0 w-full h-full object-cover object-top z-0"
         />
@@ -141,7 +141,7 @@ export default function CommercialLandscapingPage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden h-96 lg:order-1">
               <img
-                src="/uploads/hero-lawn-care.jpg"
+                src="/uploads/detail-commercial-landscaping.jpg"
                 alt="Commercial property landscaping"
                 className="w-full h-full object-cover object-top"
               />

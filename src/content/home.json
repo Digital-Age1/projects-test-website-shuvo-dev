@@ -1,13 +1,13 @@
 {
   "hero": {
-    "image": "/uploads/hero-lawn-care.jpg",
+    "image": "/uploads/hero-home.jpg",
     "badge": ["5.0/5 Google Rating", "5-Star Rated", "Women-Owned"],
     "headline": "Transform Your Outdoor Space",
     "highlight": "With Expert Care",
     "description": "Professional lawn care and landscaping services in Westfield, Huntington, Russell & Montgomery, MA. Licensed, insured, and trusted by homeowners and businesses across Western Massachusetts."
   },
   "about": {
-    "image": "/uploads/about-team.jpg",
+    "image": "/uploads/home-about-team.jpg",
     "eyebrow": "About Us",
     "headline": "Your Local Lawn Care Experts Since 2009",
     "paragraphs": [
@@ -16,7 +16,7 @@
     ]
   },
   "freeEstimate": {
-    "image": "/uploads/free-estimate.jpg",
+    "image": "/uploads/home-free-estimate.jpg",
     "headline": "Get Your Free Estimate Today",
     "description": "No obligation, no pressure. Just honest advice and a detailed quote for your lawn care and landscaping needs."
   }

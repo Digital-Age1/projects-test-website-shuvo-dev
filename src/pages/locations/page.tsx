@@ -80,10 +80,9 @@ function NearMeSection() {
     <section className="py-20 relative overflow-hidden bg-gray-900">
       <div className="absolute inset-0 z-0">
         <img
-          src="/uploads/hero-lawn-care.jpg"
+          src="/uploads/service-areas-near-me.jpg"
           alt="Western Massachusetts service area aerial view"
-          className="w-full h-full object-cover object-top"
-        />
+          className="w-full h-full object-cover object-top" />
         <div className="absolute inset-0 bg-primary-900/80"></div>
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

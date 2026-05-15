@@ -2,10 +2,9 @@ export default function BlogHero() {
   return (
     <section className="relative h-72 md:h-96 overflow-hidden bg-gray-900">
       <img
-        src="/uploads/hero-lawn-care.jpg"
+        src="/uploads/about-gallery-banner.jpg"
         alt="Trimming Edge Blog"
-        className="absolute inset-0 w-full h-full object-cover object-top z-0"
-      />
+        className="absolute inset-0 w-full h-full object-cover object-top z-0" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60 z-[1] flex items-center justify-center">
         <div className="text-center px-4">
           <h1 className="font-display font-bold text-4xl md:text-6xl text-white mb-4">

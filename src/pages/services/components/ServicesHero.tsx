@@ -5,10 +5,9 @@ export default function ServicesHero() {
     <section className="relative py-28 overflow-hidden bg-gray-900">
       <div className="absolute inset-0 z-0">
         <img
-          src="/uploads/hero-lawn-care.jpg"
+          src="/uploads/hero-services.jpg"
           alt="Professional Lawn Care Services"
-          className="w-full h-full object-cover object-top"
-        />
+          className="w-full h-full object-cover object-top" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>
 

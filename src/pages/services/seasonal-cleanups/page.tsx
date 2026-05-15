@@ -69,7 +69,7 @@ export default function SeasonalCleanupsPage() {
       {/* Hero */}
       <section className="relative h-[420px] md:h-[520px] w-full overflow-hidden bg-gray-900">
         <img
-          src="/uploads/hero-lawn-care.jpg"
+          src="/uploads/hero-seasonal-cleanups.jpg"
           alt="Seasonal Cleanups"
           className="absolute inset-0 w-full h-full object-cover object-top z-0"
         />
@@ -127,7 +127,7 @@ export default function SeasonalCleanupsPage() {
             <div className="rounded-2xl overflow-hidden border border-gray-200">
               <div className="relative h-56 w-full">
                 <img
-                  src="/uploads/hero-lawn-care.jpg"
+                  src="/uploads/detail-seasonal-cleanup-spring.jpg"
                   alt="Spring cleanup"
                   className="w-full h-full object-cover object-top"
                 />
@@ -150,7 +150,7 @@ export default function SeasonalCleanupsPage() {
             <div className="rounded-2xl overflow-hidden border border-gray-200">
               <div className="relative h-56 w-full">
                 <img
-                  src="/uploads/hero-lawn-care.jpg"
+                  src="/uploads/detail-seasonal-cleanup-fall.jpg"
                   alt="Fall cleanup"
                   className="w-full h-full object-cover object-top"
                 />

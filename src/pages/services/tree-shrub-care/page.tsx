@@ -62,7 +62,7 @@ export default function TreeShrubCarePage() {
       {/* Hero */}
       <section className="relative h-[420px] md:h-[520px] w-full overflow-hidden bg-gray-900">
         <img
-          src="/uploads/hero-lawn-care.jpg"
+          src="/uploads/hero-tree-shrub-care.jpg"
           alt="Tree & Shrub Care"
           className="absolute inset-0 w-full h-full object-cover object-top z-0"
         />
@@ -134,7 +134,7 @@ export default function TreeShrubCarePage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden h-96 lg:order-1">
               <img
-                src="/uploads/hero-lawn-care.jpg"
+                src="/uploads/detail-tree-shrub-care.jpg"
                 alt="Professional tree and shrub trimming"
                 className="w-full h-full object-cover object-top"
               />

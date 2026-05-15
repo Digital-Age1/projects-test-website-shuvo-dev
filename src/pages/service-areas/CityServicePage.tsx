@@ -83,7 +83,7 @@ export default function CityServicePage() {
         <section className="relative min-h-[480px] flex items-center overflow-hidden bg-gray-900">
           <div className="absolute inset-0 z-0">
             <img
-              src="/uploads/hero-lawn-care.jpg"
+              src="/uploads/city-lawn.jpg"
               alt={`${service.label} in ${city.name}, ${city.state}`}
               className="w-full h-full object-cover object-top"
             />
@@ -129,7 +129,7 @@ export default function CityServicePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="lg:order-2">
                 <img
-                  src="/uploads/hero-lawn-care.jpg"
+                  src="/uploads/city-lawn.jpg"
                   alt={`${service.label} in ${city.name}`}
                   className="w-full h-72 object-cover object-top rounded-2xl"
                 />
@@ -150,7 +150,7 @@ export default function CityServicePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <img
-                  src="/uploads/hero-lawn-care.jpg"
+                  src="/uploads/city-commercial.jpg"
                   alt={`${service.label} solutions`}
                   className="w-full h-72 object-cover object-top rounded-2xl"
                 />
@@ -171,7 +171,7 @@ export default function CityServicePage() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="lg:order-2">
                 <img
-                  src="/uploads/hero-lawn-care.jpg"
+                  src="/uploads/city-company.jpg"
                   alt={`Expert ${service.label}`}
                   className="w-full h-72 object-cover object-top rounded-2xl"
                 />

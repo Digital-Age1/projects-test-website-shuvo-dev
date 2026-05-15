@@ -62,7 +62,7 @@ export default function LandscapeDesignPage() {
       {/* Hero */}
       <section className="relative h-[420px] md:h-[520px] w-full overflow-hidden bg-gray-900">
         <img
-          src="/uploads/hero-lawn-care.jpg"
+          src="/uploads/hero-landscape-design.jpg"
           alt="Landscape Design & Installation"
           className="absolute inset-0 w-full h-full object-cover object-top z-0"
         />
@@ -134,7 +134,7 @@ export default function LandscapeDesignPage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden h-96">
               <img
-                src="/uploads/hero-lawn-care.jpg"
+                src="/uploads/detail-landscape-design.jpg"
                 alt="Completed landscape installation"
                 className="w-full h-full object-cover object-top"
               />

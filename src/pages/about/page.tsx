@@ -12,32 +12,32 @@ import { useSEO, SITE_URL } from '@/hooks/useSEO';
 function AboutWorkGallery() {
   const shots = [
     {
-      src: '/uploads/hero-lawn-care.jpg',
+      src: '/uploads/about-precision-edging.jpg',
       alt: 'Professional lawn edging service',
       label: 'Precision Edging',
     },
     {
-      src: '/uploads/hero-lawn-care.jpg',
+      src: '/uploads/about-gallery-mowing.jpg',
       alt: 'Lawn mowing with commercial equipment',
       label: 'Lawn Mowing',
     },
     {
-      src: '/uploads/hero-lawn-care.jpg',
+      src: '/uploads/about-gallery-shrub.jpg',
       alt: 'Hedge and shrub trimming',
       label: 'Shrub Trimming',
     },
     {
-      src: '/uploads/hero-lawn-care.jpg',
+      src: '/uploads/about-gallery-mulch.jpg',
       alt: 'Mulch bed installation',
       label: 'Mulching & Beds',
     },
     {
-      src: '/uploads/hero-lawn-care.jpg',
+      src: '/uploads/about-gallery-equipment.jpg',
       alt: 'Trimming Edge professional equipment',
       label: 'Professional Equipment',
     },
     {
-      src: '/uploads/hero-lawn-care.jpg',
+      src: '/uploads/about-gallery-result.jpg',
       alt: 'Completed lawn care result',
       label: 'Completed Results',
     },
@@ -77,7 +77,7 @@ function AboutWorkGallery() {
 
         <div className="relative rounded-3xl overflow-hidden h-64">
           <img
-            src="/uploads/hero-lawn-care.jpg"
+            src="/uploads/about-gallery-banner.jpg"
             alt="Trimming Edge completed lawn care result"
             className="w-full h-full object-cover object-center"
           />
@@ -155,7 +155,7 @@ function AboutWhatsDifferent() {
           </div>
           <div className="relative rounded-3xl overflow-hidden h-72">
             <img
-              src="/uploads/hero-lawn-care.jpg"
+              src="/uploads/about-difference-truck.jpg"
               alt="Trimming Edge professional equipment and service"
               className="w-full h-full object-cover object-top"
             />

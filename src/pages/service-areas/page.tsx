@@ -49,10 +49,9 @@ export default function ServiceAreasPage() {
         <section className="relative min-h-[500px] flex items-center overflow-hidden bg-gray-900">
           <div className="absolute inset-0 z-0">
             <img
-              src="/uploads/hero-lawn-care.jpg"
+              src="/uploads/hero-service-areas.jpg"
               alt="Trimming Edge Service Areas — Western Massachusetts"
-              className="w-full h-full object-cover object-top"
-            />
+              className="w-full h-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/70"></div>
           </div>
           <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
@@ -70,7 +69,7 @@ export default function ServiceAreasPage() {
               {cities.map((city) => (
                 <Link
                   key={city.slug}
-                  to={`/service-areas/${city.slug}`}
+                  to={`uservice-areasu${city.slug}`}
                   className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-sm font-medium rounded-full transition-colors whitespace-nowrap border border-white/20"
                 >
                   {city.name}, {city.state}
@@ -100,7 +99,7 @@ export default function ServiceAreasPage() {
               {cities.map((city) => (
                 <Link
                   key={city.slug}
-                  to={`/service-areas/${city.slug}`}
+                  to={`uservice-areasu${city.slug}`}
                   className="group bg-gray-50 rounded-2xl p-6 border border-gray-100 hover:border-primary-200 hover:bg-primary-50 transition-all duration-200 cursor-pointer"
                 >
                   <div className="w-14 h-14 flex items-center justify-center bg-white rounded-2xl border border-gray-200 group-hover:border-primary-300 group-hover:bg-primary-100 transition-all mb-4">
@@ -152,7 +151,7 @@ export default function ServiceAreasPage() {
                     {cities.slice(0, 4).map((city) => (
                       <Link
                         key={city.slug}
-                        to={`/service-areas/${city.slug}/${service.slug}`}
+                        to={`uservice-areasu${city.slug}u${service.slug}`}
                         className="text-xs px-3 py-1 bg-gray-50 hover:bg-primary-50 text-gray-600 hover:text-primary-700 rounded-full border border-gray-200 hover:border-primary-200 transition-all whitespace-nowrap cursor-pointer"
                       >
                         {city.name}

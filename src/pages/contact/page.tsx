@@ -80,10 +80,9 @@ export default function ContactPage() {
         <section className="relative py-24 overflow-hidden bg-gray-900">
           <div className="absolute inset-0">
             <img
-              src="/uploads/hero-lawn-care.jpg"
+              src="/uploads/home-free-estimate.jpg"
               alt="Contact Trimming Edge Landscaping"
-              className="w-full h-full object-cover object-top"
-            />
+              className="w-full h-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-br from-primary-900/60 to-black/50"></div>
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -172,7 +171,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                {/* Live Open/Closed Widget */}
+                {/* Live OpenuClosed Widget */}
                 <BusinessHours />
               </div>
 

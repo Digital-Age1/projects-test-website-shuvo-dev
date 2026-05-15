@@ -5,62 +5,62 @@ import PageFooter from '../../components/feature/PageFooter';
 
 const instagramPosts = [
   {
-    src: '/uploads/hero-lawn-care.jpg',
+    src: '/uploads/gallery-residential-lawn-care.jpg',
     alt: 'Trimming Edge lawn care work',
     date: 'a week ago',
   },
   {
-    src: '/uploads/hero-lawn-care.jpg',
+    src: '/uploads/gallery-landscape-design.jpg',
     alt: 'Trimming Edge lawn care work',
     date: '3 weeks ago',
   },
   {
-    src: '/uploads/hero-lawn-care.jpg',
+    src: '/uploads/gallery-mulch-installation.jpg',
     alt: 'Trimming Edge lawn care work',
     date: '3 weeks ago',
   },
   {
-    src: '/uploads/hero-lawn-care.jpg',
+    src: '/uploads/gallery-commercial-property.jpg',
     alt: 'Trimming Edge lawn care work',
     date: '3 weeks ago',
   },
   {
-    src: '/uploads/hero-lawn-care.jpg',
+    src: '/uploads/gallery-seasonal-cleanup.jpg',
     alt: 'Trimming Edge lawn care work',
     date: '3 weeks ago',
   },
   {
-    src: '/uploads/hero-lawn-care.jpg',
+    src: '/uploads/gallery-tree-trimming.jpg',
     alt: 'Trimming Edge lawn care work',
     date: '3 weeks ago',
   },
   {
-    src: '/uploads/hero-lawn-care.jpg',
+    src: '/uploads/about-gallery-banner.jpg',
     alt: 'Trimming Edge lawn care work',
     date: '3 weeks ago',
   },
   {
-    src: '/uploads/hero-lawn-care.jpg',
+    src: '/uploads/about-gallery-shrub.jpg',
     alt: 'Trimming Edge lawn care work',
     date: '3 weeks ago',
   },
   {
-    src: '/uploads/hero-lawn-care.jpg',
+    src: '/uploads/service-lawn-mowing.jpg',
     alt: 'Trimming Edge lawn care work',
     date: '3 weeks ago',
   },
   {
-    src: '/uploads/hero-lawn-care.jpg',
+    src: '/uploads/service-landscape-design.jpg',
     alt: 'Trimming Edge lawn care work',
     date: '3 weeks ago',
   },
   {
-    src: '/uploads/hero-lawn-care.jpg',
+    src: '/uploads/service-tree-care.jpg',
     alt: 'Trimming Edge lawn care work',
     date: '3 weeks ago',
   },
   {
-    src: '/uploads/hero-lawn-care.jpg',
+    src: '/uploads/service-commercial-landscaping.jpg',
     alt: 'Trimming Edge lawn care work',
     date: '3 weeks ago',
   },

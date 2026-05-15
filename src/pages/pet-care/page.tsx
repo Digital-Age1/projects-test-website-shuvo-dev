@@ -10,10 +10,9 @@ export default function PetCarePage() {
         <section className="relative min-h-[480px] flex items-center justify-center overflow-hidden bg-gray-900">
           <div className="absolute inset-0">
             <img
-              src="/uploads/hero-lawn-care.jpg"
+              src="/uploads/hero-home.jpg"
               alt="Pet Care Services — Trimming Edge"
-              className="w-full h-full object-cover object-top"
-            />
+              className="w-full h-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
           </div>
           <div className="relative z-10 text-center px-4 w-full max-w-4xl mx-auto">
@@ -50,10 +49,9 @@ export default function PetCarePage() {
               </div>
               <div className="w-full h-72 rounded-xl overflow-hidden">
                 <img
-                  src="/uploads/hero-lawn-care.jpg"
+                  src="/uploads/home-about-team.jpg"
                   alt="Quality Pet Care"
-                  className="w-full h-full object-cover object-top"
-                />
+                  className="w-full h-full object-cover object-top" />
               </div>
             </div>
           </div>
@@ -139,7 +137,7 @@ export default function PetCarePage() {
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-3">Overnight Services</h3>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li><strong>$100</strong> Overnight, 22 Hour Max/ Mid-day PAWp-In Included</li>
+                  <li><strong>$100</strong> Overnight, 22 Hour Maxu Mid-day PAWp-In Included</li>
                   <li><strong>$200</strong> + Overnight, Includes 2 Hours Per Day Visit</li>
                 </ul>
                 <p className="text-xs text-gray-400 mt-3">*See Scheduling Info</p>
@@ -174,7 +172,7 @@ export default function PetCarePage() {
         {/* Dog Logs Pricing */}
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">Dog Logs Pricing (Biweekly/Left)</h2>
+            <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">Dog Logs Pricing (BiweeklyuLeft)</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <ul className="space-y-2 text-sm text-gray-600">

@@ -41,10 +41,9 @@ export default function AboutValues() {
         {/* Visual accent image */}
         <div className="relative rounded-3xl overflow-hidden h-56 mb-12">
           <img
-            src="/uploads/hero-lawn-care.jpg"
+            src="/uploads/about-values.jpg"
             alt="Trimming Edge quality lawn care"
-            className="w-full h-full object-cover object-center"
-          />
+            className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary-900/70 via-primary-800/40 to-transparent flex items-center">
             <div className="px-10 max-w-xl">
               <p className="text-white font-display font-bold text-2xl leading-snug">

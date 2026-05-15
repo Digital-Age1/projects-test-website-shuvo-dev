@@ -1,0 +1,155 @@
+[
+  {
+    "pageOrSection": "Home hero",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/de8aff9aac4115fb0a4fc229a24cb769.jpg",
+    "localFilename": "hero-home.jpg",
+    "localPath": "/uploads/hero-home.jpg"
+  },
+  {
+    "pageOrSection": "Home about section",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/0d8a8730fd5b6996f0d198fa90d93670.jpg",
+    "localFilename": "home-about-team.jpg",
+    "localPath": "/uploads/home-about-team.jpg"
+  },
+  {
+    "pageOrSection": "Home free estimate CTA",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/11460a5b98e30995f26d8348c4694d9e.jpg",
+    "localFilename": "home-free-estimate.jpg",
+    "localPath": "/uploads/home-free-estimate.jpg"
+  },
+  {
+    "pageOrSection": "Services page hero",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/6e2b07e17470b8e74a94c209d5dfd98c.jpg",
+    "localFilename": "hero-services.jpg",
+    "localPath": "/uploads/hero-services.jpg"
+  },
+  {
+    "pageOrSection": "Lawn mowing service hero",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/f96073b8b5cf162d9dd8b19a24d509fe.jpg",
+    "localFilename": "hero-lawn-mowing.jpg",
+    "localPath": "/uploads/hero-lawn-mowing.jpg"
+  },
+  {
+    "pageOrSection": "Lawn mowing service detail",
+    "originalUrl": "https://readdy.ai/api/search-image?seq=lawnmow_detail02",
+    "localFilename": "detail-lawn-mowing.jpg",
+    "localPath": "/uploads/detail-lawn-mowing.jpg"
+  },
+  {
+    "pageOrSection": "Landscape design service hero",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/1e6505260c86e2ff5441c70d10b8959b.jpg",
+    "localFilename": "hero-landscape-design.jpg",
+    "localPath": "/uploads/hero-landscape-design.jpg"
+  },
+  {
+    "pageOrSection": "Landscape design service detail",
+    "originalUrl": "https://readdy.ai/api/search-image?seq=landscape_detail02",
+    "localFilename": "detail-landscape-design.jpg",
+    "localPath": "/uploads/detail-landscape-design.jpg"
+  },
+  {
+    "pageOrSection": "Tree and shrub service hero",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/d2e0cb593600e6724f5fdda314ae8d9f.jpg",
+    "localFilename": "hero-tree-shrub-care.jpg",
+    "localPath": "/uploads/hero-tree-shrub-care.jpg"
+  },
+  {
+    "pageOrSection": "Tree and shrub service detail",
+    "originalUrl": "https://readdy.ai/api/search-image?seq=treeshrub_detail02",
+    "localFilename": "detail-tree-shrub-care.jpg",
+    "localPath": "/uploads/detail-tree-shrub-care.jpg"
+  },
+  {
+    "pageOrSection": "Seasonal cleanups hero",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/1d8aaeafb05e0c7a3bbe7b37a6b58b85.jpg",
+    "localFilename": "hero-seasonal-cleanups.jpg",
+    "localPath": "/uploads/hero-seasonal-cleanups.jpg"
+  },
+  {
+    "pageOrSection": "Seasonal cleanups spring detail",
+    "originalUrl": "https://readdy.ai/api/search-image?seq=spring_cleanup02",
+    "localFilename": "detail-seasonal-cleanup-spring.jpg",
+    "localPath": "/uploads/detail-seasonal-cleanup-spring.jpg"
+  },
+  {
+    "pageOrSection": "Seasonal cleanups fall detail",
+    "originalUrl": "https://readdy.ai/api/search-image?seq=fall_cleanup02",
+    "localFilename": "detail-seasonal-cleanup-fall.jpg",
+    "localPath": "/uploads/detail-seasonal-cleanup-fall.jpg"
+  },
+  {
+    "pageOrSection": "Mulching service hero",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/44048ece5d4d9a48e7b1041f08149769.jpg",
+    "localFilename": "hero-mulching-bed-maintenance.jpg",
+    "localPath": "/uploads/hero-mulching-bed-maintenance.jpg"
+  },
+  {
+    "pageOrSection": "Mulching service detail",
+    "originalUrl": "https://readdy.ai/api/search-image?seq=mulch_detail02",
+    "localFilename": "detail-mulching-bed-maintenance.jpg",
+    "localPath": "/uploads/detail-mulching-bed-maintenance.jpg"
+  },
+  {
+    "pageOrSection": "Commercial landscaping hero",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/99261d41d827ad2ac235699f42b24cee.jpg",
+    "localFilename": "hero-commercial-landscaping.jpg",
+    "localPath": "/uploads/hero-commercial-landscaping.jpg"
+  },
+  {
+    "pageOrSection": "Commercial landscaping detail",
+    "originalUrl": "https://readdy.ai/api/search-image?seq=commercial_detail02",
+    "localFilename": "detail-commercial-landscaping.jpg",
+    "localPath": "/uploads/detail-commercial-landscaping.jpg"
+  },
+  {
+    "pageOrSection": "About page hero",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/0bcb8d60f12d3deb1ea09152456a3ea4.jpg",
+    "localFilename": "hero-about.jpg",
+    "localPath": "/uploads/hero-about.jpg"
+  },
+  {
+    "pageOrSection": "About values banner",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/79138968383863fdcd7019ac79f17297.jpg",
+    "localFilename": "about-values.jpg",
+    "localPath": "/uploads/about-values.jpg"
+  },
+  {
+    "pageOrSection": "Service areas hero",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/8180f9ce6786b8b9202bc1564f25f5da.jpg",
+    "localFilename": "hero-service-areas.jpg",
+    "localPath": "/uploads/hero-service-areas.jpg"
+  },
+  {
+    "pageOrSection": "City service area hero",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/4bbfe8cae2adc36aef83253cdd75bd15.jpg",
+    "localFilename": "hero-city-service-area.jpg",
+    "localPath": "/uploads/hero-city-service-area.jpg"
+  },
+  {
+    "pageOrSection": "City service detail hero",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/6991fa8e3c4a373b44d1a2feb0db4fff.jpg",
+    "localFilename": "city-lawn.jpg",
+    "localPath": "/uploads/city-lawn.jpg",
+    "note": "The direct public image returned 403 during localization, so this uses the original city-lawn reference image from the same page bundle."
+  },
+  {
+    "pageOrSection": "Contact page hero",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/80ceccf395b97cce2029d51fac557987.jpg",
+    "localFilename": "home-free-estimate.jpg",
+    "localPath": "/uploads/home-free-estimate.jpg",
+    "note": "The direct reference image returned 403 during localization, so this uses the original free-estimate image as the closest localized CTA/contact equivalent."
+  },
+  {
+    "pageOrSection": "Blog page hero",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/68419b0bebb1a03e1831113b747b4afd.jpg",
+    "localFilename": "about-gallery-banner.jpg",
+    "localPath": "/uploads/about-gallery-banner.jpg",
+    "note": "The direct reference image returned 403 during localization, so this uses a localized wide lawn-care banner from the same reference bundle."
+  },
+  {
+    "pageOrSection": "Our Work page hero/source gallery",
+    "originalUrl": "https://public.readdy.ai/ai/img_res/c4294e1e6397d244bf45fdb6db7f7937.jpg",
+    "localFilename": "hero-our-work.jpg",
+    "localPath": "/uploads/hero-our-work.jpg"
+  }
+]

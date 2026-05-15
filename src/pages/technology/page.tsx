@@ -11,10 +11,9 @@ export default function TechnologyPage() {
         <section className="relative min-h-[480px] flex items-center justify-center overflow-hidden bg-gray-900">
           <div className="absolute inset-0">
             <img
-              src="/uploads/hero-lawn-care.jpg"
+              src="/uploads/about-difference-truck.jpg"
               alt="Technology & IT Solutions — Trimming Edge"
-              className="w-full h-full object-cover object-top"
-            />
+              className="w-full h-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
           </div>
           <div className="relative z-10 text-center px-4 w-full max-w-4xl mx-auto">
@@ -67,10 +66,9 @@ export default function TechnologyPage() {
               </div>
               <div className="w-full h-80 rounded-xl overflow-hidden">
                 <img
-                  src="/uploads/hero-lawn-care.jpg"
+                  src="/uploads/city-company.jpg"
                   alt="IT Computer Solutions"
-                  className="w-full h-full object-cover object-top"
-                />
+                  className="w-full h-full object-cover object-top" />
               </div>
             </div>
           </div>
@@ -91,7 +89,7 @@ export default function TechnologyPage() {
                   We design our I.T. networking and computer solutions to meet a wide range of technical needs for both individual and business clients. We specialize in troubleshooting and resolving issues related to computers, phones, tablets, and networks. Our expert team can tackle any problem, be it a slow-running desktop, a malfunctioning smartphone, or connectivity issues. Our services extend to printer setups and maintenance, ensuring your printing resources are always operational without disruption.
                 </p>
                 <p className="text-sm font-semibold text-gray-700 mb-6">
-                  Starting Price: $80/hour Remote &nbsp;|&nbsp; $100/hour On Site
+                  Starting Price: $80uhour Remote &nbsp;|&nbsp; $100uhour On Site
                 </p>
                 <div className="flex flex-wrap items-center gap-3">
                   <a
@@ -133,10 +131,9 @@ export default function TechnologyPage() {
               </div>
               <div className="w-full h-80 rounded-xl overflow-hidden">
                 <img
-                  src="/uploads/hero-lawn-care.jpg"
+                  src="/uploads/city-commercial.jpg"
                   alt="Business Network Solutions"
-                  className="w-full h-full object-cover object-top"
-                />
+                  className="w-full h-full object-cover object-top" />
               </div>
             </div>
           </div>
@@ -148,10 +145,9 @@ export default function TechnologyPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="w-full h-80 rounded-xl overflow-hidden order-2 lg:order-1">
                 <img
-                  src="/uploads/hero-lawn-care.jpg"
+                  src="/uploads/about-gallery-equipment.jpg"
                   alt="Remote IT Troubleshooting"
-                  className="w-full h-full object-cover object-top"
-                />
+                  className="w-full h-full object-cover object-top" />
               </div>
               <div className="order-1 lg:order-2">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">

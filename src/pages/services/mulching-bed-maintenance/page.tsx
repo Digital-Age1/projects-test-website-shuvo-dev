@@ -62,7 +62,7 @@ export default function MulchingBedMaintenancePage() {
       {/* Hero */}
       <section className="relative h-[420px] md:h-[520px] w-full overflow-hidden bg-gray-900">
         <img
-          src="/uploads/hero-lawn-care.jpg"
+          src="/uploads/hero-mulching-bed-maintenance.jpg"
           alt="Mulching & Bed Maintenance"
           className="absolute inset-0 w-full h-full object-cover object-top z-0"
         />
@@ -134,7 +134,7 @@ export default function MulchingBedMaintenancePage() {
             </div>
             <div className="relative rounded-2xl overflow-hidden h-96">
               <img
-                src="/uploads/hero-lawn-care.jpg"
+                src="/uploads/detail-mulching-bed-maintenance.jpg"
                 alt="Fresh mulch and clean bed edges"
                 className="w-full h-full object-cover object-top"
               />

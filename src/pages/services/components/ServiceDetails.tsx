@@ -3,7 +3,7 @@ const serviceDetails = [
     id: 1,
     title: 'Lawn Mowing & Maintenance',
     icon: 'ri-plant-line',
-    image: '/uploads/hero-lawn-care.jpg',
+    image: '/uploads/detail-lawn-mowing.jpg',
     description1: 'Regular lawn mowing is the foundation of a beautiful property. Our professional crew arrives on a consistent schedule — weekly or bi-weekly — with commercial-grade equipment that delivers clean, precise cuts every time. We mow, edge, trim around obstacles, and blow off all clippings so your property looks immaculate when we leave.',
     description2: 'We adjust our cutting height based on grass type and season to promote healthy growth, reduce stress, and prevent disease. Whether you have a small residential yard in Montgomery or a large commercial property in Westfield, our team has the equipment and expertise to handle it efficiently.',
     benefits: [
@@ -18,7 +18,7 @@ const serviceDetails = [
     id: 2,
     title: 'Landscape Design & Installation',
     icon: 'ri-seedling-line',
-    image: '/uploads/hero-lawn-care.jpg',
+    image: '/uploads/detail-landscape-design.jpg',
     description1: 'A professionally designed landscape dramatically increases your property\'s curb appeal and market value. Our design process starts with understanding your vision, budget, and how you use your outdoor space. We then create a customized plan featuring plants native to Western Massachusetts that thrive in our climate.',
     description2: 'From planting trees and shrubs to installing stone pathways and decorative beds, our installation team brings the design to life with precision and care. We source quality plants and materials and back our work with a satisfaction guarantee.',
     benefits: [
@@ -33,7 +33,7 @@ const serviceDetails = [
     id: 3,
     title: 'Tree & Shrub Care',
     icon: 'ri-leaf-line',
-    image: '/uploads/hero-lawn-care.jpg',
+    image: '/uploads/detail-tree-shrub-care.jpg',
     description1: 'Healthy trees and shrubs require regular attention — improper trimming can damage plants and create safety hazards. Our team is trained in proper pruning techniques that promote healthy growth, improve structure, and enhance the natural beauty of your trees and shrubs.',
     description2: 'We service all types of trees and ornamental shrubs throughout Huntington, Russell, Westfield, and Montgomery, MA. Whether it\'s routine maintenance trimming or shaping overgrown hedges, we handle every job with care and precision.',
     benefits: [

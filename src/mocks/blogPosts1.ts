@@ -12,19 +12,19 @@ export interface BlogPost {
   readTime: string;
 }
 
-const IMG_LOCAL = '/uploads/hero-lawn-care.jpg';
-const IMG_CABIN = '/uploads/hero-lawn-care.jpg';
-const IMG_COMMERCIAL = '/uploads/hero-lawn-care.jpg';
-const IMG_LAWN = '/uploads/hero-lawn-care.jpg';
-const IMG_FACEBOOK = '/uploads/hero-lawn-care.jpg';
-const IMG_TRUCK = '/uploads/hero-lawn-care.jpg';
-const IMG_CHERRY = '/uploads/hero-lawn-care.jpg';
-const IMG_GARDEN = '/uploads/hero-lawn-care.jpg';
-const IMG_HEDGE = '/uploads/hero-lawn-care.jpg';
-const IMG_SPRING = '/uploads/hero-lawn-care.jpg';
-const IMG_MOWER = '/uploads/hero-lawn-care.jpg';
-const IMG_AERATION = '/uploads/hero-lawn-care.jpg';
-const IMG_FALL = '/uploads/hero-lawn-care.jpg';
+const IMG_LOCAL = '/uploads/service-area-montgomery.jpg';
+const IMG_CABIN = '/uploads/service-area-huntington.jpg';
+const IMG_COMMERCIAL = '/uploads/gallery-commercial-property.jpg';
+const IMG_LAWN = '/uploads/gallery-residential-lawn-care.jpg';
+const IMG_FACEBOOK = '/uploads/home-about-team.jpg';
+const IMG_TRUCK = '/uploads/about-gallery-equipment.jpg';
+const IMG_CHERRY = '/uploads/gallery-landscape-design.jpg';
+const IMG_GARDEN = '/uploads/gallery-landscape-design.jpg';
+const IMG_HEDGE = '/uploads/about-gallery-shrub.jpg';
+const IMG_SPRING = '/uploads/detail-seasonal-cleanup-spring.jpg';
+const IMG_MOWER = '/uploads/about-gallery-mowing.jpg';
+const IMG_AERATION = '/uploads/detail-lawn-mowing.jpg';
+const IMG_FALL = '/uploads/detail-seasonal-cleanup-fall.jpg';
 
 export const russellPosts: BlogPost[] = [
   {
