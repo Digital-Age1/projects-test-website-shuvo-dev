@@ -51,16 +51,6 @@ export default function SpeedtestPage() {
                 allow="fullscreen"
               ></iframe>
             </div>
-            <div className="text-center mt-4">
-              <a
-                href="https://trimming-edge.speedtestcustom.com"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex items-center justify-center px-6 py-3 bg-gray-900 text-white rounded-full border border-gray-700 hover:bg-gray-800 transition"
-              >
-                Open Speed Test
-              </a>
-            </div>
             <p className="text-gray-400 text-xs text-center mt-4">
               All trademarks of Ookla, LLC, including Speedtest®, are used under license.
             </p>
