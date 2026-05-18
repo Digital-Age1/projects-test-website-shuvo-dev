@@ -45,6 +45,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <meta name="google-site-verification" content="jmSf0FvAM3a06ofDbBAu1-9WmYQ8MYnRrQ27Je4iQsk" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
   <body>
     <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;">Trimming Edge - Professional Lawn Care &amp; Landscaping in Westfield, Montgomery, Russell &amp; Huntington MA</h1>
@@ -53,5 +54,16 @@
 
     <!-- WillyWeather Warning Widget -->
     <script src="https://cdnres.willyweather.com/widget/warning/loadView.html?id=157794" type="application/javascript"></script>
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', function(user) {
+          if (!user) {
+            window.netlifyIdentity.on('login', function() {
+              document.location.href = '/admin/';
+            });
+          }
+        });
+      }
+    </script>
   </body>
 </html>

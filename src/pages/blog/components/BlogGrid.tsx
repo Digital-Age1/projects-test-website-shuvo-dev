@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { blogPosts } from '@/mocks/blog';
+import blogContent from '@/content/blog/posts.json';
 
 export default function BlogGrid() {
   const [searchQuery, setSearchQuery] = useState('');
   const [visibleCount, setVisibleCount] = useState(6);
+  const blogPosts = blogContent.posts;
 
   const filtered = blogPosts.filter((post) => {
     const q = searchQuery.toLowerCase();

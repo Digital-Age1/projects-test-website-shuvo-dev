@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "title": "About Trimming Edge",
+    "image": "/uploads/hero-about.jpg",
+    "description": "A locally owned lawn care and landscaping company serving Western Massachusetts."
+  },
+  "sections": [
+    {
+      "title": "Your Local Lawn Care Experts Since 2009",
+      "image": "/uploads/about-team.jpg",
+      "body": "Trimming Edge has been proudly serving homeowners and businesses with professional lawn care and landscaping services for over 15 years."
+    }
+  ]
+}

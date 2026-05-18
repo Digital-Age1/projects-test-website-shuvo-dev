@@ -2,8 +2,10 @@ import { useEffect } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
 import PageHeader from '@/components/feature/PageHeader';
 import PageFooter from '@/components/feature/PageFooter';
-import { blogPosts } from '@/mocks/blog';
+import blogContent from '@/content/blog/posts.json';
 import { useSEO, SITE_URL } from '@/hooks/useSEO';
+
+const blogPosts = blogContent.posts;
 
 function PostContent({ post }: { post: (typeof blogPosts)[0] }) {
   return (

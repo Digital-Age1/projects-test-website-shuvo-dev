@@ -1,0 +1,229 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+site_url: "https://test-website-shuvo-dev.netlify.app"
+display_url: "https://test-website-shuvo-dev.netlify.app"
+logo_url: "/uploads/logo-trimming-edge.png"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "src/content/site.json"
+        label: "Site Info"
+        name: "site"
+        format: "json"
+        fields:
+          - { label: "Company Name", name: "companyName", widget: "string" }
+          - { label: "Business Name", name: "businessName", widget: "string", required: false }
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Phone Link", name: "phoneHref", widget: "string", required: false }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Email Link", name: "emailHref", widget: "string", required: false }
+          - { label: "Address", name: "address", widget: "text" }
+          - { label: "Location", name: "location", widget: "string", required: false }
+          - { label: "Service Area Text", name: "serviceAreaText", widget: "string", required: false }
+          - { label: "Logo", name: "logo", widget: "image", required: false }
+          - { label: "Client Login URL", name: "clientLoginUrl", widget: "string", required: false }
+          - label: "Claims"
+            name: "claims"
+            widget: "list"
+            field: { label: "Claim", name: "claim", widget: "string" }
+
+  - name: "pages"
+    label: "Page Content"
+    files:
+      - file: "src/content/home.json"
+        label: "Home"
+        name: "home"
+        format: "json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Badges", name: "badge", widget: "list", field: { label: "Badge", name: "badge", widget: "string" } }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Highlight", name: "highlight", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+          - label: "Free Estimate"
+            name: "freeEstimate"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+      - file: "src/content/navigation.json"
+        label: "Navigation"
+        name: "navigation"
+        format: "json"
+        fields:
+          - { label: "Main Links", name: "main", widget: "list", fields: [{ label: "Label", name: "label", widget: "string" }, { label: "Path", name: "path", widget: "string" }] }
+          - { label: "Services Dropdown", name: "services", widget: "list", fields: [{ label: "Label", name: "label", widget: "string" }, { label: "Path", name: "path", widget: "string" }] }
+          - { label: "About Dropdown", name: "about", widget: "list", fields: [{ label: "Label", name: "label", widget: "string" }, { label: "Path", name: "path", widget: "string" }] }
+          - { label: "Service Areas Dropdown", name: "serviceAreas", widget: "list", fields: [{ label: "Label", name: "label", widget: "string" }, { label: "Path", name: "path", widget: "string" }] }
+
+      - file: "src/content/services.json"
+        label: "Services"
+        name: "services"
+        format: "json"
+        fields:
+          - label: "Services"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "number", value_type: "int", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Icon", name: "icon", widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image", required: false }
+
+      - file: "src/content/servicePages.json"
+        label: "Service Pages"
+        name: "servicePages"
+        format: "json"
+        fields:
+          - label: "Pages"
+            name: "pages"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Slug", name: "slug", widget: "string" }
+              - { label: "Hero Image", name: "heroImage", widget: "image", required: false }
+              - { label: "Detail Image", name: "detailImage", widget: "image", required: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
+
+      - file: "src/content/serviceAreas.json"
+        label: "Service Areas"
+        name: "serviceAreas"
+        format: "json"
+        fields:
+          - { label: "Hero", name: "hero", widget: "object", fields: [{ label: "Title", name: "title", widget: "string" }, { label: "Image", name: "image", widget: "image" }, { label: "Description", name: "description", widget: "text" }] }
+          - { label: "Cities", name: "cities", widget: "list", fields: [{ label: "Name", name: "name", widget: "string" }, { label: "State", name: "state", widget: "string" }, { label: "Slug", name: "slug", widget: "string" }, { label: "Image", name: "image", widget: "image", required: false }] }
+
+      - file: "src/content/about.json"
+        label: "About"
+        name: "about"
+        format: "json"
+        fields:
+          - { label: "Hero", name: "hero", widget: "object", fields: [{ label: "Title", name: "title", widget: "string" }, { label: "Image", name: "image", widget: "image" }, { label: "Description", name: "description", widget: "text" }] }
+          - { label: "Sections", name: "sections", widget: "list", fields: [{ label: "Title", name: "title", widget: "string" }, { label: "Image", name: "image", widget: "image", required: false }, { label: "Body", name: "body", widget: "text" }] }
+
+      - file: "src/content/petCare.json"
+        label: "Pet Care"
+        name: "petCare"
+        format: "json"
+        fields:
+          - { label: "Hero", name: "hero", widget: "object", fields: [{ label: "Title", name: "title", widget: "string" }, { label: "Image", name: "image", widget: "image" }, { label: "Description", name: "description", widget: "text", required: false }] }
+          - { label: "Intro", name: "intro", widget: "object", fields: [{ label: "Title", name: "title", widget: "string" }, { label: "Image", name: "image", widget: "image" }, { label: "Body", name: "body", widget: "text" }] }
+
+      - file: "src/content/technology.json"
+        label: "Technology"
+        name: "technology"
+        format: "json"
+        fields:
+          - { label: "Hero", name: "hero", widget: "object", fields: [{ label: "Title", name: "title", widget: "string" }, { label: "Image", name: "image", widget: "image" }, { label: "Description", name: "description", widget: "text", required: false }] }
+          - { label: "Sections", name: "sections", widget: "list", fields: [{ label: "Title", name: "title", widget: "string" }, { label: "Image", name: "image", widget: "image", required: false }, { label: "Body", name: "body", widget: "text" }] }
+
+      - file: "src/content/gallery.json"
+        label: "Gallery"
+        name: "gallery"
+        format: "json"
+        fields:
+          - label: "Gallery Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "number", value_type: "int", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+
+      - file: "src/content/testimonials.json"
+        label: "Testimonials"
+        name: "testimonials"
+        format: "json"
+        fields:
+          - label: "Testimonials"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "number", value_type: "int", required: false }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Location", name: "location", widget: "string", required: false }
+              - { label: "Rating", name: "rating", widget: "number", value_type: "int", min: 1, max: 5 }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Initials", name: "initials", widget: "string", required: false }
+              - { label: "Color Class", name: "color", widget: "string", required: false }
+
+      - file: "src/content/faq.json"
+        label: "FAQ"
+        name: "faq"
+        format: "json"
+        fields:
+          - label: "FAQ Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "number", value_type: "int", required: false }
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+
+      - file: "src/content/contact.json"
+        label: "Contact"
+        name: "contact"
+        format: "json"
+        fields:
+          - { label: "Phone", name: "phone", widget: "string" }
+          - { label: "Phone Link", name: "phoneHref", widget: "string", required: false }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Email Link", name: "emailHref", widget: "string", required: false }
+          - { label: "Location", name: "location", widget: "string" }
+          - { label: "Hours", name: "hours", widget: "list", field: { label: "Hour", name: "hour", widget: "string" } }
+
+      - file: "src/content/seo.json"
+        label: "SEO"
+        name: "seo"
+        format: "json"
+        fields:
+          - { label: "Default Title", name: "defaultTitle", widget: "string" }
+          - { label: "Default Description", name: "defaultDescription", widget: "text" }
+          - { label: "Site URL", name: "siteUrl", widget: "string" }
+          - { label: "Open Graph Image", name: "ogImage", widget: "image", required: false }
+
+  - name: "blog"
+    label: "Blog"
+    files:
+      - file: "src/content/blog/posts.json"
+        label: "Blog Posts"
+        name: "posts"
+        format: "json"
+        fields:
+          - label: "Posts"
+            name: "posts"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Slug", name: "slug", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Excerpt", name: "excerpt", widget: "text" }
+              - { label: "Content", name: "content", widget: "markdown" }
+              - { label: "Author", name: "author", widget: "string" }
+              - { label: "Date", name: "date", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Tags", name: "tags", widget: "list", field: { label: "Tag", name: "tag", widget: "string" } }
+              - { label: "Read Time", name: "readTime", widget: "string", required: false }

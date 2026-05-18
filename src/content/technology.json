@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "title": "Maximize Your Network Potential",
+    "image": "/uploads/hero-technology-server-room.jpg",
+    "description": "Technology, networking, and computer solutions for homes and small businesses."
+  },
+  "sections": [
+    {
+      "title": "Unleashing Excellence In Technology Solutions.",
+      "image": "/uploads/technology-computer-repair.jpg",
+      "body": "I.T. networking and computer solutions tailored to your specific needs."
+    },
+    {
+      "title": "Comprehensive Business Network and Communication Services",
+      "image": "/uploads/technology-network-setup.jpg",
+      "body": "Network equipment, routers, switches, communication systems, and small business support."
+    }
+  ]
+}

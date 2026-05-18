@@ -1,0 +1,15 @@
+{
+  "hero": {
+    "title": "Service Areas",
+    "image": "/uploads/hero-service-areas.jpg",
+    "description": "Trimming Edge provides professional lawn care and landscaping across Western Massachusetts."
+  },
+  "cities": [
+    { "name": "Agawam", "state": "MA", "slug": "agawam-ma", "image": "/uploads/hero-city-service-area.jpg" },
+    { "name": "Huntington", "state": "MA", "slug": "huntington-ma", "image": "/uploads/service-area-huntington.jpg" },
+    { "name": "Montgomery", "state": "MA", "slug": "montgomery-ma", "image": "/uploads/service-area-montgomery.jpg" },
+    { "name": "Russell", "state": "MA", "slug": "russell-ma", "image": "/uploads/service-area-russell.jpg" },
+    { "name": "Southwick", "state": "MA", "slug": "southwick-ma", "image": "/uploads/hero-city-service-area.jpg" },
+    { "name": "Westfield", "state": "MA", "slug": "westfield-ma", "image": "/uploads/service-area-westfield.jpg" }
+  ]
+}

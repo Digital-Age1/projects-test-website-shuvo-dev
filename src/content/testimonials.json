@@ -1,38 +1,40 @@
-[
-  {
-    "id": 1,
-    "name": "Frank Laskowski",
-    "location": "Google Review - 6 months ago",
-    "rating": 5,
-    "text": "David and Amanda are a pleasure to work with. These guys are the real deal. They're great at what they do with a price point that is spot on. I highly recommend them.",
-    "initials": "FL",
-    "color": "bg-emerald-500"
-  },
-  {
-    "id": 2,
-    "name": "Linda Binnenkade",
-    "location": "Google Review - 4 months ago",
-    "rating": 5,
-    "text": "If I could give this company more stars I would. They work very hard and we are always pleased with the outcome. Thank you Trimming Edge!",
-    "initials": "LB",
-    "color": "bg-teal-500"
-  },
-  {
-    "id": 3,
-    "name": "Robert Brayton",
-    "location": "Local Guide - 6 months ago",
-    "rating": 5,
-    "text": "Excellent clean and efficient work. My lawn always looks better after Trimming Edge completes their work. David and Amanda are kind and caring. They treat it as if it was their own lawn.",
-    "initials": "RB",
-    "color": "bg-green-600"
-  },
-  {
-    "id": 4,
-    "name": "John Dean",
-    "location": "Google Review - 4 months ago",
-    "rating": 5,
-    "text": "Contracted for Fall cleanup. Came early and did an outstanding job. Highly recommend, friendly and hard working crew.",
-    "initials": "JD",
-    "color": "bg-lime-600"
-  }
-]
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Frank Laskowski",
+      "location": "Google Review - 6 months ago",
+      "rating": 5,
+      "text": "David and Amanda are a pleasure to work with. These guys are the real deal. They're great at what they do with a price point that is spot on. I highly recommend them.",
+      "initials": "FL",
+      "color": "bg-emerald-500"
+    },
+    {
+      "id": 2,
+      "name": "Linda Binnenkade",
+      "location": "Google Review - 4 months ago",
+      "rating": 5,
+      "text": "If I could give this company more stars I would. They work very hard and we are always pleased with the outcome. Thank you Trimming Edge!",
+      "initials": "LB",
+      "color": "bg-teal-500"
+    },
+    {
+      "id": 3,
+      "name": "Robert Brayton",
+      "location": "Local Guide - 6 months ago",
+      "rating": 5,
+      "text": "Excellent clean and efficient work. My lawn always looks better after Trimming Edge completes their work. David and Amanda are kind and caring. They treat it as if it was their own lawn.",
+      "initials": "RB",
+      "color": "bg-green-600"
+    },
+    {
+      "id": 4,
+      "name": "John Dean",
+      "location": "Google Review - 4 months ago",
+      "rating": 5,
+      "text": "Contracted for Fall cleanup. Came early and did an outstanding job. Highly recommend, friendly and hard working crew.",
+      "initials": "JD",
+      "color": "bg-lime-600"
+    }
+  ]
+}

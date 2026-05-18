@@ -1,0 +1,46 @@
+{
+  "pages": [
+    {
+      "title": "Lawn Mowing & Maintenance",
+      "slug": "lawn-mowing",
+      "heroImage": "/uploads/hero-lawn-mowing.jpg",
+      "detailImage": "/uploads/detail-lawn-mowing.jpg",
+      "description": "Professional weekly or bi-weekly lawn mowing with edging, trimming, and blowing."
+    },
+    {
+      "title": "Landscape Design & Installation",
+      "slug": "landscape-design",
+      "heroImage": "/uploads/hero-landscape-design.jpg",
+      "detailImage": "/uploads/detail-landscape-design.jpg",
+      "description": "Custom landscape design, plantings, mulching, and installation for Western Massachusetts properties."
+    },
+    {
+      "title": "Tree & Shrub Care",
+      "slug": "tree-shrub-care",
+      "heroImage": "/uploads/hero-tree-shrub-care.jpg",
+      "detailImage": "/uploads/detail-tree-shrub-care.jpg",
+      "description": "Tree trimming, shrub pruning, hedge shaping, and plant health care."
+    },
+    {
+      "title": "Seasonal Cleanups",
+      "slug": "seasonal-cleanups",
+      "heroImage": "/uploads/hero-seasonal-cleanups.jpg",
+      "detailImage": "/uploads/detail-seasonal-cleanup-fall.jpg",
+      "description": "Spring and fall cleanups, leaf removal, debris clearing, and bed preparation."
+    },
+    {
+      "title": "Mulching & Bed Maintenance",
+      "slug": "mulching-bed-maintenance",
+      "heroImage": "/uploads/hero-mulching-bed-maintenance.jpg",
+      "detailImage": "/uploads/detail-mulching-bed-maintenance.jpg",
+      "description": "Fresh mulch installation and garden bed maintenance for a polished landscape."
+    },
+    {
+      "title": "Commercial Landscaping",
+      "slug": "commercial-landscaping",
+      "heroImage": "/uploads/hero-commercial-landscaping.jpg",
+      "detailImage": "/uploads/detail-commercial-landscaping.jpg",
+      "description": "Reliable commercial grounds maintenance for businesses, HOAs, and property managers."
+    }
+  ]
+}

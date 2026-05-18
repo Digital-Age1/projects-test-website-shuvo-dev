@@ -3,7 +3,7 @@ import gallery from '@/content/gallery.json';
 import testimonialsContent from '@/content/testimonials.json';
 import faqContent from '@/content/faq.json';
 
-export const mainServices = services;
+export const mainServices = services.items;
 
 export const whyChooseUs = [
   {
@@ -32,7 +32,7 @@ export const whyChooseUs = [
   },
 ];
 
-export const testimonials = testimonialsContent;
+export const testimonials = testimonialsContent.items;
 
 export const serviceAreas = [
   'Huntington, MA',
@@ -62,6 +62,6 @@ export const processSteps = [
   },
 ];
 
-export const faqItems = faqContent;
+export const faqItems = faqContent.items;
 
-export const galleryImages = gallery;
+export const galleryImages = gallery.items;

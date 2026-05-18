@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import PageHeader from '../../components/feature/PageHeader';
 import PageFooter from '../../components/feature/PageFooter';
 
+const INSTAGRAM_URL = 'https://www.instagram.com/trimmingedge';
+const FACEBOOK_URL = 'https://www.facebook.com/trimmingedgema/photos_albums';
+
 const instagramPosts = [
   {
     src: '/uploads/gallery-residential-lawn-care.jpg',
@@ -91,7 +94,7 @@ export default function OurWorkPage() {
           </div>
         </section>
 
-        {/* Instagram Feed Header */}
+        {/* Social Gallery Header */}
         <section className="py-12 bg-white">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
@@ -101,17 +104,29 @@ export default function OurWorkPage() {
                 </div>
                 <div>
                   <div className="font-display font-bold text-xl text-gray-900">TrimmingEdge.com</div>
-                  <div className="text-sm text-gray-500">32 Posts on Instagram</div>
+                  <div className="text-sm text-gray-500">Recent work from Instagram and Facebook</div>
                 </div>
               </div>
-              <a
-                href="https://www.instagram.com/trimmingedge"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-2.5 border-2 border-gray-900 text-gray-900 font-semibold rounded-lg hover:bg-gray-900 hover:text-white transition-colors whitespace-nowrap"
-              >
-                Follow Us
-              </a>
+              <div className="flex flex-wrap items-center gap-3">
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-2.5 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 text-white font-semibold rounded-lg hover:opacity-90 transition-opacity whitespace-nowrap"
+                >
+                  <i className="ri-instagram-line mr-2 text-lg"></i>
+                  Instagram
+                </a>
+                <a
+                  href={FACEBOOK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center px-6 py-2.5 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-800 transition-colors whitespace-nowrap"
+                >
+                  <i className="ri-facebook-fill mr-2 text-lg"></i>
+                  Facebook
+                </a>
+              </div>
             </div>
 
             {/* Photo Grid */}
@@ -119,7 +134,7 @@ export default function OurWorkPage() {
               {instagramPosts.map((post, i) => (
                 <a
                   key={i}
-                  href="https://www.instagram.com/trimmingedge"
+                  href={INSTAGRAM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative aspect-square rounded-xl overflow-hidden bg-gray-100 cursor-pointer"
@@ -129,14 +144,14 @@ export default function OurWorkPage() {
                     alt={post.alt}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
-                    <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
+                    <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="w-10 h-10 flex items-center justify-center bg-white/90 rounded-full">
                         <i className="ri-instagram-line text-gray-900 text-lg"></i>
                       </div>
                     </div>
                   </div>
-                  <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="absolute bottom-2 left-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="flex items-center space-x-1.5 bg-black/60 backdrop-blur-sm rounded-lg px-2 py-1">
                       <div className="w-4 h-4 flex items-center justify-center">
                         <i className="ri-instagram-line text-white text-xs"></i>
@@ -149,15 +164,24 @@ export default function OurWorkPage() {
               ))}
             </div>
 
-            <div className="text-center mt-10">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
               <a
-                href="https://www.instagram.com/trimmingedge"
+                href={INSTAGRAM_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 text-white text-lg font-bold rounded-lg hover:opacity-90 transition-opacity whitespace-nowrap"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-400 text-white text-lg font-bold rounded-lg hover:opacity-90 transition-opacity whitespace-nowrap"
               >
                 <i className="ri-instagram-line mr-2 text-xl"></i>
                 View All on Instagram
+              </a>
+              <a
+                href={FACEBOOK_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-gray-900 text-white text-lg font-bold rounded-lg hover:bg-gray-800 transition-colors whitespace-nowrap"
+              >
+                <i className="ri-facebook-fill mr-2 text-xl"></i>
+                View All on Facebook
               </a>
             </div>
           </div>

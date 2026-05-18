@@ -1,32 +1,34 @@
-[
-  {
-    "id": 1,
-    "question": "How often should I have my lawn mowed?",
-    "answer": "During peak growing season, we recommend weekly mowing to maintain optimal lawn health and appearance. In slower growth periods, bi-weekly service may be sufficient."
-  },
-  {
-    "id": 2,
-    "question": "Do you offer free estimates?",
-    "answer": "Yes. We provide free, no-obligation estimates for all our services. Call us at (413) 551-9653 or request an estimate online."
-  },
-  {
-    "id": 3,
-    "question": "Are you licensed and insured?",
-    "answer": "Yes. Trimming Edge is licensed and insured to protect both our team and your property."
-  },
-  {
-    "id": 4,
-    "question": "What areas do you serve?",
-    "answer": "We proudly serve Huntington, Montgomery, Russell, and Westfield in Western Massachusetts."
-  },
-  {
-    "id": 5,
-    "question": "Do you provide commercial landscaping services?",
-    "answer": "Yes. We provide reliable commercial property maintenance for businesses, HOAs, and property managers."
-  },
-  {
-    "id": 6,
-    "question": "What services does Trimming Edge offer?",
-    "answer": "Our main services include lawn mowing and maintenance, landscape design and installation, tree and shrub care, seasonal cleanups, mulching and bed maintenance, and commercial landscaping."
-  }
-]
+{
+  "items": [
+    {
+      "id": 1,
+      "question": "How often should I have my lawn mowed?",
+      "answer": "During peak growing season, we recommend weekly mowing to maintain optimal lawn health and appearance. In slower growth periods, bi-weekly service may be sufficient."
+    },
+    {
+      "id": 2,
+      "question": "Do you offer free estimates?",
+      "answer": "Yes. We provide free, no-obligation estimates for all our services. Call us at (413) 551-9653 or request an estimate online."
+    },
+    {
+      "id": 3,
+      "question": "Are you licensed and insured?",
+      "answer": "Yes. Trimming Edge is licensed and insured to protect both our team and your property."
+    },
+    {
+      "id": 4,
+      "question": "What areas do you serve?",
+      "answer": "We proudly serve Huntington, Montgomery, Russell, and Westfield in Western Massachusetts."
+    },
+    {
+      "id": 5,
+      "question": "Do you provide commercial landscaping services?",
+      "answer": "Yes. We provide reliable commercial property maintenance for businesses, HOAs, and property managers."
+    },
+    {
+      "id": 6,
+      "question": "What services does Trimming Edge offer?",
+      "answer": "Our main services include lawn mowing and maintenance, landscape design and installation, tree and shrub care, seasonal cleanups, mulching and bed maintenance, and commercial landscaping."
+    }
+  ]
+}

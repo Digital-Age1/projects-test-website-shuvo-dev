@@ -1,10 +1,12 @@
 {
   "businessName": "Trimming Edge",
+  "companyName": "Trimming Edge",
   "phone": "(413) 551-9653",
   "phoneHref": "tel:+14135519653",
   "email": "info@trimmingedge.com",
   "emailHref": "mailto:info@trimmingedge.com",
   "location": "Montgomery, MA 01050",
+  "address": "Montgomery, MA 01050",
   "serviceAreaText": "Huntington, Montgomery, Russell & Westfield, MA",
   "logo": "/uploads/logo-trimming-edge.png",
   "clientLoginUrl": "https://clienthub.getjobber.com/client_hubs/da2b824e-c9bb-44de-96ad-55e97fa0a147/login/new?source=share_login",

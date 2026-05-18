@@ -1,0 +1,12 @@
+{
+  "hero": {
+    "title": "Pamper Your Pets Today!",
+    "image": "/uploads/hero-pet-care-dog-lawn.jpg",
+    "description": "Pet care services for clients throughout Western Massachusetts."
+  },
+  "intro": {
+    "title": "Quality Care For Your Furry Friend.",
+    "image": "/uploads/pet-care-family-dog.jpg",
+    "body": "Trimming Edge is the ultimate destination for premium pet care, where your furry friend's happiness and well-being are our top priorities."
+  }
+}
