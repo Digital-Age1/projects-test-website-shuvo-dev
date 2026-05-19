@@ -8,6 +8,8 @@ import { useSEO, SITE_URL } from '@/hooks/useSEO';
 const blogPosts = blogContent.posts;
 
 function PostContent({ post }: { post: (typeof blogPosts)[0] }) {
+  const content = (post as any).content ?? (post as any).body ?? '';
+
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
       {/* Breadcrumb */}
@@ -58,8 +60,8 @@ function PostContent({ post }: { post: (typeof blogPosts)[0] }) {
 
       {/* Content Sections */}
       <div className="prose-custom space-y-5">
-        {typeof post.content === 'string' ? (
-          post.content.split('\n\n').map((paragraph, idx) => {
+        {typeof content === 'string' ? (
+          content.split('\n\n').map((paragraph, idx) => {
             const trimmed = paragraph.trim();
             if (!trimmed) return null;
             if (trimmed.startsWith('## ')) {
@@ -91,58 +93,63 @@ function PostContent({ post }: { post: (typeof blogPosts)[0] }) {
             );
           })
         ) : (
-          (post.content as Array<{ type: string; text?: string; items?: string[] }>).map((section, idx) => {
-            if (section.type === 'paragraph') {
-              return (
-                <p key={idx} className="text-gray-700 text-base leading-relaxed">
-                  {section.text}
-                </p>
-              );
-            }
-            if (section.type === 'heading') {
-              return (
-                <h2 key={idx} className="font-display font-bold text-xl md:text-2xl text-gray-900 mt-8 mb-2">
-                  {section.text}
-                </h2>
-              );
-            }
-            if (section.type === 'list' && section.items) {
-              return (
-                <ul key={idx} className="space-y-2 pl-2">
-                  {section.items.map((item, i) => (
-                    <li key={i} className="flex items-start space-x-2 text-gray-700 text-sm">
-                      <div className="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <i className="ri-checkbox-circle-fill text-primary-500 text-base"></i>
-                      </div>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              );
-            }
-            if (section.type === 'cta') {
-              return (
-                <div key={idx} className="bg-primary-50 border border-primary-100 rounded-xl p-6 mt-8 text-center">
-                  <p className="text-gray-700 font-medium mb-4">
-                    Ready to get started? Contact Trimming Edge today for a free, no-obligation estimate.
-                  </p>
-                  <a
-                    href="/contact-us"
-                    className="inline-flex items-center px-8 py-3 bg-primary-600 text-white text-sm font-bold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap"
-                  >
+          (() => {
+            const content = (post as any).content ?? (post as any).body ?? '';
+            const sections = Array.isArray(content) ? content : [];
+
+            return sections.map((section, idx) => {
+              if (section.type === 'paragraph') {
+                return (
+                  <p key={idx} className="text-gray-700 text-base leading-relaxed">
                     {section.text}
-                  </a>
-                </div>
-              );
-            }
-            return null;
-          })
+                  </p>
+                );
+              }
+              if (section.type === 'heading') {
+                return (
+                  <h2 key={idx} className="font-display font-bold text-xl md:text-2xl text-gray-900 mt-8 mb-2">
+                    {section.text}
+                  </h2>
+                );
+              }
+              if (section.type === 'list' && section.items) {
+                return (
+                  <ul key={idx} className="space-y-2 pl-2">
+                    {(Array.isArray(section.items) ? section.items : []).map((item, i) => (
+                      <li key={i} className="flex items-start space-x-2 text-gray-700 text-sm">
+                        <div className="w-5 h-5 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <i className="ri-checkbox-circle-fill text-primary-500 text-base"></i>
+                        </div>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                );
+              }
+              if (section.type === 'cta') {
+                return (
+                  <div key={idx} className="bg-primary-50 border border-primary-100 rounded-xl p-6 mt-8 text-center">
+                    <p className="text-gray-700 font-medium mb-4">
+                      Ready to get started? Contact Trimming Edge today for a free, no-obligation estimate.
+                    </p>
+                    <a
+                      href="/contact-us"
+                      className="inline-flex items-center px-8 py-3 bg-primary-600 text-white text-sm font-bold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap"
+                    >
+                      {section.text}
+                    </a>
+                  </div>
+                );
+              }
+              return null;
+            })
+          })()
         )}
       </div>
 
       {/* Tags */}
       <div className="flex flex-wrap gap-2 mt-10 pt-8 border-t border-gray-100">
-        {post.tags.map((tag) => (
+        {(Array.isArray(post.tags) ? post.tags : []).map((tag) => (
           <span key={tag} className="px-3 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded-full">
             #{tag}
           </span>
@@ -217,7 +224,7 @@ export default function BlogPostPage() {
       ? post.excerpt
       : 'Expert lawn care and landscaping tips from Trimming Edge in Western Massachusetts.',
     keywords: post
-      ? post.tags.join(', ')
+      ? (Array.isArray(post.tags) ? post.tags.join(', ') : `${post.tags || ''}`)
       : 'lawn care tips, landscaping advice, Western Massachusetts',
     canonical: post ? `/blog/${post.slug}` : '/blog',
     ogType: 'article',
@@ -239,7 +246,9 @@ export default function BlogPostPage() {
             name: 'Trimming Edge',
             url: `${SITE_URL}/`,
           },
-          keywords: post.tags.join(', '),
+          keywords: Array.isArray(post.seoKeywords)
+            ? post.seoKeywords.join(', ')
+            : (typeof post.seoKeywords === 'string' ? post.seoKeywords : ''),
           articleSection: post.category,
           breadcrumb: {
             '@type': 'BreadcrumbList',
