@@ -1,14 +1,192 @@
 {
-  "hero": {
-    "title": "About Trimming Edge",
-    "image": "/uploads/hero-about.jpg",
-    "description": "A locally owned lawn care and landscaping company serving Western Massachusetts."
-  },
-  "sections": [
+  "heroTitle": "Locally Owned Lawn Care in Western MA",
+  "heroSubtitle": "Trimming Edge is a family-operated lawn care company based in Montgomery, MA - built on hard work, local pride, and a perfect 5-star reputation.",
+  "heroImage": "/uploads/hero-about.jpg",
+  "heroPrimaryLabel": "(413) 551-9653",
+  "heroPrimaryHref": "tel:+14135519653",
+  "heroSecondaryLabel": "View Our Services",
+  "heroSecondaryHref": "/services",
+  "storyEyebrow": "Our Story",
+  "storyTitle": "Our Story",
+  "storyText": [
+    "Trimming Edge started with a simple belief: that lawn care should be personal, professional, and consistent. David and Amanda founded the company in Montgomery, MA with a single truck, a few tools, and a commitment to treating every property like their own.",
+    "Word spread quickly. Neighbors told neighbors. Today, Trimming Edge serves homeowners and businesses across Westfield, Huntington, Russell, Montgomery, and surrounding areas - all while maintaining the same hands-on approach that made us successful from day one.",
+    "As a locally owned business, we take extra pride in proving that quality, attention to detail, and reliability are what define great lawn care - and we have built a perfect 5-star reputation to prove it."
+  ],
+  "storyImage": "/uploads/about-team.jpg",
+  "storyImageAlt": "Trimming Edge owners and lawn care team",
+  "valuesTitle": "What Guides Everything We Do",
+  "valuesSubtitle": "Every decision we make - from how we schedule visits to how we communicate - comes back to these core values.",
+  "valuesImage": "/uploads/about-values.jpg",
+  "valuesImageAlt": "Trimming Edge quality lawn care",
+  "valuesQuote": "\"We treat every property as if it were our own.\"",
+  "valuesQuoteAttribution": "- David & Amanda, Founders",
+  "values": [
     {
-      "title": "Your Local Lawn Care Experts Since 2009",
-      "image": "/uploads/about-team.jpg",
-      "body": "Trimming Edge has been proudly serving homeowners and businesses with professional lawn care and landscaping services for over 15 years."
+      "iconKey": "award",
+      "title": "Quality First",
+      "description": "We never rush. Every mow, every edge, every cleanup is done with precision and care. Your property deserves our best work - every single visit."
+    },
+    {
+      "iconKey": "time",
+      "title": "Reliability You Can Count On",
+      "description": "We show up when we say we will. Consistency is at the heart of great lawn care, and our customers know they can count on us week after week."
+    },
+    {
+      "iconKey": "group",
+      "title": "Customer First, Always",
+      "description": "From your first call to the finished job, we treat you like a neighbor - because you are one. Your satisfaction is not just a goal, it's our guarantee."
+    },
+    {
+      "iconKey": "heart",
+      "title": "Community Pride",
+      "description": "We're based in Montgomery, MA and care deeply about the communities we serve. Beautiful properties make better neighborhoods - and that matters to us."
     }
-  ]
+  ],
+  "differentiatorsTitle": "What Makes Trimming Edge Different",
+  "differentiatorsSubtitle": "There are a lot of lawn care companies in Western Massachusetts. Here's why homeowners and businesses across Westfield, Huntington, Russell, and Montgomery keep coming back to us - and why they refer their neighbors.",
+  "differentiatorsImage": "/uploads/about-difference-truck.jpg",
+  "differentiatorsImageAlt": "Trimming Edge professional equipment and service",
+  "differentiators": [
+    {
+      "iconKey": "userHeart",
+      "title": "You Work Directly With the Owners",
+      "description": "No call centers, no middlemen. When you call Trimming Edge, David or Amanda picks up. That direct relationship means faster answers, better service, and real accountability."
+    },
+    {
+      "iconKey": "homeSmile",
+      "title": "We Live In the Community We Serve",
+      "description": "We're based right here in Montgomery, MA. When we drive through Westfield or Huntington, we see the lawns we care for. That local pride shows in every job we do."
+    },
+    {
+      "iconKey": "awardFill",
+      "title": "Perfect 5-Star Record - Every Review",
+      "description": "Not almost-perfect. Perfect. Every Google review we've ever received is a 5-star review. That's not luck - it's the result of genuinely caring about each customer's property."
+    },
+    {
+      "iconKey": "calendar",
+      "title": "Consistent Scheduling, Every Time",
+      "description": "We show up on the day we say we will. Consistent scheduling builds trust, and trust is what keeps our customers coming back season after season."
+    },
+    {
+      "iconKey": "shieldStar",
+      "title": "Licensed, Insured & 100% Accountable",
+      "description": "Fully licensed and insured in Massachusetts. We protect your property, your investment, and your peace of mind on every single visit."
+    },
+    {
+      "iconKey": "chatSmile",
+      "title": "Clear Communication, No Surprises",
+      "description": "We give you honest estimates, explain what's included, and communicate proactively. No hidden fees, no surprises - just straight-forward, professional service."
+    }
+  ],
+  "galleryTitle": "See the Trimming Edge Difference",
+  "gallerySubtitle": "Every property we service gets the same treatment - precision, care, and a clean finish that makes your home stand out in the neighborhood.",
+  "galleryImages": [
+    { "image": "/uploads/about-precision-edging.jpg", "alt": "Professional lawn edging service", "caption": "Precision Edging" },
+    { "image": "/uploads/about-gallery-mowing.jpg", "alt": "Lawn mowing with commercial equipment", "caption": "Lawn Mowing" },
+    { "image": "/uploads/about-gallery-shrub.jpg", "alt": "Hedge and shrub trimming", "caption": "Shrub Trimming" },
+    { "image": "/uploads/about-gallery-mulch.jpg", "alt": "Mulch bed installation", "caption": "Mulching & Beds" },
+    { "image": "/uploads/about-gallery-equipment.jpg", "alt": "Trimming Edge professional equipment", "caption": "Professional Equipment" },
+    { "image": "/uploads/about-gallery-result.jpg", "alt": "Completed lawn care result", "caption": "Completed Results" }
+  ],
+  "galleryBannerImage": "/uploads/about-gallery-banner.jpg",
+  "galleryBannerAlt": "Trimming Edge completed lawn care result",
+  "galleryBannerTitle": "Every Property. Every Visit.",
+  "galleryBannerText": "We treat your lawn like it's our own.",
+  "faqTitle": "Frequently Asked Questions",
+  "faqSubtitle": "Everything you need to know about working with Trimming Edge.",
+  "faq": [
+    {
+      "question": "How long has Trimming Edge been in business?",
+      "answer": "We have been serving the Western Massachusetts community for several years, building a loyal customer base and a perfect 5.0 Google rating with all five-star reviews. Our reputation is built entirely on word-of-mouth from happy neighbors."
+    },
+    {
+      "question": "What makes Trimming Edge different from other lawn care companies?",
+      "answer": "We are locally owned and operated - not a franchise. When you hire us, you work directly with David and Amanda, not a call center. We show up on time, communicate proactively, and treat your property like it's our own. That personal accountability is what has earned us a perfect 5-star rating."
+    },
+    {
+      "question": "Do you offer free estimates?",
+      "answer": "Yes! We provide completely free, no-obligation estimates for all lawn care and landscaping services. Call (413) 551-9653 or fill out our online form and we will get back to you promptly."
+    },
+    {
+      "question": "Are you licensed and insured?",
+      "answer": "Absolutely. Trimming Edge is fully licensed, bonded, and insured in Massachusetts to protect both our team and your property."
+    },
+    {
+      "question": "What areas do you serve?",
+      "answer": "We proudly serve Westfield, Huntington, Russell, Montgomery, Agawam, and Southwick in Western Massachusetts."
+    }
+  ],
+  "ctaTitle": "Let's Take Care of Your Property",
+  "ctaText": "Experience the Trimming Edge difference - personal, professional, and backed by a perfect 5-star reputation.",
+  "ctaPrimaryLabel": "Call (413) 551-9653",
+  "ctaPrimaryHref": "tel:+14135519653",
+  "ctaSecondaryLabel": "See All Our Services",
+  "ctaSecondaryHref": "/services",
+  "seoTitle": "About Trimming Edge | Locally Owned Lawn Care Company Montgomery MA",
+  "seoDescription": "Learn about Trimming Edge - a locally operated lawn care company based in Montgomery, MA. Serving Westfield, Huntington, Russell & surrounding areas with 5-star rated service.",
+  "seoKeywords": "about Trimming Edge, locally owned lawn care, Montgomery MA landscaping, local lawn care Western Massachusetts",
+  "ogImage": "/uploads/hero-about.jpg",
+  "historyHeroTitle": "The History of Wolf Radio & Wolf Enterprise",
+  "historyHeroSubtitle": "From radio waves to lawn care - the DnA story of David & Amanda.",
+  "historyHeroImage": "/uploads/hero-about.jpg",
+  "historyIntroTitle": "Our Story",
+  "historyIntroText": "We have been through some changes. Starting in Radio back in 1996 as Wolf Radio, then becoming Wolf Enterprise when David and Amanda started the DnA Show, and eventually launching Trimming Edge Lawn Care.",
+  "historyParagraphs": [
+    "We have been through some changes. Starting in Radio back in 1996 as Wolf Radio (Wolf Radio LLC). We also became Wolf Enterprise when my wife Amanda and I started the radio show the DnA Show.",
+    "(DnA stands for David & Amanda) This show focused on technology and computer repair. I also make, on-site house calls for repairing computers. Amanda also started her Pet Sitting business. However with the ever changing technology world, where people no longer fix computers like they use to, it is time we go in a new direction. With that the launch of: Trimming Edge Lawn Care.",
+    "Wolf Radio has returned. We are still broadcasting at AM Stereo 1690 and 107.5 FM. The Stream has Returned to as well as under the About tab on this site.",
+    "Trimming Edge Lawn Care now has their own blog at",
+    "For now I am still doing IT and Computer Work under the name."
+  ],
+  "paymentTitle": "Payment Information",
+  "paymentItems": [
+    "Please make checks to Wolf Enterprise out to Wolf Radio LLC",
+    "All checks for the Lawn Care Service should be made out to: Trimming Edge Lawn Care LLC",
+    "All Checks to Wolfies Pet Care or pet services should be made out to: Wolfies Pet Care"
+  ],
+  "historyQuoteSource": "Colossians 3:23",
+  "historyQuoteHref": "https://www.bible.com/bible/111/COL.3.23.NIV",
+  "historyQuoteText": "Whatever you do, work at it with all your heart, as working for the Lord, not for human masters.",
+  "timelineTitle": "A History of Our Logos Over the Years",
+  "timelineSubtitle": "From Wolf Radio to Trimming Edge - our brand has evolved alongside our journey.",
+  "timelineItems": [
+    {
+      "year": "Early Logo",
+      "title": "Trimming Edge Lawn Care - Early Logo",
+      "description": "Early Trimming Edge Lawn Care logo with a lawn mower on a black and tan background.",
+      "image": "/uploads/hero-about.jpg"
+    },
+    {
+      "year": "Combined Brand",
+      "title": "Trimming Edge + Wolf Radio Combined Logo",
+      "description": "Combined logo with Trimming Edge Lawn Care text, a lawnmower icon, and wolf background.",
+      "image": "/uploads/home-about-team.jpg"
+    },
+    {
+      "year": "Classic Logo",
+      "title": "Wolf Radio - Classic Logo",
+      "description": "Logo for Wolf Radio featuring a wolf's head.",
+      "image": "/uploads/about-values.jpg"
+    }
+  ],
+  "milestonesTitle": "History of the Text Wolf /\\0!0/\\",
+  "milestones": [
+    "In the Wolf Radio Logo there is /\\0!0/\\ placed above the W.",
+    "This started back when I was about 5 or 6 years old doing code programming.",
+    "I came up with this text logo that can show in the DOS command line prompt.",
+    "If you adjust the eyes and nose to look like the image below you can see the resemblance of the face of a Wolf."
+  ],
+  "textWolfPrompt": "/\\0!0/\\ Give me a Command C:\\>",
+  "textWolfImage": "/uploads/about-gallery-equipment.jpg",
+  "textWolfImageAlt": "Stylized text art characters resembling a playful wolf-like face on a dark background",
+  "historyCtaTitle": "Ready to Work With Us?",
+  "historyCtaText": "From radio to lawn care - we bring the same passion and dedication to everything we do.",
+  "historyCtaPrimaryLabel": "Call (413) 551-9653",
+  "historyCtaPrimaryHref": "tel:+14135519653",
+  "historyCtaSecondaryLabel": "Learn More About Us",
+  "historyCtaSecondaryHref": "/about",
+  "historySeoTitle": "History of Wolf Radio & Wolf Enterprise | Trimming Edge",
+  "historySeoDescription": "Learn the history of Wolf Radio, Wolf Enterprise, and the launch of Trimming Edge Lawn Care.",
+  "historyOgImage": "/uploads/hero-about.jpg"
 }

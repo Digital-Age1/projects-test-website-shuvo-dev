@@ -1,25 +1,11 @@
-const values = [
-  {
-    icon: 'ri-award-line',
-    title: 'Quality First',
-    description: 'We never rush. Every mow, every edge, every cleanup is done with precision and care. Your property deserves our best work — every single visit.',
-  },
-  {
-    icon: 'ri-time-line',
-    title: 'Reliability You Can Count On',
-    description: 'We show up when we say we will. Consistency is at the heart of great lawn care, and our customers know they can count on us week after week.',
-  },
-  {
-    icon: 'ri-group-line',
-    title: 'Customer First, Always',
-    description: 'From your first call to the finished job, we treat you like a neighbor — because you are one. Your satisfaction is not just a goal, it\'s our guarantee.',
-  },
-  {
-    icon: 'ri-heart-3-line',
-    title: 'Community Pride',
-    description: 'We\'re based in Montgomery, MA and care deeply about the communities we serve. Beautiful properties make better neighborhoods — and that matters to us.',
-  },
-];
+import about from '@/content/about.json';
+
+const valueIcons: Record<string, string> = {
+  award: 'ri-award-line',
+  time: 'ri-time-line',
+  group: 'ri-group-line',
+  heart: 'ri-heart-3-line',
+};
 
 export default function AboutValues() {
   return (
@@ -31,34 +17,34 @@ export default function AboutValues() {
             <span className="text-sm font-semibold text-primary-600">Our Values</span>
           </div>
           <h2 className="font-display font-bold text-4xl sm:text-5xl text-gray-900 mb-4">
-            What Guides Everything We Do
+            {about.valuesTitle}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Every decision we make — from how we schedule visits to how we communicate — comes back to these core values.
+            {about.valuesSubtitle}
           </p>
         </div>
 
         {/* Visual accent image */}
         <div className="relative rounded-3xl overflow-hidden h-56 mb-12">
           <img
-            src="/uploads/about-values.jpg"
-            alt="Trimming Edge quality lawn care"
+            src={about.valuesImage}
+            alt={about.valuesImageAlt}
             className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-gradient-to-r from-primary-900/70 via-primary-800/40 to-transparent flex items-center">
             <div className="px-10 max-w-xl">
               <p className="text-white font-display font-bold text-2xl leading-snug">
-                "We treat every property as if it were our own."
+                {about.valuesQuote}
               </p>
-              <p className="text-primary-200 mt-2 text-sm">— David & Amanda, Founders</p>
+              <p className="text-primary-200 mt-2 text-sm">{about.valuesQuoteAttribution}</p>
             </div>
           </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {values.map((v, i) => (
+          {about.values.map((v, i) => (
             <div key={i} className="bg-white rounded-2xl p-7 text-center hover:shadow-xl transition-all border border-gray-100">
               <div className="w-16 h-16 flex items-center justify-center bg-primary-100 rounded-2xl mx-auto mb-5">
-                <i className={`${v.icon} text-3xl text-primary-600`}></i>
+                <i className={`${valueIcons[v.iconKey] || 'ri-award-line'} text-3xl text-primary-600`}></i>
               </div>
               <h3 className="font-display font-bold text-xl text-gray-900 mb-3">{v.title}</h3>
               <p className="text-sm text-gray-600 leading-relaxed">{v.description}</p>

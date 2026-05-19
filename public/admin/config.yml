@@ -407,20 +407,120 @@ collections:
         name: "about"
         format: "json"
         fields:
-          - label: "Hero"
-            name: "hero"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Description", name: "description", widget: "text" }
-          - label: "Sections"
-            name: "sections"
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Hero Primary Label", name: "heroPrimaryLabel", widget: "string" }
+          - { label: "Hero Primary URL", name: "heroPrimaryHref", widget: "string" }
+          - { label: "Hero Secondary Label", name: "heroSecondaryLabel", widget: "string" }
+          - { label: "Hero Secondary URL", name: "heroSecondaryHref", widget: "string" }
+          - { label: "Story Eyebrow", name: "storyEyebrow", widget: "string" }
+          - { label: "Story Title", name: "storyTitle", widget: "string" }
+          - label: "Story Text"
+            name: "storyText"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - { label: "Story Image", name: "storyImage", widget: "image" }
+          - { label: "Story Image Alt Text", name: "storyImageAlt", widget: "string" }
+          - { label: "Values Title", name: "valuesTitle", widget: "string" }
+          - { label: "Values Subtitle", name: "valuesSubtitle", widget: "text" }
+          - { label: "Values Image", name: "valuesImage", widget: "image" }
+          - { label: "Values Image Alt Text", name: "valuesImageAlt", widget: "string" }
+          - { label: "Values Quote", name: "valuesQuote", widget: "string" }
+          - { label: "Values Quote Attribution", name: "valuesQuoteAttribution", widget: "string" }
+          - label: "Values"
+            name: "values"
             widget: "list"
             fields:
+              - label: "Icon"
+                name: "iconKey"
+                widget: "select"
+                options: ["award", "time", "group", "heart"]
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Image", name: "image", widget: "image", required: false }
-              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Description", name: "description", widget: "text" }
+          - { label: "Differentiators Title", name: "differentiatorsTitle", widget: "string" }
+          - { label: "Differentiators Subtitle", name: "differentiatorsSubtitle", widget: "text" }
+          - { label: "Differentiators Image", name: "differentiatorsImage", widget: "image" }
+          - { label: "Differentiators Image Alt Text", name: "differentiatorsImageAlt", widget: "string" }
+          - label: "Differentiators"
+            name: "differentiators"
+            widget: "list"
+            fields:
+              - label: "Icon"
+                name: "iconKey"
+                widget: "select"
+                options: ["userHeart", "homeSmile", "awardFill", "calendar", "shieldStar", "chatSmile"]
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - { label: "Gallery Title", name: "galleryTitle", widget: "string" }
+          - { label: "Gallery Subtitle", name: "gallerySubtitle", widget: "text" }
+          - label: "Gallery Images"
+            name: "galleryImages"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
+              - { label: "Caption", name: "caption", widget: "string" }
+          - { label: "Gallery Banner Image", name: "galleryBannerImage", widget: "image" }
+          - { label: "Gallery Banner Alt Text", name: "galleryBannerAlt", widget: "string" }
+          - { label: "Gallery Banner Title", name: "galleryBannerTitle", widget: "string" }
+          - { label: "Gallery Banner Text", name: "galleryBannerText", widget: "string" }
+          - { label: "FAQ Title", name: "faqTitle", widget: "string" }
+          - { label: "FAQ Subtitle", name: "faqSubtitle", widget: "text" }
+          - label: "FAQ"
+            name: "faq"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+          - { label: "CTA Title", name: "ctaTitle", widget: "string" }
+          - { label: "CTA Text", name: "ctaText", widget: "text" }
+          - { label: "CTA Primary Label", name: "ctaPrimaryLabel", widget: "string" }
+          - { label: "CTA Primary URL", name: "ctaPrimaryHref", widget: "string" }
+          - { label: "CTA Secondary Label", name: "ctaSecondaryLabel", widget: "string" }
+          - { label: "CTA Secondary URL", name: "ctaSecondaryHref", widget: "string" }
+          - { label: "SEO Title", name: "seoTitle", widget: "string" }
+          - { label: "SEO Description", name: "seoDescription", widget: "text" }
+          - { label: "SEO Keywords", name: "seoKeywords", widget: "text" }
+          - { label: "OG Image", name: "ogImage", widget: "image" }
+          - { label: "History Hero Title", name: "historyHeroTitle", widget: "string" }
+          - { label: "History Hero Subtitle", name: "historyHeroSubtitle", widget: "text" }
+          - { label: "History Hero Image", name: "historyHeroImage", widget: "image" }
+          - { label: "History Intro Title", name: "historyIntroTitle", widget: "string" }
+          - { label: "History Intro Text", name: "historyIntroText", widget: "text" }
+          - label: "History Paragraphs"
+            name: "historyParagraphs"
+            widget: "list"
+            field: { label: "Paragraph", name: "paragraph", widget: "text" }
+          - { label: "Payment Title", name: "paymentTitle", widget: "string" }
+          - { label: "Payment Items", name: "paymentItems", widget: "list", field: { label: "Payment Item", name: "paymentItem", widget: "string" } }
+          - { label: "History Quote Source", name: "historyQuoteSource", widget: "string" }
+          - { label: "History Quote URL", name: "historyQuoteHref", widget: "string" }
+          - { label: "History Quote Text", name: "historyQuoteText", widget: "text" }
+          - { label: "Timeline Title", name: "timelineTitle", widget: "string" }
+          - { label: "Timeline Subtitle", name: "timelineSubtitle", widget: "text" }
+          - label: "Timeline Items"
+            name: "timelineItems"
+            widget: "list"
+            fields:
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+          - { label: "Milestones Title", name: "milestonesTitle", widget: "string" }
+          - { label: "Milestones", name: "milestones", widget: "list", field: { label: "Milestone", name: "milestone", widget: "text" } }
+          - { label: "Text Wolf Prompt", name: "textWolfPrompt", widget: "string" }
+          - { label: "Text Wolf Image", name: "textWolfImage", widget: "image" }
+          - { label: "Text Wolf Image Alt Text", name: "textWolfImageAlt", widget: "string" }
+          - { label: "History CTA Title", name: "historyCtaTitle", widget: "string" }
+          - { label: "History CTA Text", name: "historyCtaText", widget: "text" }
+          - { label: "History CTA Primary Label", name: "historyCtaPrimaryLabel", widget: "string" }
+          - { label: "History CTA Primary URL", name: "historyCtaPrimaryHref", widget: "string" }
+          - { label: "History CTA Secondary Label", name: "historyCtaSecondaryLabel", widget: "string" }
+          - { label: "History CTA Secondary URL", name: "historyCtaSecondaryHref", widget: "string" }
+          - { label: "History SEO Title", name: "historySeoTitle", widget: "string" }
+          - { label: "History SEO Description", name: "historySeoDescription", widget: "text" }
+          - { label: "History OG Image", name: "historyOgImage", widget: "image" }
 
       - file: "src/content/petCare.json"
         label: "Pet Care"

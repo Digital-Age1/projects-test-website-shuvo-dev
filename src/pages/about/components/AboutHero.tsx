@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
+import about from '@/content/about.json';
 
 export default function AboutHero() {
   return (
     <section className="relative py-28 overflow-hidden bg-gray-900">
       <div className="absolute inset-0 z-0">
         <img
-          src="/uploads/hero-about.jpg"
+          src={about.heroImage}
           alt="Trimming Edge Professional Lawn Care"
           className="w-full h-full object-cover object-top" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/25"></div>
@@ -18,24 +19,24 @@ export default function AboutHero() {
             <span className="text-sm font-semibold text-white">About Trimming Edge</span>
           </div>
           <h1 className="font-display font-bold text-5xl sm:text-6xl text-white mb-6 leading-tight">
-            Locally Owned Lawn Care in Western MA
+            {about.heroTitle}
           </h1>
           <p className="text-xl text-white/90 mb-8 leading-relaxed drop-shadow">
-            Trimming Edge is a family-operated lawn care company based in Montgomery, MA — built on hard work, local pride, and a perfect 5-star reputation.
+            {about.heroSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="tel:+14135519653"
+              href={about.heroPrimaryHref}
               className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white text-lg font-bold rounded-lg hover:bg-primary-700 transition-all whitespace-nowrap"
             >
-              <i className="ri-phone-line mr-2"></i>
-              (413) 551-9653
+              {about.heroPrimaryHref.startsWith('tel:') && <i className="ri-phone-line mr-2"></i>}
+              {about.heroPrimaryLabel}
             </a>
             <Link
-              to="/services"
+              to={about.heroSecondaryHref}
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 text-lg font-bold rounded-lg hover:bg-gray-100 transition-all whitespace-nowrap"
             >
-              View Our Services
+              {about.heroSecondaryLabel}
             </Link>
           </div>
           <div className="flex flex-wrap gap-6 mt-8">
