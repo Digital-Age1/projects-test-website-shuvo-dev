@@ -1,46 +1,364 @@
 {
   "pages": [
     {
-      "title": "Lawn Mowing & Maintenance",
       "slug": "lawn-mowing",
+      "title": "Lawn Mowing & Maintenance",
+      "eyebrow": "Lawn Care Services",
+      "heroTitle": "Lawn Mowing & Maintenance",
+      "heroSubtitle": "Professional, reliable lawn mowing for residential and commercial properties across Western Massachusetts.",
       "heroImage": "/uploads/hero-lawn-mowing.jpg",
+      "heroPrimaryLabel": "Get a Free Estimate",
+      "heroPrimaryHref": "/contact-us",
+      "heroSecondaryLabel": "(413) 551-9653",
+      "heroSecondaryHref": "tel:+14135519653",
+      "overviewTitle": "Consistent, Professional Lawn Care You Can Count On",
+      "overviewText": [
+        "Regular lawn mowing is the foundation of a beautiful property. Our professional crew arrives on a consistent schedule - weekly or bi-weekly - with commercial-grade equipment that delivers clean, precise cuts every time. We mow, edge, trim around obstacles, and blow off all clippings so your property looks immaculate when we leave.",
+        "We adjust our cutting height based on grass type and season to promote healthy growth, reduce stress, and prevent disease. Whether you have a small residential yard in Montgomery or a large commercial property in Westfield, our team has the equipment and expertise to handle it efficiently."
+      ],
       "detailImage": "/uploads/detail-lawn-mowing.jpg",
-      "description": "Professional weekly or bi-weekly lawn mowing with edging, trimming, and blowing."
+      "detailImageAlt": "Perfect lawn stripes after professional mowing",
+      "overviewCtaLabel": "Call for a Free Quote",
+      "overviewCtaHref": "tel:+14135519653",
+      "benefitsTitle": "What's Included",
+      "benefits": [
+        "Weekly or bi-weekly scheduled service",
+        "Edging along driveways, sidewalks & beds",
+        "Trimming around fences, trees & structures",
+        "Cleanup and blowing of all clippings",
+        "Height adjustment by season & grass type",
+        "Commercial-grade zero-turn equipment",
+        "Consistent crew - same team every visit",
+        "No contracts required"
+      ],
+      "includesTitle": "What's Included",
+      "includes": [],
+      "processTitle": "How It Works",
+      "processSteps": [
+        { "iconKey": "phone", "title": "Request a Quote", "description": "Call or fill out our form. We respond quickly and schedule a free property visit." },
+        { "iconKey": "calendar", "title": "Set Your Schedule", "description": "Choose weekly or bi-weekly service. We lock in your preferred day and stick to it." },
+        { "iconKey": "scissors", "title": "Sit Back & Enjoy", "description": "Our crew arrives, mows, edges, trims, and cleans up - leaving your lawn looking perfect." }
+      ],
+      "faqTitle": "Frequently Asked Questions",
+      "faq": [
+        { "question": "How often should I have my lawn mowed?", "answer": "During peak growing season (spring and early summer), weekly mowing keeps your lawn at its healthiest. In slower growth periods, bi-weekly service is usually sufficient. We tailor the schedule to your lawn's specific needs." },
+        { "question": "Do you mow in the rain?", "answer": "We avoid mowing wet grass as it can damage turf and leave clumps. If weather forces a reschedule, we'll notify you promptly and get you back on track as soon as conditions allow." },
+        { "question": "What cutting height do you use?", "answer": "We adjust cutting height based on grass type, season, and current conditions. Proper height promotes healthy root growth and reduces stress - we never scalp your lawn." },
+        { "question": "Do I need to be home during service?", "answer": "No - most of our customers aren't home during service. Just make sure gates are unlocked and pets are secured. We'll take care of everything and leave your property looking great." }
+      ],
+      "ctaTitle": "Ready for a Perfectly Mowed Lawn?",
+      "ctaText": "Serving Huntington, Westfield, Russell, Montgomery & surrounding areas.",
+      "ctaPrimaryLabel": "Request Free Estimate",
+      "ctaPrimaryHref": "/contact-us",
+      "ctaSecondaryLabel": "(413) 551-9653",
+      "ctaSecondaryHref": "tel:+14135519653",
+      "seoTitle": "Lawn Mowing & Maintenance | Trimming Edge Western Massachusetts",
+      "seoDescription": "Professional lawn mowing and maintenance for residential and commercial properties in Westfield, Huntington, Russell & Montgomery MA. Weekly or bi-weekly service. Free estimates.",
+      "seoKeywords": "lawn mowing Westfield MA, lawn maintenance Huntington MA, residential lawn mowing Western Massachusetts, commercial lawn mowing Russell MA",
+      "ogImage": "/uploads/hero-lawn-mowing.jpg"
     },
     {
-      "title": "Landscape Design & Installation",
       "slug": "landscape-design",
+      "title": "Landscape Design & Installation",
+      "eyebrow": "Landscaping Services",
+      "heroTitle": "Landscape Design & Installation",
+      "heroSubtitle": "Transform your outdoor space with custom landscape design built for Western Massachusetts.",
       "heroImage": "/uploads/hero-landscape-design.jpg",
+      "heroPrimaryLabel": "Get a Free Estimate",
+      "heroPrimaryHref": "/contact-us",
+      "heroSecondaryLabel": "(413) 551-9653",
+      "heroSecondaryHref": "tel:+14135519653",
+      "overviewTitle": "Custom Landscapes Designed to Thrive in Western MA",
+      "overviewText": [
+        "A professionally designed landscape dramatically increases your property's curb appeal and market value. Our design process starts with understanding your vision, budget, and how you use your outdoor space. We then create a customized plan featuring plants native to Western Massachusetts that thrive in our climate.",
+        "From planting trees and shrubs to installing stone pathways and decorative beds, our installation team brings the design to life with precision and care. We source quality plants and materials and back our work with a satisfaction guarantee."
+      ],
       "detailImage": "/uploads/detail-landscape-design.jpg",
-      "description": "Custom landscape design, plantings, mulching, and installation for Western Massachusetts properties."
+      "detailImageAlt": "Completed landscape installation",
+      "overviewCtaLabel": "Call for a Free Consultation",
+      "overviewCtaHref": "tel:+14135519653",
+      "benefitsTitle": "What's Included",
+      "benefits": [
+        "Custom design consultation included",
+        "Plants native to Western MA climate",
+        "Garden bed creation & installation",
+        "Stone pathways and hardscaping",
+        "Seasonal color planting",
+        "Mulch installation & edging",
+        "Irrigation-friendly planning",
+        "Satisfaction guaranteed"
+      ],
+      "includesTitle": "What's Included",
+      "includes": [],
+      "processTitle": "Our Design Process",
+      "processSteps": [
+        { "iconKey": "discuss", "title": "Consultation", "description": "We visit your property and discuss your goals, style preferences, and budget." },
+        { "iconKey": "draft", "title": "Custom Plan", "description": "We design a landscape plan tailored to your property and Western MA climate." },
+        { "iconKey": "plant", "title": "Installation", "description": "Our crew installs everything with precision - plants, beds, paths, and more." },
+        { "iconKey": "star", "title": "Final Walkthrough", "description": "We walk through the finished project with you to ensure your complete satisfaction." }
+      ],
+      "faqTitle": "Frequently Asked Questions",
+      "faq": [
+        { "question": "Do you offer a design consultation before starting?", "answer": "Yes - every landscape project starts with a free consultation. We visit your property, discuss your vision and budget, and create a customized plan before any work begins." },
+        { "question": "What plants do you recommend for Western Massachusetts?", "answer": "We specialize in plants native to the Western MA climate - species that thrive in our soil, survive our winters, and require minimal maintenance once established. We'll guide you through the best options for your specific yard." },
+        { "question": "How long does a landscape installation take?", "answer": "Most residential landscape installations are completed in 1-3 days depending on scope. Larger projects with hardscaping may take longer. We'll give you a clear timeline during your consultation." },
+        { "question": "Do you handle both design and installation?", "answer": "Absolutely - we handle everything from initial design through final installation. You work with one team from start to finish, which ensures the vision is executed exactly as planned." }
+      ],
+      "ctaTitle": "Ready to Transform Your Outdoor Space?",
+      "ctaText": "Serving Huntington, Westfield, Russell, Montgomery & surrounding areas.",
+      "ctaPrimaryLabel": "Request Free Estimate",
+      "ctaPrimaryHref": "/contact-us",
+      "ctaSecondaryLabel": "(413) 551-9653",
+      "ctaSecondaryHref": "tel:+14135519653",
+      "seoTitle": "Landscape Design & Installation | Trimming Edge Western Massachusetts",
+      "seoDescription": "Custom landscape design and installation for Western Massachusetts homes. Native plants, garden beds, stone pathways & more. Free consultation. Serving Westfield, Huntington, Russell & Montgomery MA.",
+      "seoKeywords": "landscape design Westfield MA, landscape installation Huntington MA, custom landscaping Western Massachusetts, garden design Russell MA",
+      "ogImage": "/uploads/hero-landscape-design.jpg"
     },
     {
-      "title": "Tree & Shrub Care",
       "slug": "tree-shrub-care",
+      "title": "Tree & Shrub Care",
+      "eyebrow": "Tree & Shrub Services",
+      "heroTitle": "Tree & Shrub Care",
+      "heroSubtitle": "Expert pruning, trimming, and shaping to keep your trees and shrubs healthy and beautiful.",
       "heroImage": "/uploads/hero-tree-shrub-care.jpg",
+      "heroPrimaryLabel": "Get a Free Estimate",
+      "heroPrimaryHref": "/contact-us",
+      "heroSecondaryLabel": "(413) 551-9653",
+      "heroSecondaryHref": "tel:+14135519653",
+      "overviewTitle": "Healthy Trees & Shrubs Start with Proper Care",
+      "overviewText": [
+        "Healthy trees and shrubs require regular attention - improper trimming can damage plants and create safety hazards. Our team is trained in proper pruning techniques that promote healthy growth, improve structure, and enhance the natural beauty of your trees and shrubs.",
+        "We service all types of trees and ornamental shrubs throughout Huntington, Russell, Westfield, and Montgomery, MA. Whether it's routine maintenance trimming or shaping overgrown hedges, we handle every job with care and precision."
+      ],
       "detailImage": "/uploads/detail-tree-shrub-care.jpg",
-      "description": "Tree trimming, shrub pruning, hedge shaping, and plant health care."
+      "detailImageAlt": "Professional tree and shrub trimming",
+      "overviewCtaLabel": "Call for a Free Quote",
+      "overviewCtaHref": "tel:+14135519653",
+      "benefitsTitle": "What's Included",
+      "benefits": [
+        "Seasonal pruning and shaping",
+        "Hedge and shrub trimming",
+        "Dead branch removal",
+        "Crown thinning and shaping",
+        "Storm damage cleanup",
+        "Ornamental tree care",
+        "Proper pruning techniques",
+        "Year-round availability"
+      ],
+      "includesTitle": "What We Trim & Prune",
+      "includes": [],
+      "processTitle": "What We Trim & Prune",
+      "processSteps": [
+        { "iconKey": "tree", "title": "Ornamental Trees", "description": "Crown shaping, dead branch removal, and structural pruning to keep your trees healthy and beautiful." },
+        { "iconKey": "plant", "title": "Hedges & Shrubs", "description": "Precise shaping and trimming of hedges, boxwoods, arborvitae, and all ornamental shrubs." },
+        { "iconKey": "wind", "title": "Storm Cleanup", "description": "Fast response to storm-damaged branches and debris - keeping your property safe after severe weather." }
+      ],
+      "faqTitle": "Frequently Asked Questions",
+      "faq": [
+        { "question": "When is the best time to trim trees and shrubs?", "answer": "Most trees and shrubs benefit from late winter or early spring pruning before new growth begins. However, flowering shrubs are best trimmed right after they bloom. We'll advise the best timing for your specific plants." },
+        { "question": "Can improper trimming damage my trees?", "answer": "Yes - incorrect cuts can introduce disease, cause structural weakness, and permanently damage trees. Our team is trained in proper pruning techniques that promote healthy growth and long-term plant health." },
+        { "question": "Do you handle storm-damaged trees?", "answer": "Yes. We offer storm damage cleanup including removal of broken branches and debris. If a tree poses a safety risk, we'll assess the situation and recommend the safest course of action." },
+        { "question": "How often should hedges be trimmed?", "answer": "Most hedges benefit from 2-3 trims per season to maintain their shape and density. Fast-growing species may need more frequent attention. We can set up a regular schedule that keeps your hedges looking sharp all season." }
+      ],
+      "ctaTitle": "Keep Your Trees & Shrubs Looking Their Best",
+      "ctaText": "Serving Huntington, Westfield, Russell, Montgomery & surrounding areas.",
+      "ctaPrimaryLabel": "Request Free Estimate",
+      "ctaPrimaryHref": "/contact-us",
+      "ctaSecondaryLabel": "(413) 551-9653",
+      "ctaSecondaryHref": "tel:+14135519653",
+      "seoTitle": "Tree & Shrub Care | Pruning & Trimming Services Western Massachusetts",
+      "seoDescription": "Expert tree and shrub pruning, trimming, and shaping in Westfield, Huntington, Russell & Montgomery MA. Storm damage cleanup. Proper pruning techniques for healthy plants. Free estimates.",
+      "seoKeywords": "tree trimming Westfield MA, shrub pruning Huntington MA, hedge trimming Western Massachusetts, tree care Russell MA",
+      "ogImage": "/uploads/hero-tree-shrub-care.jpg"
     },
     {
-      "title": "Seasonal Cleanups",
       "slug": "seasonal-cleanups",
+      "title": "Seasonal Cleanups",
+      "eyebrow": "Seasonal Services",
+      "heroTitle": "Seasonal Cleanups",
+      "heroSubtitle": "Spring and fall property cleanups that get your yard ready for every season.",
       "heroImage": "/uploads/hero-seasonal-cleanups.jpg",
+      "heroPrimaryLabel": "Get a Free Estimate",
+      "heroPrimaryHref": "/contact-us",
+      "heroSecondaryLabel": "(413) 551-9653",
+      "heroSecondaryHref": "tel:+14135519653",
+      "overviewTitle": "Spring & Fall Cleanup Services",
+      "overviewText": [
+        "We offer comprehensive seasonal cleanups twice a year to keep your property looking its best through every season."
+      ],
       "detailImage": "/uploads/detail-seasonal-cleanup-fall.jpg",
-      "description": "Spring and fall cleanups, leaf removal, debris clearing, and bed preparation."
+      "detailImageAlt": "Seasonal cleanup service",
+      "benefitsTitle": "What's Included",
+      "benefits": [],
+      "includesTitle": "Spring & Fall Cleanup Services",
+      "includes": [
+        {
+          "title": "Spring Property Refresh",
+          "description": "Start the growing season right. We clear winter debris, prep your beds, and get your lawn ready for a healthy, beautiful summer.",
+          "image": "/uploads/detail-seasonal-cleanup-spring.jpg",
+          "imageAlt": "Spring cleanup",
+          "badge": "Spring Cleanup",
+          "items": [
+            "Leaf and debris removal",
+            "Bed cleanup and edging",
+            "Lawn dethatching",
+            "First mow of the season",
+            "Mulch refresh and top-up",
+            "Pruning winter-damaged plants"
+          ]
+        },
+        {
+          "title": "Fall Winterization Cleanup",
+          "description": "Prepare your property for winter with a thorough fall cleanup. We remove all leaves, cut back beds, and leave your yard clean and ready.",
+          "image": "/uploads/detail-seasonal-cleanup-fall.jpg",
+          "imageAlt": "Fall cleanup",
+          "badge": "Fall Cleanup",
+          "items": [
+            "Complete leaf removal",
+            "Gutter clearing (add-on)",
+            "Bed cutback and cleanup",
+            "Final mow and edging",
+            "Lawn aeration available",
+            "Property winterization prep"
+          ]
+        }
+      ],
+      "processTitle": "How It Works",
+      "processSteps": [],
+      "faqTitle": "Frequently Asked Questions",
+      "faq": [
+        { "question": "What does a spring cleanup include?", "answer": "Our spring cleanup covers leaf and debris removal, bed cleanup and edging, pruning of winter-damaged plants, first mow of the season, and mulch refresh. We get your property looking great for the growing season." },
+        { "question": "What does a fall cleanup include?", "answer": "Fall cleanup includes complete leaf removal, bed cutback, final mow and edging, and general property cleanup to prepare for winter. We can also add gutter clearing as an optional service." },
+        { "question": "When should I schedule my spring cleanup?", "answer": "We recommend scheduling spring cleanup in late March through April, once the ground has thawed and before heavy growth begins. Booking early ensures you get your preferred date - our schedule fills up fast in spring." },
+        { "question": "Do you haul away the debris?", "answer": "Yes - all leaves, clippings, and debris are removed from your property as part of the cleanup service. We leave your yard completely clean." }
+      ],
+      "ctaTitle": "Book Your Seasonal Cleanup Today",
+      "ctaText": "Spots fill up fast - especially in spring. Reserve your date early.",
+      "ctaPrimaryLabel": "Request Free Estimate",
+      "ctaPrimaryHref": "/contact-us",
+      "ctaSecondaryLabel": "(413) 551-9653",
+      "ctaSecondaryHref": "tel:+14135519653",
+      "seoTitle": "Seasonal Cleanups | Spring & Fall Yard Cleanup Western Massachusetts",
+      "seoDescription": "Professional spring and fall seasonal cleanups in Westfield, Huntington, Russell & Montgomery MA. Leaf removal, bed cleanup, lawn prep & winterization. Book early - spots fill fast.",
+      "seoKeywords": "spring cleanup Westfield MA, fall cleanup Huntington MA, seasonal yard cleanup Western Massachusetts, leaf removal Russell MA",
+      "ogImage": "/uploads/hero-seasonal-cleanups.jpg"
     },
     {
-      "title": "Mulching & Bed Maintenance",
       "slug": "mulching-bed-maintenance",
+      "title": "Mulching & Bed Maintenance",
+      "eyebrow": "Bed & Mulch Services",
+      "heroTitle": "Mulching & Bed Maintenance",
+      "heroSubtitle": "Fresh mulch and clean bed edges that give your landscape a polished, professional look.",
       "heroImage": "/uploads/hero-mulching-bed-maintenance.jpg",
+      "heroPrimaryLabel": "Get a Free Estimate",
+      "heroPrimaryHref": "/contact-us",
+      "heroSecondaryLabel": "(413) 551-9653",
+      "heroSecondaryHref": "tel:+14135519653",
+      "overviewTitle": "The Finishing Touch That Makes Your Landscape Pop",
+      "overviewText": [
+        "Fresh mulch installation and garden bed maintenance are some of the most impactful improvements you can make to your property's appearance. A clean layer of dark mulch with crisp edges instantly elevates the look of any landscape - and it's not just cosmetic.",
+        "Mulch suppresses weeds, retains soil moisture, regulates temperature, and protects plant roots. Our team installs mulch properly - the right depth, the right type, and with clean edges that make your beds look sharp all season long."
+      ],
       "detailImage": "/uploads/detail-mulching-bed-maintenance.jpg",
-      "description": "Fresh mulch installation and garden bed maintenance for a polished landscape."
+      "detailImageAlt": "Fresh mulch and clean bed edges",
+      "overviewCtaLabel": "Call for a Free Quote",
+      "overviewCtaHref": "tel:+14135519653",
+      "benefitsTitle": "What's Included",
+      "benefits": [
+        "Fresh mulch installation",
+        "Mulch top-up and refresh",
+        "Crisp bed edging",
+        "Weed removal from beds",
+        "Bed reshaping and expansion",
+        "Perennial cutback",
+        "Seasonal color planting",
+        "Debris and old mulch removal"
+      ],
+      "includesTitle": "Why Mulch Matters",
+      "includes": [],
+      "processTitle": "Why Mulch Matters",
+      "processSteps": [
+        { "iconKey": "shield", "title": "Weed Suppression", "description": "A proper mulch layer blocks sunlight and dramatically reduces weed growth in your beds." },
+        { "iconKey": "drop", "title": "Moisture Retention", "description": "Mulch slows evaporation, keeping soil moist longer and reducing how often you need to water." },
+        { "iconKey": "temperature", "title": "Root Protection", "description": "Insulates plant roots from temperature extremes - both summer heat and winter cold." },
+        { "iconKey": "eye", "title": "Curb Appeal", "description": "Fresh dark mulch with clean edges is one of the fastest ways to improve your property's appearance." }
+      ],
+      "faqTitle": "Frequently Asked Questions",
+      "faq": [
+        { "question": "How often should mulch be replaced?", "answer": "Most beds benefit from a fresh layer of mulch once a year - typically in spring. Over time, mulch breaks down and loses its effectiveness at suppressing weeds and retaining moisture. A 2-3 inch layer is ideal." },
+        { "question": "What type of mulch do you use?", "answer": "We typically use premium shredded hardwood mulch, which looks great and breaks down slowly. We can also source other types based on your preference - just let us know during your consultation." },
+        { "question": "Does mulch really help with weeds?", "answer": "Yes - a proper layer of mulch significantly reduces weed germination by blocking sunlight. Combined with clean bed edging, it's one of the most effective ways to keep your beds looking tidy with minimal maintenance." },
+        { "question": "Can you reshape or expand my existing beds?", "answer": "Absolutely. We can redefine existing bed edges, expand beds to include more planting area, or create entirely new beds as part of a landscape refresh. Just let us know what you have in mind." }
+      ],
+      "ctaTitle": "Give Your Beds a Fresh Look This Season",
+      "ctaText": "Serving Huntington, Westfield, Russell, Montgomery & surrounding areas.",
+      "ctaPrimaryLabel": "Request Free Estimate",
+      "ctaPrimaryHref": "/contact-us",
+      "ctaSecondaryLabel": "(413) 551-9653",
+      "ctaSecondaryHref": "tel:+14135519653",
+      "seoTitle": "Mulching & Bed Maintenance | Garden Bed Services Western Massachusetts",
+      "seoDescription": "Professional mulch installation and garden bed maintenance in Westfield, Huntington, Russell & Montgomery MA. Fresh mulch, crisp edging, weed removal & bed reshaping. Free estimates.",
+      "seoKeywords": "mulching services Westfield MA, garden bed maintenance Huntington MA, mulch installation Western Massachusetts, bed edging Russell MA",
+      "ogImage": "/uploads/hero-mulching-bed-maintenance.jpg"
     },
     {
-      "title": "Commercial Landscaping",
       "slug": "commercial-landscaping",
+      "title": "Commercial Landscaping",
+      "eyebrow": "Commercial Services",
+      "heroTitle": "Commercial Landscaping",
+      "heroSubtitle": "Reliable, professional grounds maintenance for businesses, HOAs, and property managers.",
       "heroImage": "/uploads/hero-commercial-landscaping.jpg",
+      "heroPrimaryLabel": "Get a Free Estimate",
+      "heroPrimaryHref": "/contact-us",
+      "heroSecondaryLabel": "(413) 551-9653",
+      "heroSecondaryHref": "tel:+14135519653",
+      "overviewTitle": "Professional Grounds Maintenance That Reflects Your Business",
+      "overviewText": [
+        "Your property's exterior is the first thing clients, customers, and employees see. A well-maintained landscape communicates professionalism, attention to detail, and pride in your business. Trimming Edge provides reliable commercial landscaping services that keep your grounds looking impressive all season long.",
+        "We have extensive experience with commercial properties including office buildings, retail centers, HOAs, and property management companies. We offer flexible scheduling to minimize disruption to your business and consistent crews so you always know who's on your property."
+      ],
       "detailImage": "/uploads/detail-commercial-landscaping.jpg",
-      "description": "Reliable commercial grounds maintenance for businesses, HOAs, and property managers."
+      "detailImageAlt": "Commercial property landscaping",
+      "overviewCtaLabel": "Call for a Commercial Quote",
+      "overviewCtaHref": "tel:+14135519653",
+      "benefitsTitle": "What's Included",
+      "benefits": [
+        "Reliable scheduled maintenance",
+        "Commercial-grade equipment",
+        "Flexible scheduling options",
+        "HOA and property management",
+        "Office and retail properties",
+        "Consistent crew every visit",
+        "Fully licensed and insured",
+        "Seasonal service packages"
+      ],
+      "includesTitle": "Who We Serve",
+      "includes": [],
+      "processTitle": "Who We Serve",
+      "processSteps": [
+        { "iconKey": "building", "title": "Office Buildings", "description": "Professional grounds maintenance that makes a great first impression on clients and employees." },
+        { "iconKey": "store", "title": "Retail Properties", "description": "Curb appeal that drives foot traffic - clean, well-maintained grounds attract customers." },
+        { "iconKey": "community", "title": "HOAs & Condos", "description": "Consistent, reliable service for homeowner associations and condominium communities." },
+        { "iconKey": "homeOffice", "title": "Property Managers", "description": "We work directly with property managers to keep multiple properties looking their best." }
+      ],
+      "faqTitle": "Frequently Asked Questions",
+      "faq": [
+        { "question": "Do you offer contracts for commercial properties?", "answer": "Yes - we offer seasonal and annual service agreements for commercial clients. Contracts ensure priority scheduling, consistent pricing, and reliable service throughout the season." },
+        { "question": "Can you service multiple properties?", "answer": "Absolutely. We work with property management companies and HOAs that need consistent service across multiple locations. We'll coordinate scheduling to make it seamless for you." },
+        { "question": "Do you work around business hours?", "answer": "Yes - we can schedule service during off-hours or early morning to minimize disruption to your business operations. Just let us know your preferences during the consultation." },
+        { "question": "Are you insured for commercial work?", "answer": "Yes - Trimming Edge is fully licensed, bonded, and insured with comprehensive liability coverage appropriate for commercial properties. We can provide certificates of insurance upon request." }
+      ],
+      "ctaTitle": "Let's Talk About Your Commercial Property",
+      "ctaText": "Serving businesses across Westfield, Huntington, Russell, Montgomery & surrounding areas.",
+      "ctaPrimaryLabel": "Request Free Estimate",
+      "ctaPrimaryHref": "/contact-us",
+      "ctaSecondaryLabel": "(413) 551-9653",
+      "ctaSecondaryHref": "tel:+14135519653",
+      "seoTitle": "Commercial Landscaping | Business Grounds Maintenance Western Massachusetts",
+      "seoDescription": "Reliable commercial landscaping for businesses, HOAs & property managers in Westfield, Huntington, Russell & Montgomery MA. Licensed & insured. Flexible scheduling. Free estimates.",
+      "seoKeywords": "commercial landscaping Westfield MA, business lawn care Huntington MA, HOA landscaping Western Massachusetts, property maintenance Russell MA",
+      "ogImage": "/uploads/hero-commercial-landscaping.jpg"
     }
   ]
 }

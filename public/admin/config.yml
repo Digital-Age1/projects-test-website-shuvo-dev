@@ -188,9 +188,70 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Slug", name: "slug", widget: "string" }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Hero Title", name: "heroTitle", widget: "string" }
+              - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
               - { label: "Hero Image", name: "heroImage", widget: "image" }
+              - { label: "Hero Primary Label", name: "heroPrimaryLabel", widget: "string" }
+              - { label: "Hero Primary URL", name: "heroPrimaryHref", widget: "string" }
+              - { label: "Hero Secondary Label", name: "heroSecondaryLabel", widget: "string" }
+              - { label: "Hero Secondary URL", name: "heroSecondaryHref", widget: "string" }
+              - { label: "Overview Title", name: "overviewTitle", widget: "string" }
+              - label: "Overview Text"
+                name: "overviewText"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
               - { label: "Detail Image", name: "detailImage", widget: "image" }
-              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Detail Image Alt Text", name: "detailImageAlt", widget: "string" }
+              - { label: "Overview CTA Label", name: "overviewCtaLabel", widget: "string", required: false }
+              - { label: "Overview CTA URL", name: "overviewCtaHref", widget: "string", required: false }
+              - { label: "Benefits Title", name: "benefitsTitle", widget: "string" }
+              - label: "Benefits"
+                name: "benefits"
+                widget: "list"
+                required: false
+                field: { label: "Benefit", name: "benefit", widget: "string" }
+              - { label: "Includes Title", name: "includesTitle", widget: "string" }
+              - label: "Includes"
+                name: "includes"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Image", name: "image", widget: "image", required: false }
+                  - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: false }
+                  - { label: "Badge", name: "badge", widget: "string", required: false }
+                  - { label: "Items", name: "items", widget: "list", required: false, field: { label: "Item", name: "item", widget: "string" } }
+              - { label: "Process Title", name: "processTitle", widget: "string" }
+              - label: "Process Steps"
+                name: "processSteps"
+                widget: "list"
+                required: false
+                fields:
+                  - label: "Icon"
+                    name: "iconKey"
+                    widget: "select"
+                    options: ["building", "calendar", "community", "discuss", "draft", "drop", "eye", "homeOffice", "phone", "plant", "scissors", "shield", "star", "store", "temperature", "tree", "wind"]
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+              - { label: "FAQ Section Title", name: "faqTitle", widget: "string" }
+              - label: "FAQ"
+                name: "faq"
+                widget: "list"
+                fields:
+                  - { label: "Question", name: "question", widget: "string" }
+                  - { label: "Answer", name: "answer", widget: "text" }
+              - { label: "CTA Title", name: "ctaTitle", widget: "string" }
+              - { label: "CTA Text", name: "ctaText", widget: "text" }
+              - { label: "CTA Primary Label", name: "ctaPrimaryLabel", widget: "string" }
+              - { label: "CTA Primary URL", name: "ctaPrimaryHref", widget: "string" }
+              - { label: "CTA Secondary Label", name: "ctaSecondaryLabel", widget: "string" }
+              - { label: "CTA Secondary URL", name: "ctaSecondaryHref", widget: "string" }
+              - { label: "SEO Title", name: "seoTitle", widget: "string" }
+              - { label: "SEO Description", name: "seoDescription", widget: "text" }
+              - { label: "SEO Keywords", name: "seoKeywords", widget: "text", required: false }
+              - { label: "OG Image", name: "ogImage", widget: "image" }
 
       - file: "src/content/serviceAreas.json"
         label: "Service Areas"
