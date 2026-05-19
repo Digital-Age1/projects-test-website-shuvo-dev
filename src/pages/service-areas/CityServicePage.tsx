@@ -3,8 +3,14 @@ import { useParams, Link } from 'react-router-dom';
 import { useSEO, SITE_URL } from '@/hooks/useSEO';
 import PageHeader from '@/components/feature/PageHeader';
 import PageFooter from '@/components/feature/PageFooter';
-import { cities, services, serviceIcons } from '@/mocks/serviceAreas';
-import { cityServiceContent, getFallbackContent } from '@/mocks/cityServiceContent';
+import { getCity, getCityService, getService, services, serviceIcons } from './serviceAreaData';
+
+const benefitIcons: Record<string, string> = {
+  star: 'ri-star-fill',
+  heart: 'ri-heart-line',
+  shield: 'ri-shield-check-line',
+  time: 'ri-time-line',
+};
 
 export default function CityServicePage() {
   const { citySlug, serviceSlug } = useParams<{ citySlug: string; serviceSlug: string }>();
@@ -13,27 +19,25 @@ export default function CityServicePage() {
     window.scrollTo(0, 0);
   }, [citySlug, serviceSlug]);
 
-  const city = cities.find((c) => c.slug === citySlug);
-  const service = services.find((s) => s.slug === serviceSlug);
+  const city = getCity(citySlug);
+  const service = getService(serviceSlug);
+  const content = getCityService(citySlug, serviceSlug);
 
   useSEO({
-    title: city && service
-      ? `${service.label} in ${city.name} MA | Trimming Edge`
-      : 'Lawn Care Services | Trimming Edge Western Massachusetts',
-    description: city && service
-      ? `Professional ${service.label.toLowerCase()} services in ${city.name}, MA. Expert lawn care from Trimming Edge. Call (413) 551-9653 for a free estimate.`
-      : 'Professional lawn care and landscaping in Western Massachusetts.',
+    title: content?.seoTitle ?? 'Lawn Care Services | Trimming Edge Western Massachusetts',
+    description: content?.seoDescription ?? 'Professional lawn care and landscaping in Western Massachusetts.',
     keywords: city && service
       ? `${service.label.toLowerCase()} ${city.name} MA, ${service.label.toLowerCase()} ${city.name} Massachusetts, lawn care ${city.name} MA`
       : 'lawn care Western Massachusetts',
     canonical: city && service ? `/service-areas/${city.slug}/${service.slug}` : '/service-areas',
+    ogImage: content ? `${SITE_URL}${content.ogImage}` : undefined,
     schemaJson: city && service
       ? {
           '@context': 'https://schema.org',
           '@type': 'Service',
           '@id': `${SITE_URL}/service-areas/${city.slug}/${service.slug}`,
           name: `${service.label} in ${city.name}, MA`,
-          description: `Professional ${service.label.toLowerCase()} services in ${city.name}, MA by Trimming Edge.`,
+          description: content?.seoDescription ?? `Professional ${service.label.toLowerCase()} services in ${city.name}, MA by Trimming Edge.`,
           provider: { '@type': 'LocalBusiness', name: 'Trimming Edge', telephone: '+14135519653', url: `${SITE_URL}/` },
           areaServed: { '@type': 'City', name: city.name, addressRegion: 'MA' },
           breadcrumb: {
@@ -49,7 +53,7 @@ export default function CityServicePage() {
       : undefined,
   });
 
-  if (!city || !service) {
+  if (!city || !service || !content) {
     return (
       <div className="min-h-screen bg-white">
         <PageHeader />
@@ -66,13 +70,6 @@ export default function CityServicePage() {
   }
 
   const icon = serviceIcons[service.slug] || 'ri-leaf-line';
-
-  // Get real content from the live site data, or fall back to generated content
-  const cityData = cityServiceContent[city.slug];
-  const content = (cityData && cityData[service.slug])
-    ? cityData[service.slug]
-    : getFallbackContent(city.name, service.label);
-
   const otherServices = services.filter((s) => s.slug !== serviceSlug).slice(0, 6);
 
   return (
@@ -83,7 +80,7 @@ export default function CityServicePage() {
         <section className="relative min-h-[480px] flex items-center overflow-hidden bg-gray-900">
           <div className="absolute inset-0 z-0">
             <img
-              src="/uploads/city-lawn.jpg"
+              src={content.heroImage}
               alt={`${service.label} in ${city.name}, ${city.state}`}
               className="w-full h-full object-cover object-top"
             />
@@ -94,16 +91,16 @@ export default function CityServicePage() {
               <i className={`${icon} text-3xl text-white`}></i>
             </div>
             <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-white mb-4 drop-shadow-lg">
-              {content.bannerTitle}
+              {content.heroTitle}
             </h1>
             <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-              Serving clients throughout Western Massachusetts
+              {content.heroSubtitle}
             </p>
             <a
-              href="/contact-us"
+              href={content.ctaPrimaryHref}
               className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white text-lg font-bold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap"
             >
-              Schedule a Service
+              {content.ctaPrimaryLabel}
             </a>
           </div>
         </section>
@@ -123,110 +120,64 @@ export default function CityServicePage() {
           </div>
         </div>
 
-        {/* Section 1 — Intro */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="lg:order-2">
-                <img
-                  src="/uploads/city-lawn.jpg"
-                  alt={`${service.label} in ${city.name}`}
-                  className="w-full h-72 object-cover object-top rounded-2xl"
-                />
-              </div>
-              <div className="lg:order-1">
-                <h2 className="font-display font-bold text-2xl md:text-3xl text-gray-900 mb-4">
-                  {content.section1Heading}
-                </h2>
-                <p className="text-gray-600 leading-relaxed">{content.section1Body}</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 2 — Customized Solutions */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <img
-                  src="/uploads/city-commercial.jpg"
-                  alt={`${service.label} solutions`}
-                  className="w-full h-72 object-cover object-top rounded-2xl"
-                />
-              </div>
-              <div>
-                <h2 className="font-display font-bold text-2xl md:text-3xl text-gray-900 mb-4">
-                  {content.section2Heading}
-                </h2>
-                <p className="text-gray-600 leading-relaxed">{content.section2Body}</p>
+        {content.sections.map((section, index) => (
+          <section key={section.title} className={`py-16 ${index === 1 ? 'bg-gray-50' : 'bg-white'}`}>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className={index !== 1 ? 'lg:order-2' : ''}>
+                  <img
+                    src={section.image}
+                    alt={section.imageAlt}
+                    className="w-full h-72 object-cover object-top rounded-2xl"
+                  />
+                </div>
+                <div className={index !== 1 ? 'lg:order-1' : ''}>
+                  <h2 className="font-display font-bold text-2xl md:text-3xl text-gray-900 mb-4">
+                    {section.title}
+                  </h2>
+                  <p className="text-gray-600 leading-relaxed">{section.body}</p>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        ))}
 
-        {/* Section 3 — Expert Care */}
-        <section className="py-16 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="lg:order-2">
-                <img
-                  src="/uploads/city-company.jpg"
-                  alt={`Expert ${service.label}`}
-                  className="w-full h-72 object-cover object-top rounded-2xl"
-                />
-              </div>
-              <div className="lg:order-1">
-                <h2 className="font-display font-bold text-2xl md:text-3xl text-gray-900 mb-4">
-                  {content.section3Heading}
-                </h2>
-                <p className="text-gray-600 leading-relaxed">{content.section3Body}</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Main Content Block — sect title + sect desc */}
+        {/* Main Content Block */}
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="font-display font-bold text-2xl md:text-3xl text-gray-900 mb-6">
-                  {content.sectTitle}
+                  {content.overviewTitle}
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-8">{content.sectDesc}</p>
+                <p className="text-gray-600 leading-relaxed mb-8">{content.overviewText}</p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href="/contact-us"
+                    href={content.ctaPrimaryHref}
                     className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap"
                   >
-                    Get in Touch
+                    {content.ctaPrimaryLabel}
                   </a>
                   <a
-                    href="tel:+14135519653"
+                    href={content.ctaSecondaryHref}
                     className="inline-flex items-center justify-center px-6 py-3 border-2 border-primary-600 text-primary-600 font-semibold rounded-lg hover:bg-primary-50 transition-colors whitespace-nowrap"
                   >
-                    <i className="ri-phone-line mr-2"></i>
-                    (413) 551-9653
+                    {content.ctaSecondaryHref.startsWith('tel:') && <i className="ri-phone-line mr-2"></i>}
+                    {content.ctaSecondaryLabel}
                   </a>
                 </div>
               </div>
               <div className="bg-white rounded-2xl p-8 border border-gray-100">
                 <h3 className="font-display font-bold text-lg text-gray-900 mb-6">Why Choose Trimming Edge?</h3>
                 <ul className="space-y-4">
-                  {[
-                    { icon: 'ri-star-fill', title: '5.0 Google Rating', desc: 'Every review is five stars from real customers across Western MA.' },
-                    { icon: 'ri-heart-line', title: 'Locally Owned', desc: 'Based in Montgomery, MA — we\'re your true neighbors.' },
-                    { icon: 'ri-shield-check-line', title: 'Licensed & Insured', desc: 'Fully covered so you never have to worry.' },
-                    { icon: 'ri-time-line', title: 'Same-Week Scheduling', desc: 'We move fast. Call today, get on the schedule this week.' },
-                  ].map((item, i) => (
+                  {content.benefits.map((item, i) => (
                     <li key={i} className="flex items-start space-x-3">
                       <div className="w-9 h-9 flex items-center justify-center bg-primary-50 rounded-lg flex-shrink-0">
-                        <i className={`${item.icon} text-primary-600`}></i>
+                        <i className={`${benefitIcons[item.iconKey] || 'ri-star-line'} text-primary-600`}></i>
                       </div>
                       <div>
                         <p className="font-semibold text-gray-900 text-sm">{item.title}</p>
-                        <p className="text-xs text-gray-500 leading-relaxed">{item.desc}</p>
+                        <p className="text-xs text-gray-500 leading-relaxed">{item.description}</p>
                       </div>
                     </li>
                   ))}
@@ -236,20 +187,35 @@ export default function CityServicePage() {
           </div>
         </section>
 
-        {/* FAQs — shown when available */}
-        {content.faqs && content.faqs.length > 0 && (
+        {content.includes.length > 0 && (
+          <section className="py-16 bg-white">
+            <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="font-display font-bold text-3xl text-gray-900 text-center mb-10">What's Included</h2>
+              <div className="grid gap-3">
+                {content.includes.map((item) => (
+                  <div key={item} className="flex items-center space-x-3 p-4 bg-gray-50 rounded-xl">
+                    <i className="ri-checkbox-circle-fill text-primary-600"></i>
+                    <span className="text-gray-700 font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {content.faq.length > 0 && (
           <section className="py-16 bg-white">
             <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
               <h2 className="font-display font-bold text-3xl text-gray-900 text-center mb-10">Frequently Asked Questions</h2>
               <div className="space-y-4">
-                {content.faqs.map((faq, i) => (
+                {content.faq.map((faq, i) => (
                   <details key={i} className="group border border-gray-200 rounded-xl overflow-hidden">
                     <summary className="flex items-center justify-between px-6 py-4 cursor-pointer list-none font-semibold text-gray-900 hover:bg-gray-50 transition-colors">
-                      {faq.q}
+                      {faq.question}
                       <i className="ri-add-line text-xl text-primary-600 group-open:hidden flex-shrink-0 ml-4"></i>
                       <i className="ri-subtract-line text-xl text-primary-600 hidden group-open:block flex-shrink-0 ml-4"></i>
                     </summary>
-                    <div className="px-6 pb-4 text-gray-600 text-sm leading-relaxed">{faq.a}</div>
+                    <div className="px-6 pb-4 text-gray-600 text-sm leading-relaxed">{faq.answer}</div>
                   </details>
                 ))}
               </div>
@@ -267,8 +233,8 @@ export default function CityServicePage() {
                 </div>
                 <h3 className="font-display font-bold text-base text-gray-900 mb-3">Time of Operation</h3>
                 <div className="text-sm text-gray-600 space-y-1">
-                  <p><strong>Mon - Fri:</strong> 8:00 AM – 6:00 PM</p>
-                  <p><strong>Saturday:</strong> 9:00 AM – 5:00 PM</p>
+                  <p><strong>Mon - Fri:</strong> 8:00 AM - 6:00 PM</p>
+                  <p><strong>Saturday:</strong> 9:00 AM - 5:00 PM</p>
                   <p><strong>Sunday:</strong> Closed</p>
                 </div>
               </div>
@@ -332,24 +298,24 @@ export default function CityServicePage() {
         <section className="py-16 bg-primary-600">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mb-4">
-              Get {service.label} in {city.name} Today
+              {content.ctaTitle}
             </h2>
             <p className="text-xl text-primary-100 mb-8">
-              Call or text us for a free estimate. Same-week scheduling available.
+              {content.ctaText}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact-us"
+                href={content.ctaPrimaryHref}
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 text-lg font-bold rounded-lg hover:bg-gray-100 transition-colors whitespace-nowrap"
               >
-                Request Free Estimate
+                {content.ctaPrimaryLabel}
               </a>
               <a
-                href="tel:+14135519653"
+                href={content.ctaSecondaryHref}
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white text-lg font-bold rounded-lg hover:bg-white/10 transition-colors whitespace-nowrap"
               >
-                <i className="ri-phone-line mr-2"></i>
-                (413) 551-9653
+                {content.ctaSecondaryHref.startsWith('tel:') && <i className="ri-phone-line mr-2"></i>}
+                {content.ctaSecondaryLabel}
               </a>
             </div>
           </div>

@@ -1,3 +1,5 @@
+// Deprecated: service-area content now lives in src/content/serviceAreas.json.
+
 export const services = [
   { slug: 'bush-maintenance', label: 'Bush Maintenance' },
   { slug: 'bush-trimming-services', label: 'Bush Trimming Services' },

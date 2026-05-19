@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { mainServices } from '../../../mocks/services';
+import { cities, services } from '../../service-areas/serviceAreaData';
 
 export default function LocationsServices() {
   return (
@@ -19,23 +19,23 @@ export default function LocationsServices() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {mainServices.map((service) => (
-            <div key={service.id} className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-primary-200 transition-all group">
+          {services.slice(0, 6).map((service) => (
+            <div key={service.slug} className="bg-white rounded-2xl p-6 border border-gray-100 hover:border-primary-200 transition-all group">
               <div className="flex items-start space-x-4">
                 <div className="w-12 h-12 flex items-center justify-center bg-primary-100 rounded-xl flex-shrink-0 group-hover:bg-primary-600 transition-colors">
                   <i className={`${service.icon} text-2xl text-primary-600 group-hover:text-white transition-colors`}></i>
                 </div>
                 <div>
                   <h3 className="font-display font-bold text-lg text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
-                    {service.title}
+                    {service.label}
                   </h3>
                   <p className="text-sm text-gray-600 leading-relaxed">{service.description}</p>
                 </div>
               </div>
               <div className="mt-4 pt-4 border-t border-gray-100 flex flex-wrap gap-2">
-                {['Westfield', 'Huntington', 'Russell', 'Montgomery'].map((area) => (
-                  <span key={area} className="text-xs px-2 py-1 bg-primary-50 text-primary-700 rounded-full font-medium">
-                    {area}
+                {cities.slice(0, 4).map((area) => (
+                  <span key={area.slug} className="text-xs px-2 py-1 bg-primary-50 text-primary-700 rounded-full font-medium">
+                    {area.name}
                   </span>
                 ))}
               </div>

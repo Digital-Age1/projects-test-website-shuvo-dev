@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation, Navigate } from 'react-router-dom';
-import { cities, services } from '@/mocks/serviceAreas';
+import { cities, services } from './service-areas/serviceAreaData';
 import PageHeader from '@/components/feature/PageHeader';
 import PageFooter from '@/components/feature/PageFooter';
 import { useSEO } from '@/hooks/useSEO';

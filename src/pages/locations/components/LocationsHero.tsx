@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
+import { locationsContent } from '../../service-areas/serviceAreaData';
 
 export default function LocationsHero() {
   return (
     <section className="relative py-28 overflow-hidden bg-gray-900">
       <div className="absolute inset-0 z-0">
         <img
-          src="/uploads/hero-service-areas.jpg"
-          alt="Western Massachusetts Service Area — Trimming Edge"
+          src={locationsContent.heroImage}
+          alt="Western Massachusetts Service Area - Trimming Edge"
           className="w-full h-full object-cover object-top" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/20"></div>
       </div>
@@ -18,10 +19,10 @@ export default function LocationsHero() {
             <span className="text-sm font-semibold text-white">Service Areas</span>
           </div>
           <h1 className="font-display font-bold text-5xl sm:text-6xl text-white mb-6 leading-tight">
-            Serving Westfield, Huntington, Russell &amp; Montgomery, MA
+            {locationsContent.heroTitle}
           </h1>
           <p className="text-xl text-white/90 mb-8 leading-relaxed drop-shadow">
-            Trimming Edge provides professional lawn care and landscaping throughout Western Massachusetts. Local, reliable, and trusted — right in your neighborhood.
+            {locationsContent.heroSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
@@ -49,7 +50,7 @@ export default function LocationsHero() {
             </div>
             <div className="flex items-center space-x-2 text-white">
               <i className="ri-shield-check-line text-primary-300"></i>
-              <span className="text-sm font-medium">Licensed &amp; Insured</span>
+              <span className="text-sm font-medium">Licensed & Insured</span>
             </div>
           </div>
         </div>

@@ -258,23 +258,149 @@ collections:
         name: "serviceAreas"
         format: "json"
         fields:
-          - label: "Hero"
-            name: "hero"
+          - label: "Service Areas Landing"
+            name: "landing"
             widget: "object"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Hero Title", name: "heroTitle", widget: "string" }
+              - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+              - { label: "Hero Image", name: "heroImage", widget: "image" }
+              - { label: "Hero Eyebrow", name: "heroEyebrow", widget: "string", required: false }
+              - { label: "Intro Eyebrow", name: "introEyebrow", widget: "string", required: false }
+              - { label: "Intro Title", name: "introTitle", widget: "string" }
+              - { label: "Intro Text", name: "introText", widget: "text" }
+              - { label: "Services Eyebrow", name: "servicesEyebrow", widget: "string", required: false }
+              - { label: "Services Title", name: "servicesTitle", widget: "string" }
+              - { label: "Services Text", name: "servicesText", widget: "text" }
+              - { label: "CTA Title", name: "ctaTitle", widget: "string" }
+              - { label: "CTA Text", name: "ctaText", widget: "text" }
+              - { label: "CTA Primary Label", name: "ctaPrimaryLabel", widget: "string" }
+              - { label: "CTA Primary URL", name: "ctaPrimaryHref", widget: "string" }
+              - { label: "SEO Title", name: "seoTitle", widget: "string" }
+              - { label: "SEO Description", name: "seoDescription", widget: "text" }
+              - { label: "SEO Keywords", name: "seoKeywords", widget: "text", required: false }
+              - { label: "OG Image", name: "ogImage", widget: "image" }
+          - label: "Locations Page"
+            name: "locations"
+            widget: "object"
+            fields:
+              - { label: "Hero Title", name: "heroTitle", widget: "string" }
+              - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+              - { label: "Hero Image", name: "heroImage", widget: "image" }
+              - { label: "Intro Title", name: "introTitle", widget: "string" }
+              - { label: "Intro Text", name: "introText", widget: "text" }
+              - { label: "SEO Title", name: "seoTitle", widget: "string" }
+              - { label: "SEO Description", name: "seoDescription", widget: "text" }
+              - { label: "OG Image", name: "ogImage", widget: "image" }
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - label: "Slug"
+                name: "slug"
+                widget: "select"
+                options: ["bush-maintenance", "bush-trimming-services", "commercial-landscaping", "commercial-property-maintenance", "commercial-yard-care", "corporate-landscaping", "edging-services", "enterprise-lawn-services", "garden-mulch-installation", "hedge-cutting-services", "hedge-trimming-services", "landscaping-technology-solutions", "lawn-care", "lawn-care-services", "lawn-mowing-services", "lawn-overseeding", "mulching-services", "organic-mulch-services", "pet-friendly-landscaping", "professional-landscaping", "seasonal-clean-up"]
+              - { label: "Label", name: "label", widget: "string" }
+              - label: "Icon"
+                name: "icon"
+                widget: "select"
+                options: ["ri-plant-line", "ri-scissors-cut-line", "ri-building-2-line", "ri-tools-line", "ri-building-line", "ri-briefcase-line", "ri-crop-line", "ri-community-line", "ri-seedling-line", "ri-scissors-2-line", "ri-leaf-line", "ri-cpu-line", "ri-plant-fill", "ri-landscape-line", "ri-dashboard-line", "ri-seedling-fill", "ri-recycle-line", "ri-earth-line", "ri-heart-line", "ri-award-line", "ri-sun-line"]
               - { label: "Description", name: "description", widget: "text" }
           - label: "Cities"
             name: "cities"
             widget: "list"
             fields:
+              - label: "Slug"
+                name: "slug"
+                widget: "select"
+                options: ["agawam-ma", "huntington-ma", "montgomery-ma", "russell-ma", "southwick-ma", "westfield-ma"]
               - { label: "Name", name: "name", widget: "string" }
               - { label: "State", name: "state", widget: "string" }
-              - { label: "Slug", name: "slug", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Hero Title", name: "heroTitle", widget: "string" }
+              - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+              - { label: "Hero Image", name: "heroImage", widget: "image" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Highlights", name: "highlights", widget: "list", field: { label: "Highlight", name: "highlight", widget: "string" } }
               - { label: "Image", name: "image", widget: "image" }
-              - { label: "Description", name: "description", widget: "text", required: false }
-              - { label: "Highlights", name: "highlights", widget: "list", required: false, field: { label: "Highlight", name: "highlight", widget: "string" } }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+              - label: "Icon"
+                name: "icon"
+                widget: "select"
+                options: ["ri-building-2-line", "ri-landscape-line", "ri-home-heart-line", "ri-map-pin-2-line", "ri-building-line", "ri-tree-line"]
+              - label: "Available Service Slugs"
+                name: "services"
+                widget: "list"
+                field:
+                  label: "Service Slug"
+                  name: "service"
+                  widget: "select"
+                  options: ["bush-maintenance", "bush-trimming-services", "commercial-landscaping", "commercial-property-maintenance", "commercial-yard-care", "corporate-landscaping", "edging-services", "enterprise-lawn-services", "garden-mulch-installation", "hedge-cutting-services", "hedge-trimming-services", "landscaping-technology-solutions", "lawn-care", "lawn-care-services", "lawn-mowing-services", "lawn-overseeding", "mulching-services", "organic-mulch-services", "pet-friendly-landscaping", "professional-landscaping", "seasonal-clean-up"]
+              - { label: "About Title", name: "aboutTitle", widget: "string" }
+              - { label: "About Text", name: "aboutText", widget: "text" }
+              - { label: "CTA Title", name: "ctaTitle", widget: "string" }
+              - { label: "CTA Text", name: "ctaText", widget: "text" }
+              - { label: "CTA Primary Label", name: "ctaPrimaryLabel", widget: "string" }
+              - { label: "CTA Primary URL", name: "ctaPrimaryHref", widget: "string" }
+              - { label: "CTA Secondary Label", name: "ctaSecondaryLabel", widget: "string" }
+              - { label: "CTA Secondary URL", name: "ctaSecondaryHref", widget: "string" }
+              - { label: "SEO Title", name: "seoTitle", widget: "string" }
+              - { label: "SEO Description", name: "seoDescription", widget: "text" }
+              - { label: "OG Image", name: "ogImage", widget: "image" }
+          - label: "City Service Pages"
+            name: "cityServices"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - label: "City Slug"
+                name: "citySlug"
+                widget: "select"
+                options: ["agawam-ma", "huntington-ma", "montgomery-ma", "russell-ma", "southwick-ma", "westfield-ma"]
+              - label: "Service Slug"
+                name: "serviceSlug"
+                widget: "select"
+                options: ["bush-maintenance", "bush-trimming-services", "commercial-landscaping", "commercial-property-maintenance", "commercial-yard-care", "corporate-landscaping", "edging-services", "enterprise-lawn-services", "garden-mulch-installation", "hedge-cutting-services", "hedge-trimming-services", "landscaping-technology-solutions", "lawn-care", "lawn-care-services", "lawn-mowing-services", "lawn-overseeding", "mulching-services", "organic-mulch-services", "pet-friendly-landscaping", "professional-landscaping", "seasonal-clean-up"]
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Hero Title", name: "heroTitle", widget: "string" }
+              - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+              - { label: "Hero Image", name: "heroImage", widget: "image" }
+              - { label: "Overview Title", name: "overviewTitle", widget: "string" }
+              - { label: "Overview Text", name: "overviewText", widget: "text" }
+              - label: "Content Sections"
+                name: "sections"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Body", name: "body", widget: "text" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+              - label: "Benefits"
+                name: "benefits"
+                widget: "list"
+                fields:
+                  - label: "Icon"
+                    name: "iconKey"
+                    widget: "select"
+                    options: ["star", "heart", "shield", "time"]
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+              - { label: "Includes", name: "includes", widget: "list", required: false, field: { label: "Item", name: "item", widget: "string" } }
+              - label: "FAQ"
+                name: "faq"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Question", name: "question", widget: "string" }
+                  - { label: "Answer", name: "answer", widget: "text" }
+              - { label: "CTA Title", name: "ctaTitle", widget: "string" }
+              - { label: "CTA Text", name: "ctaText", widget: "text" }
+              - { label: "CTA Primary Label", name: "ctaPrimaryLabel", widget: "string" }
+              - { label: "CTA Primary URL", name: "ctaPrimaryHref", widget: "string" }
+              - { label: "CTA Secondary Label", name: "ctaSecondaryLabel", widget: "string" }
+              - { label: "CTA Secondary URL", name: "ctaSecondaryHref", widget: "string" }
+              - { label: "SEO Title", name: "seoTitle", widget: "string" }
+              - { label: "SEO Description", name: "seoDescription", widget: "text" }
+              - { label: "OG Image", name: "ogImage", widget: "image" }
 
       - file: "src/content/about.json"
         label: "About"

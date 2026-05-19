@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { services, serviceIcons, serviceDescriptions } from '@/mocks/serviceAreas';
+import { services, serviceIcons, serviceDescriptions } from '../serviceAreaData';
 
 interface CityServiceGridProps {
   citySlug: string;

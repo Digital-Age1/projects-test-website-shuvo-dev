@@ -1,14 +1,31 @@
 interface CityHeroProps {
   cityName: string;
   state: string;
+  heroTitle: string;
+  heroSubtitle: string;
+  heroImage: string;
+  ctaPrimaryLabel: string;
+  ctaPrimaryHref: string;
+  ctaSecondaryLabel: string;
+  ctaSecondaryHref: string;
 }
 
-export default function CityHero({ cityName, state }: CityHeroProps) {
+export default function CityHero({
+  cityName,
+  state,
+  heroTitle,
+  heroSubtitle,
+  heroImage,
+  ctaPrimaryLabel,
+  ctaPrimaryHref,
+  ctaSecondaryLabel,
+  ctaSecondaryHref,
+}: CityHeroProps) {
   return (
     <section className="relative min-h-[520px] flex items-center overflow-hidden bg-gray-900">
       <div className="absolute inset-0 z-0">
         <img
-          src="/uploads/hero-city-service-area.jpg"
+          src={heroImage}
           alt={`Lawn Care in ${cityName}, ${state}`}
           className="w-full h-full object-cover object-top" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/25"></div>
@@ -20,24 +37,24 @@ export default function CityHero({ cityName, state }: CityHeroProps) {
             <span className="text-sm font-semibold text-white">{state} Service Area</span>
           </div>
           <h1 className="font-display font-bold text-5xl sm:text-6xl text-white mb-4 leading-tight">
-            Lawn Care in {cityName}, {state}
+            {heroTitle}
           </h1>
           <p className="text-xl text-white/90 max-w-xl mb-8 leading-relaxed drop-shadow">
-            Professional lawn care &amp; landscaping services in {cityName}. Locally owned, family-operated, 5-star rated.
+            {heroSubtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="tel:+14135519653"
+              href={ctaPrimaryHref}
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 text-lg font-bold rounded-lg hover:bg-gray-100 transition-colors whitespace-nowrap"
             >
-              <i className="ri-phone-line mr-2"></i>
-              (413) 551-9653
+              {ctaPrimaryHref.startsWith('tel:') && <i className="ri-phone-line mr-2"></i>}
+              {ctaPrimaryLabel}
             </a>
             <a
-              href="/contact-us"
+              href={ctaSecondaryHref}
               className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white text-lg font-bold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap"
             >
-              Free Estimate
+              {ctaSecondaryLabel}
             </a>
           </div>
           <div className="flex flex-wrap gap-6 mt-8">

@@ -2,10 +2,12 @@ interface CityAboutProps {
   cityName: string;
   state: string;
   description: string;
+  title: string;
+  secondaryText: string;
   highlights: string[];
 }
 
-export default function CityAbout({ cityName, state, description, highlights }: CityAboutProps) {
+export default function CityAbout({ cityName, state, description, title, secondaryText, highlights }: CityAboutProps) {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -16,13 +18,13 @@ export default function CityAbout({ cityName, state, description, highlights }: 
               <span className="text-sm font-semibold text-primary-600">Serving {cityName}, {state}</span>
             </div>
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 mb-4">
-              Premium Lawn Care Services for {cityName}
+              {title}
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
               {description}
             </p>
             <p className="text-gray-600 leading-relaxed mb-8">
-              Trimming Edge is a locally owned, women-operated lawn care company based in Montgomery, MA. We serve {cityName} and surrounding communities with the same reliable, detail-oriented service on every visit — no shortcuts, no excuses.
+              {secondaryText}
             </p>
             <div className="grid grid-cols-2 gap-3">
               {highlights.map((h, i) => (

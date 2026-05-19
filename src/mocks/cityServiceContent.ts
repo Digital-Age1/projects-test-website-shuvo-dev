@@ -1,3 +1,5 @@
+// Deprecated: city-service content now lives in src/content/serviceAreas.json.
+
 // Real content extracted from trimmingedge.com city service pages
 // Each entry contains genuinely unique text specific to each city and service
 

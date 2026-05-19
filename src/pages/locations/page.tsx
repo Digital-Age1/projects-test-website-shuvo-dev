@@ -8,10 +8,11 @@ import LocationsFAQ from './components/LocationsFAQ';
 import { Link } from 'react-router-dom';
 import LocationsServices from './components/LocationsServices';
 import { useSEO, SITE_URL } from '@/hooks/useSEO';
+import { cities, locationsContent } from '../service-areas/serviceAreaData';
 
 function CoverageStatsBar() {
   const stats = [
-    { icon: 'ri-map-pin-line', value: '6', label: 'Towns Served' },
+    { icon: 'ri-map-pin-line', value: String(cities.length), label: 'Towns Served' },
     { icon: 'ri-feedback-line', value: '5.0', label: 'Star Rating' },
     { icon: 'ri-star-fill', value: '5.0', label: 'Google Rating' },
     { icon: 'ri-calendar-line', value: '15+', label: 'Years Experience' },
@@ -45,26 +46,19 @@ function ServiceAreaIntro() {
               <span className="text-sm font-semibold text-primary-600">Coverage Overview</span>
             </div>
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 mb-4">
-              Professional Lawn Care Across Western Massachusetts
+              {locationsContent.introTitle}
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Trimming Edge is a locally owned, family-operated lawn care company based in Montgomery, MA. We provide full-service lawn maintenance, landscaping, and seasonal cleanup throughout Hampden County — serving Westfield, Huntington, Russell, Montgomery, Agawam, and Southwick with the same reliable, 5-star quality on every visit.
+              {locationsContent.introText}
             </p>
           </div>
           <div className="grid grid-cols-2 gap-3">
-            {[
-              { city: 'Westfield', state: 'MA', icon: 'ri-building-2-line' },
-              { city: 'Huntington', state: 'MA', icon: 'ri-landscape-line' },
-              { city: 'Russell', state: 'MA', icon: 'ri-home-heart-line' },
-              { city: 'Montgomery', state: 'MA (Home Base)', icon: 'ri-map-pin-2-line' },
-              { city: 'Agawam', state: 'MA', icon: 'ri-building-line' },
-              { city: 'Southwick', state: 'MA', icon: 'ri-tree-line' },
-            ].map((c) => (
-              <div key={c.city} className="bg-white rounded-2xl p-4 border border-gray-100 text-center">
+            {cities.map((c) => (
+              <div key={c.slug} className="bg-white rounded-2xl p-4 border border-gray-100 text-center">
                 <div className="w-10 h-10 flex items-center justify-center bg-primary-100 rounded-xl mx-auto mb-2">
                   <i className={`${c.icon} text-lg text-primary-600`}></i>
                 </div>
-                <div className="font-bold text-sm text-gray-900">{c.city}</div>
+                <div className="font-bold text-sm text-gray-900">{c.name}</div>
                 <div className="text-xs text-gray-500">{c.state}</div>
               </div>
             ))}
@@ -168,8 +162,8 @@ export default function LocationsPage() {
   }, []);
 
   useSEO({
-    title: 'Service Areas | Lawn Care Near Me Westfield Huntington Russell Montgomery MA',
-    description: 'Trimming Edge serves Westfield, Huntington, Russell, Montgomery, Agawam & Southwick MA. Professional lawn care and landscaping near you in Western Massachusetts.',
+    title: locationsContent.seoTitle,
+    description: locationsContent.seoDescription,
     keywords: 'lawn care near me Western MA, landscaping Westfield MA, lawn service Huntington MA, lawn care Russell MA, Montgomery MA landscaping',
     canonical: '/locations',
     schemaJson: {

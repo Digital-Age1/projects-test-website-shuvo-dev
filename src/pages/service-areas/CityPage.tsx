@@ -5,7 +5,7 @@ import PageFooter from '@/components/feature/PageFooter';
 import CityHero from './components/CityHero';
 import CityAbout from './components/CityAbout';
 import CityServiceGrid from './components/CityServiceGrid';
-import { cities } from '@/mocks/serviceAreas';
+import { getCity } from './serviceAreaData';
 import { useSEO, SITE_URL } from '@/hooks/useSEO';
 
 export default function CityPage() {
@@ -15,15 +15,11 @@ export default function CityPage() {
     window.scrollTo(0, 0);
   }, [citySlug]);
 
-  const city = cities.find((c) => c.slug === citySlug);
+  const city = getCity(citySlug);
 
   useSEO({
-    title: city
-      ? `Lawn Care & Landscaping ${city.name} MA | Trimming Edge`
-      : 'Lawn Care & Landscaping | Trimming Edge Western Massachusetts',
-    description: city
-      ? `Professional lawn care and landscaping services in ${city.name}, MA. Mowing, trimming, mulching, seasonal cleanups & more. Call Trimming Edge at (413) 551-9653 for a free estimate.`
-      : 'Professional lawn care and landscaping in Western Massachusetts.',
+    title: city ? city.seoTitle : 'Lawn Care & Landscaping | Trimming Edge Western Massachusetts',
+    description: city ? city.seoDescription : 'Professional lawn care and landscaping in Western Massachusetts.',
     keywords: city
       ? `lawn care ${city.name} MA, landscaping ${city.name} Massachusetts, lawn mowing ${city.name}, ${city.name} lawn service`
       : 'lawn care Western Massachusetts',
@@ -69,11 +65,23 @@ export default function CityPage() {
     <div className="min-h-screen bg-white">
       <PageHeader />
       <main>
-        <CityHero cityName={city.name} state={city.state} />
+        <CityHero
+          cityName={city.name}
+          state={city.state}
+          heroTitle={city.heroTitle}
+          heroSubtitle={city.heroSubtitle}
+          heroImage={city.heroImage}
+          ctaPrimaryLabel={city.ctaPrimaryLabel}
+          ctaPrimaryHref={city.ctaPrimaryHref}
+          ctaSecondaryLabel={city.ctaSecondaryLabel}
+          ctaSecondaryHref={city.ctaSecondaryHref}
+        />
         <CityAbout
           cityName={city.name}
           state={city.state}
           description={city.description}
+          title={city.aboutTitle}
+          secondaryText={city.aboutText}
           highlights={city.highlights}
         />
         <CityServiceGrid citySlug={city.slug} cityName={city.name} state={city.state} />
@@ -82,24 +90,24 @@ export default function CityPage() {
         <section className="py-16 bg-primary-600">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-display font-bold text-3xl sm:text-4xl text-white mb-4">
-              Ready for a Greener {city.name}?
+              {city.ctaTitle}
             </h2>
             <p className="text-xl text-primary-100 mb-8">
-              Call or text us today for a free estimate. Same-week scheduling available.
+              {city.ctaText}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+14135519653"
+                href={city.ctaPrimaryHref}
                 className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white text-primary-700 text-lg font-bold rounded-lg hover:bg-gray-100 transition-colors whitespace-nowrap"
               >
-                <i className="ri-phone-line mr-2"></i>
-                (413) 551-9653
+                {city.ctaPrimaryHref.startsWith('tel:') && <i className="ri-phone-line mr-2"></i>}
+                {city.ctaPrimaryLabel}
               </a>
               <Link
-                to="/service-areas"
+                to={city.ctaSecondaryHref}
                 className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-primary-700 text-white text-lg font-bold rounded-lg hover:bg-primary-800 transition-colors whitespace-nowrap"
               >
-                All Service Areas
+                {city.ctaSecondaryLabel}
               </Link>
             </div>
           </div>
