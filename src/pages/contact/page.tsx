@@ -3,6 +3,7 @@ import PageHeader from '@/components/feature/PageHeader';
 import PageFooter from '@/components/feature/PageFooter';
 import BusinessHours from './components/BusinessHours';
 import { useSEO, SITE_URL } from '@/hooks/useSEO';
+import contact from '@/content/contact.json';
 
 export default function ContactPage() {
   const formContainerRef = useRef<HTMLDivElement>(null);
@@ -80,7 +81,7 @@ export default function ContactPage() {
         <section className="relative py-24 overflow-hidden bg-gray-900">
           <div className="absolute inset-0">
             <img
-              src="/uploads/hero-contact-landscape-garden.jpg"
+              src={contact.hero?.image || '/uploads/hero-contact-landscape-garden.jpg'}
               alt="Contact Trimming Edge Landscaping"
               className="w-full h-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-br from-primary-900/60 to-black/50"></div>
@@ -91,10 +92,10 @@ export default function ContactPage() {
               <span className="text-sm font-semibold text-white">Get In Touch</span>
             </div>
             <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-white mb-4">
-              Request Your Free Estimate
+              {contact.hero?.title || 'Request Your Free Estimate'}
             </h1>
             <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Fill out the form below and we will get back to you within 24 hours with a detailed quote for your lawn care or landscaping project.
+              {contact.hero?.description || 'Fill out the form below and we will get back to you within 24 hours with a detailed quote for your lawn care or landscaping project.'}
             </p>
           </div>
         </section>
@@ -106,10 +107,10 @@ export default function ContactPage() {
               {/* Contact Info */}
               <div>
                 <h2 className="font-display font-bold text-3xl text-gray-900 mb-6">
-                  Contact Trimming Edge
+                  {contact.intro?.title || 'Contact Trimming Edge'}
                 </h2>
                 <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                  We are here to help with all your lawn care and landscaping needs. Reach out by phone, or fill out the form to request your free estimate.
+                  {contact.intro?.description || 'We are here to help with all your lawn care and landscaping needs. Reach out by phone, or fill out the form to request your free estimate.'}
                 </p>
 
                 <div className="space-y-6 mb-8">
@@ -119,8 +120,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                      <a href="tel:+14135519653" className="text-gray-600 hover:text-primary-600 transition-colors">
-                        (413) 551-9653
+                      <a href={contact.phoneHref} className="text-gray-600 hover:text-primary-600 transition-colors">
+                        {contact.phone}
                       </a>
                     </div>
                   </div>
@@ -131,8 +132,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                      <a href="mailto:info@trimmingedge.com" className="text-gray-600 hover:text-primary-600 transition-colors">
-                        info@trimmingedge.com
+                      <a href={contact.emailHref} className="text-gray-600 hover:text-primary-600 transition-colors">
+                        {contact.email}
                       </a>
                     </div>
                   </div>
@@ -143,7 +144,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Location</h4>
-                      <p className="text-gray-600">Montgomery, MA 01050</p>
+                      <p className="text-gray-600">{contact.location}</p>
                     </div>
                   </div>
 
@@ -153,9 +154,9 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 mb-1">Business Hours</h4>
-                      <p className="text-sm text-gray-600">Monday - Friday: 8:00 AM - 6:00 PM</p>
-                      <p className="text-sm text-gray-600">Saturday: 9:00 AM - 5:00 PM</p>
-                      <p className="text-sm text-gray-600">Sunday: Closed</p>
+                      {contact.hours.map((line) => (
+                        <p key={line} className="text-sm text-gray-600">{line}</p>
+                      ))}
                     </div>
                   </div>
                 </div>

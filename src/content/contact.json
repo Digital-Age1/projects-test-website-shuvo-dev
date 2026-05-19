@@ -1,4 +1,13 @@
 {
+  "hero": {
+    "title": "Request Your Free Estimate",
+    "image": "/uploads/hero-contact-landscape-garden.jpg",
+    "description": "Fill out the form below and we will get back to you within 24 hours with a detailed quote for your lawn care or landscaping project."
+  },
+  "intro": {
+    "title": "Contact Trimming Edge",
+    "description": "We are here to help with all your lawn care and landscaping needs. Reach out by phone, or fill out the form to request your free estimate."
+  },
   "phone": "(413) 551-9653",
   "phoneHref": "tel:+14135519653",
   "email": "info@trimmingedge.com",

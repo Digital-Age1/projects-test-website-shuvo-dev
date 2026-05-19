@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
-import { galleryImages } from '../../../mocks/services';
+import gallery from '@/content/gallery.json';
+
+const galleryImages = gallery.items;
 
 export default function Gallery() {
   return (

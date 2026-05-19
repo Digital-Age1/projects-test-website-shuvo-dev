@@ -2,72 +2,12 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../../components/feature/PageHeader';
 import PageFooter from '../../components/feature/PageFooter';
+import gallery from '@/content/gallery.json';
+import site from '@/content/site.json';
 
-const INSTAGRAM_URL = 'https://www.instagram.com/trimmingedge';
-const FACEBOOK_URL = 'https://www.facebook.com/trimmingedgema/photos_albums';
-
-const instagramPosts = [
-  {
-    src: '/uploads/gallery-residential-lawn-care.jpg',
-    alt: 'Trimming Edge lawn care work',
-    date: 'a week ago',
-  },
-  {
-    src: '/uploads/gallery-landscape-design.jpg',
-    alt: 'Trimming Edge lawn care work',
-    date: '3 weeks ago',
-  },
-  {
-    src: '/uploads/gallery-mulch-installation.jpg',
-    alt: 'Trimming Edge lawn care work',
-    date: '3 weeks ago',
-  },
-  {
-    src: '/uploads/gallery-commercial-property.jpg',
-    alt: 'Trimming Edge lawn care work',
-    date: '3 weeks ago',
-  },
-  {
-    src: '/uploads/gallery-seasonal-cleanup.jpg',
-    alt: 'Trimming Edge lawn care work',
-    date: '3 weeks ago',
-  },
-  {
-    src: '/uploads/gallery-tree-trimming.jpg',
-    alt: 'Trimming Edge lawn care work',
-    date: '3 weeks ago',
-  },
-  {
-    src: '/uploads/about-gallery-banner.jpg',
-    alt: 'Trimming Edge lawn care work',
-    date: '3 weeks ago',
-  },
-  {
-    src: '/uploads/about-gallery-shrub.jpg',
-    alt: 'Trimming Edge lawn care work',
-    date: '3 weeks ago',
-  },
-  {
-    src: '/uploads/service-lawn-mowing.jpg',
-    alt: 'Trimming Edge lawn care work',
-    date: '3 weeks ago',
-  },
-  {
-    src: '/uploads/service-landscape-design.jpg',
-    alt: 'Trimming Edge lawn care work',
-    date: '3 weeks ago',
-  },
-  {
-    src: '/uploads/service-tree-care.jpg',
-    alt: 'Trimming Edge lawn care work',
-    date: '3 weeks ago',
-  },
-  {
-    src: '/uploads/service-commercial-landscaping.jpg',
-    alt: 'Trimming Edge lawn care work',
-    date: '3 weeks ago',
-  },
-];
+const INSTAGRAM_URL = gallery.social.instagramUrl;
+const FACEBOOK_URL = gallery.social.facebookUrl;
+const instagramPosts = gallery.socialPosts;
 
 export default function OurWorkPage() {
   useEffect(() => {
@@ -83,13 +23,13 @@ export default function OurWorkPage() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 rounded-full mb-6">
               <i className="ri-gallery-line text-primary-400"></i>
-              <span className="text-sm font-semibold text-primary-400">Portfolio</span>
+              <span className="text-sm font-semibold text-primary-400">{gallery.hero.eyebrow}</span>
             </div>
             <h1 className="font-display font-bold text-4xl sm:text-5xl mb-4">
-              Our Work
+              {gallery.hero.title}
             </h1>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Browse our gallery of completed landscaping and lawn maintenance projects. See the quality and detail Trimming Edge brings to every local property.
+              {gallery.hero.description}
             </p>
           </div>
         </section>
@@ -103,8 +43,8 @@ export default function OurWorkPage() {
                   <i className="ri-instagram-line text-white text-2xl"></i>
                 </div>
                 <div>
-                  <div className="font-display font-bold text-xl text-gray-900">TrimmingEdge.com</div>
-                  <div className="text-sm text-gray-500">Recent work from Instagram and Facebook</div>
+                  <div className="font-display font-bold text-xl text-gray-900">{gallery.social.brandName}</div>
+                  <div className="text-sm text-gray-500">{gallery.social.description}</div>
                 </div>
               </div>
               <div className="flex flex-wrap items-center gap-3">
@@ -140,7 +80,7 @@ export default function OurWorkPage() {
                   className="group relative aspect-square rounded-xl overflow-hidden bg-gray-100 cursor-pointer"
                 >
                   <img
-                    src={post.src}
+                    src={post.image}
                     alt={post.alt}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
@@ -191,24 +131,24 @@ export default function OurWorkPage() {
         <section className="py-14 bg-gray-900">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-display font-bold text-3xl text-white mb-4">
-              Want Results Like These?
+              {gallery.cta.title}
             </h2>
             <p className="text-gray-400 text-lg mb-8">
-              Call us today for a free estimate and let us transform your property.
+              {gallery.cta.description}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+14135519653"
+                href={site.phoneHref}
                 className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white text-lg font-bold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap"
               >
                 <i className="ri-phone-line mr-2"></i>
-                Call (413) 551-9653
+                {gallery.cta.primaryLabel}
               </a>
               <Link
                 to="/services"
                 className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 text-lg font-bold rounded-lg hover:bg-gray-100 transition-colors whitespace-nowrap"
               >
-                View Our Services
+                {gallery.cta.secondaryLabel}
               </Link>
             </div>
           </div>

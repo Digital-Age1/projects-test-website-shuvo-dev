@@ -1,5 +1,7 @@
 import PageHeader from '@/components/feature/PageHeader';
 import PageFooter from '@/components/feature/PageFooter';
+import petCare from '@/content/petCare.json';
+import site from '@/content/site.json';
 
 export default function PetCarePage() {
   return (
@@ -10,7 +12,7 @@ export default function PetCarePage() {
         <section className="relative min-h-[480px] flex items-center justify-center overflow-hidden bg-gray-900">
           <div className="absolute inset-0">
             <img
-              src="/uploads/hero-pet-care-dog-lawn.jpg"
+              src={petCare.hero.image}
               alt="Pet Care Services — Trimming Edge"
               className="w-full h-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/60"></div>
@@ -20,7 +22,7 @@ export default function PetCarePage() {
               Serving Clients Throughout Western Massachusetts
             </p>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Pamper Your Pets Today!
+              {petCare.hero.title}
             </h1>
             <a
               href="/contact-us"
@@ -36,12 +38,12 @@ export default function PetCarePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Quality Care For Your Furry Friend.</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">{petCare.intro.title}</h2>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  Trimming Edge is the ultimate destination for premium pet care, where your furry friend's happiness and well-being are our top priorities. Our expert team is dedicated to providing personalized pet care services, ensuring your pet feels comfortable, loved, and cared for every step of the way. We believe every pet deserves the best, so we focus on delivering outstanding pet care that meets the highest standards. With a passion for animals and a commitment to excellence, Trimming Edge pet care is the trusted choice for pet owners throughout Western Massachusetts.
+                  {petCare.intro.body}
                 </p>
                 <a
-                  href="tel:+14135519653"
+                  href={site.phoneHref}
                   className="inline-block px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap cursor-pointer"
                 >
                   Get in Touch
@@ -49,7 +51,7 @@ export default function PetCarePage() {
               </div>
               <div className="w-full h-72 rounded-xl overflow-hidden">
                 <img
-                  src="/uploads/pet-care-family-dog.jpg"
+                  src={petCare.intro.image}
                   alt="Quality Pet Care"
                   className="w-full h-full object-cover object-top" />
               </div>

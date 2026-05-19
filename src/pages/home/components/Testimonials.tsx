@@ -1,22 +1,7 @@
 import { useState } from 'react';
+import testimonialsContent from '@/content/testimonials.json';
 
-const testimonials = [
-  {
-    quote: 'Trimming Edge completely transformed our yard. David and Amanda are incredibly reliable and the results speak for themselves. Best lawn care service we have ever used.',
-    author: 'Sarah M.',
-    location: 'Westfield, MA',
-  },
-  {
-    quote: 'Professional, punctual, and they actually care about your property. Our lawn has never looked better. Highly recommend to anyone in Western MA.',
-    author: 'Mike R.',
-    location: 'Russell, MA',
-  },
-  {
-    quote: 'I have used many lawn services over the years, but Trimming Edge is on another level. Attention to detail is unmatched and they always go above and beyond.',
-    author: 'Jennifer K.',
-    location: 'Montgomery, MA',
-  },
-];
+const testimonials = testimonialsContent.items;
 
 export default function Testimonials() {
   const [active, setActive] = useState(0);
@@ -43,14 +28,14 @@ export default function Testimonials() {
         <div className="bg-white/10 rounded-2xl p-8 md:p-10 backdrop-blur-sm mb-8">
           <i className="ri-double-quotes-l text-4xl text-primary-400 mb-4"></i>
           <p className="text-xl md:text-2xl font-medium leading-relaxed mb-6">
-            {testimonials[active].quote}
+            {testimonials[active].text}
           </p>
           <div className="flex items-center space-x-3">
             <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-sm font-bold">
-              {testimonials[active].author.charAt(0)}
+              {(testimonials[active].initials || testimonials[active].name.charAt(0)).charAt(0)}
             </div>
             <div>
-              <p className="font-semibold">{testimonials[active].author}</p>
+              <p className="font-semibold">{testimonials[active].name}</p>
               <p className="text-sm text-primary-200">{testimonials[active].location}</p>
             </div>
           </div>

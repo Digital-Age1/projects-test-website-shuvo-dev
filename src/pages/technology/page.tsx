@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import PageHeader from '@/components/feature/PageHeader';
 import PageFooter from '@/components/feature/PageFooter';
+import technology from '@/content/technology.json';
+import site from '@/content/site.json';
 
 export default function TechnologyPage() {
   return (
@@ -11,7 +13,7 @@ export default function TechnologyPage() {
         <section className="relative min-h-[480px] flex items-center justify-center overflow-hidden bg-gray-900">
           <div className="absolute inset-0">
             <img
-              src="/uploads/hero-technology-server-room.jpg"
+              src={technology.hero.image}
               alt="Technology & IT Solutions — Trimming Edge"
               className="w-full h-full object-cover object-top" />
             <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70"></div>
@@ -21,11 +23,11 @@ export default function TechnologyPage() {
               Serving Clients Throughout Western Massachusetts
             </p>
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Maximize Your Network Potential
+              {technology.hero.title}
             </h1>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
-                href="https://clienthub.getjobber.com/client_hubs/da2b824e-c9bb-44de-96ad-55e97fa0a147/login/new?source=share_login"
+                href={site.clientLoginUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center space-x-2 px-6 py-3 bg-white/20 border border-white/40 text-white font-semibold rounded-lg hover:bg-white/30 transition-colors whitespace-nowrap cursor-pointer"
@@ -34,7 +36,7 @@ export default function TechnologyPage() {
                 <span>Customer Login</span>
               </a>
               <a
-                href="https://clienthub.getjobber.com/booking/3aceb8c6-ccdc-49cb-a13a-0053adabdce9/"
+                href={site.bookingUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center space-x-2 px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap cursor-pointer"
@@ -52,13 +54,13 @@ export default function TechnologyPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                  Unleashing Excellence In Technology Solutions.
+                  {technology.sections[0].title}
                 </h2>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  <strong>Choosing Trimming Edge for your I.T. Networking and Computer Solutions needs ensures you're partnering with a company at the forefront of Technology. With our extensive experience in I.T. Networking and Computer Solutions, we deliver reliable, cutting-edge services tailored to your specific needs. Our expertise in I.T. Networking and Computer Solutions allows us to address challenges swiftly, using the latest in Technology to maximize efficiency.</strong>
+                  <strong>{technology.sections[0].body}</strong>
                 </p>
                 <a
-                  href="tel:+14135519653"
+                  href={site.phoneHref}
                   className="inline-block px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap cursor-pointer"
                 >
                   Get in Touch
@@ -66,7 +68,7 @@ export default function TechnologyPage() {
               </div>
               <div className="w-full h-80 rounded-xl overflow-hidden">
                 <img
-                  src="/uploads/technology-computer-repair.jpg"
+                  src={technology.sections[0].image}
                   alt="IT Computer Solutions"
                   className="w-full h-full object-cover object-top" />
               </div>
@@ -96,7 +98,7 @@ export default function TechnologyPage() {
                 </p>
                 <div className="flex flex-wrap items-center gap-3">
                   <a
-                    href="tel:+14135519653"
+                    href={site.phoneHref}
                     className="inline-block px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap cursor-pointer"
                   >
                     Reach Us
@@ -120,13 +122,13 @@ export default function TechnologyPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                  Comprehensive Business Network and Communication Services
+                  {technology.sections[1].title}
                 </h2>
                 <p className="text-gray-600 leading-relaxed mb-6">
-                  <strong>We provide robust solutions for business networks and communication systems, tailored to meet the specific needs of your company. Our services include the installation and troubleshooting of IP phones and cell phones, which enhance your business communication systems for optimal productivity. We also specialize in setting up and maintaining network equipment such as routers and switches to ensure your network is secure, reliable, and fast. Our team is adept at managing NAS drives and servers, ensuring that your data storage solutions are efficient and scalable.</strong>
+                  <strong>{technology.sections[1].body}</strong>
                 </p>
                 <a
-                  href="tel:+14135519653"
+                  href={site.phoneHref}
                   className="inline-block px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap cursor-pointer"
                 >
                   Get in Touch
@@ -134,7 +136,7 @@ export default function TechnologyPage() {
               </div>
               <div className="w-full h-80 rounded-xl overflow-hidden">
                 <img
-                  src="/uploads/technology-network-setup.jpg"
+                  src={technology.sections[1].image}
                   alt="Business Network Solutions"
                   className="w-full h-full object-cover object-top" />
               </div>
@@ -168,7 +170,7 @@ export default function TechnologyPage() {
         <section className="py-12 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="tel:+14135519653"
+              href={site.phoneHref}
               className="inline-flex items-center justify-center space-x-2 px-8 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap cursor-pointer"
             >
               <i className="ri-phone-line text-lg"></i>
@@ -205,7 +207,7 @@ export default function TechnologyPage() {
                   <i className="ri-phone-line text-3xl text-primary-600"></i>
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">Office Phone</h3>
-                <a href="tel:4135519653" className="text-primary-600 font-semibold">(413) 551-9653</a>
+                <a href={site.phoneHref} className="text-primary-600 font-semibold">{site.phone}</a>
               </div>
               <div>
                 <div className="w-12 h-12 flex items-center justify-center mx-auto mb-3">
@@ -222,7 +224,7 @@ export default function TechnologyPage() {
                     Request Estimate
                   </a>
                   <a
-                    href="https://clienthub.getjobber.com/booking/3aceb8c6-ccdc-49cb-a13a-0053adabdce9/"
+                    href={site.bookingUrl}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center justify-center space-x-1 px-5 py-2 bg-gray-900 text-white text-sm font-semibold rounded-lg hover:bg-gray-800 transition-colors whitespace-nowrap cursor-pointer"

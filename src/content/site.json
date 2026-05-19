@@ -10,6 +10,19 @@
   "serviceAreaText": "Huntington, Montgomery, Russell & Westfield, MA",
   "logo": "/uploads/logo-trimming-edge.png",
   "clientLoginUrl": "https://clienthub.getjobber.com/client_hubs/da2b824e-c9bb-44de-96ad-55e97fa0a147/login/new?source=share_login",
+  "bookingUrl": "https://clienthub.getjobber.com/booking/3aceb8c6-ccdc-49cb-a13a-0053adabdce9/",
+  "socialLinks": [
+    { "label": "Facebook", "href": "https://facebook.com/trimmingedgema", "iconKey": "facebook" },
+    { "label": "Instagram", "href": "http://instagram.com/TrimmingEdge", "iconKey": "instagram" }
+  ],
+  "hours": [
+    "Monday - Friday: 8:00 AM - 6:00 PM",
+    "Saturday: 9:00 AM - 5:00 PM",
+    "Sunday: Closed"
+  ],
+  "shortHours": ["Mon-Fri: 8AM - 6PM", "Sat: 9AM - 5PM", "Sun: Closed"],
+  "footerDescription": "Locally operated lawn care & landscaping serving Western Massachusetts with 5-star results.",
+  "copyrightText": "© 2026 Trimming Edge. All rights reserved. Serving Huntington, Montgomery, Russell & Westfield, MA.",
   "claims": [
     "Licensed & Insured",
     "15+ Years Experience",

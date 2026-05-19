@@ -1,6 +1,49 @@
 {
   "defaultTitle": "Lawn Care & Landscaping Montgomery MA | Trimming Edge",
   "defaultDescription": "Professional lawn care and landscaping in Montgomery, Huntington, Westfield and Russell MA. Call (413) 551-9653 for a free estimate.",
-  "siteUrl": "https://www.trimmingedge.com",
-  "ogImage": "/uploads/hero-home.jpg"
+  "siteUrl": "https://test-website-shuvo-dev.netlify.app",
+  "ogImage": "/uploads/hero-home.jpg",
+  "robots": "noindex, nofollow",
+  "routes": {
+    "/": {
+      "title": "Lawn Care & Landscaping Montgomery MA | Trimming Edge",
+      "description": "Professional lawn care & landscaping in Montgomery, Huntington, Westfield & Russell MA. Mowing, mulching, seasonal cleanups & more. 5-star rated.",
+      "keywords": "lawn care Montgomery MA, landscaping Montgomery Massachusetts, lawn mowing Western MA, mulching services MA, seasonal cleanup Hampden County, Trimming Edge",
+      "canonical": "/",
+      "ogImage": "/uploads/hero-home.jpg",
+      "robots": "noindex, nofollow"
+    },
+    "/services": {
+      "title": "Lawn Care & Landscaping Services | Trimming Edge Western Massachusetts",
+      "description": "Full-service lawn care and landscaping in Westfield, Huntington, Russell & Montgomery MA. Lawn mowing, landscape design, tree care, mulching, seasonal cleanups & commercial services.",
+      "keywords": "lawn care services Western MA, landscaping services Massachusetts, lawn mowing Westfield, tree trimming Huntington, mulching Russell MA, seasonal cleanup Montgomery MA",
+      "canonical": "/services",
+      "ogImage": "/uploads/hero-services.jpg",
+      "robots": "noindex, nofollow"
+    },
+    "/about": {
+      "title": "About Trimming Edge | Local Lawn Care Montgomery MA",
+      "description": "Learn about Trimming Edge, a locally operated lawn care company based in Montgomery, MA serving Western Massachusetts with 5-star rated service.",
+      "keywords": "about Trimming Edge, locally owned lawn care, Montgomery MA landscaping, local lawn care Western Massachusetts",
+      "canonical": "/about",
+      "ogImage": "/uploads/hero-about.jpg",
+      "robots": "noindex, nofollow"
+    },
+    "/contact-us": {
+      "title": "Contact Trimming Edge | Free Lawn Care Estimate Montgomery MA",
+      "description": "Contact Trimming Edge for a free lawn care or landscaping estimate. Serving Westfield, Huntington, Russell & Montgomery MA.",
+      "keywords": "contact Trimming Edge, free lawn care estimate, landscaping quote Western MA, lawn care Montgomery MA",
+      "canonical": "/contact-us",
+      "ogImage": "/uploads/hero-contact-landscape-garden.jpg",
+      "robots": "noindex, nofollow"
+    },
+    "/blog": {
+      "title": "Lawn Care Blog | Trimming Edge",
+      "description": "Expert lawn care tips, landscaping advice, and seasonal guides for Western Massachusetts homeowners.",
+      "keywords": "lawn care blog, landscaping tips Western MA, lawn maintenance advice, Trimming Edge blog",
+      "canonical": "/blog",
+      "ogImage": "/uploads/hero-blog-gardening-flowers.jpg",
+      "robots": "noindex, nofollow"
+    }
+  }
 }

@@ -1,34 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import site from '@/content/site.json';
+import navigation from '@/content/navigation.json';
 
-const servicesSubLinks = [
-  { label: 'Lawn Mowing & Maintenance', path: '/services/lawn-mowing' },
-  { label: 'Landscape Design & Installation', path: '/services/landscape-design' },
-  { label: 'Tree & Shrub Care', path: '/services/tree-shrub-care' },
-  { label: 'Seasonal Cleanups', path: '/services/seasonal-cleanups' },
-  { label: 'Mulching & Bed Maintenance', path: '/services/mulching-bed-maintenance' },
-  { label: 'Commercial Landscaping', path: '/services/commercial-landscaping' },
-  { label: 'Pet Care', path: '/pet-care' },
-  { label: 'Technology', path: '/technology' },
-];
-
-const aboutSubLinks = [
-  { label: 'About Us', path: '/about' },
-  { label: 'History', path: '/history' },
-  { label: 'Our Work', path: '/our-work' },
-  { label: 'Speedtest', path: '/speedtest' },
-  { label: 'Updates', path: '/updates' },
-  { label: 'Wolf Radio', path: '/wolf-radio' },
-];
-
-const serviceAreaCities = [
-  { label: 'Agawam, MA', path: '/service-areas/agawam-ma' },
-  { label: 'Huntington, MA', path: '/service-areas/huntington-ma' },
-  { label: 'Montgomery, MA', path: '/service-areas/montgomery-ma' },
-  { label: 'Russell, MA', path: '/service-areas/russell-ma' },
-  { label: 'Southwick, MA', path: '/service-areas/southwick-ma' },
-  { label: 'Westfield, MA', path: '/service-areas/westfield-ma' },
-];
+const servicesSubLinks = navigation.services;
+const aboutSubLinks = navigation.about;
+const serviceAreaCities = navigation.serviceAreas;
 
 export default function PageHeader() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -72,8 +49,8 @@ export default function PageHeader() {
             {/* Logo */}
             <Link to="/" className="flex items-center flex-shrink-0">
               <img
-                src="/uploads/logo-trimming-edge.png"
-                alt="Trimming Edge Logo"
+                src={site.logo}
+                alt={`${site.businessName} Logo`}
                 className="h-12 w-auto object-contain"
               />
             </Link>
@@ -156,11 +133,11 @@ export default function PageHeader() {
 
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center space-x-3">
-              <a href="tel:+14135519653" className="flex items-center space-x-2 text-sm font-semibold text-gray-900 hover:text-primary-600 transition-colors whitespace-nowrap">
+              <a href={site.phoneHref} className="flex items-center space-x-2 text-sm font-semibold text-gray-900 hover:text-primary-600 transition-colors whitespace-nowrap">
                 <i className="ri-phone-line text-lg"></i>
-                <span>(413) 551-9653</span>
+                <span>{site.phone}</span>
               </a>
-              <a href="https://clienthub.getjobber.com/client_hubs/da2b824e-c9bb-44de-96ad-55e97fa0a147/login/new?source=share_login"
+              <a href={site.clientLoginUrl}
                 target="_blank" rel="noopener noreferrer"
                 className="flex items-center space-x-1.5 px-4 py-2.5 text-sm font-semibold rounded-lg border border-gray-300 text-gray-700 hover:border-primary-500 hover:text-primary-600 transition-colors whitespace-nowrap">
                 <i className="ri-user-line text-base"></i>
@@ -279,16 +256,16 @@ export default function PageHeader() {
                 Terms of Service
               </Link>
 
-              <a href="https://clienthub.getjobber.com/client_hubs/da2b824e-c9bb-44de-96ad-55e97fa0a147/login/new?source=share_login"
+              <a href={site.clientLoginUrl}
                 target="_blank" rel="noopener noreferrer"
                 className="flex items-center justify-center space-x-2 w-full px-4 py-3 border border-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-colors whitespace-nowrap mt-2">
                 <i className="ri-user-line text-lg"></i>
                 <span>Client Login — Pay Invoice</span>
               </a>
-              <a href="tel:+14135519653"
+              <a href={site.phoneHref}
                 className="flex items-center justify-center space-x-2 w-full px-4 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap mt-2">
                 <i className="ri-phone-line text-lg"></i>
-                <span>(413) 551-9653</span>
+                <span>{site.phone}</span>
               </a>
             </nav>
           </div>
@@ -298,7 +275,7 @@ export default function PageHeader() {
       {/* Sticky Mobile CTA */}
       <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white border-t border-gray-200">
         <div className="grid grid-cols-2 gap-2 p-3">
-          <a href="tel:+14135519653"
+          <a href={site.phoneHref}
             className="flex items-center justify-center space-x-2 px-4 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap">
             <i className="ri-phone-line text-lg"></i>
             <span>Call Now</span>

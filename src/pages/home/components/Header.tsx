@@ -1,35 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import site from '@/content/site.json';
+import navigation from '@/content/navigation.json';
 
-const servicesSubLinks = [
-  { label: 'Lawn Mowing & Maintenance', path: '/services/lawn-mowing' },
-  { label: 'Landscape Design & Installation', path: '/services/landscape-design' },
-  { label: 'Tree & Shrub Care', path: '/services/tree-shrub-care' },
-  { label: 'Seasonal Cleanups', path: '/services/seasonal-cleanups' },
-  { label: 'Mulching & Bed Maintenance', path: '/services/mulching-bed-maintenance' },
-  { label: 'Commercial Landscaping', path: '/services/commercial-landscaping' },
-  { label: 'Pet Care', path: '/pet-care' },
-  { label: 'Technology', path: '/technology' },
-];
-
-const aboutSubLinks = [
-  { label: 'About Us', path: '/about' },
-  { label: 'History', path: '/history' },
-  { label: 'Our Work', path: '/our-work' },
-  { label: 'Speedtest', path: '/speedtest' },
-  { label: 'Updates', path: '/updates' },
-  { label: 'Wolf Radio', path: '/wolf-radio' },
-];
-
-const serviceAreaCities = [
-  { label: 'Agawam, MA', path: '/service-areas/agawam-ma' },
-  { label: 'Huntington, MA', path: '/service-areas/huntington-ma' },
-  { label: 'Montgomery, MA', path: '/service-areas/montgomery-ma' },
-  { label: 'Russell, MA', path: '/service-areas/russell-ma' },
-  { label: 'Southwick, MA', path: '/service-areas/southwick-ma' },
-  { label: 'Westfield, MA', path: '/service-areas/westfield-ma' },
-];
+const servicesSubLinks = navigation.services;
+const aboutSubLinks = navigation.about;
+const serviceAreaCities = navigation.serviceAreas;
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

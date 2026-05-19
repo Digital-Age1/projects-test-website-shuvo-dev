@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import seo from '@/content/seo.json';
 
 interface SEOProps {
   title: string;
@@ -9,10 +10,11 @@ interface SEOProps {
   ogDescription?: string;
   ogType?: string;
   ogImage?: string;
+  robots?: string;
   schemaJson?: object | object[];
 }
 
-const SITE_URL = import.meta.env.VITE_SITE_URL || 'https://trimmingedge.com';
+const SITE_URL = import.meta.env.VITE_SITE_URL || seo.siteUrl || 'https://trimmingedge.com';
 
 export function useSEO({
   title,
@@ -23,6 +25,7 @@ export function useSEO({
   ogDescription,
   ogType = 'website',
   ogImage,
+  robots = seo.robots || 'noindex, nofollow',
   schemaJson,
 }: SEOProps) {
   useEffect(() => {
@@ -52,6 +55,7 @@ export function useSEO({
 
     setMeta('description', description);
     if (keywords) setMeta('keywords', keywords);
+    setMeta('robots', robots);
 
     const canonicalUrl = canonical ? `${SITE_URL}${canonical}` : SITE_URL;
     setLink('canonical', canonicalUrl);
@@ -88,7 +92,7 @@ export function useSEO({
       const s = document.getElementById(schemaId);
       if (s) s.remove();
     };
-  }, [title, description, keywords, canonical, ogTitle, ogDescription, ogType, ogImage, schemaJson]);
+  }, [title, description, keywords, canonical, ogTitle, ogDescription, ogType, ogImage, robots, schemaJson]);
 }
 
 export { SITE_URL };
