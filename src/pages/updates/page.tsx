@@ -2,11 +2,14 @@ import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PageHeader from '../../components/feature/PageHeader';
 import PageFooter from '../../components/feature/PageFooter';
+import updatesContent from '@/content/updates.json';
 
 export default function UpdatesPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const page = updatesContent || {} as any;
 
   return (
     <div className="min-h-screen bg-white">
@@ -20,10 +23,10 @@ export default function UpdatesPage() {
               <span className="text-sm font-semibold text-primary-400">Live &amp; Podcast</span>
             </div>
             <h1 className="font-display font-bold text-4xl sm:text-5xl mb-4">
-              Updates &amp; DnA Show
+              {page.heroTitle || 'Updates & DnA Show'}
             </h1>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Listen to Wolf Radio live and catch up on the latest DnA Show podcast episodes on Spotify and YouTube.
+              {page.heroSubtitle || 'Listen to Wolf Radio live and catch up on the latest DnA Show podcast episodes on Spotify and YouTube.'}
             </p>
           </div>
         </section>
@@ -32,8 +35,8 @@ export default function UpdatesPage() {
         <section className="py-12 bg-gray-950">
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8">
-              <h2 className="font-display font-bold text-2xl text-white mb-2">Wolf Radio — Live Stream</h2>
-              <p className="text-gray-400 text-sm">Broadcasting on AM Stereo 1690 and 107.5 FM</p>
+              <h2 className="font-display font-bold text-2xl text-white mb-2">{(page.updates && page.updates[0] && page.updates[0].title) || 'Wolf Radio — Live Stream'}</h2>
+              <p className="text-gray-400 text-sm">{(page.updates && page.updates[0] && page.updates[0].excerpt) || 'Broadcasting on AM Stereo 1690 and 107.5 FM'}</p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
               {/* Player */}
@@ -152,24 +155,24 @@ export default function UpdatesPage() {
         <section className="py-14 bg-gray-900">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-display font-bold text-3xl text-white mb-4">
-              Need Lawn Care Services?
+              {page.ctaTitle || 'Need Lawn Care Services?'}
             </h2>
             <p className="text-gray-400 text-lg mb-8">
-              While you&apos;re listening, let us take care of your property.
+              {page.ctaText || "While you're listening, let us take care of your property."}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+14135519653"
+                href={page.ctaPrimaryHref || 'tel:+14135519653'}
                 className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white text-lg font-bold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap"
               >
                 <i className="ri-phone-line mr-2"></i>
-                Call (413) 551-9653
+                {page.ctaPrimaryLabel || 'Call (413) 551-9653'}
               </a>
               <Link
-                to="/services"
+                to={page.ctaSecondaryHref || '/services'}
                 className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 text-lg font-bold rounded-lg hover:bg-gray-100 transition-colors whitespace-nowrap"
               >
-                View Our Services
+                {page.ctaSecondaryLabel || 'View Our Services'}
               </Link>
             </div>
           </div>

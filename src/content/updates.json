@@ -1,0 +1,32 @@
+{
+  "heroTitle": "Updates & DnA Show",
+  "heroSubtitle": "Listen to Wolf Radio live and catch up on the latest DnA Show podcast episodes on Spotify and YouTube.",
+  "heroImage": "/uploads/hero-updates.jpg",
+  "introTitle": "Wolf Radio & The DnA Show",
+  "introText": "Live stream, podcast episodes, and community updates from the Trimming Edge crew.",
+  "updates": [
+    {
+      "id": "1",
+      "title": "Wolf Radio — Live Stream",
+      "date": "May 20, 2026",
+      "excerpt": "Broadcasting on AM Stereo 1690 and 107.5 FM — listen live or catch recent tracks.",
+      "href": "https://live365.com/"
+    },
+    {
+      "id": "2",
+      "title": "DnA Show Podcast — New Episodes",
+      "date": "May 18, 2026",
+      "excerpt": "Catch the latest episodes on Spotify and YouTube.",
+      "href": "https://open.spotify.com/"
+    }
+  ],
+  "ctaTitle": "Need Lawn Care Services?",
+  "ctaText": "While you're listening, let us take care of your property.",
+  "ctaPrimaryLabel": "Call (413) 551-9653",
+  "ctaPrimaryHref": "tel:+14135519653",
+  "ctaSecondaryLabel": "View Our Services",
+  "ctaSecondaryHref": "/services",
+  "seoTitle": "Updates & Podcast | Trimming Edge",
+  "seoDescription": "Live radio, podcast episodes, and company updates from Trimming Edge. Listen to Wolf Radio and the DnA Show.",
+  "ogImage": "/uploads/hero-updates.jpg"
+}

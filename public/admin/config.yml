@@ -648,6 +648,74 @@ collections:
               - { label: "Question", name: "question", widget: "string" }
               - { label: "Answer", name: "answer", widget: "text" }
 
+  - name: "blog_settings"
+    label: "Blog Settings"
+    files:
+      - file: "src/content/blog/blog.json"
+        label: "Blog Page"
+        name: "blogPage"
+        format: "json"
+        fields:
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Intro Title", name: "introTitle", widget: "string" }
+          - { label: "Intro Text", name: "introText", widget: "text" }
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            field: { label: "Category", name: "category", widget: "string" }
+          - { label: "FAQ Title", name: "faqTitle", widget: "string" }
+          - { label: "FAQ Subtitle", name: "faqSubtitle", widget: "text" }
+          - label: "FAQ"
+            name: "faq"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+          - { label: "CTA Title", name: "ctaTitle", widget: "string" }
+          - { label: "CTA Text", name: "ctaText", widget: "text" }
+          - { label: "CTA Primary Label", name: "ctaPrimaryLabel", widget: "string" }
+          - { label: "CTA Primary URL", name: "ctaPrimaryHref", widget: "string" }
+          - { label: "CTA Secondary Label", name: "ctaSecondaryLabel", widget: "string" }
+          - { label: "CTA Secondary URL", name: "ctaSecondaryHref", widget: "string" }
+          - { label: "SEO Title", name: "seoTitle", widget: "string" }
+          - { label: "SEO Description", name: "seoDescription", widget: "text" }
+          - { label: "SEO Keywords", name: "seoKeywords", widget: "text" }
+          - { label: "OG Image", name: "ogImage", widget: "image" }
+
+  - name: "updates"
+    label: "Updates"
+    files:
+      - file: "src/content/updates.json"
+        label: "Updates Page"
+        name: "updates"
+        format: "json"
+        fields:
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+          - { label: "Hero Image", name: "heroImage", widget: "image" }
+          - { label: "Intro Title", name: "introTitle", widget: "string" }
+          - { label: "Intro Text", name: "introText", widget: "text" }
+          - label: "Updates List"
+            name: "updates"
+            widget: "list"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Date", name: "date", widget: "datetime", format: "MMMM D, YYYY", time_format: false }
+              - { label: "Excerpt", name: "excerpt", widget: "text" }
+              - { label: "URL", name: "href", widget: "string", required: false }
+          - { label: "CTA Title", name: "ctaTitle", widget: "string" }
+          - { label: "CTA Text", name: "ctaText", widget: "text" }
+          - { label: "CTA Primary Label", name: "ctaPrimaryLabel", widget: "string" }
+          - { label: "CTA Primary URL", name: "ctaPrimaryHref", widget: "string" }
+          - { label: "CTA Secondary Label", name: "ctaSecondaryLabel", widget: "string" }
+          - { label: "CTA Secondary URL", name: "ctaSecondaryHref", widget: "string" }
+          - { label: "SEO Title", name: "seoTitle", widget: "string" }
+          - { label: "SEO Description", name: "seoDescription", widget: "text" }
+          - { label: "OG Image", name: "ogImage", widget: "image" }
+
   - name: "blog"
     label: "Blog"
     files:
@@ -664,10 +732,19 @@ collections:
               - { label: "Slug", name: "slug", widget: "string" }
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Excerpt", name: "excerpt", widget: "text" }
-              - { label: "Body", name: "content", widget: "markdown" }
-              - { label: "Author", name: "author", widget: "string" }
+              - { label: "Body", name: "body", widget: "markdown" }
               - { label: "Date", name: "date", widget: "datetime", format: "MMMM D, YYYY", time_format: false }
-              - { label: "Category", name: "category", widget: "select", options: ["Services", "Tips & Guides", "Commercial", "About Us", "Family & Pets", "Russell, MA", "Huntington, MA", "Montgomery, MA", "Westfield, MA", "Southwick, MA", "Agawam, MA"] }
-              - { label: "Image", name: "image", widget: "image" }
-              - { label: "Tags", name: "tags", widget: "list", field: { label: "Tag", name: "tag", widget: "string" } }
+              - { label: "Author", name: "author", widget: "string" }
+              - { label: "Category", name: "category", widget: "string" }
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                field: { label: "Tag", name: "tag", widget: "string" }
+              - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
+              - { label: "Featured Image Alt", name: "featuredImageAlt", widget: "string", required: false }
               - { label: "Read Time", name: "readTime", widget: "string", required: false }
+              - { label: "Featured", name: "featured", widget: "boolean", default: false }
+              - { label: "SEO Title", name: "seoTitle", widget: "string", required: false }
+              - { label: "SEO Description", name: "seoDescription", widget: "text", required: false }
+              - { label: "SEO Keywords", name: "seoKeywords", widget: "text", required: false }
+              - { label: "OG Image", name: "ogImage", widget: "image", required: false }
