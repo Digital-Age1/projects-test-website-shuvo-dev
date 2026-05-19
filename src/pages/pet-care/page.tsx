@@ -1,9 +1,32 @@
+import { useSEO, SITE_URL } from '@/hooks/useSEO';
 import PageHeader from '@/components/feature/PageHeader';
 import PageFooter from '@/components/feature/PageFooter';
 import petCare from '@/content/petCare.json';
 import site from '@/content/site.json';
 
 export default function PetCarePage() {
+  useSEO({
+    title: petCare.seoTitle,
+    description: petCare.seoDescription,
+    keywords: petCare.seoKeywords,
+    canonical: '/pet-care',
+    ogImage: `${SITE_URL}${petCare.ogImage || petCare.hero.image}`,
+    schemaJson: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${SITE_URL}/pet-care`,
+      url: `${SITE_URL}/pet-care`,
+      name: petCare.seoTitle,
+      description: petCare.seoDescription,
+      breadcrumb: {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE_URL}/` },
+          { '@type': 'ListItem', position: 2, name: 'Pet Care', item: `${SITE_URL}/pet-care` },
+        ],
+      },
+    },
+  });
   return (
     <>
       <PageHeader />

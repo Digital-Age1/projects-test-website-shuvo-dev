@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useSEO, SITE_URL } from '@/hooks/useSEO';
 import PageHeader from '../../components/feature/PageHeader';
 import PageFooter from '../../components/feature/PageFooter';
 import updatesContent from '@/content/updates.json';
@@ -10,6 +11,22 @@ export default function UpdatesPage() {
   }, []);
 
   const page = updatesContent || {} as any;
+
+  useSEO({
+    title: page.seoTitle,
+    description: page.seoDescription,
+    keywords: page.seoKeywords,
+    canonical: '/updates',
+    ogImage: `${SITE_URL}${page.ogImage || page.heroImage}`,
+    schemaJson: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${SITE_URL}/updates`,
+      url: `${SITE_URL}/updates`,
+      name: page.seoTitle,
+      description: page.seoDescription,
+    },
+  });
 
   return (
     <div className="min-h-screen bg-white">

@@ -1,10 +1,26 @@
 import { Link } from 'react-router-dom';
+import { useSEO, SITE_URL } from '@/hooks/useSEO';
 import PageHeader from '@/components/feature/PageHeader';
 import PageFooter from '@/components/feature/PageFooter';
 import technology from '@/content/technology.json';
 import site from '@/content/site.json';
 
 export default function TechnologyPage() {
+  useSEO({
+    title: technology.seoTitle,
+    description: technology.seoDescription,
+    keywords: technology.seoKeywords,
+    canonical: '/technology',
+    ogImage: `${SITE_URL}${technology.ogImage || technology.hero.image}`,
+    schemaJson: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${SITE_URL}/technology`,
+      url: `${SITE_URL}/technology`,
+      name: technology.seoTitle,
+      description: technology.seoDescription,
+    },
+  });
   return (
     <>
       <PageHeader />

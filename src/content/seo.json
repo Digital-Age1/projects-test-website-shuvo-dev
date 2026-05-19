@@ -44,6 +44,53 @@
       "canonical": "/blog",
       "ogImage": "/uploads/hero-blog-gardening-flowers.jpg",
       "robots": "noindex, nofollow"
+    },
+    "/pet-care": {
+      "title": "Pet Care Services | Trimming Edge Western Massachusetts",
+      "description": "Premium pet care, dog walking, and pet taxi services from Trimming Edge. Serving Western Massachusetts with compassionate care.",
+      "keywords": "pet care services Western MA, dog walking Massachusetts, pet taxi Western MA, pet sitter Western MA, Trimming Edge",
+      "canonical": "/pet-care",
+      "ogImage": "/uploads/hero-pet-care-dog-lawn.jpg",
+      "robots": "noindex, nofollow"
+    },
+    "/technology": {
+      "title": "Technology & IT Services | Trimming Edge",
+      "description": "Technology solutions, computer repair, and network support from Trimming Edge Technology in Western Massachusetts.",
+      "keywords": "IT services Western MA, computer repair Massachusetts, network support Westfield, technology services Trimming Edge",
+      "canonical": "/technology",
+      "ogImage": "/uploads/hero-technology-server-room.jpg",
+      "robots": "noindex, nofollow"
+    },
+    "/updates": {
+      "title": "Updates & Podcast | Trimming Edge",
+      "description": "Live radio, podcast episodes, and company updates from Trimming Edge. Listen to Wolf Radio and the DnA Show.",
+      "keywords": "Wolf Radio updates, DnA Show podcast, Trimming Edge news, live radio Western MA",
+      "canonical": "/updates",
+      "ogImage": "/uploads/hero-updates.jpg",
+      "robots": "noindex, nofollow"
+    },
+    "/our-work": {
+      "title": "Our Work | Trimming Edge Landscaping Gallery",
+      "description": "Browse Trimming Edge’s portfolio of completed landscaping and lawn care projects across Western Massachusetts.",
+      "keywords": "landscaping gallery, lawn care portfolio, Trimming Edge work, Western Massachusetts landscaping projects",
+      "canonical": "/our-work",
+      "ogImage": "/uploads/gallery-residential-lawn-care.jpg",
+      "robots": "noindex, nofollow"
+    },
+    "/wolf-radio": {
+      "title": "Wolf Radio | Trimming Edge",
+      "description": "Wolf Radio live streams, podcast updates, and community programming from the Wolf Enterprise team.",
+      "keywords": "Wolf Radio, live radio 1690 AM, 107.5 FM, DnA Show podcast, Trimming Edge",
+      "canonical": "/wolf-radio",
+      "robots": "noindex, nofollow"
+    },
+    "/speedtest": {
+      "title": "Network Speed Test | Trimming Edge Technology",
+      "description": "Free internet speed testing and network diagnostics provided by Trimming Edge Technology.",
+      "keywords": "network speed test, internet speed test, technology tools Western MA, Trimming Edge Technology",
+      "canonical": "/speedtest",
+      "ogImage": "/uploads/hero-technology-server-room.jpg",
+      "robots": "noindex, nofollow"
     }
   }
 }

@@ -1,9 +1,22 @@
 import { useEffect } from 'react';
+import { useSEO, SITE_URL } from '@/hooks/useSEO';
 import { Link } from 'react-router-dom';
 import PageHeader from '../../components/feature/PageHeader';
 import PageFooter from '../../components/feature/PageFooter';
 
 export default function WolfRadioPage() {
+  useSEO({
+    route: '/wolf-radio',
+    canonical: '/wolf-radio',
+    schemaJson: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${SITE_URL}/wolf-radio`,
+      url: `${SITE_URL}/wolf-radio`,
+      name: 'Wolf Radio | Trimming Edge',
+      description: 'Wolf Radio live streams, podcast updates, and community programming from the Wolf Enterprise team.',
+    },
+  });
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

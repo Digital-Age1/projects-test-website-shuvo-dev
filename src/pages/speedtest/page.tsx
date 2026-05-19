@@ -1,9 +1,22 @@
 import { useEffect } from 'react';
+import { useSEO, SITE_URL } from '@/hooks/useSEO';
 import { Link } from 'react-router-dom';
 import PageHeader from '../../components/feature/PageHeader';
 import PageFooter from '../../components/feature/PageFooter';
 
 export default function SpeedtestPage() {
+  useSEO({
+    route: '/speedtest',
+    canonical: '/speedtest',
+    schemaJson: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${SITE_URL}/speedtest`,
+      url: `${SITE_URL}/speedtest`,
+      name: 'Network Speed Test | Trimming Edge Technology',
+      description: 'Free internet speed testing and network troubleshooting resource from Trimming Edge Technology.',
+    },
+  });
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

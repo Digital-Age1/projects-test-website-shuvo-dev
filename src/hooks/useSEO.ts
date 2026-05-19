@@ -2,10 +2,11 @@ import { useEffect } from 'react';
 import seo from '@/content/seo.json';
 
 interface SEOProps {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   keywords?: string;
   canonical?: string;
+  route?: string;
   ogTitle?: string;
   ogDescription?: string;
   ogType?: string;
@@ -21,16 +22,29 @@ export function useSEO({
   description,
   keywords,
   canonical,
+  route,
   ogTitle,
   ogDescription,
   ogType = 'website',
   ogImage,
-  robots = seo.robots || 'noindex, nofollow',
+  robots,
   schemaJson,
 }: SEOProps) {
   useEffect(() => {
-    // Title
-    document.title = title;
+    const routeKey = route ?? canonical;
+    const routeData = routeKey ? seo.routes?.[routeKey] : undefined;
+    const documentTitle = title || routeData?.title || seo.defaultTitle;
+    const pageDescription = description || routeData?.description || seo.defaultDescription;
+    const pageKeywords = keywords || routeData?.keywords;
+    const pageRobots = robots || routeData?.robots || seo.robots || 'noindex, nofollow';
+    const canonicalPath = canonical || routeData?.canonical || routeKey || '/';
+    const canonicalUrl = canonicalPath.startsWith('http') ? canonicalPath : `${SITE_URL}${canonicalPath}`;
+    const imagePath = ogImage || routeData?.ogImage || seo.ogImage;
+    const ogImageUrl = imagePath ? (imagePath.startsWith('http') ? imagePath : `${SITE_URL}${imagePath}`) : undefined;
+    const openGraphTitle = ogTitle || documentTitle;
+    const openGraphDescription = ogDescription || pageDescription;
+
+    document.title = documentTitle;
 
     const setMeta = (name: string, content: string, isProperty = false) => {
       const attr = isProperty ? 'property' : 'name';
@@ -53,28 +67,24 @@ export function useSEO({
       el.setAttribute('href', href);
     };
 
-    setMeta('description', description);
-    if (keywords) setMeta('keywords', keywords);
-    setMeta('robots', robots);
+    setMeta('description', pageDescription);
+    if (pageKeywords) setMeta('keywords', pageKeywords);
+    setMeta('robots', pageRobots);
 
-    const canonicalUrl = canonical ? `${SITE_URL}${canonical}` : SITE_URL;
     setLink('canonical', canonicalUrl);
 
-    // Open Graph
-    setMeta('og:title', ogTitle || title, true);
-    setMeta('og:description', ogDescription || description, true);
+    setMeta('og:title', openGraphTitle, true);
+    setMeta('og:description', openGraphDescription, true);
     setMeta('og:type', ogType, true);
     setMeta('og:url', canonicalUrl, true);
-    if (ogImage) setMeta('og:image', ogImage, true);
+    if (ogImageUrl) setMeta('og:image', ogImageUrl, true);
 
-    // Twitter
-    setMeta('twitter:title', ogTitle || title);
-    setMeta('twitter:description', ogDescription || description);
+    setMeta('twitter:title', openGraphTitle);
+    setMeta('twitter:description', openGraphDescription);
+    if (ogImageUrl) setMeta('twitter:image', ogImageUrl);
 
-    // Last modified
     setMeta('last-modified', new Date().toISOString().split('T')[0]);
 
-    // Schema JSON-LD
     const schemaId = 'page-schema-jsonld';
     let existingScript = document.getElementById(schemaId);
     if (existingScript) existingScript.remove();
@@ -92,7 +102,7 @@ export function useSEO({
       const s = document.getElementById(schemaId);
       if (s) s.remove();
     };
-  }, [title, description, keywords, canonical, ogTitle, ogDescription, ogType, ogImage, robots, schemaJson]);
+  }, [title, description, keywords, canonical, route, ogTitle, ogDescription, ogType, ogImage, robots, schemaJson]);
 }
 
 export { SITE_URL };

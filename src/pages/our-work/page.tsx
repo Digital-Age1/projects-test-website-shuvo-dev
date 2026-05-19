@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useSEO, SITE_URL } from '@/hooks/useSEO';
 import { Link } from 'react-router-dom';
 import PageHeader from '../../components/feature/PageHeader';
 import PageFooter from '../../components/feature/PageFooter';
@@ -10,6 +11,21 @@ const FACEBOOK_URL = gallery.social.facebookUrl;
 const instagramPosts = gallery.socialPosts;
 
 export default function OurWorkPage() {
+  useSEO({
+    title: gallery.seoTitle,
+    description: gallery.seoDescription,
+    keywords: gallery.seoKeywords,
+    canonical: '/our-work',
+    ogImage: `${SITE_URL}${gallery.ogImage}`,
+    schemaJson: {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${SITE_URL}/our-work`,
+      url: `${SITE_URL}/our-work`,
+      name: gallery.seoTitle,
+      description: gallery.seoDescription,
+    },
+  });
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
