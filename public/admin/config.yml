@@ -708,13 +708,26 @@ collections:
           - label: "Testimonials"
             name: "items"
             widget: "list"
+            summary: "{{fields.name}} - {{fields.location}}"
             fields:
-              - { label: "ID", name: "id", widget: "number", value_type: "int" }
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Location or Source", name: "location", widget: "string" }
-              - { label: "Rating", name: "rating", widget: "select", options: [1, 2, 3, 4, 5] }
-              - { label: "Text", name: "text", widget: "text" }
-              - { label: "Initials", name: "initials", widget: "string", required: false }
+              - { label: "ID", name: "id", widget: "number", value_type: "int", required: true }
+              - { label: "Name", name: "name", widget: "string", required: true }
+              - { label: "Location or Source", name: "location", widget: "string", default: "Google Review", required: true }
+              - label: "Rating"
+                name: "rating"
+                widget: "select"
+                options: [1, 2, 3, 4, 5]
+                value_type: "int"
+                default: 5
+                required: true
+              - { label: "Text", name: "text", widget: "text", default: "", required: true }
+              - { label: "Initials", name: "initials", widget: "string", default: "", required: true }
+              - label: "Color"
+                name: "color"
+                widget: "select"
+                options: ["bg-emerald-500", "bg-teal-500", "bg-green-600", "bg-lime-600", "bg-blue-500", "bg-purple-500"]
+                default: "bg-emerald-500"
+                required: true
 
       - file: "src/content/faq.json"
         label: "FAQ"

@@ -39,7 +39,8 @@
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "type-check": "tsc --noEmit --project tsconfig.app.json",
-    "validate:blog": "node scripts/validate-blog-posts.cjs"
+    "validate:blog": "node scripts/validate-blog-posts.cjs",
+    "validate:testimonials": "node scripts/validate-testimonials.cjs"
   },
   "type": "module",
   "version": "0.0.0"

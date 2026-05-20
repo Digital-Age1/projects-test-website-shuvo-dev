@@ -1,10 +1,50 @@
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import testimonialsContent from '@/content/testimonials.json';
 
-const testimonials = testimonialsContent.items;
+const DEFAULT_COLOR = 'bg-emerald-500';
+
+type RawTestimonial = Partial<(typeof testimonialsContent.items)[number]>;
+
+function getInitials(name?: string) {
+  if (!name) return '';
+
+  return name
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part.charAt(0).toUpperCase())
+    .join('');
+}
+
+function normalizeTestimonial(testimonial: RawTestimonial) {
+  const name = testimonial.name || 'Customer';
+  const rating = Number(testimonial.rating);
+
+  return {
+    id: testimonial.id,
+    name,
+    location: testimonial.location || 'Google Review',
+    rating: Number.isFinite(rating) && rating >= 1 && rating <= 5 ? rating : 5,
+    text: testimonial.text || '',
+    initials: testimonial.initials || getInitials(name),
+    color: testimonial.color || DEFAULT_COLOR,
+  };
+}
 
 export default function Testimonials() {
+  const testimonials = useMemo(
+    () => testimonialsContent.items.map(normalizeTestimonial).filter((testimonial) => testimonial.text),
+    []
+  );
   const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    if (active >= testimonials.length) setActive(0);
+  }, [active, testimonials.length]);
+
+  if (testimonials.length === 0) return null;
+
+  const activeTestimonial = testimonials[active] || testimonials[0];
 
   return (
     <section className="bg-primary-600 text-white py-16">
@@ -21,30 +61,30 @@ export default function Testimonials() {
             What Our Customers Say
           </h2>
           <p className="text-primary-100 text-lg max-w-2xl mx-auto">
-            Every review is 5 stars. Real customers, real results — across Westfield, Huntington, Russell &amp; Montgomery, MA.
+            Every review is 5 stars. Real customers, real results â€” across Westfield, Huntington, Russell &amp; Montgomery, MA.
           </p>
         </div>
 
         <div className="bg-white/10 rounded-2xl p-8 md:p-10 backdrop-blur-sm mb-8">
           <i className="ri-double-quotes-l text-4xl text-primary-400 mb-4"></i>
           <p className="text-xl md:text-2xl font-medium leading-relaxed mb-6">
-            {testimonials[active].text}
+            {activeTestimonial.text}
           </p>
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center text-sm font-bold">
-              {(testimonials[active].initials || testimonials[active].name.charAt(0)).charAt(0)}
+            <div className={`w-10 h-10 ${activeTestimonial.color} rounded-full flex items-center justify-center text-sm font-bold`}>
+              {activeTestimonial.initials || getInitials(activeTestimonial.name)}
             </div>
             <div>
-              <p className="font-semibold">{testimonials[active].name}</p>
-              <p className="text-sm text-primary-200">{testimonials[active].location}</p>
+              <p className="font-semibold">{activeTestimonial.name}</p>
+              <p className="text-sm text-primary-200">{activeTestimonial.location}</p>
             </div>
           </div>
         </div>
 
         <div className="flex justify-center space-x-3">
-          {testimonials.map((_, idx) => (
+          {testimonials.map((testimonial, idx) => (
             <button
-              key={idx}
+              key={testimonial.id ?? idx}
               onClick={() => setActive(idx)}
               className={`w-3 h-3 rounded-full transition-colors ${
                 idx === active ? 'bg-white' : 'bg-white/30 hover:bg-white/50'

@@ -15,13 +15,24 @@ interface TestimonialsSectionProps {
 }
 
 function StarRow({ count }: { count: number }) {
+  const safeCount = Number.isFinite(count) ? Math.min(Math.max(Math.round(count), 1), 5) : 5;
+
   return (
     <div className="flex items-center gap-1">
-      {Array.from({ length: count }).map((_, i) => (
+      {Array.from({ length: safeCount }).map((_, i) => (
         <i key={i} className="ri-star-fill text-[#C9A84C] text-sm" />
       ))}
     </div>
   );
+}
+
+function getInitials(name?: string) {
+  return (name || '')
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part.charAt(0).toUpperCase())
+    .join('');
 }
 
 export default function TestimonialsSection({
@@ -32,8 +43,19 @@ export default function TestimonialsSection({
   const [featuredRef, featuredVisible] = useInView<HTMLDivElement>();
   const [gridRef, gridVisible] = useInView<HTMLDivElement>();
 
-  const featured = testimonials[0];
-  const rest = testimonials.slice(1);
+  const safeTestimonials = testimonials
+    .map((testimonial) => ({
+      ...testimonial,
+      name: testimonial.name || 'Customer',
+      role: testimonial.role || 'Google Review',
+      avatar: testimonial.avatar || getInitials(testimonial.name),
+      rating: Number.isFinite(testimonial.rating) ? testimonial.rating : 5,
+      text: testimonial.text || '',
+    }))
+    .filter((testimonial) => testimonial.text);
+
+  const featured = safeTestimonials[0];
+  const rest = safeTestimonials.slice(1);
 
   return (
     <section className="bg-[#080808] py-28 px-6 lg:px-16 border-t border-[#1A1A1A]" id="testimonials">
