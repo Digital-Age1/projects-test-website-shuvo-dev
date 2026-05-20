@@ -29,6 +29,11 @@
       "id": 6,
       "question": "What services does Trimming Edge offer?",
       "answer": "Our main services include lawn mowing and maintenance, landscape design and installation, tree and shrub care, seasonal cleanups, mulching and bed maintenance, and commercial landscaping."
+    },
+    {
+      "id": 7,
+      "question": "What services does Trimming Edge offer? 2",
+      "answer": "Our main services include lawn mowing and maintenance, landscape design and installation, tree and shrub care, seasonal cleanups, mulching and bed maintenance, and commercial landscaping."
     }
   ]
 }
