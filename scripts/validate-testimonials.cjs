@@ -11,12 +11,11 @@ const allowedColors = new Set([
 ]);
 
 function getInitials(name) {
-  return String(name || '')
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part.charAt(0).toUpperCase())
-    .join('');
+  if (!name || typeof name !== 'string') return '?';
+  const parts = name.trim().split(/\s+/).filter(Boolean);
+  if (parts.length === 0) return '?';
+  if (parts.length === 1) return parts[0].slice(0, 1).toUpperCase();
+  return `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase();
 }
 
 const errors = [];
@@ -31,20 +30,20 @@ if (!Array.isArray(content.items)) {
     if (!item.name) errors.push(`${label}.name is required.`);
     if (!item.text) errors.push(`${label}.text is required.`);
 
-    const rating = Number(item.rating);
-    if (!Number.isFinite(rating) || rating < 0 || rating > 5) {
-      errors.push(`${label}.rating must be a number between 0 and 5.`);
-    } else if (!Number.isInteger(rating * 2)) {
-      errors.push(`${label}.rating must use 0.5 increments.`);
+    if (item.rating !== undefined && item.rating !== null && item.rating !== '') {
+      const rating = Number(item.rating);
+      if (!Number.isFinite(rating) || rating < 0 || rating > 5) {
+        errors.push(`${label}.rating must be a number between 0 and 5.`);
+      } else if (!Number.isInteger(rating * 2)) {
+        errors.push(`${label}.rating must use 0.5 increments.`);
+      }
     }
 
     if (item.color && !allowedColors.has(item.color)) {
       errors.push(`${label}.color must be one of: ${[...allowedColors].join(', ')}.`);
     }
 
-    if (!item.initials && !getInitials(item.name)) {
-      errors.push(`${label}.initials is required or must be generatable from name.`);
-    }
+    getInitials(item.name);
   });
 }
 

@@ -27,12 +27,11 @@ function StarRow({ count }: { count: number }) {
 }
 
 function getInitials(name?: string) {
-  return (name || '')
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part.charAt(0).toUpperCase())
-    .join('');
+  if (!name || typeof name !== 'string') return '?';
+  const parts = name.trim().split(/\s+/).filter(Boolean);
+  if (parts.length === 0) return '?';
+  if (parts.length === 1) return parts[0].slice(0, 1).toUpperCase();
+  return `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase();
 }
 
 export default function TestimonialsSection({
@@ -54,7 +53,7 @@ export default function TestimonialsSection({
         id: testimonial.id ?? index + 1,
         name,
         role: testimonial.role || 'Google Review',
-        avatar: testimonial.avatar || getInitials(name),
+        avatar: getInitials(testimonial.name),
         rating: safeRating,
         text: testimonial.text || '',
       };

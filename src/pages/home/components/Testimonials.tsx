@@ -14,18 +14,16 @@ const ALLOWED_COLORS = new Set([
 type RawTestimonial = Partial<(typeof testimonialsContent.items)[number]>;
 
 function getInitials(name?: string) {
-  if (!name) return '';
-
-  return name
-    .split(/\s+/)
-    .filter(Boolean)
-    .slice(0, 2)
-    .map((part) => part.charAt(0).toUpperCase())
-    .join('');
+  if (!name || typeof name !== 'string') return '?';
+  const parts = name.trim().split(/\s+/).filter(Boolean);
+  if (parts.length === 0) return '?';
+  if (parts.length === 1) return parts[0].slice(0, 1).toUpperCase();
+  return `${parts[0][0]}${parts[parts.length - 1][0]}`.toUpperCase();
 }
 
 function normalizeTestimonial(testimonial: RawTestimonial) {
   const name = testimonial.name || 'Customer';
+  const initials = getInitials(testimonial.name);
   const rating = Number(testimonial.rating);
   const safeRating = Number.isFinite(rating) ? Math.min(Math.max(rating, 0), 5) : 5;
 
@@ -35,7 +33,7 @@ function normalizeTestimonial(testimonial: RawTestimonial) {
     location: testimonial.location || 'Google Review',
     rating: safeRating,
     text: testimonial.text || '',
-    initials: testimonial.initials || getInitials(name),
+    initials,
     color: testimonial.color && ALLOWED_COLORS.has(testimonial.color) ? testimonial.color : DEFAULT_COLOR,
   };
 }

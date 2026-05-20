@@ -722,7 +722,7 @@ collections:
                 default: 5
                 required: true
               - { label: "Text", name: "text", widget: "text", default: "", required: true }
-              - { label: "Initials", name: "initials", widget: "string", default: "", required: true }
+              - { label: "Initials (Optional)", name: "initials", widget: "string", default: "", required: false }
               - label: "Color"
                 name: "color"
                 widget: "select"
