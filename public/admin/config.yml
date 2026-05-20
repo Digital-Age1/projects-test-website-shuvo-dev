@@ -253,6 +253,87 @@ collections:
               - { label: "SEO Keywords", name: "seoKeywords", widget: "text", required: false }
               - { label: "OG Image", name: "ogImage", widget: "image" }
 
+      - file: "src/content/legal.json"
+        label: "Legal Pages"
+        name: "legal"
+        format: "json"
+        fields:
+          - label: "Privacy Policy"
+            name: "privacy"
+            widget: "object"
+            fields:
+              - { label: "Hero Title", name: "heroTitle", widget: "string" }
+              - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+              - { label: "Last Updated", name: "lastUpdated", widget: "string" }
+              - label: "Sections"
+                name: "sections"
+                widget: "list"
+                fields:
+                  - { label: "Section Title", name: "title", widget: "string" }
+                  - { label: "Section Body", name: "body", widget: "text" }
+          - label: "Terms & Conditions"
+            name: "terms"
+            widget: "object"
+            fields:
+              - { label: "Hero Title", name: "heroTitle", widget: "string" }
+              - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+              - { label: "Last Updated", name: "lastUpdated", widget: "string" }
+              - label: "Sections"
+                name: "sections"
+                widget: "list"
+                fields:
+                  - { label: "Section Title", name: "title", widget: "string" }
+                  - { label: "Section Body", name: "body", widget: "text" }
+      - file: "src/content/wolfRadio.json"
+        label: "Wolf Radio"
+        name: "wolfRadio"
+        format: "json"
+        fields:
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+          - { label: "Hero Image", name: "heroImage", widget: "image", required: false }
+          - { label: "Live Label", name: "liveLabel", widget: "string" }
+          - { label: "Last Played Label", name: "lastPlayedLabel", widget: "string" }
+          - { label: "Intro Title", name: "introTitle", widget: "string" }
+          - { label: "Intro Text", name: "introText", widget: "text" }
+          - { label: "About Eyebrow", name: "aboutEyebrow", widget: "string" }
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Section Body", name: "body", widget: "text" }
+          - label: "Station Facts"
+            name: "stationFacts"
+            widget: "list"
+            fields:
+              - label: "Icon"
+                name: "iconKey"
+                widget: "select"
+                options: ["broadcast", "global"]
+              - { label: "Label", name: "label", widget: "string" }
+          - { label: "Text Logo", name: "textLogo", widget: "string" }
+          - { label: "Text Logo Caption", name: "textLogoCaption", widget: "string" }
+          - { label: "External Link Label", name: "externalLinkLabel", widget: "string" }
+          - { label: "External Link Href", name: "externalLinkHref", widget: "string" }
+          - { label: "Podcast Title", name: "podcastTitle", widget: "string" }
+          - { label: "Podcast Subtitle", name: "podcastSubtitle", widget: "text" }
+          - { label: "Spotify Label", name: "spotifyLabel", widget: "string" }
+          - { label: "YouTube Label", name: "youtubeLabel", widget: "string" }
+          - { label: "CTA Title", name: "ctaTitle", widget: "string" }
+          - { label: "CTA Text", name: "ctaText", widget: "text" }
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Primary Label", name: "primaryLabel", widget: "string" }
+              - { label: "Primary Href", name: "primaryHref", widget: "string" }
+              - { label: "Secondary Label", name: "secondaryLabel", widget: "string" }
+              - { label: "Secondary Href", name: "secondaryHref", widget: "string" }
+          - { label: "SEO Title", name: "seoTitle", widget: "string", required: false }
+          - { label: "SEO Description", name: "seoDescription", widget: "text", required: false }
+          - { label: "OG Image", name: "ogImage", widget: "image", required: false }
+
       - file: "src/content/serviceAreas.json"
         label: "Service Areas"
         name: "serviceAreas"

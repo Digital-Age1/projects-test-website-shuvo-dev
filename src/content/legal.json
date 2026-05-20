@@ -1,0 +1,116 @@
+{
+  "privacy": {
+    "heroTitle": "Privacy Policy",
+    "heroSubtitle": "Learn how we collect, use, and protect your personal information.",
+    "lastUpdated": "May 2026",
+    "sections": [
+      {
+        "title": "Who We Are",
+        "body": "<p>Our website address is: <strong>https://TrimmingEdge.com</strong><br />Trimming Edge Lawn Care<br />Phone: <a href=\"tel:+14135519653\">(413) 551-9653</a></p>"
+      },
+      {
+        "title": "Comments",
+        "body": "<p>When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor's IP address and browser user agent string to help spam detection. An anonymized string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service privacy policy is available here: <a href=\"https://automattic.com/privacy/\" rel=\"nofollow\">https://automattic.com/privacy/</a>. After approval of your comment, your profile picture is visible to the public in the context of your comment.</p>"
+      },
+      {
+        "title": "Media",
+        "body": "<p>If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.</p>"
+      },
+      {
+        "title": "Cookies",
+        "body": "<p>If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.</p><p>If you visit our login page, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</p><p>When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select \"Remember Me\", your login will persist for two weeks. If you log out of your account, the login cookies will be removed.</p><p>If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.</p>"
+      },
+      {
+        "title": "Embedded Content from Other Websites",
+        "body": "<p>Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website. These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</p>"
+      },
+      {
+        "title": "Who We Share Your Data With",
+        "body": "<p>If you request a password reset, your IP address will be included in the reset email. We do not share your data with third parties for marketing purposes. Trimming Edge will not sell, rent, or share the collected mobile numbers. No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>"
+      },
+      {
+        "title": "How Long We Retain Your Data",
+        "body": "<p>If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognize and approve any follow-up comments automatically instead of holding them in a moderation queue. For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.</p>"
+      },
+      {
+        "title": "What Rights You Have Over Your Data",
+        "body": "<p>If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.</p>"
+      },
+      {
+        "title": "Data Collection for SMS",
+        "body": "<p>We will collect your name, email address, mailing address, and mobile phone number when you sign up for SMS updates. The information will be collected via the website contact form, email, rental agreement, or third-party reservation systems. We use your data solely for sending updates, promotions, and reminders related to our products or services. We protect your data with secure storage measures to prevent unauthorized access. We retain your information as long as you are subscribed to our SMS service. You may request deletion at any time.</p><p><strong>MESSAGE AND DATA RATES MAY APPLY.</strong> Your mobile carrier may charge fees for sending or receiving text messages, especially if you do not have an unlimited texting or data plan. Messages are recurring, and message frequency varies.</p><p>Contact Trimming Edge Lawn Care at <a href=\"tel:+14135519653\">(413) 551-9653</a> or <a href=\"mailto:info@trimmingedge.com\">info@trimmingedge.com</a> for HELP or to STOP receiving messages. You can opt out of the SMS list at any time by texting, emailing, or replying STOP or UNSUBSCRIBE to <a href=\"mailto:info@trimmingedge.com\">info@trimmingedge.com</a> or <a href=\"tel:+14135519653\">(413) 551-9653</a>. After unsubscribing, you will receive a final SMS to confirm you have unsubscribed and we will remove your number from our list within 24 hours.</p>"
+      },
+      {
+        "title": "Location Data",
+        "body": "<p>We may collect and share anonymous location data. To customize our service for you, we and our partners may collect, use, and share precise location data, including the real-time geographic location of your computer or device. This location data is collected anonymously in a form that does not personally identify you and is used only to provide and improve our service. We may obtain your consent on your first use of the service.</p>"
+      },
+      {
+        "title": "Access & Deletion",
+        "body": "<p>You can request to see or delete your personal data. You can sign into your account to see or delete any personally identifiable information we have stored, such as your name, address, email or phone number. You can also contact us by email to request to see or delete this information. We may keep data indefinitely. You may ask to have your data deleted at any time by calling our office at <a href=\"tel:+14135519653\">(413) 551-9653</a>.</p>"
+      },
+      {
+        "title": "Sharing",
+        "body": "<p>We do not share personal information with anyone for any reason, unless requested by law enforcement. We never use your information for marketing or sell information for any reason.</p>"
+      },
+      {
+        "title": "Ad Tracking",
+        "body": "<p>Ad companies collect anonymous data. You can opt out. Ad companies may use and collect anonymous data about your interests to customize content and advertising here and in other sites and applications. Interest and location data may be linked to your device, but is not linked to your identity.</p>"
+      },
+      {
+        "title": "Vendors",
+        "body": "<p>Service providers access data on our behalf. In order to serve you, we may share your personal and anonymous information with other companies, including vendors and contractors. Their use of information is limited to these purposes, and subject to agreements that require them to keep the information confidential. Our vendors provide assurance that they take reasonable steps to safeguard the data they hold on our behalf, although data security cannot be guaranteed.</p><p>Analytics companies may access anonymous data (such as your IP address or device ID) to help us understand how our services are used. They use this data solely on our behalf. They do not share it except in aggregate form; no data is shared as to any individual user.</p>"
+      },
+      {
+        "title": "Special Situations",
+        "body": "<p>Special situations may require disclosure of your data. To operate the service, we also may make identifiable and anonymous information available to third parties in these limited circumstances: (1) with your express consent, (2) when we have a good faith belief it is required by law, (3) when we have a good faith belief it is necessary to protect our rights or property, or (4) to any successor or purchaser in a merger, acquisition, liquidation, dissolution or sale of assets. Your consent will not be required for disclosure in these cases, but we will attempt to notify you, to the extent permitted by law to do so.</p>"
+      },
+      {
+        "title": "Policy Changes",
+        "body": "<p>Our privacy policy may change from time to time. Please check back here for updated information. Contact Trimming Edge Lawn Care at <a href=\"tel:+14135519653\">(413) 551-9653</a> for HELP or to STOP receiving messages. You can opt out of the SMS list at any time by texting or replying STOP or UNSUBSCRIBE to <a href=\"tel:+14135519653\">(413) 551-9653</a>. After unsubscribing, we will remove your number from our list within 24 hours.</p>"
+      }
+    ]
+  },
+  "terms": {
+    "heroTitle": "Terms of Service",
+    "heroSubtitle": "Please read these terms carefully before using our services.",
+    "lastUpdated": "May 2026",
+    "sections": [
+      {
+        "title": "Mowing Service",
+        "body": "<p>We mow lawns up to 6 inches. Lawns more than 6 inches are subject to overgrown mowing fees. Please ensure all items are picked up in the yard — toys, sticks &amp; branches, lawn chairs &amp; furniture, and pet waste — on the days we service your property. If pet waste is an issue, we do offer the service for an extra fee. Fees may apply for items and excess waste left in the yard.</p><p>Quotes are valid for the next 30 days, after which values may be subject to change. This pricing assumes that your lawn is not overgrown beyond 6 inches, that obstacles (ex: large objects, cars, dogs), and debris (ex: children's toys, trash, dog poop) have been removed from the lawn, and that overall the lawn is in acceptable condition to complete the selected scope of work. If the lawn is overgrown or there is excess pet waste in the yard, it will require additional cost, which could delay the service.</p><p>Please cancel any appointment 24 hours before your appointment date to avoid being charged for the appointment. Unpaid invoices will be subject to collection. A $35 late fee will be charged. Accounts will be charged off and sent to collections after 30 days with an additional $35 collection fee.</p>"
+      },
+      {
+        "title": "SMS Consent",
+        "body": "<p>By opting into SMS from a web form or other medium, you are agreeing to receive SMS messages from Trimming Edge. This includes SMS messages for conversations (external). Message frequency varies. Message and data rates may apply. See privacy policy at <a href=\"https://www.trimmingedge.com/privacy-policy\" rel=\"nofollow\">https://www.trimmingedge.com/privacy-policy</a>. Message HELP for help. Reply STOP to any message to opt out.</p>"
+      },
+      {
+        "title": "Types of SMS Communications",
+        "body": "<p>If you opt in to receive messages from Trimming Edge, you may receive texts about conversational purposes. Standard message rates may apply.</p>"
+      },
+      {
+        "title": "Message Frequency",
+        "body": "<p>You may receive approximately 1 SMS message per month.</p>"
+      },
+      {
+        "title": "Carrier Charges",
+        "body": "<p>Message and data rates may apply based on your mobile carrier and location.</p>"
+      },
+      {
+        "title": "Opt-In Methods",
+        "body": "<p>You can opt in via the following methods: We get consent verbally by asking, \"Do you agree to receive conversations (external) text messages from Trimming Edge. Reply STOP to opt-out; Reply HELP for support; Message &amp; data rates may apply; Messaging frequency may vary. Visit <a href=\"https://www.trimmingedge.com/privacy-policy\" rel=\"nofollow\">https://www.trimmingedge.com/privacy-policy</a> to see our privacy policy and <a href=\"https://www.trimmingedge.com/terms-and-conditions\" rel=\"nofollow\">https://www.trimmingedge.com/terms-and-conditions</a> for our Terms of Service.\"</p>"
+      },
+      {
+        "title": "Opt-Out Instructions",
+        "body": "<p>You may opt out at any time by replying STOP to any message. To resume receiving texts, reply START.</p>"
+      },
+      {
+        "title": "Help",
+        "body": "<p>If you need assistance, reply HELP or contact us at <a href=\"https://www.trimmingedge.com\" rel=\"nofollow\">www.TrimmingEdge.com</a>.</p>"
+      },
+      {
+        "title": "Disclosures",
+        "body": "<ul><li>Message frequency may vary.</li><li>Message and data rates may apply.</li><li>Reply STOP to cancel.</li><li>Reply HELP for assistance.</li><li>Visit our website to review our <a href=\"https://www.trimmingedge.com/privacy-policy\" rel=\"nofollow\">Privacy Policy</a> and <a href=\"https://www.trimmingedge.com/terms-and-conditions\" rel=\"nofollow\">Terms of Service</a>.</li></ul>"
+      }
+    ]
+  }
+}

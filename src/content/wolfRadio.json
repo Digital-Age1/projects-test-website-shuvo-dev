@@ -1,0 +1,44 @@
+{
+  "heroTitle": "Wolf Radio",
+  "heroSubtitle": "Broadcasting on AM Stereo 1690 and 107.5 FM. Stream live right here or tune in on WolfRadio.net.",
+  "heroImage": "/uploads/hero-wolf-radio.jpg",
+  "liveLabel": "LIVE NOW",
+  "lastPlayedLabel": "LAST PLAYED",
+  "introTitle": "Wolf Radio - Since 1996",
+  "introText": "Wolf Radio has been broadcasting since 1996. The station is part of the Wolf Enterprise family, run by David & Amanda - the same team behind Trimming Edge Lawn Care.",
+  "aboutEyebrow": "About the Station",
+  "sections": [
+    {
+      "title": "About the Station",
+      "body": "<p>Wolf Radio has been broadcasting since 1996. The station is part of the Wolf Enterprise family, run by David &amp; Amanda - the same team behind Trimming Edge Lawn Care.</p><p>The DnA Show (David &amp; Amanda) focuses on technology, community, and great music. You can also catch the show as a podcast on Spotify and YouTube.</p>"
+    },
+    {
+      "title": "Podcast Episodes",
+      "body": "<p>The DnA Show Podcast is available on Spotify and YouTube. Tune in for new episodes, community stories, and technology discussions from the Trimming Edge team.</p>"
+    }
+  ],
+  "stationFacts": [
+    { "iconKey": "broadcast", "label": "AM Stereo 1690" },
+    { "iconKey": "broadcast", "label": "107.5 FM" },
+    { "iconKey": "global", "label": "WolfRadio.net Online Stream" }
+  ],
+  "textLogo": "/\\0!0/\\",
+  "textLogoCaption": "The iconic Wolf Radio text logo",
+  "externalLinkLabel": "Visit WolfRadio.net",
+  "externalLinkHref": "http://wolfradio.net/",
+  "podcastTitle": "The DnA Show Podcast",
+  "podcastSubtitle": "Listen on Spotify or watch on YouTube - new episodes regularly.",
+  "spotifyLabel": "Spotify",
+  "youtubeLabel": "YouTube",
+  "ctaTitle": "Enjoy the Music - We'll Handle the Lawn",
+  "ctaText": "Sit back, tune in to Wolf Radio, and let Trimming Edge take care of your property.",
+  "cta": {
+    "primaryLabel": "Call (413) 551-9653",
+    "primaryHref": "tel:+14135519653",
+    "secondaryLabel": "Read Our History",
+    "secondaryHref": "/history"
+  },
+  "seoTitle": "Wolf Radio | Trimming Edge",
+  "seoDescription": "Wolf Radio live streams, podcast updates, and community programming from the Wolf Enterprise team.",
+  "ogImage": "/uploads/hero-wolf-radio.jpg"
+}

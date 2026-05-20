@@ -45,6 +45,22 @@
       "ogImage": "/uploads/hero-blog-gardening-flowers.jpg",
       "robots": "noindex, nofollow"
     },
+    "/privacy-policy": {
+      "title": "Privacy Policy | Trimming Edge Lawn Care",
+      "description": "Read the Privacy Policy for Trimming Edge Lawn Care. Learn how we collect, use, and protect your personal information.",
+      "keywords": "privacy policy, Trimming Edge, data protection, lawn care privacy",
+      "canonical": "/privacy-policy",
+      "ogImage": "/uploads/hero-privacy.jpg",
+      "robots": "noindex, nofollow"
+    },
+    "/terms-and-conditions": {
+      "title": "Terms of Service | Trimming Edge Lawn Care",
+      "description": "Read the Terms of Service for Trimming Edge Lawn Care. Learn about our service policies, SMS consent, commercial agreements, and booking terms in Western Massachusetts.",
+      "keywords": "terms of service, Trimming Edge, lawn care terms, service agreement Western MA, landscaping contract Massachusetts",
+      "canonical": "/terms-and-conditions",
+      "ogImage": "/uploads/hero-terms.jpg",
+      "robots": "noindex, nofollow"
+    },
     "/pet-care": {
       "title": "Pet Care Services | Trimming Edge Western Massachusetts",
       "description": "Premium pet care, dog walking, and pet taxi services from Trimming Edge. Serving Western Massachusetts with compassionate care.",

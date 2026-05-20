@@ -3,23 +3,33 @@ import { useSEO, SITE_URL } from '@/hooks/useSEO';
 import { Link } from 'react-router-dom';
 import PageHeader from '../../components/feature/PageHeader';
 import PageFooter from '../../components/feature/PageFooter';
+import wolfRadioContent from '../../content/wolfRadio.json';
+
+const stationFactIcons: Record<string, string> = {
+  broadcast: 'ri-broadcast-line',
+  global: 'ri-global-line',
+};
 
 export default function WolfRadioPage() {
   useSEO({
-    route: '/wolf-radio',
+    title: wolfRadioContent.seoTitle,
+    description: wolfRadioContent.seoDescription,
     canonical: '/wolf-radio',
+    ogImage: wolfRadioContent.ogImage,
     schemaJson: {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
       '@id': `${SITE_URL}/wolf-radio`,
       url: `${SITE_URL}/wolf-radio`,
-      name: 'Wolf Radio | Trimming Edge',
-      description: 'Wolf Radio live streams, podcast updates, and community programming from the Wolf Enterprise team.',
+      name: wolfRadioContent.seoTitle,
+      description: wolfRadioContent.seoDescription,
     },
   });
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const aboutSection = wolfRadioContent.sections[0];
 
   return (
     <div className="min-h-screen bg-white">
@@ -33,10 +43,10 @@ export default function WolfRadioPage() {
               <span className="text-sm font-semibold text-primary-400">Live Radio</span>
             </div>
             <h1 className="font-display font-bold text-4xl sm:text-5xl mb-4">
-              Wolf Radio
+              {wolfRadioContent.heroTitle}
             </h1>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Broadcasting on AM Stereo 1690 and 107.5 FM. Stream live right here or tune in on WolfRadio.net.
+              {wolfRadioContent.heroSubtitle}
             </p>
           </div>
         </section>
@@ -49,7 +59,7 @@ export default function WolfRadioPage() {
               <div className="flex flex-col items-center">
                 <div className="flex items-center space-x-2 mb-4">
                   <div className="w-2.5 h-2.5 bg-red-500 rounded-full animate-pulse"></div>
-                  <span className="text-white font-semibold text-sm">LIVE NOW</span>
+                  <span className="text-white font-semibold text-sm">{wolfRadioContent.liveLabel}</span>
                 </div>
                 <div className="rounded-2xl overflow-hidden border border-gray-700">
                   <iframe
@@ -65,7 +75,7 @@ export default function WolfRadioPage() {
               <div className="flex flex-col items-center">
                 <div className="flex items-center space-x-2 mb-4">
                   <i className="ri-history-line text-gray-400"></i>
-                  <span className="text-white font-semibold text-sm">LAST PLAYED</span>
+                  <span className="text-white font-semibold text-sm">{wolfRadioContent.lastPlayedLabel}</span>
                 </div>
                 <div className="rounded-2xl overflow-hidden border border-gray-700">
                   <iframe
@@ -88,26 +98,20 @@ export default function WolfRadioPage() {
               <div>
                 <div className="inline-flex items-center space-x-2 px-4 py-2 bg-primary-50 rounded-full mb-6">
                   <i className="ri-information-line text-primary-600"></i>
-                  <span className="text-sm font-semibold text-primary-600">About the Station</span>
+                  <span className="text-sm font-semibold text-primary-600">{wolfRadioContent.aboutEyebrow}</span>
                 </div>
                 <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 mb-4">
-                  Wolf Radio — Since 1996
+                  {wolfRadioContent.introTitle}
                 </h2>
-                <p className="text-gray-600 leading-relaxed mb-4">
-                  Wolf Radio has been broadcasting since 1996. The station is part of the Wolf Enterprise family, run by David &amp; Amanda — the same team behind Trimming Edge Lawn Care.
-                </p>
-                <p className="text-gray-600 leading-relaxed mb-6">
-                  The DnA Show (David &amp; Amanda) focuses on technology, community, and great music. You can also catch the show as a podcast on Spotify and YouTube.
-                </p>
+                <div
+                  className="text-gray-600 leading-relaxed mb-6 space-y-4"
+                  dangerouslySetInnerHTML={{ __html: aboutSection.body }}
+                />
                 <div className="space-y-3">
-                  {[
-                    { icon: 'ri-broadcast-line', label: 'AM Stereo 1690' },
-                    { icon: 'ri-broadcast-line', label: '107.5 FM' },
-                    { icon: 'ri-global-line', label: 'WolfRadio.net Online Stream' },
-                  ].map((item) => (
+                  {wolfRadioContent.stationFacts.map((item) => (
                     <div key={item.label} className="flex items-center space-x-3">
                       <div className="w-8 h-8 flex items-center justify-center bg-primary-100 rounded-lg">
-                        <i className={`${item.icon} text-primary-600`}></i>
+                        <i className={`${stationFactIcons[item.iconKey] || 'ri-broadcast-line'} text-primary-600`}></i>
                       </div>
                       <span className="text-gray-700 font-medium text-sm">{item.label}</span>
                     </div>
@@ -115,16 +119,16 @@ export default function WolfRadioPage() {
                 </div>
               </div>
               <div className="bg-gray-900 rounded-3xl p-8 text-center">
-                <div className="text-6xl font-display font-black text-primary-400 mb-2">/\0!0/\</div>
-                <p className="text-gray-400 text-sm mb-6">The iconic Wolf Radio text logo</p>
+                <div className="text-6xl font-display font-black text-primary-400 mb-2">{wolfRadioContent.textLogo}</div>
+                <p className="text-gray-400 text-sm mb-6">{wolfRadioContent.textLogoCaption}</p>
                 <a
-                  href="http://wolfradio.net/"
+                  href={wolfRadioContent.externalLinkHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap"
                 >
                   <i className="ri-external-link-line mr-2"></i>
-                  Visit WolfRadio.net
+                  {wolfRadioContent.externalLinkLabel}
                 </a>
               </div>
             </div>
@@ -136,9 +140,9 @@ export default function WolfRadioPage() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-10">
               <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 mb-3">
-                The DnA Show Podcast
+                {wolfRadioContent.podcastTitle}
               </h2>
-              <p className="text-gray-600">Listen on Spotify or watch on YouTube — new episodes regularly.</p>
+              <p className="text-gray-600">{wolfRadioContent.podcastSubtitle}</p>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
@@ -146,7 +150,7 @@ export default function WolfRadioPage() {
                   <div className="w-8 h-8 flex items-center justify-center bg-green-500 rounded-full">
                     <i className="ri-spotify-line text-white text-sm"></i>
                   </div>
-                  <span className="font-semibold text-gray-900">Spotify</span>
+                  <span className="font-semibold text-gray-900">{wolfRadioContent.spotifyLabel}</span>
                 </div>
                 <div className="rounded-2xl overflow-hidden border border-gray-200">
                   <iframe
@@ -166,7 +170,7 @@ export default function WolfRadioPage() {
                   <div className="w-8 h-8 flex items-center justify-center bg-red-600 rounded-full">
                     <i className="ri-youtube-line text-white text-sm"></i>
                   </div>
-                  <span className="font-semibold text-gray-900">YouTube</span>
+                  <span className="font-semibold text-gray-900">{wolfRadioContent.youtubeLabel}</span>
                 </div>
                 <div className="rounded-2xl overflow-hidden border border-gray-200">
                   <iframe
@@ -189,24 +193,24 @@ export default function WolfRadioPage() {
         <section className="py-14 bg-gray-900">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="font-display font-bold text-3xl text-white mb-4">
-              Enjoy the Music — We&apos;ll Handle the Lawn
+              {wolfRadioContent.ctaTitle}
             </h2>
             <p className="text-gray-400 text-lg mb-8">
-              Sit back, tune in to Wolf Radio, and let Trimming Edge take care of your property.
+              {wolfRadioContent.ctaText}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="tel:+14135519653"
+                href={wolfRadioContent.cta.primaryHref}
                 className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white text-lg font-bold rounded-lg hover:bg-primary-700 transition-colors whitespace-nowrap"
               >
-                <i className="ri-phone-line mr-2"></i>
-                Call (413) 551-9653
+                {wolfRadioContent.cta.primaryHref.startsWith('tel:') && <i className="ri-phone-line mr-2"></i>}
+                {wolfRadioContent.cta.primaryLabel}
               </a>
               <Link
-                to="/history"
+                to={wolfRadioContent.cta.secondaryHref}
                 className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 bg-white text-gray-900 text-lg font-bold rounded-lg hover:bg-gray-100 transition-colors whitespace-nowrap"
               >
-                Read Our History
+                {wolfRadioContent.cta.secondaryLabel}
               </Link>
             </div>
           </div>
