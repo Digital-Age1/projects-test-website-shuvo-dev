@@ -21,9 +21,9 @@ export default function Hero() {
         <div className="inline-flex items-center space-x-2 px-4 py-2 bg-white/95 backdrop-blur-sm rounded-full mb-8">
           <i className="ri-star-fill text-accent-500 text-lg"></i>
           <span className="text-sm font-semibold text-gray-900">{home.hero.badge[0]}</span>
-          <span className="text-gray-400">-</span>
+          <span className="text-gray-400">•</span>
           <span className="text-sm text-gray-600">{home.hero.badge[1]}</span>
-          <span className="text-gray-400">-</span>
+          <span className="text-gray-400">•</span>
           <span className="text-sm text-gray-600">{home.hero.badge[2]}</span>
         </div>
 

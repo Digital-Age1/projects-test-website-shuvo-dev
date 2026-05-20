@@ -68,7 +68,7 @@ export default function Testimonials() {
             What Our Customers Say
           </h2>
           <p className="text-primary-100 text-lg max-w-2xl mx-auto">
-            Every review is 5 stars. Real customers, real results â€” across Westfield, Huntington, Russell &amp; Montgomery, MA.
+            Every review is 5 stars. Real customers, real results — across Westfield, Huntington, Russell &amp; Montgomery, MA.
           </p>
         </div>
 
