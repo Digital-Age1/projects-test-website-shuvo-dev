@@ -31,13 +31,14 @@ if (!Array.isArray(content.items)) {
     if (!item.name) errors.push(`${label}.name is required.`);
     if (!item.text) errors.push(`${label}.text is required.`);
 
-    if (typeof item.rating !== 'number' || item.rating < 1 || item.rating > 5) {
-      errors.push(`${label}.rating must be a number between 1 and 5.`);
+    const rating = Number(item.rating);
+    if (!Number.isFinite(rating) || rating < 0 || rating > 5) {
+      errors.push(`${label}.rating must be a number between 0 and 5.`);
+    } else if (!Number.isInteger(rating * 2)) {
+      errors.push(`${label}.rating must use 0.5 increments.`);
     }
 
-    if (!item.color) {
-      errors.push(`${label}.color is required.`);
-    } else if (!allowedColors.has(item.color)) {
+    if (item.color && !allowedColors.has(item.color)) {
       errors.push(`${label}.color must be one of: ${[...allowedColors].join(', ')}.`);
     }
 

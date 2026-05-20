@@ -11,11 +11,11 @@ interface Testimonial {
 
 interface TestimonialsSectionProps {
   heading?: string;
-  testimonials: Testimonial[];
+  testimonials: Partial<Testimonial>[];
 }
 
 function StarRow({ count }: { count: number }) {
-  const safeCount = Number.isFinite(count) ? Math.min(Math.max(Math.round(count), 1), 5) : 5;
+  const safeCount = Number.isFinite(count) ? Math.min(Math.max(Math.round(count), 0), 5) : 5;
 
   return (
     <div className="flex items-center gap-1">
@@ -44,14 +44,21 @@ export default function TestimonialsSection({
   const [gridRef, gridVisible] = useInView<HTMLDivElement>();
 
   const safeTestimonials = testimonials
-    .map((testimonial) => ({
-      ...testimonial,
-      name: testimonial.name || 'Customer',
-      role: testimonial.role || 'Google Review',
-      avatar: testimonial.avatar || getInitials(testimonial.name),
-      rating: Number.isFinite(testimonial.rating) ? testimonial.rating : 5,
-      text: testimonial.text || '',
-    }))
+    .map((testimonial, index) => {
+      const rating = Number(testimonial.rating);
+      const safeRating = Number.isFinite(rating) ? Math.min(Math.max(rating, 0), 5) : 5;
+      const name = testimonial.name || 'Customer';
+
+      return {
+        ...testimonial,
+        id: testimonial.id ?? index + 1,
+        name,
+        role: testimonial.role || 'Google Review',
+        avatar: testimonial.avatar || getInitials(name),
+        rating: safeRating,
+        text: testimonial.text || '',
+      };
+    })
     .filter((testimonial) => testimonial.text);
 
   const featured = safeTestimonials[0];
@@ -120,7 +127,7 @@ export default function TestimonialsSection({
         >
           {rest.map((t, i) => (
             <div
-              key={t.id}
+              key={`${t.name || 'testimonial'}-${t.id ?? i}`}
               className="bg-[#0D0D0D] hover:bg-[#0F0F0F] p-8 flex flex-col transition-colors"
               style={{ transitionDelay: `${i * 80}ms` }}
             >

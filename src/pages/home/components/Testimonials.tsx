@@ -2,6 +2,14 @@ import { useEffect, useMemo, useState } from 'react';
 import testimonialsContent from '@/content/testimonials.json';
 
 const DEFAULT_COLOR = 'bg-emerald-500';
+const ALLOWED_COLORS = new Set([
+  'bg-emerald-500',
+  'bg-teal-500',
+  'bg-green-600',
+  'bg-lime-600',
+  'bg-blue-500',
+  'bg-purple-500',
+]);
 
 type RawTestimonial = Partial<(typeof testimonialsContent.items)[number]>;
 
@@ -19,15 +27,16 @@ function getInitials(name?: string) {
 function normalizeTestimonial(testimonial: RawTestimonial) {
   const name = testimonial.name || 'Customer';
   const rating = Number(testimonial.rating);
+  const safeRating = Number.isFinite(rating) ? Math.min(Math.max(rating, 0), 5) : 5;
 
   return {
     id: testimonial.id,
     name,
     location: testimonial.location || 'Google Review',
-    rating: Number.isFinite(rating) && rating >= 1 && rating <= 5 ? rating : 5,
+    rating: safeRating,
     text: testimonial.text || '',
     initials: testimonial.initials || getInitials(name),
-    color: testimonial.color || DEFAULT_COLOR,
+    color: testimonial.color && ALLOWED_COLORS.has(testimonial.color) ? testimonial.color : DEFAULT_COLOR,
   };
 }
 
@@ -84,7 +93,7 @@ export default function Testimonials() {
         <div className="flex justify-center space-x-3">
           {testimonials.map((testimonial, idx) => (
             <button
-              key={testimonial.id ?? idx}
+              key={`${testimonial.name || 'testimonial'}-${testimonial.id ?? idx}`}
               onClick={() => setActive(idx)}
               className={`w-3 h-3 rounded-full transition-colors ${
                 idx === active ? 'bg-white' : 'bg-white/30 hover:bg-white/50'

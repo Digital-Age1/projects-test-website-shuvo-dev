@@ -710,14 +710,15 @@ collections:
             widget: "list"
             summary: "{{fields.name}} - {{fields.location}}"
             fields:
-              - { label: "ID", name: "id", widget: "number", value_type: "int", required: true }
               - { label: "Name", name: "name", widget: "string", required: true }
               - { label: "Location or Source", name: "location", widget: "string", default: "Google Review", required: true }
               - label: "Rating"
                 name: "rating"
-                widget: "select"
-                options: [1, 2, 3, 4, 5]
-                value_type: "int"
+                widget: "number"
+                value_type: "float"
+                min: 0
+                max: 5
+                step: 0.5
                 default: 5
                 required: true
               - { label: "Text", name: "text", widget: "text", default: "", required: true }
