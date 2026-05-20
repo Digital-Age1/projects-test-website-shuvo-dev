@@ -14,8 +14,8 @@ export const whyChooseUs = [
   },
   {
     id: 2,
-    title: 'Women-Owned Business',
-    description: 'Proudly women-owned and operated, bringing care, dedication, and a personal touch to every property we serve.',
+    title: 'Locally Owned Business',
+    description: 'Proudly locally owned and operated, bringing care, dedication, and a personal touch to every property we serve.',
     icon: 'ri-heart-line',
   },
   {

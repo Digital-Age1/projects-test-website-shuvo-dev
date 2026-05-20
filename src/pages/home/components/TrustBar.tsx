@@ -20,8 +20,8 @@ export default function TrustBar() {
           <div className="flex items-center space-x-2">
             <i className="ri-award-line text-primary-400 text-lg"></i>
             <div>
-              <div className="font-bold text-sm">Women-Owned</div>
-              <div className="text-sm text-primary-100">Local Business</div>
+              <div className="font-bold text-sm">Locally Owned</div>
+              <div className="text-sm text-primary-100">Family Operated</div>
             </div>
           </div>
         </div>

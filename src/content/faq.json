@@ -3,7 +3,7 @@
     {
       "id": 1,
       "question": "How often should I have my lawn mowed?",
-      "answer": "During peak growing season, we recommend weekly mowing to maintain optimal lawn health and appearance. In slower growth periods, bi-weekly service may be sufficient."
+      "answer": "During peak growing season (spring and early summer), we recommend weekly mowing to maintain optimal lawn health and appearance. In slower growth periods, bi-weekly service may be sufficient. We can customize a schedule based on your lawn's specific needs."
     },
     {
       "id": 2,
@@ -27,13 +27,8 @@
     },
     {
       "id": 6,
-      "question": "What services does Trimming Edge offer?",
-      "answer": "Our main services include lawn mowing and maintenance, landscape design and installation, tree and shrub care, seasonal cleanups, mulching and bed maintenance, and commercial landscaping."
-    },
-    {
-      "id": 7,
-      "question": "What services does Trimming Edge offer? 2",
-      "answer": "Our main services include lawn mowing and maintenance, landscape design and installation, tree and shrub care, seasonal cleanups, mulching and bed maintenance, and commercial landscaping."
+      "question": "What payment methods do you accept?",
+      "answer": "We accept cash, check, and major credit cards. Payment details are confirmed when your estimate is approved."
     }
   ]
 }
